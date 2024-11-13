@@ -1,0 +1,47 @@
+---
+title: "Axioms"
+subtitle: "Domain-specific rules that describe entity relations in the Alaska Community Ontology"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+date: 2024-11-12
+---
+
+Axioms are domain-specific rules that encapsulate what we know about the Classes.
+  - Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include `x = y` and `y = z`, trying to enter an `x` that isn't equal to `z` would fail a test.
+  - An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.
+  
+
+## Community
+- Communities are primarily determined by the expectations of the AEDG audience.
+- Communities should be equal to a single Municipalities or VillageCorps (preferred))
+- Communities could be collections of Municipalities or VillageCorps (example: Fairbanks should include College and Farmers Loop, which are separate places in the [wassit])
+
+## State
+- The State is defined to be Alaska
+- All Communities are in the State
+
+## Districts
+
+- HouseDistrict is a subset of SenateDistrict (is this true?)
+- HouseDistricts can contain multiple Communities.
+- A single Community might intersect several HouseDistricts (example: Fairbanks)
+  - Therefore: HouseDistrict population cannot be determined from a sum of Community populations.
+
+## Boroughs
+- Communities can be unencorporated, meaning they are not in a Borough.
+- If encorporated, a Community can only be in a single Borough
+
+## Census
+- 
+
+## Energy-Related
+- Communities can be isolated (microgrids)
+- Communities can be connected via Interties
+
+## Zip Codes (Optional)
+- A ZipCode can contain multiple Communities, especially in rural areas.
+- A single Community can contain multiple ZipCodes, especially in urban areas.

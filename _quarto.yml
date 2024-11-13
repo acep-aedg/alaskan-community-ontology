@@ -1,0 +1,56 @@
+project:
+  type: book
+
+book:
+  page-navigation: true
+  title: Alaskan Community Ontology 
+  author: Liz Dobbins
+  description: A vocabulary to describe entities describin Alaskan communities, aggregates of communities such as grids and regions, and the ralationships between them.
+  # site-url: "https://eldobbins/alaska-community-ontology/" 
+  repo-url: https://github.com/eldobbins/alaska-community-ontology 
+  repo-actions: [issue]
+  downloads: [pdf]
+  
+  page-footer:
+    right: "This page is based on Openscape's [Quarto Site Template](https://github.com/Openscapes/quarto-website-tutorial) and built with [Quarto](https://quarto.org/) ."
+    left: "&copy; CC BY-SA 4.0, 2024"
+    
+  sidebar:
+    logo: "images/data-duck.png"
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://cookiecutter.readthedocs.io/en/stable/
+        text: "Cookiecutter Project Templates"
+      - icon: github
+        href: https://github.com/eldobbins
+        text: "Liz Dobbins's GitHub"
+
+  chapters:
+    - index.qmd
+    - classes.qmd
+    - relations.qmd
+    - axioms.qmd
+  appendices:
+    - about.qmd
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss] # from https://github.com/sta210-s22/website/blob/main/_quarto.yml
+      dark: [cosmo, theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+    toc: true
+  pdf:
+    documentclass: scrreprt # LaTex document class as implemented by KOMA-script (book, report, article, letter)
+    toc: true
+    lof: false
+    lot: false
+
+filters:
+  - quarto
+
+

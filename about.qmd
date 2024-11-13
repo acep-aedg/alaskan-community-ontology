@@ -1,0 +1,13 @@
+---
+title: "About"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+citation: true
+date: 2024-11-12
+---
+
+This respository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP), UAF, and the Institute for Social and Economic Research (ISER), UAA. It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.
