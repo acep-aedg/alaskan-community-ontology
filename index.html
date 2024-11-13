@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Liz Dobbins">
-<meta name="description" content="A vocabulary to describe entities describin Alaskan communities, aggregates of communities such as grids and regions, and the ralationships between them.">
+<meta name="description" content="A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.">
 
 <title>Alaskan Community Ontology</title>
 <style>
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    A vocabulary to describe entities describin Alaskan communities, aggregates of communities such as grids and regions, and the ralationships between them.
+    A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.
   </div>
 </div>
 
@@ -221,8 +221,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="goal" class="level2" data-number="0.2">
 <h2 data-number="0.2" class="anchored" data-anchor-id="goal"><span class="header-section-number">0.2</span> Goal</h2>
 <p>To provide a basis for tranformation of data provided at different scales so that multiple groupings can be displayed on AEDG dashboards.</p>
-<p>This is required because data will provided at different scales. For instance: - Because of interties, electricity is not always reported by individual communities. - Some ways of avoiding personally identifiable information (such as for building footprints) involve reporting by zip code. - Existing analysis such as [somebody’s] energy burden data is reported at census tract level.</p>
-<p>Also, different audiences need data reported at different scales: - Communities want a summary of their own data. - Legislative Aides want summaries by legislative district. - Agency leads might want to compare PCE communities with railbelt communities.</p>
+<p>This is required because data will provided at different scales. For instance:</p>
+<ul>
+<li>Because of interties, electricity is not always reported by individual communities.</li>
+<li>Some ways of avoiding personally identifiable information (such as for building footprints) involve reporting by zip code.</li>
+<li>Existing analysis such as [somebody’s] energy burden data is reported at census tract level.</li>
+</ul>
+<p>Also, different audiences need data reported at different scales:</p>
+<ul>
+<li>Communities want a summary of their own data.</li>
+<li>Legislative Aides want summaries by legislative district.</li>
+<li>Agency leads might want to compare PCE communities with railbelt communities.</li>
+</ul>
 <p>The assumption is that this needs to function <strong>for the current time only</strong>. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves. In a future time, we might want to support this with a time-dependent version of this system, but now is not that time.</p>
 </section>
 <section id="format" class="level2" data-number="0.3">
@@ -259,14 +269,18 @@ ul.task-list li input[type="checkbox"] {
 <li>If that does not work, we will try a relational database for consistency with other AEDG products.</li>
 <li>If the concepts do not resolve into a relational database, we can try a graph database. We might want to leave this option open for visualization possibilities.</li>
 </ol>
-<p>Whenever possible, we will rely on existing resources and resist defining our own ontology from scratch. Hopeful candidates are: - Darwin Core - <a href="https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties">OBO Relations Ontology</a></p>
+<p>Whenever possible, we will rely on existing resources and resist defining our own ontology from scratch. Hopeful candidates are:</p>
+<ul>
+<li>Darwin Core</li>
+<li><a href="https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties">OBO Relations Ontology</a></li>
+</ul>
 <p>As of Nov.&nbsp;2024, it is unclear how to make use of an OWL formated ontology with code. If this becomes problematic, we reserve the right to use a relational database instead based on our greater familiarity with that tech. Ontology specific work can be delayed to future development cycles.</p>
 </section>
 <section id="this-is-a-stoat" class="level2" data-number="0.5">
 <h2 data-number="0.5" class="anchored" data-anchor-id="this-is-a-stoat"><span class="header-section-number">0.5</span> This is a stoat</h2>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="images/brainstorming_board.jpg" class="img-fluid figure-img" alt="first graph of communities" width="200"></p>
+<p><img src="images/brainstorming_board.jpg" class="img-fluid figure-img" alt="first graph of communities" width="600"></p>
 <figcaption>Initial Brainstorming.</figcaption>
 </figure>
 </div>
