@@ -13,11 +13,13 @@ date: 2024-11-12
 ## Classes
 
 Classes are types of entities. The base Class is Community; dispite the fact that this might be the hardest Class to define, Community is the organizational principle of previous versions of AEDG, so we will start with that. Other Classes (Borough, AEARegion, ZipCode) will be defined in relation to Community. 
+
   - Classes could be translated to tables in a relational database, if that makes sense for development. 
   - Instances of a Class are nodes in a graph, if you think about things that way.
   - Classes are typically capitolized to differentiate them from instances or objects of that class, which are lower case.
 
 This page also includes Properties, which are attributes of the Classes. 
+
   - Properties could take the form of columns in tables in a relational database.
 
 ## Common Properties
@@ -88,7 +90,7 @@ These are attributes shared by all Classes
   - Additional properties should be determined by what is important to the people.
 
 
-## Region
+### Region
 
 - **Definition**: Definitions of regions that have been used to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA's 11 regions or ACEP's 3 regions (Coastal, PCE, or Railbelt).
 - **Properties**:

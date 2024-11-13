@@ -16,11 +16,13 @@ If possible, this cross-walk will be machine readable/actionable. But to establi
 To provide a basis for tranformation of data provided at different scales so that multiple groupings can be displayed on AEDG dashboards. 
 
 This is required because data will provided at different scales. For instance:
+
 - Because of interties, electricity is not always reported by individual communities.
 - Some ways of avoiding personally identifiable information (such as for building footprints) involve reporting by zip code.
 - Existing analysis such as [somebody's] energy burden data is reported at census tract level.
 
 Also, different audiences need data reported at different scales:
+
 - Communities want a summary of their own data.
 - Legislative Aides want summaries by legislative district.
 - Agency leads might want to compare PCE communities with railbelt communities.
@@ -52,6 +54,7 @@ Development will begin with a series of web pages oriented around ontological co
 6. If the concepts do not resolve into a relational database, we can try a graph database. We might want to leave this option open for visualization possibilities.
 
 Whenever possible, we will rely on existing resources and resist defining our own ontology from scratch. Hopeful candidates are:
+
 - Darwin Core
 - [OBO Relations Ontology](https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties)
 
@@ -59,5 +62,5 @@ As of Nov. 2024, it is unclear how to make use of an OWL formated ontology with 
 
 ## This is a stoat
 
-![Initial Brainstorming.](images/brainstorming_board.jpg){fig-alt="first graph of communities" width=200 fig-align="left"}
+![Initial Brainstorming.](images/brainstorming_board.jpg){fig-alt="first graph of communities" width=600 fig-align="left"}
 

@@ -11,6 +11,7 @@ date: 2024-11-12
 ---
 
 Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
+
   - Relations are the edges in a graph.
   - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.
 

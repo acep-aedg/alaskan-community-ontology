@@ -5,8 +5,7 @@ book:
   page-navigation: true
   title: Alaskan Community Ontology 
   author: Liz Dobbins
-  description: A vocabulary to describe entities describin Alaskan communities, aggregates of communities such as grids and regions, and the ralationships between them.
-  # site-url: "https://eldobbins/alaska-community-ontology/" 
+  description: A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.  # site-url: "https://eldobbins/alaska-community-ontology/" 
   repo-url: https://github.com/eldobbins/alaska-community-ontology 
   repo-actions: [issue]
   downloads: [pdf]

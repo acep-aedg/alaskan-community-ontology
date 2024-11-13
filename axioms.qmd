@@ -11,6 +11,7 @@ date: 2024-11-12
 ---
 
 Axioms are domain-specific rules that encapsulate what we know about the Classes.
+
   - Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include `x = y` and `y = z`, trying to enter an `x` that isn't equal to `z` would fail a test.
   - An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.
   
