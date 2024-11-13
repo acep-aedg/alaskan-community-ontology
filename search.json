@@ -1,0 +1,213 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alaskan Community Ontology",
+    "section": "",
+    "text": "0.1 Welcome\nThis repository aims to support needed conversations regarding a foundational element of Alaska Energy Data Gateway (AEDG): the creation of derived aggregates of socio-economic and energy data at upper levels such as administrative regions and grids.\nTo accomplish the computation of these aggregates in a reproducible way, a cross-walk between conceptual groupings of communities is required. This conceptual model will be applicable to diverse types of data. It will also guide the development of the algorythms that compute the aggregations and convert between them.\nIf possible, this cross-walk will be machine readable/actionable. But to establish with consensus between our various subject matter experts, we need to start with a single set of definitions and axioms (rules) expressed in a human readable form. This could happen in a wiki, but we should maintain a record of revisions so we can document discussions and final recommendations. The best format for this process is a GitHub repo.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Alaska Community Ontology</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#goal",
+    "href": "index.html#goal",
+    "title": "Alaskan Community Ontology",
+    "section": "0.2 Goal",
+    "text": "0.2 Goal\nTo provide a basis for tranformation of data provided at different scales so that multiple groupings can be displayed on AEDG dashboards.\nThis is required because data will provided at different scales. For instance: - Because of interties, electricity is not always reported by individual communities. - Some ways of avoiding personally identifiable information (such as for building footprints) involve reporting by zip code. - Existing analysis such as [somebody’s] energy burden data is reported at census tract level.\nAlso, different audiences need data reported at different scales: - Communities want a summary of their own data. - Legislative Aides want summaries by legislative district. - Agency leads might want to compare PCE communities with railbelt communities.\nThe assumption is that this needs to function for the current time only. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves. In a future time, we might want to support this with a time-dependent version of this system, but now is not that time.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Alaska Community Ontology</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#format",
+    "href": "index.html#format",
+    "title": "Alaskan Community Ontology",
+    "section": "0.3 Format",
+    "text": "0.3 Format\nDevelopment will begin with a series of web pages oriented around ontological concepts. The concepts are:\n\nClasses: Types of entities. The base Class is Community; dispite the fact that this might be the hardest Class to define, Community is the organizational principle of previous versions of AEDG, so we will start with that. Other Classes (Borough, AEARegion, ZipCode) will be defined in relation to Community.\n\nClasses could be translated to tables in a relational database, if that makes sense for development.\nInstances of a Class are nodes in a graph, if you think about things that way.\n\nProperties: These are attributes of the Classes.\n\nProperties could take the form of columns in tables in a relational database.\n\nRelations: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.\n\nRelations are the edges in a graph.\nIn a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.\n\nAxioms: Domain-specific rules that encapsulate what we know about the Classes.\n\nAxioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include x = y and y = z, trying to enter an x that isn’t equal to z would fail a test.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Alaska Community Ontology</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#anticipated-workflow",
+    "href": "index.html#anticipated-workflow",
+    "title": "Alaskan Community Ontology",
+    "section": "0.4 Anticipated Workflow",
+    "text": "0.4 Anticipated Workflow\n\nLiz will draft an initial version based on discussions at the Nov 11, 2024, meeting of AEDG personnel.\nSMEs will comment on the draft by submitting GitHub Issues. Problems will be raised and solutions will be suggested.\nWhen consensus has been reached (which might happen in an offline discussion), the resolution will be recorded in the issue, revisions made to this web book, and the issue closed.\nAfter the most substantive discussions have been resolved, Liz will attempt to translate this ontology into the OWL ontology language.\nIf that does not work, we will try a relational database for consistency with other AEDG products.\nIf the concepts do not resolve into a relational database, we can try a graph database. We might want to leave this option open for visualization possibilities.\n\nWhenever possible, we will rely on existing resources and resist defining our own ontology from scratch. Hopeful candidates are: - Darwin Core - OBO Relations Ontology\nAs of Nov. 2024, it is unclear how to make use of an OWL formated ontology with code. If this becomes problematic, we reserve the right to use a relational database instead based on our greater familiarity with that tech. Ontology specific work can be delayed to future development cycles.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Alaska Community Ontology</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#this-is-a-stoat",
+    "href": "index.html#this-is-a-stoat",
+    "title": "Alaskan Community Ontology",
+    "section": "0.5 This is a stoat",
+    "text": "0.5 This is a stoat\n\n\n\nInitial Brainstorming.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Alaska Community Ontology</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html",
+    "href": "classes.html",
+    "title": "2  Classes",
+    "section": "",
+    "text": "2.1 Classes\nClasses are types of entities. The base Class is Community; dispite the fact that this might be the hardest Class to define, Community is the organizational principle of previous versions of AEDG, so we will start with that. Other Classes (Borough, AEARegion, ZipCode) will be defined in relation to Community. - Classes could be translated to tables in a relational database, if that makes sense for development. - Instances of a Class are nodes in a graph, if you think about things that way. - Classes are typically capitolized to differentiate them from instances or objects of that class, which are lower case.\nThis page also includes Properties, which are attributes of the Classes. - Properties could take the form of columns in tables in a relational database.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html#common-properties",
+    "href": "classes.html#common-properties",
+    "title": "2  Classes",
+    "section": "2.2 Common Properties",
+    "text": "2.2 Common Properties\nThese are attributes shared by all Classes\n\nid (int): All Classes should have an id column for inclusion in lookup tables.\n\nHow we determine these is a whole ’nother thing.\n\nlabel (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)\nclassModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation.\nentityModificationDate (time): This is to allow evolution in time, which we do not plan to utilize in the first development cycle of AEDG.\ngeometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html#list-of-classes",
+    "href": "classes.html#list-of-classes",
+    "title": "2  Classes",
+    "section": "2.3 List of Classes",
+    "text": "2.3 List of Classes\n\n2.3.1 Community\n\nDefinition: Construct of AEDG that is the fundamental unit of displays and dashboards.\nProperties:\n\nlocation (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted “place”.\n\n\n\n\n2.3.2 Municipality\n\nDefinition: Administrative entity for a town, city, or village.\nProperties:\n\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the town\n\n\n\n\n2.3.3 VillageCorp\n\nDefinition: a type of Municipality?\nProperties:\n\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the village (are these available?)\nAdditional properties should be determined by what is important to the people.\n\n\n\n\n2.3.4 Borough\n\nDefinition: Administrative collection of Municipalities analagous to a county in other places.\nProperties:\n\ntype (string): 1st class or 2nd class\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the Borough\n\n\n\n\n2.3.5 HouseDistrict\n\nDefinition: Alaska state House districts as available from [link]\nProperties:\n\n[wassit] (int): digit that denotes the district\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.\n\n\n\n\n2.3.6 SenateDistrict\n\nDefinition: Alaska state Senate districts as available from [link]\nProperties:\n\n[wassit] (character): Capitol letter that denotes the district\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.\n\n\n\n\n2.3.7 RegionalCorp\n\nDefinition: An Alaska Native Regional Corporation established by the [wassit] as available from [link]\nProperties:\n\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the Regional Corporation.\nAdditional properties should be determined by what is important to the people.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html#region",
+    "href": "classes.html#region",
+    "title": "2  Classes",
+    "section": "2.4 Region",
+    "text": "2.4 Region\n\nDefinition: Definitions of regions that have been used to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA’s 11 regions or ACEP’s 3 regions (Coastal, PCE, or Railbelt).\nProperties:\n\norganizaton (string): ‘ACEP’ or ‘AEA’ as the origanization that defined the region.\nboundary (WKT Polygon): A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP’s regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography.\n\n\n\n2.4.1 CensusBlock\n\nDefinition: TBA\nProperties:\n\n\n\n2.4.2 CensusTract\n\nDefinition: TBA\nProperties:\n\n\n\n2.4.3 Grid\n\nDefinition: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.\nProperties:\n\nmicrogrid (boolean): True/False (need a definition for this)\ncapacity (int):\n\n\n\n\n2.4.4 Utility Service Area\n\nDefinition: The corporate entity that runs the Grid\nProperties:\n\ncoop (boolean): True/False is it organized as a member owned co-operative?\nprivate (boolean): True/False is it a private company?\nBoundary (WKT Polygon): I feel like a spatial version of a corporate entity does not make sense. Especially for AVEC, whose region is discontinuous.\n\n\n\n\n2.4.5 Intertie\n\nDefinition: The transmission lines that create a Grid that includes multiple Communities\nProperties:\n\npath (WKT Line): longitude, latitude points that trace an acceptible, if not accurate, route of the lines.\nowner (string): Who owns it?\nmaintainer (string): Who maintains it? Is this the same as Owner?",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html#optional",
+    "href": "classes.html#optional",
+    "title": "2  Classes",
+    "section": "2.5 Optional",
+    "text": "2.5 Optional\n\n2.5.1 ZipCode\n\nDefinition: Postal zip codes as available from [link] (ZCTA)\nProperties:\n\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.\n\n\n\n\n2.5.2 SchoolDistrict\n\nDefinition: Community based school districts. This might be out of scope or better handled as research.\nProperties:\n\nboundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.\n\n\n\n\n2.5.3 PowerPlant\n\nDefinition: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.\nProperties:\n\nfuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn’t belong with communities. Perhaps already handled by the Open Energy Ontology.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "classes.html#from-initial-diagram",
+    "href": "classes.html#from-initial-diagram",
+    "title": "2  Classes",
+    "section": "2.6 From Initial Diagram",
+    "text": "2.6 From Initial Diagram\nHouse Legislative District Senate Legislative District Borough Alaska Native Regional Corporation Local Municipality Village Corporation (same as Local Municipality?) Census Tract Census Block Grid Utility Service Area Intertie (same as Grid?) School District",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Classes</span>"
+    ]
+  },
+  {
+    "objectID": "relations.html",
+    "href": "relations.html",
+    "title": "3  Relations",
+    "section": "",
+    "text": "Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything. - Relations are the edges in a graph. - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Relations</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html",
+    "href": "axioms.html",
+    "title": "4  Axioms",
+    "section": "",
+    "text": "4.1 Community",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#community",
+    "href": "axioms.html#community",
+    "title": "4  Axioms",
+    "section": "",
+    "text": "Communities are primarily determined by the expectations of the AEDG audience.\nCommunities should be equal to a single Municipalities or VillageCorps (preferred))\nCommunities could be collections of Municipalities or VillageCorps (example: Fairbanks should include College and Farmers Loop, which are separate places in the [wassit])",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#state",
+    "href": "axioms.html#state",
+    "title": "4  Axioms",
+    "section": "4.2 State",
+    "text": "4.2 State\n\nThe State is defined to be Alaska\nAll Communities are in the State",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#districts",
+    "href": "axioms.html#districts",
+    "title": "4  Axioms",
+    "section": "4.3 Districts",
+    "text": "4.3 Districts\n\nHouseDistrict is a subset of SenateDistrict (is this true?)\nHouseDistricts can contain multiple Communities.\nA single Community might intersect several HouseDistricts (example: Fairbanks)\n\nTherefore: HouseDistrict population cannot be determined from a sum of Community populations.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#boroughs",
+    "href": "axioms.html#boroughs",
+    "title": "4  Axioms",
+    "section": "4.4 Boroughs",
+    "text": "4.4 Boroughs\n\nCommunities can be unencorporated, meaning they are not in a Borough.\nIf encorporated, a Community can only be in a single Borough",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#census",
+    "href": "axioms.html#census",
+    "title": "4  Axioms",
+    "section": "4.5 ## Census",
+    "text": "4.5 ## Census",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#energy-related",
+    "href": "axioms.html#energy-related",
+    "title": "4  Axioms",
+    "section": "4.6 Energy-Related",
+    "text": "4.6 Energy-Related\n\nCommunities can be isolated (microgrids)\nCommunities can be connected via Interties",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "axioms.html#zip-codes-optional",
+    "href": "axioms.html#zip-codes-optional",
+    "title": "4  Axioms",
+    "section": "4.7 Zip Codes (Optional)",
+    "text": "4.7 Zip Codes (Optional)\n\nA ZipCode can contain multiple Communities, especially in rural areas.\nA single Community can contain multiple ZipCodes, especially in urban areas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Appendix A — About",
+    "section": "",
+    "text": "This respository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP), UAF, and the Institute for Social and Economic Research (ISER), UAA. It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About</span>"
+    ]
+  }
+]
