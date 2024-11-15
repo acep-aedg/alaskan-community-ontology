@@ -52,17 +52,26 @@ These are attributes shared by all Classes
 
 ### VillageCorp
 
-- **Definition**: a type of Municipality?
+- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.
+- **Links**:
+  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
+  - https://ancsa.lbblawyers.com/1602.htm (definition)
+  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
+  - https://ancsaregional.com/about-ancsa/#mandates
 - **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the village (are these available?)
+  - location (WKT Point): longitude, latitude of tribal leadership location
   - Additional properties should be determined by what is important to the people.
 
 
 ### Borough
 
-- **Definition**: Administrative collection of Municipalities analagous to a county in other places.
+- **Definition**: Boroughs are analagous to a county in other places. Organized boroughs were formed in those areas where economies were better developed. The remaining areas are the unorganized borough, which is divided into census areas; these areas exist for statistical analysis and do not have a government of their own. There are also consolidated city-borough governments.
+- **Links**:
+  - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
+  - https://www.commerce.alaska.gov/web/dcra/LocalBoundaryCommission
+  - https://en.wikipedia.org/wiki/List_of_boroughs_and_census_areas_in_Alaska
 - **Properties**:
-  - type (string): 1st class or 2nd class
+  - type (string): "Unified Home Rule", "Non-unified Home Rule", "First Class", "Second Class"
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the Borough
 
 
@@ -84,9 +93,14 @@ These are attributes shared by all Classes
 
 ### RegionalCorp
 
-- **Definition**: An Alaska Native Regional Corporation established by the [wassit] as available from [link]
+- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.
+- **Links**:
+  - https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0
+  - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
+  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 13)
+  - https://ancsaregional.com/about-ancsa/#mandates
 - **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the Regional Corporation.
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the RegionalCorp.
   - Additional properties should be determined by what is important to the people.
 
 
