@@ -34,7 +34,9 @@ These are attributes shared by all Classes
 - geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.
 
 
-## List of Classes
+# List of Classes
+
+## AEDG Context Only
 
 ### Community
 
@@ -43,9 +45,39 @@ These are attributes shared by all Classes
   - location (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
 
 
+## ANCSA or Indigenous Context
+
+### VillageCorp
+
+- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.
+- **References**:
+  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
+  - https://ancsa.lbblawyers.com/1602.htm (definition)
+  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
+  - https://ancsaregional.com/about-ancsa/#mandates
+- **Properties**:
+  - location (WKT Point): longitude, latitude of tribal leadership location
+  - Additional properties should be determined by what is important to the people.
+
+
+### RegionalCorp
+
+- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.
+- **References**:
+  - https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0
+  - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
+  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 13)
+  - https://ancsaregional.com/about-ancsa/#mandates
+- **Properties**:
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the RegionalCorp.
+  - Additional properties should be determined by what is important to the people.
+
+
+## Administrative Context
+
 ### IncorporatedPlace
 
-- **Definition**: Incorporated places are legally incorporated under state law, have a legally defined boundary, and an active functioning governmental structure. Examples of incorporated places include cities, towns, villages, etc. 
+- **Definition**: Incorporated places are legally incorporated under state law, have a legally defined boundary, and an active functioning governmental structure. Examples of incorporated places include cities, towns, villages, etc. (Not boroughs in Alaska)
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
   - https://www2.census.gov/programs-surveys/popest/tables/2020-2023/cities/totals/SUB-IP-EST2023-POP-02.xlsx 2023 populations for Alaska incorporated places
@@ -62,17 +94,27 @@ These are attributes shared by all Classes
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the town
 
 
-### VillageCorp
+### CensusBlock
 
-- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.
+- **Definition**: Census blocks are the smallest level of geography you can get basic census demographic data for, such as total population by age, sex, and race.
 - **References**:
-  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
-  - https://ancsa.lbblawyers.com/1602.htm (definition)
-  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
-  - https://ancsaregional.com/about-ancsa/#mandates
+  - https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html
+  - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-geopackage-file.html
+  - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
+  - https://live.laborstats.alaska.gov/article/maps-gis-data
 - **Properties**:
-  - location (WKT Point): longitude, latitude of tribal leadership location
-  - Additional properties should be determined by what is important to the people.
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census block.
+
+
+### CensusTract
+
+- **Definition**: Census tracts are small, relatively permanent statistical subdivisions of a county or statistically equivalent entity that provide a stable set of geographic units for the presentation of statistical data.
+- **References**:
+  - https://www.census.gov/programs-surveys/geography/about/glossary.html#par_textimage_13
+  - https://esri.maps.arcgis.com/home/item.html?id=20f5d275113e4066bf311236d9dcc3d4
+  - https://live.laborstats.alaska.gov/article/maps-gis-data
+- **Properties**:
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census tract.
 
 
 ### Borough
@@ -104,19 +146,7 @@ These are attributes shared by all Classes
   - [wassit] (character): Capitol letter that denotes the district
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
 
-
-### RegionalCorp
-
-- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.
-- **References**:
-  - https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0
-  - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
-  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 13)
-  - https://ancsaregional.com/about-ancsa/#mandates
-- **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the RegionalCorp.
-  - Additional properties should be determined by what is important to the people.
-
+## Academic or Research Context
 
 ### Region
 
@@ -125,29 +155,7 @@ These are attributes shared by all Classes
   - organizaton (string): 'ACEP' or 'AEA' as the origanization that defined the region. 
   - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography.
 
-
-### CensusBlock
-
-- **Definition**: Census blocks are the smallest level of geography you can get basic census demographic data for, such as total population by age, sex, and race.
-- **References**:
-  - https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html
-  - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-geopackage-file.html
-  - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
-  - https://live.laborstats.alaska.gov/article/maps-gis-data
-- **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census block.
-
-
-### CensusTract
-
-- **Definition**: Census tracts are small, relatively permanent statistical subdivisions of a county or statistically equivalent entity that provide a stable set of geographic units for the presentation of statistical data.
-- **References**:
-  - https://www.census.gov/programs-surveys/geography/about/glossary.html#par_textimage_13
-  - https://esri.maps.arcgis.com/home/item.html?id=20f5d275113e4066bf311236d9dcc3d4
-  - https://live.laborstats.alaska.gov/article/maps-gis-data
-- **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census tract.
-
+## Energy Context
 
 ### Grid
 - **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
@@ -193,19 +201,3 @@ These are attributes shared by all Classes
 - **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
 - **Properties**:
   - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
-
-
-## From Initial Diagram
-
-House Legislative District
-Senate Legislative District
-Borough
-Alaska Native Regional Corporation
-Local Municipality
-Village Corporation (same as Local Municipality?)
-Census Tract
-Census Block
-Grid
-Utility Service Area
-Intertie (same as Grid?)
-School District
