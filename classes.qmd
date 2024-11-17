@@ -68,6 +68,7 @@ These are attributes shared by all Classes
   - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
   - https://ancsa.lbblawyers.com/native-corporations.htm (list of 13)
   - https://ancsaregional.com/about-ancsa/#mandates
+  - https://maps.commerce.alaska.gov/server/rest/services/ANCSA/ANCSA_Corporations/MapServer
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the RegionalCorp.
   - Additional properties should be determined by what is important to the people.
@@ -133,18 +134,29 @@ These are attributes shared by all Classes
 
 ### HouseDistrict
 
-- **Definition**: Alaska state House districts as available from [link]
+- **Definition**: The Alaska State House is the lower house in the Alaska State Legislature. Its districts are determined on the basis of population and shall be "contiguous and compact territory containing nearly as possible a relatively integrated socioeconomic area"
+- **References**:
+  - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
+  - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
+  - https://www.elections.alaska.gov/doc/forms/H32COM.pdf community/district lists
+  - https://akleg.gov/pages/legbranch.php
 - **Properties**:
-  - [wassit] (int): digit that denotes the district
+  - district (int): digit that denotes the district
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
 
 
 ### SenateDistrict
 
-- **Definition**: Alaska state Senate districts as available from [link]
+- **Definition**: Alaska State Senate is the upper house in the Alaska State Legislature. Its districts are composed of two contiguous house districts, if possible.
+- **References**:
+  - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
+ - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
+ - https://www.elections.alaska.gov/doc/forms/H32COM.pdf community/district lists
+ - https://akleg.gov/pages/legbranch.php
 - **Properties**:
-  - [wassit] (character): Capitol letter that denotes the district
+  - district (character): Capitol letter that denotes the district
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
+
 
 ## Academic or Research Context
 
@@ -179,7 +191,16 @@ These are attributes shared by all Classes
   - owner (string): Who owns it?
   - maintainer (string): Who maintains it? Is this the same as Owner?
 
+
 ## Optional
+
+### CensusArea
+- **Definition**: Census areas are subdivisions of the unorganized borough that are only used for statistical analysis and do not have a government of their own. These are typically undeveloped areas, so I'm not sure how relevant they are for AEDG.
+- **References**:
+  - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
+- **Properties**:
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census area.
+
 
 ### ZipCode
 
@@ -188,6 +209,7 @@ These are attributes shared by all Classes
   - https://www.geonames.org/postal-codes/US/AK/alaska.html (place = town, Admin2 = borough?)
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
+
 
 ### SchoolDistrict
 

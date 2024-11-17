@@ -27,7 +27,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 ## Districts
 
-- HouseDistrict is a subset of SenateDistrict (is this true?)
+- A Senate election district is composed of two contiguous house districts, if possible.
 - HouseDistricts can contain multiple Communities.
 - A single Community might intersect several HouseDistricts (example: Fairbanks)
   - Therefore: HouseDistrict population cannot be determined from a sum of Community populations.
