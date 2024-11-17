@@ -25,9 +25,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - Communities should be equal to a single entity (preferred)
 - Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)
 
-## Indigenous
-
-[ANCSA Regional's Overview](https://ancsaregional.com/overview-of-entities/) is the best description of the different tribal entities in Alaska. 
+## Indigenous 
 
 - Tribes can be federally recognized. Does this define a tribe in the context of AEDG?
 - Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
@@ -45,8 +43,6 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - If encorporated, a Community can only be in a single Borough
 
 ## Census
-
-If the terms don't make sense, check the [Census Glossary](https://www.census.gov/glossary/).
 
 - Census blocks are not permanent through the decades. If a block is split, a suffix is added to the block number.
 - Census blocks are not required to have population. They could be water-only.

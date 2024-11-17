@@ -33,15 +33,15 @@ The assumption is that this needs to function **for the current time only**. Of 
 
 Development will begin with a series of web pages oriented around ontological concepts. The concepts are:
 
-- Classes: Types of entities. The base Class is Community; dispite the fact that this might be the hardest Class to define, Community is the organizational principle of previous versions of AEDG, so we will start with that. Other Classes (Borough, AEARegion, ZipCode) will be defined in relation to Community. 
+- **Classes**: Types of entities. Most are defined according to existing legal structures as described in the linked references. The main exception is Community, which is the organizational principle of previous versions of AEDG; we will define that one ourselves.
   - Classes could be translated to tables in a relational database, if that makes sense for development. 
   - Instances of a Class are nodes in a graph, if you think about things that way.
-- Properties: These are attributes of the Classes. 
+- **Properties**: These are attributes of the Classes. 
   - Properties could take the form of columns in tables in a relational database.
-- Relations: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
+- **Relations**: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
   - Relations are the edges in a graph.
   - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.
-- Axioms: Domain-specific rules that encapsulate what we know about the Classes.
+- **Axioms**: Domain-specific rules that encapsulate what we know about the Classes.
   - Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include `x = y` and `y = z`, trying to enter an `x` that isn't equal to `z` would fail a test.
 
 ## Anticipated Workflow
