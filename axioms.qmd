@@ -16,18 +16,26 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
   - An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.
   
 
+## State
+- The State is defined to be Alaska
+- All Communities are in the State
+
 ## Community
 - Communities are primarily determined by the expectations of the AEDG audience.
 - Communities should be equal to a single entity (preferred)
 - Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)
 
-## State
-- The State is defined to be Alaska
-- All Communities are in the State
+## Indigenous
 
-## Districts
+[ANCSA Regional's Overview](https://ancsaregional.com/overview-of-entities/) is the best description of the different tribal entities in Alaska. 
+
+- Tribes can be federally recognized. Does this define a tribe in the context of AEDG?
+- Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
+
+## Legislative Districts
 
 - A Senate election district is composed of two contiguous house districts, if possible.
+- Districts are redefined every 10 years after the federal census, and may change itermittantly due to court challenges.
 - HouseDistricts can contain multiple Communities.
 - A single Community might intersect several HouseDistricts (example: Fairbanks)
   - Therefore: HouseDistrict population cannot be determined from a sum of Community populations.
