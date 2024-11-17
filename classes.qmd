@@ -22,6 +22,16 @@ This page also includes Properties, which are attributes of the Classes.
 
   - Properties could take the form of columns in tables in a relational database.
 
+
+## Applicable Standards
+
+OEO is the [Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/), which you access via this [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/terms).
+
+[Schema.org](https://schema.org) is a widely used classification scheme built around web semantics - so more applicable to internet based services, of which AEDG is one.
+
+[Dublin Core Metadata Terms (DCMT)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms) are limited to only the most necessary terms. For instance, [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) is defined to include both spatial regions and named places, and puts no qualifications on the type or context. Similarly, an [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) is merely "a resource that acts or has the power to act". [Wikipedia says](https://en.wikipedia.org/wiki/Dublin_Core): "Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as **an** Resource Description Framework (RDF) vocabulary."
+
+
 ## Common Properties
 
 These are attributes shared by all Classes
@@ -43,6 +53,7 @@ These are attributes shared by all Classes
 - **Definition**: Construct of AEDG that is the fundamental unit of displays and dashboards. 
 - **Analogeous Standards**:
   - https://schema.org/Place
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **Properties**:
   - location (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
 
@@ -53,13 +64,14 @@ These are attributes shared by all Classes
 
 - **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.
 - **Analogeous Standards**:
- - https://schema.org/GovernmentOrganization
+  - https://schema.org/GovernmentOrganization
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - OEO:provider (an organization with a role) provides a OEO:service
 - **References**:
   - https://biamaps.geoplatform.gov/BIA-Opendata/Data/ - terrible. no way to link to dataset.
   - https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf
   - https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question
   - https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/
-
 - **Properties**:
   - location (WKT Point): longitude, latitude of tribal leadership location
   - Additional properties should be determined by what is important to the people. i.e. language?
@@ -69,7 +81,9 @@ These are attributes shared by all Classes
 
 - **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.
 - **Analogeous Standards**:
- - https://schema.org/Corporation
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - OEO:provider (an organization with a role) provides a OEO:service
 - **References**:
   - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
   - https://ancsa.lbblawyers.com/1602.htm (definition)
@@ -84,7 +98,9 @@ These are attributes shared by all Classes
 
 - **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.
 - **Analogeous Standards**:
- - https://schema.org/Corporation
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - OEO:provider (an organization with a role) provides a OEO:service
 - **References**:
   - https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0
   - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
@@ -104,6 +120,9 @@ These are attributes shared by all Classes
 - **Analogeous Standards**:
   - https://schema.org/GovernmentOrganization
   - has an https://schema.org/AdministrativeArea
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) for the place
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the government
+  - OEO:provider (an organization with a role) provides a governmental OEO:service
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
   - https://www2.census.gov/programs-surveys/popest/tables/2020-2023/cities/totals/SUB-IP-EST2023-POP-02.xlsx 2023 populations for Alaska incorporated places
@@ -116,6 +135,7 @@ These are attributes shared by all Classes
 - **Definition**: CDPs are statistical equivalents of incorporated places and represent unincorporated communities that do not have a legally defined boundary or an active, functioning governmental structure. They are locally recognized and identified by name. Examples of CDPs include unincorporated communities, planned communities, military installments, university towns, resort towns, etc. 
 - **Analogeous Standards**:
   - https://schema.org/Place
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
 - **Properties**:
@@ -128,6 +148,10 @@ These are attributes shared by all Classes
 - **Analogeous Standards**:
   - https://schema.org/GovernmentOrganization
   - has an https://schema.org/AdministrativeArea
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) for the place
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the government
+  - OEO:subregion (of Alaska)
+  - OEO:provider (an organization with a role) provides a governmental OEO:service
 - **References**:
   - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
   - https://www.commerce.alaska.gov/web/dcra/LocalBoundaryCommission
@@ -144,6 +168,8 @@ These are attributes shared by all Classes
 - **Definition**: The Alaska State House is the lower house in the Alaska State Legislature. Its districts are determined on the basis of population and shall be "contiguous and compact territory containing nearly as possible a relatively integrated socioeconomic area"
 - **Analogeous Standards**:
   - https://schema.org/AdministrativeArea
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:subregion (of Alaska and of SenateDistrict)
 - **References**:
   - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
   - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
@@ -159,6 +185,8 @@ These are attributes shared by all Classes
 - **Definition**: Alaska State Senate is the upper house in the Alaska State Legislature. Its districts are composed of two contiguous house districts, if possible.
 - **Analogeous Standards**:
   - https://schema.org/AdministrativeArea
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:subregion (of Alaska)
 - **References**:
   - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
  - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
@@ -176,6 +204,9 @@ These are attributes shared by all Classes
 - **Definition**: Census blocks are the smallest level of geography you can get basic census demographic data for, such as total population by age, sex, and race.
 - **Analogeous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:study region
+  - OEO:subregion (of CensusTract)
 - **References**:
   - https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html
   - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-geopackage-file.html
@@ -190,6 +221,8 @@ These are attributes shared by all Classes
 - **Definition**: Census tracts are small, relatively permanent statistical subdivisions of a county or statistically equivalent entity that provide a stable set of geographic units for the presentation of statistical data.
 - **Analogeous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:study region
 - **References**:
   - https://www.census.gov/programs-surveys/geography/about/glossary.html#par_textimage_13
   - https://esri.maps.arcgis.com/home/item.html?id=20f5d275113e4066bf311236d9dcc3d4
@@ -203,6 +236,8 @@ These are attributes shared by all Classes
 - **Definition**: Communities have been grouped into Regions in order to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA's 11 regions or ACEP's 3 regions (Coastal, PCE, or Railbelt).  Note: if we need to translate between AEA and ACEP regions, we will need to separate these.
 - **Analogeous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:study region
 - **Properties**:
   - organizaton (string): 'ACEP' or 'AEA' as the origanization that defined the region. 
   - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography.
@@ -213,16 +248,19 @@ These are attributes shared by all Classes
 ### Grid
 - **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
 - **Analogeous Standards**:
-  - TBD
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - OEO:electricity grid (an aggregate of material entities that has parts: power plants and lines)
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): 
 
 
-### Utility Service Area
+### Utility
 - **Definition**: The corporate entity that runs the Grid
 - **Analogeous Standards**:
-  - TBD
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - OEO:provider (an organization with a role) provides commercial OEO:service
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company?
@@ -232,7 +270,9 @@ These are attributes shared by all Classes
 ### Intertie
 - **Definition**: The transmission lines that create a Grid that includes multiple Communities
 - **Analogeous Standards**:
-  - TBD
+  - OEO:electricity grid component  (a material entity that includes power plants)
+  - or maybe more specifically OEO:power line
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
 - **Properties**:
   - path (WKT Line): longitude, latitude points that trace an acceptible, if not accurate, route of the lines.
   - owner (string): Who owns it?
@@ -245,6 +285,8 @@ These are attributes shared by all Classes
 - **Definition**: Census areas are subdivisions of the unorganized borough that are only used for statistical analysis and do not have a government of their own. These are typically undeveloped areas, so I'm not sure how relevant they are for AEDG.
 - **Analogeous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:subregion (of the unincorporated Borough)
 - **References**:
   - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
 - **Properties**:
@@ -256,6 +298,8 @@ These are attributes shared by all Classes
 - **Definition**: Postal zip codes as available from [link] (ZCTA)
 - **Analogeous Standards**:
   - https://schema.org/DefinedRegion - properties of which were designed for zip codes
+  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - OEO:subregion (of the United States and of Alaska)
 - **References**:
   - https://www.geonames.org/postal-codes/US/AK/alaska.html (place = town, Admin2 = borough?)
 - **Properties**:
@@ -266,7 +310,8 @@ These are attributes shared by all Classes
 
 - **Definition**: Community based school districts. This might be out of scope or better handled as research.
 - **Analogeous Standards**:
-  - TBD
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
+  - OEO:subregion (of what?)
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.
 
@@ -275,7 +320,7 @@ These are attributes shared by all Classes
 
 - **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
 - **Analogeous Standards**:
-  - https://schema.org/GovernmentOrganization
-  - has an https://schema.org/AdministrativeArea
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - OEO:power plant (which is an energy tranformation unit)
 - **Properties**:
   - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.

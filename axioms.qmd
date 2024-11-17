@@ -45,6 +45,9 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - If encorporated, a Community can only be in a single Borough
 
 ## Census
+
+If the terms don't make sense, check the [Census Glossary](https://www.census.gov/glossary/).
+
 - Census blocks are not permanent through the decades. If a block is split, a suffix is added to the block number.
 - Census blocks are not required to have population. They could be water-only.
 - Census blocks nest within a census tract. 
