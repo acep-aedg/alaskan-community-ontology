@@ -172,13 +172,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#community" id="toc-community" class="nav-link active" data-scroll-target="#community"><span class="header-section-number">4.1</span> Community</a></li>
-  <li><a href="#state" id="toc-state" class="nav-link" data-scroll-target="#state"><span class="header-section-number">4.2</span> State</a></li>
-  <li><a href="#districts" id="toc-districts" class="nav-link" data-scroll-target="#districts"><span class="header-section-number">4.3</span> Districts</a></li>
-  <li><a href="#boroughs" id="toc-boroughs" class="nav-link" data-scroll-target="#boroughs"><span class="header-section-number">4.4</span> Boroughs</a></li>
-  <li><a href="#census" id="toc-census" class="nav-link" data-scroll-target="#census"><span class="header-section-number">4.5</span> Census</a></li>
-  <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">4.6</span> Energy-Related</a></li>
-  <li><a href="#zip-codes-optional" id="toc-zip-codes-optional" class="nav-link" data-scroll-target="#zip-codes-optional"><span class="header-section-number">4.7</span> Zip Codes (Optional)</a></li>
+  <li><a href="#state" id="toc-state" class="nav-link active" data-scroll-target="#state"><span class="header-section-number">4.1</span> State</a></li>
+  <li><a href="#community" id="toc-community" class="nav-link" data-scroll-target="#community"><span class="header-section-number">4.2</span> Community</a></li>
+  <li><a href="#indigenous" id="toc-indigenous" class="nav-link" data-scroll-target="#indigenous"><span class="header-section-number">4.3</span> Indigenous</a></li>
+  <li><a href="#legislative-districts" id="toc-legislative-districts" class="nav-link" data-scroll-target="#legislative-districts"><span class="header-section-number">4.4</span> Legislative Districts</a></li>
+  <li><a href="#boroughs" id="toc-boroughs" class="nav-link" data-scroll-target="#boroughs"><span class="header-section-number">4.5</span> Boroughs</a></li>
+  <li><a href="#census" id="toc-census" class="nav-link" data-scroll-target="#census"><span class="header-section-number">4.6</span> Census</a></li>
+  <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">4.7</span> Energy-Related</a></li>
+  <li><a href="#zip-codes-optional" id="toc-zip-codes-optional" class="nav-link" data-scroll-target="#zip-codes-optional"><span class="header-section-number">4.8</span> Zip Codes (Optional)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -231,25 +232,34 @@ ul.task-list li input[type="checkbox"] {
 <li>Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include <code>x = y</code> and <code>y = z</code>, trying to enter an <code>x</code> that isn’t equal to <code>z</code> would fail a test.</li>
 <li>An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.</li>
 </ul>
-<section id="community" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="community"><span class="header-section-number">4.1</span> Community</h2>
+<section id="state" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="state"><span class="header-section-number">4.1</span> State</h2>
+<ul>
+<li>The State is defined to be Alaska</li>
+<li>All Communities are in the State</li>
+</ul>
+</section>
+<section id="community" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="community"><span class="header-section-number">4.2</span> Community</h2>
 <ul>
 <li>Communities are primarily determined by the expectations of the AEDG audience.</li>
 <li>Communities should be equal to a single entity (preferred)</li>
 <li>Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)</li>
 </ul>
 </section>
-<section id="state" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="state"><span class="header-section-number">4.2</span> State</h2>
+<section id="indigenous" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="indigenous"><span class="header-section-number">4.3</span> Indigenous</h2>
+<p><a href="https://ancsaregional.com/overview-of-entities/">ANCSA Regional’s Overview</a> is the best description of the different tribal entities in Alaska.</p>
 <ul>
-<li>The State is defined to be Alaska</li>
-<li>All Communities are in the State</li>
+<li>Tribes can be federally recognized. Does this define a tribe in the context of AEDG?</li>
+<li>Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr.&nbsp;16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.</li>
 </ul>
 </section>
-<section id="districts" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="districts"><span class="header-section-number">4.3</span> Districts</h2>
+<section id="legislative-districts" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="legislative-districts"><span class="header-section-number">4.4</span> Legislative Districts</h2>
 <ul>
 <li>A Senate election district is composed of two contiguous house districts, if possible.</li>
+<li>Districts are redefined every 10 years after the federal census, and may change itermittantly due to court challenges.</li>
 <li>HouseDistricts can contain multiple Communities.</li>
 <li>A single Community might intersect several HouseDistricts (example: Fairbanks)
 <ul>
@@ -257,15 +267,15 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="boroughs" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="boroughs"><span class="header-section-number">4.4</span> Boroughs</h2>
+<section id="boroughs" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="boroughs"><span class="header-section-number">4.5</span> Boroughs</h2>
 <ul>
 <li>Communities can be unencorporated, meaning they are not in a Borough.</li>
 <li>If encorporated, a Community can only be in a single Borough</li>
 </ul>
 </section>
-<section id="census" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="census"><span class="header-section-number">4.5</span> Census</h2>
+<section id="census" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="census"><span class="header-section-number">4.6</span> Census</h2>
 <ul>
 <li>Census blocks are not permanent through the decades. If a block is split, a suffix is added to the block number.</li>
 <li>Census blocks are not required to have population. They could be water-only.</li>
@@ -279,15 +289,15 @@ ul.task-list li input[type="checkbox"] {
 <li>A CDP has a name that is different from adjacent places, but is not unique and can change.</li>
 </ul>
 </section>
-<section id="energy-related" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="energy-related"><span class="header-section-number">4.6</span> Energy-Related</h2>
+<section id="energy-related" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="energy-related"><span class="header-section-number">4.7</span> Energy-Related</h2>
 <ul>
 <li>Communities can be isolated (microgrids)</li>
 <li>Communities can be connected via Interties</li>
 </ul>
 </section>
-<section id="zip-codes-optional" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="zip-codes-optional"><span class="header-section-number">4.7</span> Zip Codes (Optional)</h2>
+<section id="zip-codes-optional" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="zip-codes-optional"><span class="header-section-number">4.8</span> Zip Codes (Optional)</h2>
 <ul>
 <li>A ZipCode can contain multiple Communities, especially in rural areas.</li>
 <li>A single Community can contain multiple ZipCodes, especially in urban areas.</li>
