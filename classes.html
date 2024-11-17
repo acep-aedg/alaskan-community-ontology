@@ -173,7 +173,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">2.1</span> Classes</a></li>
-  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">2.2</span> Common Properties</a></li>
+  <li><a href="#applicable-standards" id="toc-applicable-standards" class="nav-link" data-scroll-target="#applicable-standards"><span class="header-section-number">2.2</span> Applicable Standards</a></li>
+  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">2.3</span> Common Properties</a></li>
   <li><a href="#list-of-classes" id="toc-list-of-classes" class="nav-link" data-scroll-target="#list-of-classes"><span class="header-section-number">3</span> List of Classes</a>
   <ul class="collapse">
   <li><a href="#aedg-context-only" id="toc-aedg-context-only" class="nav-link" data-scroll-target="#aedg-context-only"><span class="header-section-number">3.1</span> AEDG Context Only</a>
@@ -203,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#energy-context" id="toc-energy-context" class="nav-link" data-scroll-target="#energy-context"><span class="header-section-number">3.5</span> Energy Context</a>
   <ul class="collapse">
   <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid"><span class="header-section-number">3.5.1</span> Grid</a></li>
-  <li><a href="#utility-service-area" id="toc-utility-service-area" class="nav-link" data-scroll-target="#utility-service-area"><span class="header-section-number">3.5.2</span> Utility Service Area</a></li>
+  <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility"><span class="header-section-number">3.5.2</span> Utility</a></li>
   <li><a href="#intertie" id="toc-intertie" class="nav-link" data-scroll-target="#intertie"><span class="header-section-number">3.5.3</span> Intertie</a></li>
   </ul></li>
   <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.6</span> Optional</a>
@@ -274,8 +275,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Properties could take the form of columns in tables in a relational database.</li>
 </ul>
 </section>
-<section id="common-properties" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">2.2</span> Common Properties</h2>
+<section id="applicable-standards" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="applicable-standards"><span class="header-section-number">2.2</span> Applicable Standards</h2>
+<p>OEO is the <a href="http://openenergy-platform.org/ontology/oeo/">Open Energy Ontology</a>, which you access via this <a href="https://terminology.tib.eu/ts/ontologies/oeo/terms">Terminology Service</a>.</p>
+<p><a href="https://schema.org">Schema.org</a> is a widely used classification scheme built around web semantics - so more applicable to internet based services, of which AEDG is one.</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms">Dublin Core Metadata Terms (DCMT)</a> are limited to only the most necessary terms. For instance, <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a> is defined to include both spatial regions and named places, and puts no qualifications on the type or context. Similarly, an <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> is merely “a resource that acts or has the power to act”. <a href="https://en.wikipedia.org/wiki/Dublin_Core">Wikipedia says</a>: “Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as <strong>an</strong> Resource Description Framework (RDF) vocabulary.”</p>
+</section>
+<section id="common-properties" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">2.3</span> Common Properties</h2>
 <p>These are attributes shared by all Classes</p>
 <ul>
 <li>id (int): All Classes should have an id column for inclusion in lookup tables.
@@ -299,6 +306,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/Place</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -313,8 +321,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="fedrecognizedtribe"><span class="header-section-number">3.2.1</span> FedRecognizedTribe</h3>
 <ul>
 <li><strong>Definition</strong>: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.</li>
-<li><strong>Analogeous Standards</strong>:</li>
+<li><strong>Analogeous Standards</strong>:
+<ul>
 <li>https://schema.org/GovernmentOrganization</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+</ul></li>
 <li><strong>References</strong>:
 <ul>
 <li>https://biamaps.geoplatform.gov/BIA-Opendata/Data/ - terrible. no way to link to dataset.</li>
@@ -333,8 +345,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="villagecorp"><span class="header-section-number">3.2.2</span> VillageCorp</h3>
 <ul>
 <li><strong>Definition</strong>: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.</li>
-<li><strong>Analogeous Standards</strong>:</li>
+<li><strong>Analogeous Standards</strong>:
+<ul>
 <li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+</ul></li>
 <li><strong>References</strong>:
 <ul>
 <li>https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)</li>
@@ -353,8 +369,12 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="3.2.3" class="anchored" data-anchor-id="regionalcorp"><span class="header-section-number">3.2.3</span> RegionalCorp</h3>
 <ul>
 <li><strong>Definition</strong>: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.</li>
-<li><strong>Analogeous Standards</strong>:</li>
+<li><strong>Analogeous Standards</strong>:
+<ul>
 <li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+</ul></li>
 <li><strong>References</strong>:
 <ul>
 <li>https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0</li>
@@ -381,6 +401,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/GovernmentOrganization</li>
 <li>has an https://schema.org/AdministrativeArea</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a> for the place</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the government</li>
+<li>OEO:provider (an organization with a role) provides a governmental OEO:service</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -400,6 +423,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/Place</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -419,6 +443,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/GovernmentOrganization</li>
 <li>has an https://schema.org/AdministrativeArea</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a> for the place</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the government</li>
+<li>OEO:subregion (of Alaska)</li>
+<li>OEO:provider (an organization with a role) provides a governmental OEO:service</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -442,6 +470,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/AdministrativeArea</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:subregion (of Alaska and of SenateDistrict)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -464,6 +494,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/AdministrativeArea</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:subregion (of Alaska)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -489,6 +521,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:study region</li>
+<li>OEO:subregion (of CensusTract)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -510,6 +545,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:study region</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -530,6 +567,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:study region</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -547,7 +586,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Definition</strong>: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.</li>
 <li><strong>Analogeous Standards</strong>:
 <ul>
-<li>TBD</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+<li>OEO:electricity grid (an aggregate of material entities that has parts: power plants and lines)</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -556,13 +596,15 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="utility-service-area" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="utility-service-area"><span class="header-section-number">3.5.2</span> Utility Service Area</h3>
+<section id="utility" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="utility"><span class="header-section-number">3.5.2</span> Utility</h3>
 <ul>
 <li><strong>Definition</strong>: The corporate entity that runs the Grid</li>
 <li><strong>Analogeous Standards</strong>:
 <ul>
-<li>TBD</li>
+<li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li>OEO:provider (an organization with a role) provides commercial OEO:service</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -578,7 +620,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Definition</strong>: The transmission lines that create a Grid that includes multiple Communities</li>
 <li><strong>Analogeous Standards</strong>:
 <ul>
-<li>TBD</li>
+<li>OEO:electricity grid component (a material entity that includes power plants)</li>
+<li>or maybe more specifically OEO:power line</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -598,6 +642,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:subregion (of the unincorporated Borough)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -616,6 +662,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogeous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - properties of which were designed for zip codes</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li>OEO:subregion (of the United States and of Alaska)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -633,7 +681,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Definition</strong>: Community based school districts. This might be out of scope or better handled as research.</li>
 <li><strong>Analogeous Standards</strong>:
 <ul>
-<li>TBD</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the governmental organization.</li>
+<li>OEO:subregion (of what?)</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -647,8 +696,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Definition</strong>: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.</li>
 <li><strong>Analogeous Standards</strong>:
 <ul>
-<li>https://schema.org/GovernmentOrganization</li>
-<li>has an https://schema.org/AdministrativeArea</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+<li>OEO:power plant (which is an energy tranformation unit)</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
