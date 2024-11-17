@@ -239,21 +239,21 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="0.3" class="anchored" data-anchor-id="format"><span class="header-section-number">0.3</span> Format</h2>
 <p>Development will begin with a series of web pages oriented around ontological concepts. The concepts are:</p>
 <ul>
-<li>Classes: Types of entities. The base Class is Community; dispite the fact that this might be the hardest Class to define, Community is the organizational principle of previous versions of AEDG, so we will start with that. Other Classes (Borough, AEARegion, ZipCode) will be defined in relation to Community.
+<li><strong>Classes</strong>: Types of entities. Most are defined according to existing legal structures as described in the linked references. The main exception is Community, which is the organizational principle of previous versions of AEDG; we will define that one ourselves.
 <ul>
 <li>Classes could be translated to tables in a relational database, if that makes sense for development.</li>
 <li>Instances of a Class are nodes in a graph, if you think about things that way.</li>
 </ul></li>
-<li>Properties: These are attributes of the Classes.
+<li><strong>Properties</strong>: These are attributes of the Classes.
 <ul>
 <li>Properties could take the form of columns in tables in a relational database.</li>
 </ul></li>
-<li>Relations: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
+<li><strong>Relations</strong>: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
 <ul>
 <li>Relations are the edges in a graph.</li>
 <li>In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.</li>
 </ul></li>
-<li>Axioms: Domain-specific rules that encapsulate what we know about the Classes.
+<li><strong>Axioms</strong>: Domain-specific rules that encapsulate what we know about the Classes.
 <ul>
 <li>Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include <code>x = y</code> and <code>y = z</code>, trying to enter an <code>x</code> that isn’t equal to <code>z</code> would fail a test.</li>
 </ul></li>
