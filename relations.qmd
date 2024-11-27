@@ -19,6 +19,7 @@ Relations can be heirarchical (taxonomy) or could form a network or graph (seman
 ## Applicable Standards
 
 [ArcMap spatial relations](https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm)
+
 - ST_Contains
 - ST_Crosses
 - ST_Disjoint
@@ -30,6 +31,7 @@ Relations can be heirarchical (taxonomy) or could form a network or graph (seman
 - ST_Within
 
 [GeoSPARQL](https://docs.ogc.org/is/22-047r1/22-047r1.html) - same except for Relate
+
 - geor:sfContains
 - geor:sfCrosses
 - geor:sfDisjoint
