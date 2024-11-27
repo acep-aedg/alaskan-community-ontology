@@ -154,7 +154,7 @@
     "href": "relations.html",
     "title": "3  Relations",
     "section": "",
-    "text": "Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.\n\nRelations are the edges in a graph.\nIn a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.",
+    "text": "Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.\n\nRelations are the edges in a graph.\nIn a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.\n\nArcMap spatial relations - ST_Contains - ST_Crosses - ST_Disjoint - ST_Equals - ST_Intersects - ST_Overlaps - ST_Relate - ST_Touches - ST_Within\nGeoSPARQL - same except for Relate - geor:sfContains - geor:sfCrosses - geor:sfDisjoint - geor:sfEquals - geor:sfIntersects - geor:sfOverlaps - geor:sfTouches - geor:sfWithin",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Relations</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "axioms.html",
     "title": "4  Axioms",
     "section": "",
-    "text": "4.1 State",
+    "text": "4.1 State\nAxioms are domain-specific rules that encapsulate what we know about the Classes.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Axioms</span>"
     ]
