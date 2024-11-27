@@ -15,3 +15,25 @@ Relations can be heirarchical (taxonomy) or could form a network or graph (seman
   - Relations are the edges in a graph.
   - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.
 
+
+
+[ArcMap spatial relations](https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm)
+- ST_Contains
+- ST_Crosses
+- ST_Disjoint
+- ST_Equals
+- ST_Intersects
+- ST_Overlaps
+- ST_Relate
+- ST_Touches
+- ST_Within
+
+[GeoSPARQL](https://docs.ogc.org/is/22-047r1/22-047r1.html) - same except for Relate
+- geor:sfContains
+- geor:sfCrosses
+- geor:sfDisjoint
+- geor:sfEquals
+- geor:sfIntersects
+- geor:sfOverlaps
+- geor:sfTouches
+- geor:sfWithin
