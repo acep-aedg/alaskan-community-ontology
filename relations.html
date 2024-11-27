@@ -167,8 +167,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#applicable-standards" id="toc-applicable-standards" class="nav-link active" data-scroll-target="#applicable-standards"><span class="header-section-number">3.1</span> Applicable Standards</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -219,10 +225,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Relations are the edges in a graph.</li>
 <li>In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.</li>
 </ul>
+<section id="applicable-standards" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="applicable-standards"><span class="header-section-number">3.1</span> Applicable Standards</h2>
 <p><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm">ArcMap spatial relations</a> - ST_Contains - ST_Crosses - ST_Disjoint - ST_Equals - ST_Intersects - ST_Overlaps - ST_Relate - ST_Touches - ST_Within</p>
 <p><a href="https://docs.ogc.org/is/22-047r1/22-047r1.html">GeoSPARQL</a> - same except for Relate - geor:sfContains - geor:sfCrosses - geor:sfDisjoint - geor:sfEquals - geor:sfIntersects - geor:sfOverlaps - geor:sfTouches - geor:sfWithin</p>
+<p><a href="https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties">OBO Relations Ontology</a> “is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.” It is a foundational element of the <a href="http://openenergy-platform.org/ontology/oeo/">Open Energy Ontology</a>.</p>
+<p>On the other hand, in the OEO <a href="https://terminology.tib.eu/ts/ontologies/oeo/props">Terminology Service</a>, I could only find one instance of a straight-up <code>RO</code> usage: <a href="https://terminology.tib.eu/ts/ontologies/oeo/props?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0040042">is homeomorphic for</a> (which I don’t even understand).</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -806,7 +817,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is based on Openscape’s <a href="https://github.com/Openscapes/quarto-website-tutorial">Quarto Site Template</a> and built with <a href="https://quarto.org/">Quarto</a> .</p>
 </div>
