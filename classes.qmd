@@ -279,7 +279,8 @@ These are attributes shared by all Classes
 - **Definition**: The transmission lines that create a Grid that includes multiple Communities
 - **SpatialRelationships**: 
   - CONTAINS TransmissionLines
-  - CONTAINS 
+  - CONTAINS Grids
+  - CONTAINS Utilities
 - **Analogous Standards**:
   - OEO:electricity grid component  (a material entity that includes power plants)
   - or maybe more specifically OEO:power line
