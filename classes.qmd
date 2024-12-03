@@ -65,7 +65,7 @@ These are attributes shared by all Classes
 ## ANCSA or Indigenous Context
 
 ### FedRecognizedTribes
-- **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. US Supreme Court ruled in 2021 that Alaska Native Corps (RegionalCorps?) are Federally Recognized Tribes and are eligible for COVID relief funds. 
+- **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. 
 - **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
@@ -275,26 +275,40 @@ These are attributes shared by all Classes
 
 ## Energy Context
 
+### Interties
+- **Definition**: The transmission lines that create a Grid that includes multiple Communities
+- **SpatialRelationships**: 
+  - CONTAINS TransmissionLines
+  - CONTAINS 
+- **Analogous Standards**:
+  - OEO:electricity grid component  (a material entity that includes power plants)
+  - or maybe more specifically OEO:power line
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+- **Properties**:
+  - owner (string): Who owns it?
+  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - geometry (WKT PolyLine): spatial trace of an acceptible, if not accurate, route of transmission lines (no distribution).
+
+
 ### Grids
 - **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
 - **SpatialRelationships**: 
   - CONTAINS TransmissionLines
   - CONTAINS PowerStations
   - CONTAINS Utilities
-  - CONTAINS Loads
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
   - OEO:electricity grid (an aggregate of material entities that has parts: power stations and transmission lines)
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): megawatts MW
-  - geometry (WKT Polygon): This assumes all grids are continuous. Otherwise use MultiPolygon
+  - geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon
 
 
 ### Utilities
 - **Definition**: The corporate or governmental entity that runs the Grid
 - **SpatialRelationships**: 
-  - WITHIN Grids (Can have multiple utilities per grid, Railbelt. Can also be fragmented, AVEC)
+  - WITHIN Grids (Can have multiple utilities per grid, Railbelt. Can also be fragmented, AVEC. Regardless, located inside of grids)
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -318,7 +332,7 @@ These are attributes shared by all Classes
 - **Properties**:
   - owner (string): Who owns it?
   - maintainer (string): Who maintains it? Is this the same as Owner?
-  - voltage (int): voltage of line in kV (by definition above 69 kV, but not always in Alaska)
+  - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
   - type (string): buried, underwater, overhead
   - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
 
@@ -332,18 +346,8 @@ These are attributes shared by all Classes
   - OEO:power plant (which is an energy tranformation unit)
 - **Properties**:
   - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
-  - capacity (int): megawatts MW
-  - prime_mover (string): 
   - geometry (WKT Point):
 
-
-### Loads (consumption)
-- **Definition**: Endpoints of grid, quantified by consumption. Data is grid-wide for now, we would love to narrow down in the future.
-- **SpatialRelationships**: 
-  - WITHIN Grids
-  - TOUCHES TransmissionLines
-- **Properties**:
-  - geometry (WKT MultiPolygon): same as Grid? Utility?
 
 
 
@@ -363,7 +367,6 @@ These are attributes shared by all Classes
 
 
 ### ZipCode
-
 - **Definition**: Postal zip codes as available from [link] (ZCTA)
 - **SpatialRelationships**: 
 - **Analogous Standards**:
@@ -377,7 +380,6 @@ These are attributes shared by all Classes
 
 
 ### SchoolDistrict
-
 - **Definition**: Community based school districts. This might be out of scope or better handled as research.
 - **SpatialRelationships**: 
 - **Analogous Standards**:
