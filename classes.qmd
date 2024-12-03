@@ -260,7 +260,7 @@ These are attributes shared by all Classes
   - geometry (WKT Polygon): boundary of the census tract.
 
 
-### Region
+### Regions
 - **Definition**: Communities have been grouped into Regions in order to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA's 11 regions or ACEP's 3 regions (Coastal, PCE, or Railbelt).  Note: if we need to translate between AEA and ACEP regions, we will need to separate these.
 - **SpatialRelationships**: 
 - **Analogous Standards**:
