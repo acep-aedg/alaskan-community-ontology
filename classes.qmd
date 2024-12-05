@@ -70,7 +70,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - OEO:provider (an organization with a role) provides a OEO:service
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **References**:
   - https://biamaps.geoplatform.gov/BIA-Opendata/Data/ - terrible. no way to link to dataset.
   - https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf
@@ -88,7 +88,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - OEO:provider (an organization with a role) provides a OEO:service
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **References**:
   - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
   - https://ancsa.lbblawyers.com/1602.htm (definition)
@@ -106,7 +106,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - OEO:provider (an organization with a role) provides a OEO:service
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **References**:
   - https://www.arcgis.com/home/item.html?id=c78df0004ab845a9a32697d9c20d09e0
   - https://catalog.data.gov/dataset/tiger-line-shapefile-2017-state-alaska-current-alaska-native-regional-corporation-anrc-state-ba
@@ -132,7 +132,7 @@ These are attributes shared by all Classes
   - has an https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) for the place
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the government
-  - OEO:provider (an organization with a role) provides a governmental OEO:service
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.  Governmental ok?
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
   - https://www2.census.gov/programs-surveys/popest/tables/2020-2023/cities/totals/SUB-IP-EST2023-POP-02.xlsx 2023 populations for Alaska incorporated places
@@ -169,7 +169,7 @@ These are attributes shared by all Classes
   - has an https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) for the place
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the government
-  - OEO:subregion (of Alaska)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)
   - OEO:provider (an organization with a role) provides a governmental OEO:service
 - **References**:
   - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
@@ -192,7 +192,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:subregion (of Alaska and of SenateDistrict)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska and of SenateDistrict)
 - **References**:
   - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
   - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
@@ -213,7 +213,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:subregion (of Alaska)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)
 - **References**:
   - https://maps.commerce.alaska.gov/server/rest/services/Govt_Related/Govt_House_and_Senate_Districts/MapServer
  - https://www.elections.alaska.gov/doc/forms/H07.pdf list of senate and house districts
@@ -233,8 +233,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:study region
-  - OEO:subregion (of CensusTract)
+  - [OEO:study subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020034) (of CensusTract)
 - **References**:
   - https://www.census.gov/newsroom/blogs/random-samplings/2011/07/what-are-census-blocks.html
   - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-geopackage-file.html
@@ -251,7 +250,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:study region
+  - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **References**:
   - https://www.census.gov/programs-surveys/geography/about/glossary.html#par_textimage_13
   - https://esri.maps.arcgis.com/home/item.html?id=20f5d275113e4066bf311236d9dcc3d4
@@ -266,7 +265,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:study region
+  - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **Properties**:
   - organizaton (string): 'ACEP' or 'AEA' as the origanization that defined the region. 
   - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography. Could be solved with multipolygon or lookup table.
@@ -275,31 +274,16 @@ These are attributes shared by all Classes
 
 ## Energy Context
 
-### Interties
-- **Definition**: The transmission lines that create a Grid that includes multiple Communities
-- **SpatialRelationships**: 
-  - CONTAINS TransmissionLines
-  - CONTAINS Grids
-  - CONTAINS Utilities
-- **Analogous Standards**:
-  - OEO:electricity grid component  (a material entity that includes power plants)
-  - or maybe more specifically OEO:power line
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-- **Properties**:
-  - owner (string): Who owns it?
-  - maintainer (string): Who maintains it? Is this the same as Owner?
-  - geometry (WKT PolyLine): spatial trace of an acceptible, if not accurate, route of transmission lines (no distribution).
-
 
 ### Grids
 - **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
 - **SpatialRelationships**: 
-  - CONTAINS TransmissionLines
+  - CONTAINS PowerLines
   - CONTAINS PowerStations
   - CONTAINS Utilities
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - OEO:electricity grid (an aggregate of material entities that has parts: power stations and transmission lines)
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) (an aggregate of material entities that has parts: power stations and power lines)
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): megawatts MW
@@ -313,21 +297,21 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - OEO:provider (an organization with a role) provides commercial OEO:service
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company? Public owned utility (POU)?
   - geom: determined by the look-up table `provides_electricity_to` because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.
 
-### TransmissionLines
-- **Definition**: The transmission lines that create a Grid that includes multiple Communities
+### PowerLines
+- **Definition**: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed. 
 - **SpatialRelationships**: 
   - WITHIN Grids
   - TOUCHES PowerStations
   - TOUCHES Loads
 - **Analogous Standards**:
-  - OEO:electricity grid component
-  - or maybe more specifically OEO:power line
+   - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
+  - or more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
 - **Properties**:
   - owner (string): Who owns it?
@@ -339,11 +323,11 @@ These are attributes shared by all Classes
 ### PowerStations
 - **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
 - **SpatialRelationships**: 
-  - TOUCHES TransmissionLines
+  - TOUCHES PowerLines
   - WITHIN Grids
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - OEO:power plant (which is an energy tranformation unit)
+  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
 - **Properties**:
   - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
   - geometry (WKT Point):
@@ -357,7 +341,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:subregion (of the unincorporated Borough)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the unincorporated Borough)
 - **References**:
   - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
 - **Properties**:
@@ -370,7 +354,7 @@ These are attributes shared by all Classes
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - properties of which were designed for zip codes
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - OEO:subregion (of the United States and of Alaska)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the United States and of Alaska)
 - **References**:
   - https://www.geonames.org/postal-codes/US/AK/alaska.html (place = town, Admin2 = borough?)
 - **Properties**:
@@ -382,7 +366,7 @@ These are attributes shared by all Classes
 - **SpatialRelationships**: 
 - **Analogous Standards**:
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
-  - OEO:subregion (of what?)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.
 

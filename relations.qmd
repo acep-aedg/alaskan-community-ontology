@@ -76,8 +76,8 @@ Utilites provide electricity to Communities. Liz added some columns that might b
 
 Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but "intertie" is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our puposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.) 
 - **Analogous Standards**:
-  - OEO:electricity grid component  (a material entity that includes power plants)
-  - or maybe more specifically OEO:power line
+  - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
+  - or maybe more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
 - **Properties**:
   - owner (string): Who owns it?
