@@ -52,21 +52,21 @@ These are attributes shared by all Classes
 
 ## AEDG Context Only
 
-### Community
-
-- **Definition**: Construct of AEDG that is the fundamental unit of displays and dashboards. 
+### Communities
+- **Definition**: Construct of AEDG that is the fundamental unit of displays and dashboards.
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/Place
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **Properties**:
-  - location (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
+  - geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
 
 
 ## ANCSA or Indigenous Context
 
-### FedRecognizedTribe
-
-- **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.
+### FedRecognizedTribes
+- **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. 
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -77,13 +77,14 @@ These are attributes shared by all Classes
   - https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question
   - https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/
 - **Properties**:
-  - location (WKT Point): longitude, latitude of tribal leadership location
+  - geometry (WKT Polygon): boundary of Tribe
   - Additional properties should be determined by what is important to the people. i.e. language?
 
 
-### VillageCorp
-
-- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to to select lands on which any part of the village was located.
+### VillageCorps
+- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located.
+- **SpatialRelationships**: 
+  - WITHIN RegionalCorps
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -94,13 +95,14 @@ These are attributes shared by all Classes
   - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
   - https://ancsaregional.com/about-ancsa/#mandates
 - **Properties**:
-  - location (WKT Point): longitude, latitude of tribal leadership location
+  - geometry (WKT Point): longitude, latitude of tribal leadership location
   - Additional properties should be determined by what is important to the people.
 
 
-### RegionalCorp
-
-- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions ANCSA.
+### RegionalCorps
+- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.
+- **SpatialRelationships**: 
+  - CONTAINS VillageCorps
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -112,15 +114,19 @@ These are attributes shared by all Classes
   - https://ancsaregional.com/about-ancsa/#mandates
   - https://maps.commerce.alaska.gov/server/rest/services/ANCSA/ANCSA_Corporations/MapServer
 - **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the RegionalCorp.
+  - geometry (WKT Polygon): boundary of the RegionalCorp.
   - Additional properties should be determined by what is important to the people.
 
 
 ## Administrative Context
 
-### IncorporatedPlace
-
+### IncorporatedPlaces
 - **Definition**: Incorporated places are legally incorporated under state law, have a legally defined boundary, and an active functioning governmental structure. Examples of incorporated places include cities, towns, villages, etc. (Not boroughs in Alaska)
+- **SpatialRelationships**: 
+  - WITHIN Boroughs
+  - WITHIN Precincts
+  - WITHIN HouseDistricts
+  - WITHIN SenateDistricts
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - has an https://schema.org/AdministrativeArea
@@ -131,24 +137,33 @@ These are attributes shared by all Classes
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
   - https://www2.census.gov/programs-surveys/popest/tables/2020-2023/cities/totals/SUB-IP-EST2023-POP-02.xlsx 2023 populations for Alaska incorporated places
 - **Properties**:
-  - location (WKT Point): longitude, latitude of the place. Perhaps the commonly accepted point or centroid of.
+  - geometry (WKT Polygon): boundary 
 
 
-### CensusDesignatedPlace
-
+### CensusDesignatedPlaces
 - **Definition**: CDPs are statistical equivalents of incorporated places and represent unincorporated communities that do not have a legally defined boundary or an active, functioning governmental structure. They are locally recognized and identified by name. Examples of CDPs include unincorporated communities, planned communities, military installments, university towns, resort towns, etc. 
+- **SpatialRelationships**: 
+  - WITHIN Boroughs
+  - WITHIN Precincts
+  - WITHIN HouseDistricts
+  - WITHIN SenateDistricts
 - **Analogous Standards**:
   - https://schema.org/Place
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
 - **Properties**:
-  - location (WKT Point): longitude, latitude points of whereever the census says it is
+  - location (WKT Point): longitude, latitude points of whereever the census says it is (does not have legal boundary, therefore not a polygon?)
 
 
-### Borough
-
+### Boroughs
 - **Definition**: Boroughs are analagous to a county in other places. Organized boroughs were formed in those areas where economies were better developed. The remaining areas are the unorganized borough, which is divided into census areas; these areas exist for statistical analysis and do not have a government of their own. There are also consolidated city-borough governments.
+- **SpatialRelationships**: 
+  - CONTAINS IncorporatedPlaces
+  - CONTAINS CensusDesignatedPlaces
+  - OVERLAPS Precincts
+  - OVERLAPS HouseDistricts
+  - OVERLAPS SenateDistricts
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - has an https://schema.org/AdministrativeArea
@@ -164,12 +179,16 @@ These are attributes shared by all Classes
   - https://live.laborstats.alaska.gov/cen/maps/bor/current/090.pdf map of FNSB with cities and census
 - **Properties**:
   - type (string): "Unified Home Rule", "Non-unified Home Rule", "First Class", "Second Class"
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the Borough
+  - geometry (WKT MultiPolygon): boundary of the Borough
 
 
-### HouseDistrict
-
+### HouseDistricts
 - **Definition**: The Alaska State House is the lower house in the Alaska State Legislature. Its districts are determined on the basis of population and shall be "contiguous and compact territory containing nearly as possible a relatively integrated socioeconomic area"
+- **SpatialRelationships**: 
+  - CONTAINS IncorporatedPlaces
+  - CONTAINS CensusDesignatedPlaces
+  - CONTAINS Precincts
+  - WITHIN SenateDistricts
 - **Analogous Standards**:
   - https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -181,12 +200,16 @@ These are attributes shared by all Classes
   - https://akleg.gov/pages/legbranch.php
 - **Properties**:
   - district (int): digit that denotes the district
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
+  - geometry (WKT MultiPolygon): boundary of the district.
 
 
-### SenateDistrict
-
+### SenateDistricts
 - **Definition**: Alaska State Senate is the upper house in the Alaska State Legislature. Its districts are composed of two contiguous house districts, if possible.
+- **SpatialRelationships**: 
+  - CONTAINS IncorporatedPlaces
+  - CONTAINS CensusDesignatedPlaces
+  - CONTAINS Precincts
+  - CONTAINS HouseDistricts
 - **Analogous Standards**:
   - https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -198,14 +221,15 @@ These are attributes shared by all Classes
  - https://akleg.gov/pages/legbranch.php
 - **Properties**:
   - district (character): Capitol letter that denotes the district
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
+  - geometry (WKT MultiPolygon): boundary of the district.
 
 
 ## Statistical or Research Context
 
-### CensusBlock
-
+### CensusBlocks
 - **Definition**: Census blocks are the smallest level of geography you can get basic census demographic data for, such as total population by age, sex, and race.
+- **SpatialRelationships**: 
+  - WITHIN CensusTracts
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -217,12 +241,13 @@ These are attributes shared by all Classes
   - https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html
   - https://live.laborstats.alaska.gov/article/maps-gis-data
 - **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census block.
+  - geometry (WKT Polygon): boundary of the census block.
 
 
-### CensusTract
-
+### CensusTracts
 - **Definition**: Census tracts are small, relatively permanent statistical subdivisions of a county or statistically equivalent entity that provide a stable set of geographic units for the presentation of statistical data.
+- **SpatialRelationships**: 
+  - CONTAINS CensusBlocks
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -232,50 +257,103 @@ These are attributes shared by all Classes
   - https://esri.maps.arcgis.com/home/item.html?id=20f5d275113e4066bf311236d9dcc3d4
   - https://live.laborstats.alaska.gov/article/maps-gis-data
 - **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census tract.
+  - geometry (WKT Polygon): boundary of the census tract.
 
 
-### Region
-
+### Regions
 - **Definition**: Communities have been grouped into Regions in order to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA's 11 regions or ACEP's 3 regions (Coastal, PCE, or Railbelt).  Note: if we need to translate between AEA and ACEP regions, we will need to separate these.
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
   - OEO:study region
 - **Properties**:
   - organizaton (string): 'ACEP' or 'AEA' as the origanization that defined the region. 
-  - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography.
+  - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography. Could be solved with multipolygon or lookup table.
+  - geometry (WKT MultiPolygon): proposed geometry 
 
 
 ## Energy Context
 
-### Grid
+### Interties
+- **Definition**: The transmission lines that create a Grid that includes multiple Communities
+- **SpatialRelationships**: 
+  - CONTAINS TransmissionLines
+  - CONTAINS Grids
+  - CONTAINS Utilities
+- **Analogous Standards**:
+  - OEO:electricity grid component  (a material entity that includes power plants)
+  - or maybe more specifically OEO:power line
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+- **Properties**:
+  - owner (string): Who owns it?
+  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - geometry (WKT PolyLine): spatial trace of an acceptible, if not accurate, route of transmission lines (no distribution).
+
+
+### Grids
 - **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
+- **SpatialRelationships**: 
+  - CONTAINS TransmissionLines
+  - CONTAINS PowerStations
+  - CONTAINS Utilities
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - OEO:electricity grid (an aggregate of material entities that has parts: power plants and lines)
+  - OEO:electricity grid (an aggregate of material entities that has parts: power stations and transmission lines)
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
-  - capacity (int): 
-  - geom: ??
+  - capacity (int): megawatts MW
+  - geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon. TBD
 
 
-### Utility
-- **Definition**: The corporate entity that runs the Grid
+### Utilities
+- **Definition**: The corporate or governmental entity that runs the Grid
+- **SpatialRelationships**: 
+  - WITHIN Grids (Can have multiple utilities per grid, Railbelt. Can also be fragmented, AVEC. Regardless, located inside of grids)
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
   - OEO:provider (an organization with a role) provides commercial OEO:service
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
-  - private (boolean): True/False is it a private company?
+  - private (boolean): True/False is it a private company? Public owned utility (POU)?
   - geom: determined by the look-up table `provides_electricity_to` because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.
+
+### TransmissionLines
+- **Definition**: The transmission lines that create a Grid that includes multiple Communities
+- **SpatialRelationships**: 
+  - WITHIN Grids
+  - TOUCHES PowerStations
+  - TOUCHES Loads
+- **Analogous Standards**:
+  - OEO:electricity grid component
+  - or maybe more specifically OEO:power line
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+- **Properties**:
+  - owner (string): Who owns it?
+  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
+  - type (string): buried, underwater, overhead
+  - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
+
+### PowerStations
+- **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
+- **SpatialRelationships**: 
+  - TOUCHES TransmissionLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - OEO:power plant (which is an energy tranformation unit)
+- **Properties**:
+  - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
+  - geometry (WKT Point):
 
 
 ## Optional
 
 ### CensusArea
 - **Definition**: Census areas are subdivisions of the unorganized borough that are only used for statistical analysis and do not have a government of their own. These are typically undeveloped areas, so I'm not sure how relevant they are for AEDG.
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -287,8 +365,8 @@ These are attributes shared by all Classes
 
 
 ### ZipCode
-
 - **Definition**: Postal zip codes as available from [link] (ZCTA)
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - properties of which were designed for zip codes
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
@@ -300,8 +378,8 @@ These are attributes shared by all Classes
 
 
 ### SchoolDistrict
-
 - **Definition**: Community based school districts. This might be out of scope or better handled as research.
+- **SpatialRelationships**: 
 - **Analogous Standards**:
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
   - OEO:subregion (of what?)
@@ -309,11 +387,4 @@ These are attributes shared by all Classes
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.
 
 
-### PowerPlant
 
-- **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
-- **Analogous Standards**:
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - OEO:power plant (which is an energy tranformation unit)
-- **Properties**:
-  - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
