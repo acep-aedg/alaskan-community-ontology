@@ -203,11 +203,10 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#energy-context" id="toc-energy-context" class="nav-link" data-scroll-target="#energy-context"><span class="header-section-number">3.5</span> Energy Context</a>
   <ul class="collapse">
-  <li><a href="#interties" id="toc-interties" class="nav-link" data-scroll-target="#interties"><span class="header-section-number">3.5.1</span> Interties</a></li>
-  <li><a href="#grids" id="toc-grids" class="nav-link" data-scroll-target="#grids"><span class="header-section-number">3.5.2</span> Grids</a></li>
-  <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">3.5.3</span> Utilities</a></li>
-  <li><a href="#transmissionlines" id="toc-transmissionlines" class="nav-link" data-scroll-target="#transmissionlines"><span class="header-section-number">3.5.4</span> TransmissionLines</a></li>
-  <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">3.5.5</span> PowerStations</a></li>
+  <li><a href="#grids" id="toc-grids" class="nav-link" data-scroll-target="#grids"><span class="header-section-number">3.5.1</span> Grids</a></li>
+  <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">3.5.2</span> Utilities</a></li>
+  <li><a href="#powerlines" id="toc-powerlines" class="nav-link" data-scroll-target="#powerlines"><span class="header-section-number">3.5.3</span> PowerLines</a></li>
+  <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">3.5.4</span> PowerStations</a></li>
   </ul></li>
   <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.6</span> Optional</a>
   <ul class="collapse">
@@ -294,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)</li>
 <li>classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation.</li>
-<li>entityModificationDate (time): This is to allow evolution in time, which we do not plan to utilize in the first development cycle of AEDG.</li>
+<li>entityModificationDate (time): This is to allow evolution in time.</li>
 <li>geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.</li>
 </ul>
 </section>
@@ -330,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/GovernmentOrganization</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
-<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -349,16 +348,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="villagecorps" class="level3" data-number="3.2.2">
 <h3 data-number="3.2.2" class="anchored" data-anchor-id="villagecorps"><span class="header-section-number">3.2.2</span> VillageCorps</h3>
 <ul>
-<li><strong>Definition</strong>: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located.</li>
+<li><strong>Definition</strong>: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Their importance in the energy context is that they might operate as Independent Power Producers that sell power to the Communities’ utilities.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
-<li>WITHIN RegionalCorps</li>
+<li>WITHIN Alaska</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li>https://schema.org/Corporation</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
-<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
+<li>Is an <a href="http://xmlns.com/foaf/spec/#term_Organization">foaf:Organization</a> that is <a href="http://xmlns.com/foaf/spec/#term_based_near">foaf:based_near</a> a Community - “A location that something is based near, for some broadly human notion of near.”</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -370,6 +370,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Properties</strong>:
 <ul>
 <li>geometry (WKT Point): longitude, latitude of tribal leadership location</li>
+<li>related to Communities via the <code>is_based_near</code> lookup table.</li>
 <li>Additional properties should be determined by what is important to the people.</li>
 </ul></li>
 </ul>
@@ -380,13 +381,13 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Definition</strong>: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
-<li>CONTAINS VillageCorps</li>
+<li>WITHIN Alaska</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li>https://schema.org/Corporation</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
-<li>OEO:provider (an organization with a role) provides a OEO:service</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -423,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
 <li>has an https://schema.org/AdministrativeArea</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a> for the place</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the government</li>
-<li>OEO:provider (an organization with a role) provides a governmental OEO:service</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents. Governmental ok?</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -480,7 +481,7 @@ ul.task-list li input[type="checkbox"] {
 <li>has an https://schema.org/AdministrativeArea</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a> for the place</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the government</li>
-<li>OEO:subregion (of Alaska)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)</li>
 <li>OEO:provider (an organization with a role) provides a governmental OEO:service</li>
 </ul></li>
 <li><strong>References</strong>:
@@ -513,7 +514,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/AdministrativeArea</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:subregion (of Alaska and of SenateDistrict)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska and of SenateDistrict)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -544,7 +545,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/AdministrativeArea</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:subregion (of Alaska)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -575,8 +576,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:study region</li>
-<li>OEO:subregion (of CensusTract)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020034">OEO:study subregion</a> (of CensusTract)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -603,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:study region</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -626,7 +626,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:study region</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -639,55 +639,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="energy-context" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="energy-context"><span class="header-section-number">3.5</span> Energy Context</h2>
-<section id="interties" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="interties"><span class="header-section-number">3.5.1</span> Interties</h3>
-<ul>
-<li><strong>Definition</strong>: The transmission lines that create a Grid that includes multiple Communities</li>
-<li><strong>SpatialRelationships</strong>:
-<ul>
-<li>CONTAINS TransmissionLines</li>
-<li>CONTAINS Grids</li>
-<li>CONTAINS Utilities</li>
-</ul></li>
-<li><strong>Analogous Standards</strong>:
-<ul>
-<li>OEO:electricity grid component (a material entity that includes power plants)</li>
-<li>or maybe more specifically OEO:power line</li>
-<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
-</ul></li>
-<li><strong>Properties</strong>:
-<ul>
-<li>owner (string): Who owns it?</li>
-<li>maintainer (string): Who maintains it? Is this the same as Owner?</li>
-<li>geometry (WKT PolyLine): spatial trace of an acceptible, if not accurate, route of transmission lines (no distribution).</li>
-</ul></li>
-</ul>
-</section>
-<section id="grids" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="grids"><span class="header-section-number">3.5.2</span> Grids</h3>
+<section id="grids" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="grids"><span class="header-section-number">3.5.1</span> Grids</h3>
 <ul>
 <li><strong>Definition</strong>: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
-<li>CONTAINS TransmissionLines</li>
+<li>CONTAINS PowerLines</li>
 <li>CONTAINS PowerStations</li>
 <li>CONTAINS Utilities</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
-<li>OEO:electricity grid (an aggregate of material entities that has parts: power stations and transmission lines)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000143">OEO:electricity grid</a> (an aggregate of material entities that has parts: power stations and power lines)</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
 <li>microgrid (boolean): True/False (need a definition for this)</li>
 <li>capacity (int): megawatts MW</li>
-<li>geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon</li>
+<li>geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon. TBD</li>
 </ul></li>
 </ul>
 </section>
-<section id="utilities" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="utilities"><span class="header-section-number">3.5.3</span> Utilities</h3>
+<section id="utilities" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="utilities"><span class="header-section-number">3.5.2</span> Utilities</h3>
 <ul>
 <li><strong>Definition</strong>: The corporate or governmental entity that runs the Grid</li>
 <li><strong>SpatialRelationships</strong>:
@@ -698,20 +674,20 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/Corporation</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
-<li>OEO:provider (an organization with a role) provides commercial OEO:service</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
 <li>coop (boolean): True/False is it organized as a member owned co-operative?</li>
 <li>private (boolean): True/False is it a private company? Public owned utility (POU)?</li>
-<li>geometry (WKT MultiPolygon): This may get interesting with discontinuous utilities such as AVEC, worth the complexity, press on.</li>
+<li>geom: determined by the look-up table <code>provides_electricity_to</code> because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.</li>
 </ul></li>
 </ul>
 </section>
-<section id="transmissionlines" class="level3" data-number="3.5.4">
-<h3 data-number="3.5.4" class="anchored" data-anchor-id="transmissionlines"><span class="header-section-number">3.5.4</span> TransmissionLines</h3>
+<section id="powerlines" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="powerlines"><span class="header-section-number">3.5.3</span> PowerLines</h3>
 <ul>
-<li><strong>Definition</strong>: The transmission lines that create a Grid that includes multiple Communities</li>
+<li><strong>Definition</strong>: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
 <li>WITHIN Grids</li>
@@ -720,8 +696,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
-<li>OEO:electricity grid component</li>
-<li>or maybe more specifically OEO:power line</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000144">OEO:electricity grid component</a> (a material entity that includes power plants)</li>
+<li>or more specifically <a href="http://openenergy-platform.org/ontology/oeo/OEO_00000253">OEO:power line</a></li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
 </ul></li>
 <li><strong>Properties</strong>:
@@ -734,19 +710,19 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="powerstations" class="level3" data-number="3.5.5">
-<h3 data-number="3.5.5" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">3.5.5</span> PowerStations</h3>
+<section id="powerstations" class="level3" data-number="3.5.4">
+<h3 data-number="3.5.4" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">3.5.4</span> PowerStations</h3>
 <ul>
 <li><strong>Definition</strong>: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
-<li>TOUCHES TransmissionLines</li>
+<li>TOUCHES PowerLines</li>
 <li>WITHIN Grids</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
-<li>OEO:power plant (which is an energy tranformation unit)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000031">OEO:power plant</a> - “an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid.”</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -767,7 +743,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:subregion (of the unincorporated Borough)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the unincorporated Borough)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -788,7 +764,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>https://schema.org/DefinedRegion - properties of which were designed for zip codes</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li>OEO:subregion (of the United States and of Alaska)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the United States and of Alaska)</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
@@ -808,7 +784,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the governmental organization.</li>
-<li>OEO:subregion (of what?)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
