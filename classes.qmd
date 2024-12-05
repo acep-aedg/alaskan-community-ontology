@@ -257,6 +257,7 @@ These are attributes shared by all Classes
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): 
+  - geom: ??
 
 
 ### Utility
@@ -268,19 +269,7 @@ These are attributes shared by all Classes
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company?
-  - ~~Boundary (WKT Polygon)~~: I feel like a spatial version of a corporate entity does not make sense. Especially for AVEC, whose region is discontinuous.
-
-
-### Intertie
-- **Definition**: The transmission lines that create a Grid that includes multiple Communities
-- **Analogous Standards**:
-  - OEO:electricity grid component  (a material entity that includes power plants)
-  - or maybe more specifically OEO:power line
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-- **Properties**:
-  - path (WKT Line): longitude, latitude points that trace an acceptible, if not accurate, route of the lines.
-  - owner (string): Who owns it?
-  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - geom: determined by the look-up table `provides_electricity_to` because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.
 
 
 ## Optional
