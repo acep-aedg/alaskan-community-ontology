@@ -82,13 +82,14 @@ These are attributes shared by all Classes
 
 
 ### VillageCorps
-- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located.
+- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Their importance in the energy context is that they might operate as Independent Power Producers that sell power to the Communities' utilities. 
 - **SpatialRelationships**: 
-  - WITHIN RegionalCorps
+  - WITHIN Alaska
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
   - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - Is an [foaf:Organization](http://xmlns.com/foaf/spec/#term_Organization) that is [foaf:based_near](http://xmlns.com/foaf/spec/#term_based_near) a Community - "A location that something is based near, for some broadly human notion of near."
 - **References**:
   - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
   - https://ancsa.lbblawyers.com/1602.htm (definition)
@@ -96,13 +97,14 @@ These are attributes shared by all Classes
   - https://ancsaregional.com/about-ancsa/#mandates
 - **Properties**:
   - geometry (WKT Point): longitude, latitude of tribal leadership location
+  - related to Communities via the `is_based_near` lookup table.
   - Additional properties should be determined by what is important to the people.
 
 
 ### RegionalCorps
 - **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.
 - **SpatialRelationships**: 
-  - CONTAINS VillageCorps
+  - WITHIN Alaska
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
