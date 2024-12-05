@@ -62,13 +62,17 @@ Here are the look-up tables that will do this:
 ## provides_electricity_to
 
 Utilites provide electricity to Communities. Liz added some columns that might be useful, but she doesn't know where these data will come from, so the table schema will change. This is just an example of what _could_ be.
+- **Analogous Standards**:
+ - [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) - "A service is a process that is an intangible activity performed by some agent for the benefit of another agent."
+ - [Schema.org:Service](https://schema.org/Service) - "A service provided by an organization, e.g. delivery service, print services, etc."
+
 
 | id_provides | id_utility | id_community | year_established | 
 | ----------- | ---------- | ------------ | ---------------- |
 | integer     | integer    | integer      | integer          |
 
 
-## is_intertied
+## is_intertied_with
 
 Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but "intertie" is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our puposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.) 
 - **Analogous Standards**:
@@ -79,9 +83,9 @@ Grids are connected to each other with interties. Interties are the physical pow
   - owner (string): Who owns it?
   - maintainer (string): Who maintains it? Is this the same as Owner?
 
-This is just an example of what _could_ be. Form will be based on one from Neils work?
+This is just an example of what _could_ be. Schema should be based on Neil's work?
 
-| id_intertie | id_grid1 | id_grid2 | year_established | owner  | maintainer |
-| ----------- | -------- | -------- | ---------------- | ------ | ---------- |
-| integer     | integer  | integer  | integer          | string | string     |
+| id_intertie | id_grid1 | id_grid2 | new_grid_id | year_established | owner  | maintainer |
+| ----------- | -------- | -------- | ----------- | ---------------- | ------ | ---------- |
+| integer     | integer  | integer  | integer     | integer          | string | string     |
 
