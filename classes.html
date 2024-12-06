@@ -207,6 +207,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">3.5.2</span> Utilities</a></li>
   <li><a href="#powerlines" id="toc-powerlines" class="nav-link" data-scroll-target="#powerlines"><span class="header-section-number">3.5.3</span> PowerLines</a></li>
   <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">3.5.4</span> PowerStations</a></li>
+  <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">3.5.5</span> PceEntities</a></li>
+  <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">3.5.6</span> PceCommunities</a></li>
   </ul></li>
   <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.6</span> Optional</a>
   <ul class="collapse">
@@ -647,7 +649,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>CONTAINS PowerLines (transmission and distribution lines)</li>
 <li>CONTAINS PowerStations (power providers)</li>
-<li>CONTAINS Communities (consumers) ?</li>
+<li>CONTAINS Communities (consumers) demand, load ?</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
@@ -656,7 +658,10 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>References</strong>:
 <ul>
-<li>https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility</li>
+<li>https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid</li>
+<li>https://en.wikipedia.org/wiki/Electrical_grid</li>
+<li>https://www.nrel.gov/grid/microgrids.html</li>
+<li>https://en.wikipedia.org/wiki/Microgrid</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -734,6 +739,26 @@ ul.task-list li input[type="checkbox"] {
 <li>fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn’t belong with communities. Perhaps already handled by the Open Energy Ontology.</li>
 <li>geometry (WKT Point):</li>
 </ul></li>
+</ul>
+</section>
+<section id="pceentities" class="level3" data-number="3.5.5">
+<h3 data-number="3.5.5" class="anchored" data-anchor-id="pceentities"><span class="header-section-number">3.5.5</span> PceEntities</h3>
+<ul>
+<li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says “Communities served by entities that are eligible for the Alaska Energy Authority’s Power Cost Equalization program.”<br>
+</li>
+<li>PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them.</li>
+<li>Also includes ineligible like Fairbanks and Barrow. Wha?</li>
+<li>Map shows points but CSV is an X,Y projection?</li>
+<li>Data Year - points with different times. Maybe</li>
+</ul>
+</section>
+<section id="pcecommunities" class="level3" data-number="3.5.6">
+<h3 data-number="3.5.6" class="anchored" data-anchor-id="pcecommunities"><span class="header-section-number">3.5.6</span> PceCommunities</h3>
+<ul>
+<li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says “Alaska Energy Authority Power Cost Equalization (PCE) program by community.”</li>
+<li>CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?</li>
+<li>Single PCECommunity can link to multiple communities, i.e.&nbsp;“Tok; Tanacross PCE”</li>
+<li>This is the big CSV from AEA with columns for population and rates.</li>
 </ul>
 </section>
 </section>
