@@ -178,8 +178,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#legislative-districts" id="toc-legislative-districts" class="nav-link" data-scroll-target="#legislative-districts"><span class="header-section-number">4.4</span> Legislative Districts</a></li>
   <li><a href="#boroughs" id="toc-boroughs" class="nav-link" data-scroll-target="#boroughs"><span class="header-section-number">4.5</span> Boroughs</a></li>
   <li><a href="#census" id="toc-census" class="nav-link" data-scroll-target="#census"><span class="header-section-number">4.6</span> Census</a></li>
-  <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">4.7</span> Energy-Related</a></li>
-  <li><a href="#zip-codes-optional" id="toc-zip-codes-optional" class="nav-link" data-scroll-target="#zip-codes-optional"><span class="header-section-number">4.8</span> Zip Codes (Optional)</a></li>
+  <li><a href="#zip-codes-optional" id="toc-zip-codes-optional" class="nav-link" data-scroll-target="#zip-codes-optional"><span class="header-section-number">4.7</span> Zip Codes (Optional)</a></li>
+  <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">5</span> Energy-Related</a>
+  <ul class="collapse">
+  <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid"><span class="header-section-number">5.1</span> Grid</a></li>
+  <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility"><span class="header-section-number">5.2</span> Utility</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -252,6 +256,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Tribes can be federally recognized. Does this define a tribe in the context of AEDG?</li>
 <li>Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr.&nbsp;16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.</li>
+<li>Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate deal.</li>
 </ul>
 </section>
 <section id="legislative-districts" class="level2" data-number="4.4">
@@ -271,6 +276,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Communities can be unencorporated, meaning they are not in a Borough.</li>
 <li>If encorporated, a Community can only be in a single Borough</li>
+<li>There is one unencorporated Borough
+<ul>
+<li>The unencorporated Borough is split into CensusAreas for statistical purposes (not administrative)</li>
+</ul></li>
 </ul>
 </section>
 <section id="census" class="level2" data-number="4.6">
@@ -288,21 +297,44 @@ ul.task-list li input[type="checkbox"] {
 <li>A CDP has a name that is different from adjacent places, but is not unique and can change.</li>
 </ul>
 </section>
-<section id="energy-related" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="energy-related"><span class="header-section-number">4.7</span> Energy-Related</h2>
-<ul>
-<li>Communities can be isolated (microgrids)</li>
-<li>Communities can be connected via Interties</li>
-</ul>
-</section>
-<section id="zip-codes-optional" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="zip-codes-optional"><span class="header-section-number">4.8</span> Zip Codes (Optional)</h2>
+<section id="zip-codes-optional" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="zip-codes-optional"><span class="header-section-number">4.7</span> Zip Codes (Optional)</h2>
 <ul>
 <li>A ZipCode can contain multiple Communities, especially in rural areas.</li>
 <li>A single Community can contain multiple ZipCodes, especially in urban areas.</li>
 </ul>
+</section>
+<section id="energy-related" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Energy-Related</h1>
+<section id="grid" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="grid"><span class="header-section-number">5.1</span> Grid</h2>
+<ul>
+<li>Is a physical structure that supplies electricity to Communities
+<ul>
+<li>A Grid has the physical entities of PowerStations and PowerLines</li>
+</ul></li>
+<li>If isolated, is called a microgrid (check this)</li>
+<li>Can be composed of multiple Grids connected by interties
+<ul>
+<li>Interies are established on particular dates, so Grid definition can change over time</li>
+</ul></li>
+<li>A Grid generates power to supply a load.</li>
+</ul>
+</section>
+<section id="utility" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="utility"><span class="header-section-number">5.2</span> Utility</h2>
+<ul>
+<li>A Utility can operate a single Grid (KEA)</li>
+<li>A Utility can operate multiple Grids (AVEC or AP&amp;T)</li>
+<li>A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
+<ul>
+<li>The Railbelt is serviced by 5 different utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).</li>
+</ul></li>
+<li>Anchorage Municipal Light &amp; Power (ML&amp;P) used to make that 6, but they were absorbed by CEA</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

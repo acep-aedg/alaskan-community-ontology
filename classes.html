@@ -642,39 +642,44 @@ ul.task-list li input[type="checkbox"] {
 <section id="grids" class="level3" data-number="3.5.1">
 <h3 data-number="3.5.1" class="anchored" data-anchor-id="grids"><span class="header-section-number">3.5.1</span> Grids</h3>
 <ul>
-<li><strong>Definition</strong>: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.</li>
+<li><strong>Definition</strong>: An Electric power grid is “A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. … In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)” (EIA)</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
-<li>CONTAINS PowerLines</li>
-<li>CONTAINS PowerStations</li>
-<li>CONTAINS Utilities</li>
+<li>CONTAINS PowerLines (transmission and distribution lines)</li>
+<li>CONTAINS PowerStations (power providers)</li>
+<li>CONTAINS Communities (consumers) ?</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
-<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000143">OEO:electricity grid</a> (an aggregate of material entities that has parts: power stations and power lines)</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000143">OEO:electricity grid</a> - “An electricity grid is a supply grid that distributes electrical energy / electricity.” It is an aggregate of material entities that has parts: power stations and power lines.</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
 <li>microgrid (boolean): True/False (need a definition for this)</li>
 <li>capacity (int): megawatts MW</li>
-<li>geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon. TBD</li>
+<li>geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?</li>
 </ul></li>
 </ul>
 </section>
 <section id="utilities" class="level3" data-number="3.5.2">
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="utilities"><span class="header-section-number">3.5.2</span> Utilities</h3>
 <ul>
-<li><strong>Definition</strong>: The corporate or governmental entity that runs the Grid</li>
-<li><strong>SpatialRelationships</strong>:
-<ul>
-<li>WITHIN Grids (Can have multiple utilities per grid, Railbelt. Can also be fragmented, AVEC. Regardless, located inside of grids)</li>
-</ul></li>
+<li><strong>Definition</strong>: “A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives.” (EIA)</li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li>https://schema.org/Corporation</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140130">OEO:power plant operator</a> - “an agent that operates an electric utility generation station.”</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -713,7 +718,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="powerstations" class="level3" data-number="3.5.4">
 <h3 data-number="3.5.4" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">3.5.4</span> PowerStations</h3>
 <ul>
-<li><strong>Definition</strong>: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.</li>
+<li><strong>Definition</strong>: Entities that generate electricity for grids.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
 <li>TOUCHES PowerLines</li>
