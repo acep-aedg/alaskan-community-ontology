@@ -276,18 +276,20 @@ These are attributes shared by all Classes
 
 ## Energy Context
 
-
 ### Grids
 - **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
 - **SpatialRelationships**: 
   - CONTAINS PowerLines (transmission and distribution lines)
   - CONTAINS PowerStations (power providers)
-  - CONTAINS Communities (consumers) ?
+  - CONTAINS Communities (consumers) demand, load ?
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
   - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
 - **References**:
-  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
+  - https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid
+  - https://en.wikipedia.org/wiki/Electrical_grid
+  - https://www.nrel.gov/grid/microgrids.html
+  - https://en.wikipedia.org/wiki/Microgrid
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): megawatts MW
@@ -336,6 +338,21 @@ These are attributes shared by all Classes
 - **Properties**:
   - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
   - geometry (WKT Point):
+
+
+### PceEntities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program."  
+- PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them. 
+- Also includes ineligible like Fairbanks and Barrow. Wha?
+- Map shows points but CSV is an X,Y projection?
+- Data Year - points with different times. Maybe 
+
+
+### PceCommunities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
+- CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
+- Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
+- This is the big CSV from AEA with columns for population and rates.
 
 
 ## Optional
