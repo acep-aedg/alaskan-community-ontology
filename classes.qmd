@@ -278,28 +278,31 @@ These are attributes shared by all Classes
 
 
 ### Grids
-- **Definition**: An entity that provides electricity to a Community. Includes generation and distribution, and is typically categorized by capacity.
+- **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
 - **SpatialRelationships**: 
-  - CONTAINS PowerLines
-  - CONTAINS PowerStations
-  - CONTAINS Utilities
+  - CONTAINS PowerLines (transmission and distribution lines)
+  - CONTAINS PowerStations (power providers)
+  - CONTAINS Communities (consumers) ?
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) (an aggregate of material entities that has parts: power stations and power lines)
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
 - **Properties**:
   - microgrid (boolean): True/False (need a definition for this)
   - capacity (int): megawatts MW
-  - geometry (WKT Polygon): This assumes all grids are continuous. Safe assumption? Otherwise use MultiPolygon. TBD
+  - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
 
 
 ### Utilities
-- **Definition**: The corporate or governmental entity that runs the Grid
-- **SpatialRelationships**: 
-  - WITHIN Grids (Can have multiple utilities per grid, Railbelt. Can also be fragmented, AVEC. Regardless, located inside of grids)
+- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA)
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
   - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company? Public owned utility (POU)?
@@ -323,7 +326,7 @@ These are attributes shared by all Classes
   - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
 
 ### PowerStations
-- **Definition**: Entities that generate electricity for grids. This might be so complex that is it better handled by a different system.
+- **Definition**: Entities that generate electricity for grids. 
 - **SpatialRelationships**: 
   - TOUCHES PowerLines
   - WITHIN Grids

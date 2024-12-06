@@ -29,6 +29,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 - Tribes can be federally recognized. Does this define a tribe in the context of AEDG?
 - Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
+- Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate deal.
 
 ## Legislative Districts
 
@@ -41,6 +42,8 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ## Boroughs
 - Communities can be unencorporated, meaning they are not in a Borough.
 - If encorporated, a Community can only be in a single Borough
+- There is one unencorporated Borough
+  - The unencorporated Borough is split into CensusAreas for statistical purposes (not administrative)
 
 ## Census
 
@@ -55,10 +58,26 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A CDP cannot cross state boundaries.
 - A CDP has a name that is different from adjacent places, but is not unique and can change.
 
-## Energy-Related
-- Communities can be isolated (microgrids)
-- Communities can be connected via Interties
 
 ## Zip Codes (Optional)
 - A ZipCode can contain multiple Communities, especially in rural areas.
 - A single Community can contain multiple ZipCodes, especially in urban areas.
+
+
+# Energy-Related
+
+
+## Grid
+- Is a physical structure that supplies electricity to Communities
+  - A Grid has the physical entities of PowerStations and PowerLines
+- If isolated, is called a microgrid (check this)
+- Can be composed of multiple Grids connected by interties
+  - Interies are established on particular dates, so Grid definition can change over time
+- A Grid generates power to supply a load.
+
+## Utility
+- A Utility can operate a single Grid (KEA)
+- A Utility can operate multiple Grids (AVEC or AP&T)
+- A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
+  - The Railbelt is serviced by 5 different utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
+- Anchorage Municipal Light & Power (ML&P) used to make that 6, but they were absorbed by CEA
