@@ -81,3 +81,10 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
   - The Railbelt is serviced by 5 different utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
 - Anchorage Municipal Light & Power (ML&P) used to make that 6, but they were absorbed by CEA
+- Utility service areas are regulated by the RCA so they do not overlap.
+- Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.
+- Utility service areas are documented by the RCA with PDF maps. KML also?
+    - [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
+
+
+![KEA in Google Earth](images/KEA_kml_google.png){fig-alt="KEA's service area displayed in Google Earth" width=600 fig-align="left"}

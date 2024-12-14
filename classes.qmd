@@ -297,7 +297,7 @@ These are attributes shared by all Classes
 
 
 ### Utilities
-- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA)
+- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -308,6 +308,8 @@ These are attributes shared by all Classes
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company? Public owned utility (POU)?
+  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
+  - certificate_name: RCA's name for the utility
   - geom: determined by the look-up table `provides_electricity_to` because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.
 
 ### PowerLines
