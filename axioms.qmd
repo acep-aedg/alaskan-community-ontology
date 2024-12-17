@@ -27,9 +27,10 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 ## Indigenous 
 
-- Tribes can be federally recognized. Does this define a tribe in the context of AEDG?
-- Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
-- Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate deal.
+- Tribes are nations and should be federally recognized (but sometimes are not)
+- Native corporations are not nations, they are corporations that are a uniquely Alaskan entity. 
+  - Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
+- Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate type of entity.
 
 ## Legislative Districts
 
@@ -85,6 +86,11 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.
 - Utility service areas are documented by the RCA with PDF maps. KML also?
     - [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
+
+## IPP
+- A [Tribal Independent Power Producer (IPP)](https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf) can develop and own renewable energy assets
+- A local utility can buy renewable energy power from the Tribal IPP
+- The cost of that power becomes a fuel cost that is an eligible PCE expense
 
 
 ![KEA in Google Earth](images/KEA_kml_google.png){fig-alt="KEA's service area displayed in Google Earth" width=600 fig-align="left"}
