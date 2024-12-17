@@ -209,6 +209,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">3.5.4</span> PowerStations</a></li>
   <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">3.5.5</span> PceEntities</a></li>
   <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">3.5.6</span> PceCommunities</a></li>
+  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">3.5.7</span> IPP</a></li>
   </ul></li>
   <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.6</span> Optional</a>
   <ul class="collapse">
@@ -316,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Properties</strong>:
 <ul>
 <li>geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted “place”.</li>
+<li>geometry (WKT Polygon): boundary of the administrative bounds of a Community available from a DRCA PCE dataset.</li>
 </ul></li>
 </ul>
 </section>
@@ -692,7 +694,7 @@ ul.task-list li input[type="checkbox"] {
 <li>private (boolean): True/False is it a private company? Public owned utility (POU)?</li>
 <li>certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number</li>
 <li>certificate_name: RCA’s name for the utility</li>
-<li>geom: determined by the look-up table <code>provides_electricity_to</code> because corporate entities do not have an intrinsic spatial component. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous.</li>
+<li>geom: could be determined by the look-up table <code>provides_electricity_to</code>. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.</li>
 </ul></li>
 </ul>
 </section>
@@ -761,6 +763,19 @@ ul.task-list li input[type="checkbox"] {
 <li>CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?</li>
 <li>Single PCECommunity can link to multiple communities, i.e.&nbsp;“Tok; Tanacross PCE”</li>
 <li>This is the big CSV from AEA with columns for population and rates.</li>
+</ul>
+</section>
+<section id="ipp" class="level3" data-number="3.5.7">
+<h3 data-number="3.5.7" class="anchored" data-anchor-id="ipp"><span class="header-section-number">3.5.7</span> IPP</h3>
+<ul>
+<li><strong>Definition</strong>: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.</li>
+<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Analogous Standards</strong>:</li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=Independent%20power%20producer</li>
+</ul></li>
+<li><strong>Properties</strong>:</li>
 </ul>
 </section>
 </section>
