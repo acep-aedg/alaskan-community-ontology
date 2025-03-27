@@ -7,3 +7,14 @@ Classes are types of entities. Most are defined according to existing legal stru
 This page also includes Properties, which are attributes of the Classes. 
 
   - Properties could take the form of columns in tables in a relational database.
+
+### Common Properties
+
+We've adopted some common properties that are used by multiple tables (but are not manditory). These are based on Rails conventions:
+
+- id (int): the row number generated when the table is ingested into the database
+- name (string): human readable label. We don't use these as indices or unique identifiers, because they are never the same between data sets.
+- date (string): time 
+- geometry (): geometry(Point, OGC:CRS84), geometry(Polygon, OGC:CRS84), geometry(MultiPolygon, OGC:CRS84) for locations and boundaries
+  - The ELT process generates GeoJSON with a coordinate reference system denoted as `"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }`. This is equivalent to EPSG:4326 (WGS84) with the order changed from Lat-Long to Long-Lat.
+- as_of_date (string): when the source data was published.

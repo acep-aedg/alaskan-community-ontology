@@ -15,18 +15,6 @@ date: 2024-11-12
 {{< include _classes.qmd >}}
 
 
-## Common Properties
-
-These are attributes shared by all Classes
-
-- id (int): All Classes should have an id column for inclusion in lookup tables. 
-  - How we determine these is a whole 'nother thing.
-- label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)
-- classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation. 
-- entityModificationDate (time): This is to allow evolution in time.
-- geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.
-
-
 # List of Classes
 
 ## AEDG Context Only
