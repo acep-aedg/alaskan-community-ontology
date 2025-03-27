@@ -178,20 +178,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">3.1</span> Classes</a></li>
-  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">3.2</span> Common Properties</a></li>
-  <li><a href="#list-of-energy-classes" id="toc-list-of-energy-classes" class="nav-link" data-scroll-target="#list-of-energy-classes"><span class="header-section-number">4</span> List of Energy Classes</a>
+  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">3.1</span> Classes</a>
   <ul class="collapse">
-  <li><a href="#energy-context" id="toc-energy-context" class="nav-link" data-scroll-target="#energy-context"><span class="header-section-number">4.1</span> Energy Context</a>
-  <ul class="collapse">
-  <li><a href="#grids" id="toc-grids" class="nav-link" data-scroll-target="#grids"><span class="header-section-number">4.1.1</span> Grids</a></li>
-  <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">4.1.2</span> Utilities</a></li>
-  <li><a href="#powerlines" id="toc-powerlines" class="nav-link" data-scroll-target="#powerlines"><span class="header-section-number">4.1.3</span> PowerLines</a></li>
-  <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">4.1.4</span> PowerStations</a></li>
-  <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">4.1.5</span> PceEntities</a></li>
-  <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">4.1.6</span> PceCommunities</a></li>
-  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">4.1.7</span> IPP</a></li>
+  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">3.1.1</span> Common Properties</a></li>
   </ul></li>
+  <li><a href="#list-of-classes-in-the-energy-context" id="toc-list-of-classes-in-the-energy-context" class="nav-link" data-scroll-target="#list-of-classes-in-the-energy-context"><span class="header-section-number">3.2</span> List of Classes in the Energy Context</a>
+  <ul class="collapse">
+  <li><a href="#grids" id="toc-grids" class="nav-link" data-scroll-target="#grids"><span class="header-section-number">3.2.1</span> Grids</a></li>
+  <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">3.2.2</span> Utilities</a></li>
+  <li><a href="#powerlines" id="toc-powerlines" class="nav-link" data-scroll-target="#powerlines"><span class="header-section-number">3.2.3</span> PowerLines</a></li>
+  <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">3.2.4</span> PowerStations</a></li>
+  <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">3.2.5</span> PceEntities</a></li>
+  <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">3.2.6</span> PceCommunities</a></li>
+  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">3.2.7</span> IPP</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -252,27 +251,25 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Properties could take the form of columns in tables in a relational database.</li>
 </ul>
-</section>
-<section id="common-properties" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">3.2</span> Common Properties</h2>
-<p>These are attributes shared by all Classes</p>
+<section id="common-properties" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">3.1.1</span> Common Properties</h3>
+<p>We’ve adopted some common properties that are used by multiple tables (but are not manditory). These are based on Rails conventions:</p>
 <ul>
-<li>id (int): All Classes should have an id column for inclusion in lookup tables.
+<li>id (int): the row number generated when the table is ingested into the database</li>
+<li>name (string): human readable label. We don’t use these as indices or unique identifiers, because they are never the same between data sets.</li>
+<li>date (string): time</li>
+<li>geometry (): geometry(Point, OGC:CRS84), geometry(Polygon, OGC:CRS84), geometry(MultiPolygon, OGC:CRS84) for locations and boundaries
 <ul>
-<li>How we determine these is a whole ’nother thing.</li>
+<li>The ELT process generates GeoJSON with a coordinate reference system denoted as <code>"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }</code>. This is equivalent to EPSG:4326 (WGS84) with the order changed from Lat-Long to Long-Lat.</li>
 </ul></li>
-<li>label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)</li>
-<li>classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation.</li>
-<li>entityModificationDate (time): This is to allow evolution in time.</li>
-<li>geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.</li>
+<li>as_of_date (string): when the source data was published.</li>
 </ul>
 </section>
-<section id="list-of-energy-classes" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> List of Energy Classes</h1>
-<section id="energy-context" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="energy-context"><span class="header-section-number">4.1</span> Energy Context</h2>
-<section id="grids" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="grids"><span class="header-section-number">4.1.1</span> Grids</h3>
+</section>
+<section id="list-of-classes-in-the-energy-context" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="list-of-classes-in-the-energy-context"><span class="header-section-number">3.2</span> List of Classes in the Energy Context</h2>
+<section id="grids" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="grids"><span class="header-section-number">3.2.1</span> Grids</h3>
 <ul>
 <li><strong>Definition</strong>: An Electric power grid is “A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. … In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)” (EIA)</li>
 <li><strong>SpatialRelationships</strong>:
@@ -301,8 +298,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="utilities" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="utilities"><span class="header-section-number">4.1.2</span> Utilities</h3>
+<section id="utilities" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="utilities"><span class="header-section-number">3.2.2</span> Utilities</h3>
 <ul>
 <li><strong>Definition</strong>: “A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives.” (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.</li>
 <li><strong>Analogous Standards</strong>:
@@ -326,8 +323,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="powerlines" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="powerlines"><span class="header-section-number">4.1.3</span> PowerLines</h3>
+<section id="powerlines" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="powerlines"><span class="header-section-number">3.2.3</span> PowerLines</h3>
 <ul>
 <li><strong>Definition</strong>: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed.</li>
 <li><strong>SpatialRelationships</strong>:
@@ -352,8 +349,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="powerstations" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">4.1.4</span> PowerStations</h3>
+<section id="powerstations" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">3.2.4</span> PowerStations</h3>
 <ul>
 <li><strong>Definition</strong>: Entities that generate electricity for grids.</li>
 <li><strong>SpatialRelationships</strong>:
@@ -373,8 +370,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="pceentities" class="level3" data-number="4.1.5">
-<h3 data-number="4.1.5" class="anchored" data-anchor-id="pceentities"><span class="header-section-number">4.1.5</span> PceEntities</h3>
+<section id="pceentities" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="pceentities"><span class="header-section-number">3.2.5</span> PceEntities</h3>
 <ul>
 <li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says “Communities served by entities that are eligible for the Alaska Energy Authority’s Power Cost Equalization program.”<br>
 </li>
@@ -384,8 +381,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Data Year - points with different times. Maybe</li>
 </ul>
 </section>
-<section id="pcecommunities" class="level3" data-number="4.1.6">
-<h3 data-number="4.1.6" class="anchored" data-anchor-id="pcecommunities"><span class="header-section-number">4.1.6</span> PceCommunities</h3>
+<section id="pcecommunities" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="pcecommunities"><span class="header-section-number">3.2.6</span> PceCommunities</h3>
 <ul>
 <li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says “Alaska Energy Authority Power Cost Equalization (PCE) program by community.”</li>
 <li>CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?</li>
@@ -393,8 +390,8 @@ ul.task-list li input[type="checkbox"] {
 <li>This is the big CSV from AEA with columns for population and rates.</li>
 </ul>
 </section>
-<section id="ipp" class="level3" data-number="4.1.7">
-<h3 data-number="4.1.7" class="anchored" data-anchor-id="ipp"><span class="header-section-number">4.1.7</span> IPP</h3>
+<section id="ipp" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7" class="anchored" data-anchor-id="ipp"><span class="header-section-number">3.2.7</span> IPP</h3>
 <ul>
 <li><strong>Definition</strong>: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.</li>
 <li><strong>SpatialRelationships</strong>:</li>
@@ -407,7 +404,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 </section>
 

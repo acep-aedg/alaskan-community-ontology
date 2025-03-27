@@ -179,13 +179,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#applicable-standards" id="toc-applicable-standards" class="nav-link active" data-scroll-target="#applicable-standards"><span class="header-section-number">4.1</span> Applicable Standards</a></li>
-  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">5</span> Relations</a>
+  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">4.2</span> Relations</a>
   <ul class="collapse">
-  <li><a href="#spatial-relations" id="toc-spatial-relations" class="nav-link" data-scroll-target="#spatial-relations"><span class="header-section-number">5.1</span> Spatial Relations</a></li>
-  <li><a href="#lookup-tables" id="toc-lookup-tables" class="nav-link" data-scroll-target="#lookup-tables"><span class="header-section-number">5.2</span> Lookup Tables</a></li>
-  <li><a href="#provides_electricity_to" id="toc-provides_electricity_to" class="nav-link" data-scroll-target="#provides_electricity_to"><span class="header-section-number">5.3</span> provides_electricity_to</a></li>
-  <li><a href="#is_intertied_with" id="toc-is_intertied_with" class="nav-link" data-scroll-target="#is_intertied_with"><span class="header-section-number">5.4</span> is_intertied_with</a></li>
-  <li><a href="#is_based_near" id="toc-is_based_near" class="nav-link" data-scroll-target="#is_based_near"><span class="header-section-number">5.5</span> is_based_near</a></li>
+  <li><a href="#spatial-relations" id="toc-spatial-relations" class="nav-link" data-scroll-target="#spatial-relations"><span class="header-section-number">4.2.1</span> Spatial Relations</a></li>
+  <li><a href="#lookup-tables" id="toc-lookup-tables" class="nav-link" data-scroll-target="#lookup-tables"><span class="header-section-number">4.2.2</span> Lookup Tables</a></li>
+  <li><a href="#early-ideas-for-lookup-tables" id="toc-early-ideas-for-lookup-tables" class="nav-link" data-scroll-target="#early-ideas-for-lookup-tables"><span class="header-section-number">4.2.3</span> Early ideas for lookup tables</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -267,20 +265,22 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties">OBO Relations Ontology</a> “is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.” It is a foundational element of the <a href="http://openenergy-platform.org/ontology/oeo/">Open Energy Ontology</a>.</p>
 <p>On the other hand, in the OEO <a href="https://terminology.tib.eu/ts/ontologies/oeo/props">Terminology Service</a>, I could only find one instance of a straight-up <code>RO</code> usage: <a href="https://terminology.tib.eu/ts/ontologies/oeo/props?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0040042">is homeomorphic for</a> (which I don’t even understand).</p>
 </section>
-<section id="relations" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Relations</h1>
-<section id="spatial-relations" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="spatial-relations"><span class="header-section-number">5.1</span> Spatial Relations</h2>
+<section id="relations" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="relations"><span class="header-section-number">4.2</span> Relations</h2>
+<section id="spatial-relations" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="spatial-relations"><span class="header-section-number">4.2.1</span> Spatial Relations</h3>
 <p>Most relationships can be established dynamically through spatial relations. We do not need to have a lookup table of Communities in Boroughs, say, because we can select all the Community points that the Borough CONTAINS. The primary relationships are sketched out on the Classes pages, but the combinations are really unlimited.</p>
 </section>
-<section id="lookup-tables" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="lookup-tables"><span class="header-section-number">5.2</span> Lookup Tables</h2>
+<section id="lookup-tables" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="lookup-tables"><span class="header-section-number">4.2.2</span> Lookup Tables</h3>
 <p>Some classes are legal or corporate entities and so do not have an intrinsic spatial component. But they serve other entities that <em>do</em> have a spatial component, so we will use look-up tables to attach spatial info to them.</p>
-<p>It would be great if the table names could be based on an established ontology. Liz is currently looking into this. However, in the meantime, table names are very specific so that they describe the exact relationship between the entities. This will self-document the queries when those are written.</p>
-<p>Here are the look-up tables that will do this:</p>
+<p>Table names are very specific so that they describe the exact relationship between the entities. This will self-document the queries when those are written.</p>
 </section>
-<section id="provides_electricity_to" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="provides_electricity_to"><span class="header-section-number">5.3</span> provides_electricity_to</h2>
+<section id="early-ideas-for-lookup-tables" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="early-ideas-for-lookup-tables"><span class="header-section-number">4.2.3</span> Early ideas for lookup tables</h3>
+<p>Before we established the ELT pipeline or the application database, Liz theorized about potentially required tables. These have not been developed, but they do illustrate some interesting points so they have not been removed.</p>
+<section id="provides_electricity_to" class="level4" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="provides_electricity_to"><span class="header-section-number">4.2.3.1</span> provides_electricity_to</h4>
 <p>Utilites provide electricity to Communities. Liz added some columns that might be useful, but she doesn’t know where these data will come from, so the table schema will change. This is just an example of what <em>could</em> be.</p>
 <ul>
 <li><strong>Analogous Standards</strong>:</li>
@@ -306,8 +306,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="is_intertied_with" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="is_intertied_with"><span class="header-section-number">5.4</span> is_intertied_with</h2>
+<section id="is_intertied_with" class="level4" data-number="4.2.3.2">
+<h4 data-number="4.2.3.2" class="anchored" data-anchor-id="is_intertied_with"><span class="header-section-number">4.2.3.2</span> is_intertied_with</h4>
 <p>Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but “intertie” is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our puposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.)</p>
 <ul>
 <li><strong>Analogous Standards</strong>:
@@ -357,8 +357,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="is_based_near" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="is_based_near"><span class="header-section-number">5.5</span> is_based_near</h2>
+<section id="is_based_near" class="level4" data-number="4.2.3.3">
+<h4 data-number="4.2.3.3" class="anchored" data-anchor-id="is_based_near"><span class="header-section-number">4.2.3.3</span> is_based_near</h4>
 <p>Alaska Native village corporations are organized around small communities in Alaska that typically originated as traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Therefore, they aren’t the same as a Community but manage lands in possibly disjointed parcels inside and around the Community.</p>
 <p>The <a href="https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/">DCRA dataset</a> explicitly links these two with the columns <code>EntityName</code> and <code>CommunityName</code>. The addresses are for the corporate headquarters, which might be in Anchorage or somewhere, so those aren’t reliable links.</p>
 <ul>
@@ -389,6 +389,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 
 
+</section>
 </section>
 </section>
 

@@ -178,8 +178,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">2.1</span> Classes</a></li>
-  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">2.2</span> Common Properties</a></li>
+  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">2.1</span> Classes</a>
+  <ul class="collapse">
+  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">2.1.1</span> Common Properties</a></li>
+  </ul></li>
   <li><a href="#list-of-classes" id="toc-list-of-classes" class="nav-link" data-scroll-target="#list-of-classes"><span class="header-section-number">3</span> List of Classes</a>
   <ul class="collapse">
   <li><a href="#aedg-context-only" id="toc-aedg-context-only" class="nav-link" data-scroll-target="#aedg-context-only"><span class="header-section-number">3.1</span> AEDG Context Only</a>
@@ -272,20 +274,20 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Properties could take the form of columns in tables in a relational database.</li>
 </ul>
-</section>
-<section id="common-properties" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">2.2</span> Common Properties</h2>
-<p>These are attributes shared by all Classes</p>
+<section id="common-properties" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">2.1.1</span> Common Properties</h3>
+<p>We’ve adopted some common properties that are used by multiple tables (but are not manditory). These are based on Rails conventions:</p>
 <ul>
-<li>id (int): All Classes should have an id column for inclusion in lookup tables.
+<li>id (int): the row number generated when the table is ingested into the database</li>
+<li>name (string): human readable label. We don’t use these as indices or unique identifiers, because they are never the same between data sets.</li>
+<li>date (string): time</li>
+<li>geometry (): geometry(Point, OGC:CRS84), geometry(Polygon, OGC:CRS84), geometry(MultiPolygon, OGC:CRS84) for locations and boundaries
 <ul>
-<li>How we determine these is a whole ’nother thing.</li>
+<li>The ELT process generates GeoJSON with a coordinate reference system denoted as <code>"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }</code>. This is equivalent to EPSG:4326 (WGS84) with the order changed from Lat-Long to Long-Lat.</li>
 </ul></li>
-<li>label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)</li>
-<li>classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation.</li>
-<li>entityModificationDate (time): This is to allow evolution in time.</li>
-<li>geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.</li>
+<li>as_of_date (string): when the source data was published.</li>
 </ul>
+</section>
 </section>
 <section id="list-of-classes" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> List of Classes</h1>
