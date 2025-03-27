@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/data-duck.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./images/aedg_logo_color_300ppi.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Alaskan Community Ontology</a> 
@@ -123,19 +123,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Alaska Community Ontology</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Alaskan Community Ontology</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./community_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Classes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Regional Classes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Energy Classes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,8 +172,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose"><span class="header-section-number">A.1</span> Purpose</a></li>
+  <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding"><span class="header-section-number">A.2</span> Funding</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow"><span class="header-section-number">A.3</span> Workflow</a></li>
+  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><span class="header-section-number">A.4</span> Additional Information</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -218,9 +227,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="purpose" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="purpose"><span class="header-section-number">A.1</span> Purpose</h2>
 <p>This respository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP), UAF, and the Institute for Social and Economic Research (ISER), UAA. It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.</p>
+</section>
+<section id="funding" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="funding"><span class="header-section-number">A.2</span> Funding</h2>
+<p>This project was built with support from State of Alaska capital appropriations for the Alaska Energy Data Gateway.</p>
+</section>
+<section id="workflow" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="workflow"><span class="header-section-number">A.3</span> Workflow</h2>
+<ol type="1">
+<li>Liz drafted an initial versions based on discussions at the Nov 11, 2024, meeting of AEDG personnel. The intention was to track issues in this repo.</li>
+<li>These were translated into a data model that serves as a translation layer between Ian who is creating the data tables and Nicole and Will who are building the Rails database.</li>
+<li>As consensus is reached (often in direct messages or conversations during meetings), the resolution migrates to the data model and then to this ontology.</li>
+</ol>
+<p>The original idea was to encode the ontology in OWL. However, as of Nov.&nbsp;2024, it is unclear how to make use of an OWL formated ontology with code.</p>
+<p>The second idea was a separate realational (or graph) database that would be queried during the table development. Instead, Ian built a self-contained ELT workflow as a way to experiment with different relations. His findings then feed back into the data model.</p>
+<p>Ontology specific work will be delayed to future development cycles, if it happens at all.</p>
+</section>
+<section id="additional-information" class="level2" data-number="A.4">
+<h2 data-number="A.4" class="anchored" data-anchor-id="additional-information"><span class="header-section-number">A.4</span> Additional Information</h2>
+<p>Learn more about the <a href="https://www.uaf.edu/acep/about/index.php">Alaska Center for Energy and Power</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -801,7 +832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is based on Openscape’s <a href="https://github.com/Openscapes/quarto-website-tutorial">Quarto Site Template</a> and built with <a href="https://quarto.org/">Quarto</a> .</p>
 </div>
