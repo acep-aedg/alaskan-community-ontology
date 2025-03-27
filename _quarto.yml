@@ -15,7 +15,7 @@ book:
     left: "&copy; CC BY-SA 4.0, 2024"
     
   sidebar:
-    logo: "images/data-duck.png"
+    logo: "images/aedg_logo_color_300ppi.png"
     pinned: true
     align: center
     tools: 

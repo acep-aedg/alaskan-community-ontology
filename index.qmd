@@ -1,6 +1,6 @@
 ---
-title: "Alaska Community Ontology"
-subtitle: "A Book Made with Quarto"
+title: "Alaskan Community Ontology"
+subtitle: "Describing elements of the Alaska Energy Data Gateway (AEDG)"
 ---
 
 ## Welcome  {#welcome}
@@ -27,7 +27,7 @@ Also, different audiences need data reported at different scales:
 - Legislative Aides want summaries by legislative district.
 - Agency leads might want to compare PCE communities with railbelt communities.
 
-The assumption is that this needs to function **for the current time only**. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves. In a future time, we might want to support this with a time-dependent version of this system, but now is not that time.
+
 
 ## Format
 
@@ -44,18 +44,6 @@ Development will begin with a series of web pages oriented around ontological co
 - **Axioms**: Domain-specific rules that encapsulate what we know about the Classes.
   - Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include `x = y` and `y = z`, trying to enter an `x` that isn't equal to `z` would fail a test.
 
-## Workflow
-
-1. Liz drafted an initial versions based on discussions at the Nov 11, 2024, meeting of AEDG personnel. The intention was to track issues in this repo.
-2. These were translated into a data model that serves as a translation layer between Ian who is creating the data tables and Nicole and Will who are building the Rails database.
-3. As consensus is reached (often in direct messages or conversations during meetings), the resolution migrates to the data model and then if we are lucky to this ontology.
-
-The original idea was to encode the ontology in OWL. However, as of Nov. 2024, it is unclear how to make use of an OWL formated ontology with code. 
-
-The second idea was a separate realational (or graph) database that would be queried during the table development. Instead, Ian built a self-contained ELT workflow as a way to experiment with different relations. His findings then feed back into the data model
-
-Ontology specific work will be delayed to future development cycles, if it happens at all.
-
 
 ## Possibly Applicable Standards
 
@@ -63,15 +51,15 @@ Whenever possible, we will rely on existing resources and resist defining our ow
 
 [Schema.org](https://schema.org) is a widely used classification scheme built around web semantics - so more applicable to internet based services, of which AEDG is one.
 
-[Dublin Core Metadata Terms (DCMT)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms) are limited to only the most necessary terms. For instance, [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) is defined to include both spatial regions and named places, and puts no qualifications on the type or context. Similarly, an [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) is merely "a resource that acts or has the power to act". [Wikipedia says](https://en.wikipedia.org/wiki/Dublin_Core): "Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as **an** Resource Description Framework (RDF) vocabulary."
+[Dublin Core Metadata Terms (DCMT)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms) are limited to only the most necessary terms. For instance, [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) is defined to include both spatial regions and named places, and puts no qualifications on the type or context. Similarly, an [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) is merely "a resource that acts or has the power to act". [Wikipedia says](https://en.wikipedia.org/wiki/Dublin_Core): "Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as a Resource Description Framework (RDF) vocabulary."
 
-OEO is the [Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/), which you access via this [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/terms).
+[Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/) (OEO), which you access via this [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/terms).
 
-If the Census terms don't make sense, check the [Census Glossary](https://www.census.gov/glossary/).
+The [Census Glossary](https://www.census.gov/glossary/) describes the terms associated with the census.
 
 Terms describing Alaska Native representation are complex. The definitions here are based on [ANCSA Regional Association's Overview](https://ancsaregional.com/overview-of-entities/), is a description of the different tribal entities in Alaska that includes links to more information.
 
-## This is a stoat
+
 
 ![Initial Brainstorming.](images/brainstorming_board.jpg){fig-alt="first graph of communities" width=600 fig-align="left"}
 

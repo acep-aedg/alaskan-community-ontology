@@ -10,4 +10,28 @@ citation: true
 date: 2024-11-12
 ---
 
+## Purpose
+
 This respository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP), UAF, and the Institute for Social and Economic Research (ISER), UAA. It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.
+
+## Funding
+
+This project was built with support from State of Alaska capital appropriations for the Alaska Energy Data Gateway.
+
+
+## Workflow
+
+1. Liz drafted an initial versions based on discussions at the Nov 11, 2024, meeting of AEDG personnel. The intention was to track issues in this repo.
+2. These were translated into a data model that serves as a translation layer between Ian who is creating the data tables and Nicole and Will who are building the Rails database.
+3. As consensus is reached (often in direct messages or conversations during meetings), the resolution migrates to the data model and then  to this ontology.
+
+The original idea was to encode the ontology in OWL. However, as of Nov. 2024, it is unclear how to make use of an OWL formated ontology with code. 
+
+The second idea was a separate realational (or graph) database that would be queried during the table development. Instead, Ian built a self-contained ELT workflow as a way to experiment with different relations. His findings then feed back into the data model.
+
+Ontology specific work will be delayed to future development cycles, if it happens at all.
+
+
+## Additional Information
+
+Learn more about the [Alaska Center for Energy and Power](https://www.uaf.edu/acep/about/index.php).

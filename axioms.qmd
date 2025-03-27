@@ -15,24 +15,25 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
   - Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include `x = y` and `y = z`, trying to enter an `x` that isn't equal to `z` would fail a test.
   - An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.
   
+## Regions
 
-## State
+### State
 - The State is defined to be Alaska
 - All Communities are in the State
 
-## Community
+### Community
 - Communities are primarily determined by the expectations of the AEDG audience.
 - Communities should be equal to a single entity (preferred)
 - Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)
 
-## Indigenous 
+### Indigenous 
 
 - Tribes are nations and should be federally recognized (but sometimes are not)
 - Native corporations are not nations, they are corporations that are a uniquely Alaskan entity. 
   - Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
 - Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate type of entity.
 
-## Legislative Districts
+### Legislative Districts
 
 - A Senate election district is composed of two contiguous house districts, if possible.
 - Districts are redefined every 10 years after the federal census, and may change itermittantly due to court challenges.
@@ -40,13 +41,13 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A single Community might intersect several HouseDistricts (example: Fairbanks)
   - Therefore: HouseDistrict population cannot be determined from a sum of Community populations.
 
-## Boroughs
+### Boroughs
 - Communities can be unencorporated, meaning they are not in a Borough.
 - If encorporated, a Community can only be in a single Borough
 - There is one unencorporated Borough
   - The unencorporated Borough is split into CensusAreas for statistical purposes (not administrative)
 
-## Census
+### Census
 
 - Census blocks are not permanent through the decades. If a block is split, a suffix is added to the block number.
 - Census blocks are not required to have population. They could be water-only.
@@ -60,15 +61,15 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A CDP has a name that is different from adjacent places, but is not unique and can change.
 
 
-## Zip Codes (Optional)
+### Zip Codes (Optional)
 - A ZipCode can contain multiple Communities, especially in rural areas.
 - A single Community can contain multiple ZipCodes, especially in urban areas.
 
 
-# Energy-Related
+## Energy-Related
 
 
-## Grid
+### Grid
 - Is a physical structure that supplies electricity to Communities
   - A Grid has the physical entities of PowerStations and PowerLines
 - If isolated, is called a microgrid (check this)
@@ -76,7 +77,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
   - Interies are established on particular dates, so Grid definition can change over time
 - A Grid generates power to supply a load.
 
-## Utility
+### Utility
 - A Utility can operate a single Grid (KEA)
 - A Utility can operate multiple Grids (AVEC or AP&T)
 - A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
@@ -87,10 +88,14 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - Utility service areas are documented by the RCA with PDF maps. KML also?
     - [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
 
-## IPP
+### IPP
 - A [Tribal Independent Power Producer (IPP)](https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf) can develop and own renewable energy assets
 - A local utility can buy renewable energy power from the Tribal IPP
 - The cost of that power becomes a fuel cost that is an eligible PCE expense
 
 
 ![KEA in Google Earth](images/KEA_kml_google.png){fig-alt="KEA's service area displayed in Google Earth" width=600 fig-align="left"}
+
+## Regarding Time
+
+The assumption is that this needs to function **for the current time only**. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves.

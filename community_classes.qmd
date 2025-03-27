@@ -1,5 +1,5 @@
 ---
-title: "Classes"
+title: "Regional Classes"
 subtitle: "Types of entities in the Alaska Community Ontology"
 author:
   - name: Liz Dobbins
