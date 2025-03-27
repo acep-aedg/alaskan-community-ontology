@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-11-12">
 <meta name="description" content="A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.">
 
-<title>Appendix A — About – Alaskan Community Ontology</title>
+<title>3&nbsp; Classes – Alaskan Community Ontology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./axioms.html" rel="prev">
+<link href="./relations.html" rel="next">
+<link href="./community_classes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">Appendices</a></li><li class="breadcrumb-item"><a href="./about.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">About</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./energy_classes.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
+  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classes</span></span></a>
   </div>
 </li>
@@ -161,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">About</span></span></a>
   </div>
 </li>
@@ -172,15 +173,36 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#classes" id="toc-classes" class="nav-link active" data-scroll-target="#classes"><span class="header-section-number">3.1</span> Classes</a></li>
+  <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">3.2</span> Common Properties</a></li>
+  <li><a href="#list-of-energy-classes" id="toc-list-of-energy-classes" class="nav-link" data-scroll-target="#list-of-energy-classes"><span class="header-section-number">4</span> List of Energy Classes</a>
+  <ul class="collapse">
+  <li><a href="#energy-context" id="toc-energy-context" class="nav-link" data-scroll-target="#energy-context"><span class="header-section-number">4.1</span> Energy Context</a>
+  <ul class="collapse">
+  <li><a href="#grids" id="toc-grids" class="nav-link" data-scroll-target="#grids"><span class="header-section-number">4.1.1</span> Grids</a></li>
+  <li><a href="#utilities" id="toc-utilities" class="nav-link" data-scroll-target="#utilities"><span class="header-section-number">4.1.2</span> Utilities</a></li>
+  <li><a href="#powerlines" id="toc-powerlines" class="nav-link" data-scroll-target="#powerlines"><span class="header-section-number">4.1.3</span> PowerLines</a></li>
+  <li><a href="#powerstations" id="toc-powerstations" class="nav-link" data-scroll-target="#powerstations"><span class="header-section-number">4.1.4</span> PowerStations</a></li>
+  <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">4.1.5</span> PceEntities</a></li>
+  <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">4.1.6</span> PceCommunities</a></li>
+  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">4.1.7</span> IPP</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">Appendices</a></li><li class="breadcrumb-item"><a href="./about.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">About</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix A — About</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Classes</span></h1>
+<p class="subtitle lead">Types of entities in the Alaska Community Ontology</p>
 </div>
 
 
@@ -218,9 +240,176 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This respository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP), UAF, and the Institute for Social and Economic Research (ISER), UAA. It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.</p>
+<section id="classes" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="classes"><span class="header-section-number">3.1</span> Classes</h2>
+<p>Classes are types of entities. Most are defined according to existing legal structures as described in the linked references. The main exception is Community, which is the organizational principle of previous versions of AEDG; we will define that one ourselves. It is likely we can use established standard vocabularies to define all Classes. Which standard we use will depend on the level of specificity we want.</p>
+<ul>
+<li>Classes could be translated to tables in a relational database, if that makes sense for development.</li>
+<li>Instances of a Class are nodes in a graph, if you think about things that way.</li>
+<li>Classes are typically capitolized to differentiate them from instances or objects of that class, which are lower case.</li>
+</ul>
+<p>This page also includes Properties, which are attributes of the Classes.</p>
+<ul>
+<li>Properties could take the form of columns in tables in a relational database.</li>
+</ul>
+</section>
+<section id="common-properties" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="common-properties"><span class="header-section-number">3.2</span> Common Properties</h2>
+<p>These are attributes shared by all Classes</p>
+<ul>
+<li>id (int): All Classes should have an id column for inclusion in lookup tables.
+<ul>
+<li>How we determine these is a whole ’nother thing.</li>
+</ul></li>
+<li>label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)</li>
+<li>classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation.</li>
+<li>entityModificationDate (time): This is to allow evolution in time.</li>
+<li>geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.</li>
+</ul>
+</section>
+<section id="list-of-energy-classes" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> List of Energy Classes</h1>
+<section id="energy-context" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="energy-context"><span class="header-section-number">4.1</span> Energy Context</h2>
+<section id="grids" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="grids"><span class="header-section-number">4.1.1</span> Grids</h3>
+<ul>
+<li><strong>Definition</strong>: An Electric power grid is “A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. … In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)” (EIA)</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CONTAINS PowerLines (transmission and distribution lines)</li>
+<li>CONTAINS PowerStations (power providers)</li>
+<li>CONTAINS Communities (consumers) demand, load ?</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000143">OEO:electricity grid</a> - “An electricity grid is a supply grid that distributes electrical energy / electricity.” It is an aggregate of material entities that has parts: power stations and power lines.</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid</li>
+<li>https://en.wikipedia.org/wiki/Electrical_grid</li>
+<li>https://www.nrel.gov/grid/microgrids.html</li>
+<li>https://en.wikipedia.org/wiki/Microgrid</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>microgrid (boolean): True/False (need a definition for this)</li>
+<li>capacity (int): megawatts MW</li>
+<li>geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?</li>
+</ul></li>
+</ul>
+</section>
+<section id="utilities" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="utilities"><span class="header-section-number">4.1.2</span> Utilities</h3>
+<ul>
+<li><strong>Definition</strong>: “A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives.” (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.</li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140130">OEO:power plant operator</a> - “an agent that operates an electric utility generation station.”</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>coop (boolean): True/False is it organized as a member owned co-operative?</li>
+<li>private (boolean): True/False is it a private company? Public owned utility (POU)?</li>
+<li>certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number</li>
+<li>certificate_name: RCA’s name for the utility</li>
+<li>geom: could be determined by the look-up table <code>provides_electricity_to</code>. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.</li>
+</ul></li>
+</ul>
+</section>
+<section id="powerlines" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="powerlines"><span class="header-section-number">4.1.3</span> PowerLines</h3>
+<ul>
+<li><strong>Definition</strong>: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>WITHIN Grids</li>
+<li>TOUCHES PowerStations</li>
+<li>TOUCHES Loads</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000144">OEO:electricity grid component</a> (a material entity that includes power plants)</li>
+<li>or more specifically <a href="http://openenergy-platform.org/ontology/oeo/OEO_00000253">OEO:power line</a></li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>owner (string): Who owns it?</li>
+<li>maintainer (string): Who maintains it? Is this the same as Owner?</li>
+<li>voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)</li>
+<li>type (string): buried, underwater, overhead</li>
+<li>geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.</li>
+</ul></li>
+</ul>
+</section>
+<section id="powerstations" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="powerstations"><span class="header-section-number">4.1.4</span> PowerStations</h3>
+<ul>
+<li><strong>Definition</strong>: Entities that generate electricity for grids.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>TOUCHES PowerLines</li>
+<li>WITHIN Grids</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000031">OEO:power plant</a> - “an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid.”</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn’t belong with communities. Perhaps already handled by the Open Energy Ontology.</li>
+<li>geometry (WKT Point):</li>
+</ul></li>
+</ul>
+</section>
+<section id="pceentities" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="pceentities"><span class="header-section-number">4.1.5</span> PceEntities</h3>
+<ul>
+<li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says “Communities served by entities that are eligible for the Alaska Energy Authority’s Power Cost Equalization program.”<br>
+</li>
+<li>PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them.</li>
+<li>Also includes ineligible like Fairbanks and Barrow. Wha?</li>
+<li>Map shows points but CSV is an X,Y projection?</li>
+<li>Data Year - points with different times. Maybe</li>
+</ul>
+</section>
+<section id="pcecommunities" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="pcecommunities"><span class="header-section-number">4.1.6</span> PceCommunities</h3>
+<ul>
+<li>https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says “Alaska Energy Authority Power Cost Equalization (PCE) program by community.”</li>
+<li>CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?</li>
+<li>Single PCECommunity can link to multiple communities, i.e.&nbsp;“Tok; Tanacross PCE”</li>
+<li>This is the big CSV from AEA with columns for population and rates.</li>
+</ul>
+</section>
+<section id="ipp" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" class="anchored" data-anchor-id="ipp"><span class="header-section-number">4.1.7</span> IPP</h3>
+<ul>
+<li><strong>Definition</strong>: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.</li>
+<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Analogous Standards</strong>:</li>
+<li><strong>References</strong>:
+<ul>
+<li>https://www.eia.gov/tools/glossary/index.php?id=Independent%20power%20producer</li>
+</ul></li>
+<li><strong>Properties</strong>:</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -786,11 +975,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./axioms.html" class="pagination-link" aria-label="Axioms">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Axioms</span></span>
+      <a href="./community_classes.html" class="pagination-link" aria-label="Classes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Classes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./relations.html" class="pagination-link" aria-label="Relations">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Relations</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -801,7 +993,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is based on Openscape’s <a href="https://github.com/Openscapes/quarto-website-tutorial">Quarto Site Template</a> and built with <a href="https://quarto.org/">Quarto</a> .</p>
 </div>
