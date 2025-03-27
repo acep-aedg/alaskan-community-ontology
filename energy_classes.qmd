@@ -1,0 +1,125 @@
+---
+title: "Classes"
+subtitle: "Types of entities in the Alaska Community Ontology"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+date: 2024-11-12
+---
+
+## Classes
+
+{{< include _classes.qmd >}}
+
+
+## Common Properties
+
+These are attributes shared by all Classes
+
+- id (int): All Classes should have an id column for inclusion in lookup tables. 
+  - How we determine these is a whole 'nother thing.
+- label (string): Human readable name. This cannot be the key of the table becaues multiple Classes could have the same label (example: Fairbanks the Municipality and Fairbanks the Borough)
+- classModificationDate (time): Classes will evolve as we evaluate their effectiveness, so we should record when the class definition changes to identify which Classes might need reevaluation. 
+- entityModificationDate (time): This is to allow evolution in time.
+- geometry (geom): As it is developing, each of these entities seems to have spatial component, though it might be a Point, Polygon, or Line.
+
+
+# List of Energy Classes
+
+## Energy Context
+
+### Grids
+- **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
+- **SpatialRelationships**: 
+  - CONTAINS PowerLines (transmission and distribution lines)
+  - CONTAINS PowerStations (power providers)
+  - CONTAINS Communities (consumers) demand, load ?
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid
+  - https://en.wikipedia.org/wiki/Electrical_grid
+  - https://www.nrel.gov/grid/microgrids.html
+  - https://en.wikipedia.org/wiki/Microgrid
+- **Properties**:
+  - microgrid (boolean): True/False (need a definition for this)
+  - capacity (int): megawatts MW
+  - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
+
+
+### Utilities
+- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
+- **Analogous Standards**:
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
+- **Properties**:
+  - coop (boolean): True/False is it organized as a member owned co-operative?
+  - private (boolean): True/False is it a private company? Public owned utility (POU)?
+  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
+  - certificate_name: RCA's name for the utility
+  - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
+
+
+### PowerLines
+- **Definition**: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed. 
+- **SpatialRelationships**: 
+  - WITHIN Grids
+  - TOUCHES PowerStations
+  - TOUCHES Loads
+- **Analogous Standards**:
+   - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
+  - or more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+- **Properties**:
+  - owner (string): Who owns it?
+  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
+  - type (string): buried, underwater, overhead
+  - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
+
+### PowerStations
+- **Definition**: Entities that generate electricity for grids. 
+- **SpatialRelationships**: 
+  - TOUCHES PowerLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
+- **Properties**:
+  - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
+  - geometry (WKT Point):
+
+
+### PceEntities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program."  
+- PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them. 
+- Also includes ineligible like Fairbanks and Barrow. Wha?
+- Map shows points but CSV is an X,Y projection?
+- Data Year - points with different times. Maybe 
+
+
+### PceCommunities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
+- CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
+- Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
+- This is the big CSV from AEA with columns for population and rates.
+
+
+### IPP
+- **Definition**: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=Independent%20power%20producer
+- **Properties**:
+
+
+

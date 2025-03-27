@@ -28,7 +28,8 @@ book:
 
   chapters:
     - index.qmd
-    - classes.qmd
+    - community_classes.qmd
+    - energy_classes.qmd
     - relations.qmd
     - axioms.qmd
   appendices:
