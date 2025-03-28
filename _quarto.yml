@@ -34,6 +34,7 @@ book:
     - axioms.qmd
   appendices:
     - about.qmd
+    - fairbanks_oddities.qmd
 
 format:
   html:

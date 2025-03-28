@@ -7,7 +7,7 @@ author:
     affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2024-11-12
+date: 2024-03-27
 ---
 
 ## Classes
@@ -16,6 +16,79 @@ date: 2024-11-12
 
 
 ## List of Classes in the Energy Context
+
+### Operators
+- **Definition**: Because so many types of entities generate power in Alaska, an overarching category is required to avoid classification conflicts. So operators are any entity that operates power generation facilities. 
+- **SpatialRelationships**: 
+  - Corporate entity, not spatial
+- **Analogous Standards**:
+  - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
+- **References**:
+  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)  
+- **Properties**:
+  - ak_operator (string): assigned by Neil to integrate EIA and PCE information
+  - pce_utility_code (string): assigned by AEA for accounting
+  - eia_operator_id (integer): assigned by EIA
+  - cpcn integer (integer): assigned by RCA
+  - operator_name (string): EIA, PCE, RCA or other
+  - sector_name (string): EIA's internal consolidated NAICS
+  - sector_number (integer): unknown
+  - operator_rca_regulatory_status_name (string): Enum = regulated, etc (see below)
+  - operator_utility_type_name (string): Enum = public, private, etc (see below)
+  - operator_cpcn_status (string): Enum = active, inactive
+  - pce_eligible (boolean)
+  - power_generation_end_use (string): Enum = retail, wholesale. source uncertain
+  - notes (string)
+
+#### Operator Regulatory Status
+- **Definition**: values of operator_rca_regulatory_status_name
+- **References**:
+  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)  
+- **Values**: 
+  - Regulated: by the RCA
+  - Not regulated
+  - Regulated, rate exemption: Exempted from rate cases because of nature of ownership is municiple or co-op or very small private or the customers waived it
+  - N/A
+
+#### Operator Utility Type Name
+- **Definition**: values of operator_utility_type_name
+- **References**:
+  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)  
+- **Values**: 
+  - Public Electric Utility: includes Electric Co-op
+  - Private Electric Utility
+  - Subsidiary
+  - Independent Power Producer
+  - Military
+  - Industrial
+  - State Government: as Joint Action Agency of the State of Alaska i.e. Southeast Alaska Power Agency or Alaska Industrial Development & Export Authority
+  - Political Subdivision of the State: Not used?
+
+### Plant
+- **Definition**: Entities that generate electricity for grids. (or power station)
+- **SpatialRelationships**: 
+  - TOUCHES PowerLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
+- **Properties**:
+  - ak_plant_id (string): assigned by Neil to integrate EIA and PCE information
+  - eia_plant_id (integer): assigned by EIA
+  - pce_preporting_id (integer): assigned by AEA
+  - operator_ak_operator_id (string): assigned by Neil in operator table
+  - eia_operator_id (integer): assigned by EIA
+  - operator_operator_name (string): defined by Neil in operator table
+  - intertie_current_intertie_id (string): assigned by Neil in intertie table
+  - intertie_current_intertie_name (string): assigned by Neil in intertie table
+  - combined_heat_power (boolean)
+  - primary_voltage (float): grid voltage (kV) at point of interconnection
+  - primary_voltage2 (float): grid voltage (kV) at point of interconnection, often null
+  - phases (integer): from AEA powerhouse survey, single or three phase
+  - latitude (float): of the plant
+  - longitude (float): of the plant
+  - notes (string)
+  - geometry (WKT Point): from latitude and longitude
 
 ### Grids
 - **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
@@ -31,27 +104,18 @@ date: 2024-11-12
   - https://en.wikipedia.org/wiki/Electrical_grid
   - https://www.nrel.gov/grid/microgrids.html
   - https://en.wikipedia.org/wiki/Microgrid
+  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) calls these interties
 - **Properties**:
-  - microgrid (boolean): True/False (need a definition for this)
-  - capacity (int): megawatts MW
+  - ak_intertie_id (string): assigned by Neil as combo of id and year
+  - intertie_unique_id_name (string): primary community name
+  - current (boolean): is this the most recent version?
+  - communities_intertied (string): community names separated by some puctuation
+  - month_of_intertie (integer): most often empty
+  - year_of_intertie (integer): repeated in id, often empty
+  - aea_energy_region (string): assigned by AEA
+  - source (string): where info came from. most often empty
   - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
 
-
-### Utilities
-- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
-- **Analogous Standards**:
-  - https://schema.org/Corporation
-  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
-  - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
-- **References**:
-  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
-- **Properties**:
-  - coop (boolean): True/False is it organized as a member owned co-operative?
-  - private (boolean): True/False is it a private company? Public owned utility (POU)?
-  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
-  - certificate_name: RCA's name for the utility
-  - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
 
 
 ### PowerLines
@@ -71,33 +135,24 @@ date: 2024-11-12
   - type (string): buried, underwater, overhead
   - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
 
-### PowerStations
-- **Definition**: Entities that generate electricity for grids. 
-- **SpatialRelationships**: 
-  - TOUCHES PowerLines
-  - WITHIN Grids
+
+## Other (unused?)
+
+### Utilities
+- **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
 - **Analogous Standards**:
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
 - **Properties**:
-  - fuel (string): OK. now I know this belongs elsewhere, because fuel type should be a lookup table and that doesn't belong with communities. Perhaps already handled by the Open Energy Ontology.
-  - geometry (WKT Point):
-
-
-### PceEntities
-- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program."  
-- PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them. 
-- Also includes ineligible like Fairbanks and Barrow. Wha?
-- Map shows points but CSV is an X,Y projection?
-- Data Year - points with different times. Maybe 
-
-
-### PceCommunities
-- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
-- CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
-- Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
-- This is the big CSV from AEA with columns for population and rates.
-
+  - coop (boolean): True/False is it organized as a member owned co-operative?
+  - private (boolean): True/False is it a private company? Public owned utility (POU)?
+  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
+  - certificate_name: RCA's name for the utility
+  - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
 
 ### IPP
 - **Definition**: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.
@@ -107,5 +162,15 @@ date: 2024-11-12
   - https://www.eia.gov/tools/glossary/index.php?id=Independent%20power%20producer
 - **Properties**:
 
+### PceEntities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program."  
+- PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them. 
+- Also includes ineligible like Fairbanks and Barrow. Wha?
+- Map shows points but CSV is an X,Y projection?
+- Data Year - points with different times. Maybe 
 
-
+### PceCommunities
+- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
+- CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
+- Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
+- This is the big CSV from AEA with columns for population and rates.

@@ -7,7 +7,7 @@ author:
     affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2024-11-12
+date: 2024-03-27
 ---
 
 Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
