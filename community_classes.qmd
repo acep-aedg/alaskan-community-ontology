@@ -229,19 +229,28 @@ date: 2024-03-27
 - **Properties**:
   - geometry (WKT Polygon): boundary of the census tract.
 
-
-### Regions
-- **Definition**: Communities have been grouped into Regions in order to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA's 11 regions or ACEP's 3 regions (Coastal, PCE, or Railbelt).  Note: if we need to translate between AEA and ACEP regions, we will need to separate these.
+### AeaEnergyRegions
+- **Definition**: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.
 - **SpatialRelationships**: 
+  - CONTAINS Communities
 - **Analogous Standards**:
   - https://schema.org/DefinedRegion - Arbitrary!  haha
-  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
+  - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
+- **References**:
+  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::alaska-energy-authority-regions/about
+  - https://gis.data.alaska.gov/datasets/DCCED::energy-development-regions/explore?location=0.934218%2C0.000000%2C0.91&showTable=true
+- **Properties**:
+  - geometry (WKT Polygon): borders of the study regions
+
+### AcepEnergyRegions
+- **Definition**: Communities were been grouped into 3 regions in order to summarize energy trends in the [2024 Alaska Electricity Trends Report](https://acep-uaf.github.io/aetr-web-book-2024/). Was intended to group communities by generation mix, but we grouped in contiguous areas: railbelt, coastal, and rural remote.
+- **SpatialRelationships**: 
+  - CONTAINS Communities
+- **Analogous Standards**:
+  - https://schema.org/DefinedRegion - Arbitrary!  haha
   - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **Properties**:
-  - organizaton (string): 'ACEP' or 'AEA' as the origanization that defined the region. 
-  - ~~boundary (WKT Polygon):~~ A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP's regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography. Could be solved with multipolygon or lookup table.
-  - geometry (WKT MultiPolygon): proposed geometry 
-
+  - geometry (WKT MultiPolygon) or (WKT Polygon): boundaries 
 
 ## Optional
 
