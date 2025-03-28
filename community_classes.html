@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Energy Classes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -212,7 +212,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#censusblocks" id="toc-censusblocks" class="nav-link" data-scroll-target="#censusblocks"><span class="header-section-number">3.4.1</span> CensusBlocks</a></li>
   <li><a href="#censustracts" id="toc-censustracts" class="nav-link" data-scroll-target="#censustracts"><span class="header-section-number">3.4.2</span> CensusTracts</a></li>
-  <li><a href="#regions" id="toc-regions" class="nav-link" data-scroll-target="#regions"><span class="header-section-number">3.4.3</span> Regions</a></li>
+  <li><a href="#aeaenergyregions" id="toc-aeaenergyregions" class="nav-link" data-scroll-target="#aeaenergyregions"><span class="header-section-number">3.4.3</span> AeaEnergyRegions</a></li>
+  <li><a href="#acepenergyregions" id="toc-acepenergyregions" class="nav-link" data-scroll-target="#acepenergyregions"><span class="header-section-number">3.4.4</span> AcepEnergyRegions</a></li>
   </ul></li>
   <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.5</span> Optional</a>
   <ul class="collapse">
@@ -616,22 +617,46 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="regions" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="regions"><span class="header-section-number">3.4.3</span> Regions</h3>
+<section id="aeaenergyregions" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="aeaenergyregions"><span class="header-section-number">3.4.3</span> AeaEnergyRegions</h3>
 <ul>
-<li><strong>Definition</strong>: Communities have been grouped into Regions in order to summarize energy trends in the Energy Statistics Workbooks or the Alaska Electricity Trends Report (2024). If new regions are defined, they can be included, but this is intended to be either AEA’s 11 regions or ACEP’s 3 regions (Coastal, PCE, or Railbelt). Note: if we need to translate between AEA and ACEP regions, we will need to separate these.</li>
-<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Definition</strong>: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CONTAINS Communities</li>
+</ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
-<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::alaska-energy-authority-regions/about</li>
+<li>https://gis.data.alaska.gov/datasets/DCCED::energy-development-regions/explore?location=0.934218%2C0.000000%2C0.91&amp;showTable=true</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>geometry (WKT Polygon): borders of the study regions</li>
+</ul></li>
+</ul>
+</section>
+<section id="acepenergyregions" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="acepenergyregions"><span class="header-section-number">3.4.4</span> AcepEnergyRegions</h3>
+<ul>
+<li><strong>Definition</strong>: Communities were been grouped into 3 regions in order to summarize energy trends in the <a href="https://acep-uaf.github.io/aetr-web-book-2024/">2024 Alaska Electricity Trends Report</a>. Was intended to group communities by generation mix, but we grouped in contiguous areas: railbelt, coastal, and rural remote.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CONTAINS Communities</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
-<li>organizaton (string): ‘ACEP’ or ‘AEA’ as the origanization that defined the region.</li>
-<li><del>boundary (WKT Polygon):</del> A spatial boundary does not make sense because these were used to group communities together, and in the case of ACEP’s regions, they were intended to be discontinuous. Meaning, there are some PCE communities that are pretty near the coast because the designation is based on power costs and not geography. Could be solved with multipolygon or lookup table.</li>
-<li>geometry (WKT MultiPolygon): proposed geometry</li>
+<li>geometry (WKT MultiPolygon) or (WKT Polygon): boundaries</li>
 </ul></li>
 </ul>
 </section>
@@ -1270,8 +1295,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./energy_classes.html" class="pagination-link" aria-label="Energy Classes">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Energy Classes</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./energy_classes.html" class="pagination-link" aria-label="Electricity Classes">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
