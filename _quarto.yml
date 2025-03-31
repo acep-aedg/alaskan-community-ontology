@@ -35,6 +35,7 @@ book:
   appendices:
     - about.qmd
     - fairbanks_oddity.qmd
+    - grids.qmd
 
 format:
   html:
