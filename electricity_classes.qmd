@@ -106,15 +106,13 @@ date: 2024-03-27
   - https://en.wikipedia.org/wiki/Microgrid
   - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) calls these interties
 - **Properties**:
-  - ak_intertie_id (string): assigned by Neil as combo of id and year
-  - intertie_unique_id_name (string): primary community name
-  - current (boolean): is this the most recent version?
-  - communities_intertied (string): community names separated by some puctuation
-  - month_of_intertie (integer): most often empty
-  - year_of_intertie (integer): repeated in id, often empty
-  - aea_energy_region (string): assigned by AEA
+  - grid_id (string): assigned by Neil as combo of id with the year removed (see Interties below)
+  - grid_name (string): primary community name + "_id"
+  - communities_fips_code (integer): Federal Information Processing Standard, identifying geographic locations uniquely
+  - connection_year (integer): when the community was connected to the grid. Months are often unknown
+  - final_year (integer): when the community was connected to a different grid, ending its previously independent grid
   - source (string): where info came from. most often empty
-  - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
+  - geometry (WKT ?): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
 
 ### LoadServingEntity
 - **Definition**: "an electric utility that has a service obligation to distribute power to more than 10 customers that receive invoices directly from the entity;" AS 42.05.760 - 42.05.790  or FERC says "Any entity, including a load aggregator or power marketer, that serves end-users within a control area and has been granted the authority or has an obligation pursuant to state or local law, regulation, or franchise to sell electric energy to end-users located within the control area."
@@ -202,3 +200,25 @@ date: 2024-03-27
 - CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
 - Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
 - This is the big CSV from AEA with columns for population and rates.
+
+### Interties
+- **Definition**: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interies connect new communities to existing grids and they become active in a defined year.
+- **SpatialRelationships**: 
+  - CONTAINS PowerLines (transmission and distribution lines)
+  - CONTAINS PowerStations (power providers)
+  - CONTAINS Communities (consumers) demand, load ?
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
+- **References**:
+  - [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)
+- **Properties**:
+  - ak_intertie_id (string): assigned by Neil as combo of id and year
+  - intertie_unique_id_name (string): primary community name
+  - current (boolean): is this the most recent version?
+  - communities_intertied (string): community names separated by some puctuation
+  - month_of_intertie (integer): most often empty
+  - year_of_intertie (integer): repeated in id, often empty
+  - aea_energy_region (string): assigned by AEA
+  - source (string): where info came from. most often empty
+  - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?

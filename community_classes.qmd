@@ -26,6 +26,7 @@ date: 2024-03-27
   - https://schema.org/Place
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **Properties**:
+  - fipps_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.
   - geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
   - geometry (WKT Polygon): boundary of the administrative bounds of a Community available from a DRCA  PCE dataset.
  

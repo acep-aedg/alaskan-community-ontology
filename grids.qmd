@@ -1,0 +1,37 @@
+---
+title: "Grids"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+citation: true
+date: 2024-03-31
+---
+
+The aim of AEDG is to query the data by community - probably for the current year but also maybe shifting to other years as well. In Neil’s Intertie table, he selected a grid and then calculated something for it based on the communities it includes. Therefore, our use case does not match Neil’s, and the format of our Grids table must be different.
+
+Instead, I think we have to add an end_year for each grid-community combo. Let’s say we have these tables: for generation, something like
+
+| year | grid | generation|
+|------|------|-----------|
+| 2019 | 64   | 30        |
+| 2019 | 75   | 100       |
+| 2020 | 75   | 130       |
+
+and for grid
+
+| community (FIPS instead) | connection_year | final_year | grid_id|
+|--------------------------|-----------------|------------|--------|
+| Mountain Village         | 1985            | 2020       | 64     |
+| St Mary’s                | 1985            | 9999       | 75     |
+| Andreafsky               | 1985            | 9999       | 75     |
+| Pitkas Point             | 1985            | 9999       | 75     |
+| Mountain Village         | 2020            | 9999       | 75     |
+
+If we are querying for generation with `community = "St Mary's" & year = 2020`, then the evolution of the grid is irrelevant. We just need to know if `connection_year <= year < final_year` so we know whether to grab generation for `grid = 75`. If `community = "Mountain Village"` we would get `grid = 75` in 2020, but `grid = 64` in 2019.
+
+If we want to show all the communities associated with this generation value, then that query would be like: find all communities where `grid_id = 75 & connection_year <= year < final_year`. In 2019, this would return 3 communities and in 2020, it would return all 4.
+
+Adding year to the grid_id complicates these queries - maybe even makes it impossible. However, we will have to keep it in mind if we re-create the energy stats tables - i.e. work like Neil did.

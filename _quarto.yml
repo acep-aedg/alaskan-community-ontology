@@ -29,12 +29,12 @@ book:
   chapters:
     - index.qmd
     - community_classes.qmd
-    - energy_classes.qmd
+    - electricity_classes.qmd
     - relations.qmd
     - axioms.qmd
   appendices:
     - about.qmd
-    - fairbanks_oddities.qmd
+    - fairbanks_oddity.qmd
 
 format:
   html:

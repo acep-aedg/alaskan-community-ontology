@@ -1,5 +1,5 @@
 ---
-title: "Illustrative Cases in Fairbanks"
+title: "Aurora Energy LLC Example"
 author:
   - name: Liz Dobbins
     url: https://github.com/eldobbins
@@ -10,7 +10,7 @@ citation: true
 date: 2024-03-27
 ---
 
-A question was raised about whether Aurora Energy in Fairbanks should be considered an electric utility or if it is an Independent Power Producer that only sells power to GVEA. The previous version of AEDG displays Fairbanks categorized Aurora as one of many utilities:
+A question was raised about whether Aurora Energy LLC in Fairbanks should be considered an electric utility or if it is an Independent Power Producer that only sells power to GVEA. The previous version of AEDG displays Fairbanks categorized Aurora as one of many utilities:
 
 ![Screenshot of Fairbanks electricity section in AEDG v2.](images/fairbanks_utilities_aedgv2.png){fig-alt="Aurora Energy listed with other utilities in Fairbanks" width=600 fig-align="left"}
 
