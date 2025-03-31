@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./energy_classes.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./electricity_classes.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link active">
+  <a href="./electricity_classes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></span></a>
   </div>
 </li>
@@ -168,8 +168,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fairbanks_oddities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Illustrative Cases in Fairbanks</span></span></a>
+  <a href="./fairbanks_oddity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Aurora Energy LLC Example</span></span></a>
   </div>
 </li>
       </ul>
@@ -205,6 +205,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">3.3.2</span> IPP</a></li>
   <li><a href="#pceentities" id="toc-pceentities" class="nav-link" data-scroll-target="#pceentities"><span class="header-section-number">3.3.3</span> PceEntities</a></li>
   <li><a href="#pcecommunities" id="toc-pcecommunities" class="nav-link" data-scroll-target="#pcecommunities"><span class="header-section-number">3.3.4</span> PceCommunities</a></li>
+  <li><a href="#interties" id="toc-interties" class="nav-link" data-scroll-target="#interties"><span class="header-section-number">3.3.5</span> Interties</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -417,15 +418,13 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
-<li>ak_intertie_id (string): assigned by Neil as combo of id and year</li>
-<li>intertie_unique_id_name (string): primary community name</li>
-<li>current (boolean): is this the most recent version?</li>
-<li>communities_intertied (string): community names separated by some puctuation</li>
-<li>month_of_intertie (integer): most often empty</li>
-<li>year_of_intertie (integer): repeated in id, often empty</li>
-<li>aea_energy_region (string): assigned by AEA</li>
+<li>grid_id (string): assigned by Neil as combo of id with the year removed (see Interties below)</li>
+<li>grid_name (string): primary community name + “_id”</li>
+<li>communities_fips_code (integer): Federal Information Processing Standard, identifying geographic locations uniquely</li>
+<li>connection_year (integer): when the community was connected to the grid. Months are often unknown</li>
+<li>final_year (integer): when the community was connected to a different grid, ending its previously independent grid</li>
 <li>source (string): where info came from. most often empty</li>
-<li>geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?</li>
+<li>geometry (WKT ?): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?</li>
 </ul></li>
 </ul>
 </section>
@@ -569,6 +568,39 @@ ul.task-list li input[type="checkbox"] {
 <li>CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?</li>
 <li>Single PCECommunity can link to multiple communities, i.e.&nbsp;“Tok; Tanacross PCE”</li>
 <li>This is the big CSV from AEA with columns for population and rates.</li>
+</ul>
+</section>
+<section id="interties" class="level3" data-number="3.3.5">
+<h3 data-number="3.3.5" class="anchored" data-anchor-id="interties"><span class="header-section-number">3.3.5</span> Interties</h3>
+<ul>
+<li><strong>Definition</strong>: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interies connect new communities to existing grids and they become active in a defined year.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CONTAINS PowerLines (transmission and distribution lines)</li>
+<li>CONTAINS PowerStations (power providers)</li>
+<li>CONTAINS Communities (consumers) demand, load ?</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000143">OEO:electricity grid</a> - “An electricity grid is a supply grid that distributes electrical energy / electricity.” It is an aggregate of material entities that has parts: power stations and power lines.</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li><a href="https://acep-uaf.github.io/ak-energy-statistics-2011_2021/">Alaska Energy Statistics Workbooks</a></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>ak_intertie_id (string): assigned by Neil as combo of id and year</li>
+<li>intertie_unique_id_name (string): primary community name</li>
+<li>current (boolean): is this the most recent version?</li>
+<li>communities_intertied (string): community names separated by some puctuation</li>
+<li>month_of_intertie (integer): most often empty</li>
+<li>year_of_intertie (integer): repeated in id, often empty</li>
+<li>aea_energy_region (string): assigned by AEA</li>
+<li>source (string): where info came from. most often empty</li>
+<li>geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?</li>
+</ul></li>
 </ul>
 
 
