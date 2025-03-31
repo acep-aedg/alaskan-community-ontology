@@ -306,5 +306,16 @@
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Aurora Energy LLC Example</span>"
     ]
+  },
+  {
+    "objectID": "grids.html",
+    "href": "grids.html",
+    "title": "Appendix C — Grids",
+    "section": "",
+    "text": "The aim of AEDG is to query the data by community - probably for the current year but also maybe shifting to other years as well. In Neil’s Intertie table, he selected a grid and then calculated something for it based on the communities it includes. Therefore, our use case does not match Neil’s, and the format of our Grids table must be different.\nInstead, I think we have to add an end_year for each grid-community combo. Let’s say we have these tables: for generation, something like\n\n\n\nyear\ngrid\ngeneration\n\n\n\n\n2019\n64\n30\n\n\n2019\n75\n100\n\n\n2020\n75\n130\n\n\n\nand for grid\n\n\n\ncommunity (FIPS instead)\nconnection_year\nfinal_year\ngrid_id\n\n\n\n\nMountain Village\n1985\n2020\n64\n\n\nSt Mary’s\n1985\n9999\n75\n\n\nAndreafsky\n1985\n9999\n75\n\n\nPitkas Point\n1985\n9999\n75\n\n\nMountain Village\n2020\n9999\n75\n\n\n\nIf we are querying for generation with community = \"St Mary's\" & year = 2020, then the evolution of the grid is irrelevant. We just need to know if connection_year &lt;= year &lt; final_year so we know whether to grab generation for grid = 75. If community = \"Mountain Village\" we would get grid = 75 in 2020, but grid = 64 in 2019.\nIf we want to show all the communities associated with this generation value, then that query would be like: find all communities where grid_id = 75 & connection_year &lt;= year &lt; final_year. In 2019, this would return 3 communities and in 2020, it would return all 4.\nAdding year to the grid_id complicates these queries - maybe even makes it impossible. However, we will have to keep it in mind if we re-create the energy stats tables - i.e. work like Neil did.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Grids</span>"
+    ]
   }
 ]
