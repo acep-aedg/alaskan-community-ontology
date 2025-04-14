@@ -98,7 +98,7 @@ date: 2024-03-27
   - CONTAINS Communities (consumers) demand, load ?
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that have parts: power stations and power lines.
 - **References**:
   - https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid
   - https://en.wikipedia.org/wiki/Electrical_grid

@@ -34,7 +34,7 @@ book:
     - axioms.qmd
   appendices:
     - about.qmd
-    - fairbanks_oddity.qmd
+    - ipp_utility_example.qmd
     - grids.qmd
 
 format:

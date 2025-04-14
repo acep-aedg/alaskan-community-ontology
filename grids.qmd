@@ -1,5 +1,5 @@
 ---
-title: "Grids"
+title: "AEDG Grids"
 author:
   - name: Liz Dobbins
     url: https://github.com/eldobbins
@@ -10,9 +10,21 @@ citation: true
 date: 2024-03-31
 ---
 
-The aim of AEDG is to query the data by community - probably for the current year but also maybe shifting to other years as well. In Neil’s Intertie table, he selected a grid and then calculated something for it based on the communities it includes. Therefore, our use case does not match Neil’s, and the format of our Grids table must be different.
+## Complexity
 
-Instead, I think we have to add an end_year for each grid-community combo. Let’s say we have these tables: for generation, something like
+The Open Energy Ontology [OEO](http://openenergy-platform.org/ontology/oeo/OEO_00000143) defines an electrical grid as a supply grid that is an aggregate of material entities such as power stations and power lines. Some data can only be reported at the grid level, meaning that once a power station inputs electricity into a grid, we cannot know which community finally consumes that power and all communities must be reported together. Clarifying these relationships for the AEDG display and correctly accounting for it in the data tables is tricky.
+
+In Alaska's environment of small isolated grids, multiple communities can be connected to the same grid or a community can be isolated on its own grid. The composition of a grid can change over time when, for instance, a community builds an intertie to an existing grid. In that case, a community could belong to multiple grids over time. 
+
+The relationship between grids and electrical utilities is also complex. In small communities, the grid and utility are essentially the same. However, some utilities (such as AVEC) have separate grids in each of the separate communities they serve. However, the Railbelt grid includes multiple electrical utilities serving communities in different portions of the grid.
+
+## Treatment
+
+For his update to the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/), Neil McMahon has an intertie lookup table to link communities with grids. In that table, interties are identified with a unique identifier paired with a year that represents the last time a community was newly added to the grid. He then queried by that code to return a list of the communities.  
+
+The aim of AEDG is somewhat different, in that AEDG queries the data by community - probably for the current year but also maybe shifting to other years as well. Therefore, the format of our Grids table must have the community as the primary key. The example of the community of Mountain Village is used to describe how our tables work. Mountain Village had an isolated grid until 2020 when an intertie was built to connect it to an existing multi-community grid.
+
+In this case, generation (with imaginary values) is reported by the grid id:
 
 | year | grid | generation|
 |------|------|-----------|
@@ -20,7 +32,7 @@ Instead, I think we have to add an end_year for each grid-community combo. Let�
 | 2019 | 75   | 100       |
 | 2020 | 75   | 130       |
 
-and for grid
+And the Mountain Village is described and switching from one grid to another. 9999 for `final_year` means the grid is still active in its present form. The `connection_year` 1985 is the earliest year for which we have information.
 
 | community (FIPS instead) | connection_year | final_year | grid_id|
 |--------------------------|-----------------|------------|--------|
@@ -30,8 +42,6 @@ and for grid
 | Pitkas Point             | 1985            | 9999       | 75     |
 | Mountain Village         | 2020            | 9999       | 75     |
 
-If we are querying for generation with `community = "St Mary's" & year = 2020`, then the evolution of the grid is irrelevant. We just need to know if `connection_year <= year < final_year` so we know whether to grab generation for `grid = 75`. If `community = "Mountain Village"` we would get `grid = 75` in 2020, but `grid = 64` in 2019.
+If we are querying for generation with `community = "St Mary's" & year = 2020`, then the evolution of the grid is irrelevant. We just need to know if `connection_year <= year < final_year` so we know whether to grab generation for `grid = 75`. For `community = "Mountain Village"` we would get `grid = 75` in 2020, but `grid = 64` in 2019.
 
 If we want to show all the communities associated with this generation value, then that query would be like: find all communities where `grid_id = 75 & connection_year <= year < final_year`. In 2019, this would return 3 communities and in 2020, it would return all 4.
-
-Adding year to the grid_id complicates these queries - maybe even makes it impossible. However, we will have to keep it in mind if we re-create the energy stats tables - i.e. work like Neil did.
