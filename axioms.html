@@ -168,14 +168,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./alaska_statutes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Energy-Related Laws</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./ipp_utility_example.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Aurora Energy LLC Example</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Aurora Energy LLC Example</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./grids.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">AEDG Grids</span></span></a>
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">AEDG Grids</span></span></a>
   </div>
 </li>
       </ul>
@@ -203,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">5.2</span> Energy-Related</a>
   <ul class="collapse">
   <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid"><span class="header-section-number">5.2.1</span> Grid</a></li>
-  <li><a href="#utility" id="toc-utility" class="nav-link" data-scroll-target="#utility"><span class="header-section-number">5.2.2</span> Utility</a></li>
+  <li><a href="#electric-utility" id="toc-electric-utility" class="nav-link" data-scroll-target="#electric-utility"><span class="header-section-number">5.2.2</span> Electric Utility</a></li>
   <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">5.2.3</span> IPP</a></li>
   </ul></li>
   <li><a href="#regarding-time" id="toc-regarding-time" class="nav-link" data-scroll-target="#regarding-time"><span class="header-section-number">5.3</span> Regarding Time</a></li>
@@ -291,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="5.1.4" class="anchored" data-anchor-id="legislative-districts"><span class="header-section-number">5.1.4</span> Legislative Districts</h3>
 <ul>
 <li>A Senate election district is composed of two contiguous house districts, if possible.</li>
-<li>Districts are redefined every 10 years after the federal census, and may change itermittantly due to court challenges.</li>
+<li>Districts are redefined every 10 years after the federal census, and may change intermittently due to court challenges.</li>
 <li>HouseDistricts can contain multiple Communities.</li>
 <li>A single Community might intersect several HouseDistricts (example: Fairbanks)
 <ul>
@@ -302,11 +308,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="boroughs" class="level3" data-number="5.1.5">
 <h3 data-number="5.1.5" class="anchored" data-anchor-id="boroughs"><span class="header-section-number">5.1.5</span> Boroughs</h3>
 <ul>
-<li>Communities can be unencorporated, meaning they are not in a Borough.</li>
-<li>If encorporated, a Community can only be in a single Borough</li>
-<li>There is one unencorporated Borough
+<li>Communities can be unincorporated, meaning they are not in a Borough.</li>
+<li>If incorporated, a Community can only be in a single Borough</li>
+<li>There is one unincorporated Borough
 <ul>
-<li>The unencorporated Borough is split into CensusAreas for statistical purposes (not administrative)</li>
+<li>The unincorporated Borough is split into CensusAreas for statistical purposes (not administrative)</li>
 </ul></li>
 </ul>
 </section>
@@ -335,6 +341,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="energy-related" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="energy-related"><span class="header-section-number">5.2</span> Energy-Related</h2>
+<ul>
+<li>A Community can be served by multiple Energy Utilities</li>
+</ul>
 <section id="grid" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="grid"><span class="header-section-number">5.2.1</span> Grid</h3>
 <ul>
@@ -345,26 +354,30 @@ ul.task-list li input[type="checkbox"] {
 <li>If isolated, is called a microgrid (check this)</li>
 <li>Can be composed of multiple Grids connected by interties
 <ul>
-<li>Interies are established on particular dates, so Grid definition can change over time</li>
+<li>Interties are established on particular dates, so Grid definition can change over time</li>
 </ul></li>
-<li>A Grid generates power to supply a load.</li>
+<li>Power Stations connected to a Grid generate power to supply a load.</li>
 </ul>
 </section>
-<section id="utility" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="utility"><span class="header-section-number">5.2.2</span> Utility</h3>
+<section id="electric-utility" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="electric-utility"><span class="header-section-number">5.2.2</span> Electric Utility</h3>
 <ul>
-<li>A Utility can operate a single Grid (KEA)</li>
-<li>A Utility can operate multiple Grids (AVEC or AP&amp;T)</li>
-<li>A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
+<li>An Electric Utility can operate a single Grid (KEA)</li>
+<li>An Electric Utility can operate multiple Grids (AVEC or AP&amp;T)</li>
+<li>An Electric Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
 <ul>
-<li>The Railbelt is serviced by 5 different utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).</li>
+<li>The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).</li>
 </ul></li>
 <li>Anchorage Municipal Light &amp; Power (ML&amp;P) used to make that 6, but they were absorbed by CEA</li>
-<li>Utility service areas are regulated by the RCA so they do not overlap.</li>
+<li>Electric Utility service areas are regulated by the RCA
+<ul>
+<li>In general, Electric Utilities cannot compete against each other (<a href="alaska_statutes.html#sec-electricity-competition" class="quarto-xref"><span>Section B.1.3</span></a>)</li>
+<li>Electric Utility service areas do not overlap</li>
 <li>Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.</li>
 <li>Utility service areas are documented by the RCA with PDF maps. KML also?
 <ul>
-<li><a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf">CPCN 17: Kotzebue Electric Association, Inc.</a></li>
+<li>See <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf">CPCN 17: Kotzebue Electric Association, Inc.</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
