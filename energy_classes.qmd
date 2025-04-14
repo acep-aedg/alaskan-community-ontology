@@ -1,0 +1,27 @@
+---
+title: "Energy Classes (not Electricity)"
+subtitle: "Descriptions of wider Energy-related entities in the Alaska Community Ontology"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+date: 2024-04-14
+---
+
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See{@sec-utility-definitions} for the text.
+
+Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.
+
+## List of Classes in the Wider Energy Context
+
+### SteamHeatUtility
+
+### transmission or distribution of natural or manufactured gas
+
+### distribution petroleum or petroleum products
+
+### natural gas storage
+
+### liquefied natural gas storage

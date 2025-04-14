@@ -1,13 +1,13 @@
 ---
 title: "Electricity Classes"
-subtitle: "Types of entities in the Alaska Community Ontology"
+subtitle: "Descriptions of Electricity-related entities in the Alaska Community Ontology"
 author:
   - name: Liz Dobbins
     url: https://github.com/eldobbins
     affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2024-03-27
+date: 2025-04-14
 ---
 
 ## Classes
@@ -105,6 +105,7 @@ date: 2024-03-27
   - https://www.nrel.gov/grid/microgrids.html
   - https://en.wikipedia.org/wiki/Microgrid
   - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) calls these interties
+  - @sec-electricity-definitions ("interconnected electric energy transmission network")
 - **Properties**:
   - grid_id (string): assigned by Neil as combo of id with the year removed (see Interties below)
   - grid_name (string): primary community name + "_id"
@@ -124,6 +125,7 @@ date: 2024-03-27
   - [Alaska Statute](https://casetext.com/statute/alaska-statutes/title-42-public-utilities-and-carriers-and-energy-programs/chapter-4205-alaska-public-utilities-regulatory-act/article-010-electric-reliability-organizations-plans-and-standards/section-4205790-definitions)
   - https://en.wikipedia.org/wiki/Load_serving_entity - focuses on deregulated energy market (which is not Alaska's situation)
   - [FERC Glossary](https://www.ferc.gov/industries-data/market-assessments/overview/glossary)
+  - @sec-electricity-definitions
 - **Properties**:
   - service_area: the control area that FERC mentioned, or the locations of the customers
 
@@ -164,7 +166,7 @@ date: 2024-03-27
 
 ## Other (unused?)
 
-### Utilities
+### Electric Utilities {#sec-electrical-utility}
 - **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
 - **Analogous Standards**:
   - https://schema.org/Corporation
@@ -173,6 +175,7 @@ date: 2024-03-27
   - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
 - **References**:
   - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
+  - {@sec-utility-definitions}
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company? Public owned utility (POU)?
@@ -181,11 +184,13 @@ date: 2024-03-27
   - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
 
 ### IPP
-- **Definition**: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility.
+- **Definition**: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility. "means a corporation, person, agency, authority, or other legal entity or instrumentality, that is not a utility and that owns or operates a facility for the generation or production of electric or thermal energy for use by the residents, local government, or businesses of one or more municipalities or unincorporated communities recognized by the Department of Commerce, Community, and Economic Development for community revenue sharing under AS 29.60.850 - 29.60.879 and 3 AAC 180." from Alaska Statute [3 AAC 106.900.](https://www.akleg.gov/basis/aac.asp#3.106.900)
 - **SpatialRelationships**: 
 - **Analogous Standards**:
 - **References**:
   - https://www.eia.gov/tools/glossary/index.php?id=Independent%20power%20producer
+  - Alaska Statute [3 AAC 106.900.](https://www.akleg.gov/basis/aac.asp#3.106.900) Definition for Load Programs
+  - @sec-ipp-definitions
 - **Properties**:
 
 ### PceEntities

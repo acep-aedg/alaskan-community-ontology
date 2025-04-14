@@ -1,0 +1,104 @@
+---
+title: "Energy-Related Laws"
+subtitle: "Quotes from Alaska Statute"
+author:
+  - name: Liz Dobbins
+    url: https://github.com/eldobbins
+    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
+    affiliation-url: https://www.uaf.edu/acep 
+type: webpage
+date: 2024-04-14
+---
+
+
+## Definitions
+
+### Electricity Definitions {#sec-electricity-definitions}
+
+Sec. 42.05.790.   Definitions. In [AS 42.05.760 — 42.05.790](https://www.akleg.gov/basis/statutes.asp#42.05.760),
+```
+      (1) “cybersecurity incident” means a malicious act or suspicious event that disrupts or attempts to disrupt the security of data or the operation of programmable electronic devices and communication networks, including hardware and software that are essential to the reliable operation of the interconnected electric energy transmission network;
+
+      (2) “electric reliability organization” means an organization that is certificated by the commission under AS 42.05.760;
+
+      (3) “electric utility” means a public utility that provides electricity service;
+
+      (4) “interconnected bulk-electric system” means an interconnected electric energy transmission network that includes two or more load-serving entities, at least one of which is subject to the provisions of AS 42.05.291;
+
+      (5) “interconnected electric energy transmission network” means a network of interconnected electrical generation resources, transmission lines, interconnections, and associated equipment operated at voltages of 69 kilovolts or more, operating in a geographic area that are synchronized so that the failure of one or more of the components may adversely affect the ability of the operators of other components within the system to maintain reliable operation of the facilities within the control of the operators;
+
+      (6) “load-serving entity” means an electric utility that has a service obligation to distribute power to more than 10 customers that receive invoices directly from the entity;
+
+      (7) “reliable operation” means operating the elements of the interconnected electric energy transmission network within equipment and electric system thermal, voltage, and stability limits so that instability, uncontrolled separation, or cascading failures of the system will not occur as a result of a sudden disturbance, including a cybersecurity incident, or unanticipated failure of system elements.
+```
+
+### Utility Definitions {#sec-utility-definitions}
+
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which (but not all) are related to energy:
+
+```
+(6) “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for
+           (A) furnishing, by generation, transmission, or distribution, electrical service to the public for compensation;
+
+           (B) furnishing telecommunications service to the public for compensation;
+
+           (C) furnishing water, steam, or sewer service to the public for compensation;
+
+           (D) furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;
+
+           (E) furnishing for distribution or by distribution petroleum or petroleum products to the public for compensation when the consumer has no alternative in the choice of supplier of a comparable product and service at an equal or lesser price;
+
+           (F) furnishing collection and disposal service of garbage, refuse, trash, or other waste material to the public for compensation;
+
+           (G) furnishing the service of natural gas storage to the public for compensation;
+
+           (H) furnishing the service of liquefied natural gas storage to the public for compensation;
+```
+
+
+
+### Allocation of Facilities and Services Between Competing Electric Utilities  {#sec-electricity-competition}
+
+[3 AAC 52 article2](https://www.akleg.gov/basis/aac.asp#3.52%20article2)
+
+```
+  3 AAC 52.110.  Purpose.
+The purpose of 3 AAC 52.110 - 3 AAC 52.150 is to prevent duplication of electric facilities and services in those geographical areas of the state in which two or more electric utilities compete.
+
+  3 AAC 52.120.  Authority to construct facilities or serve customers.
+(a) No electric utility operating in direct competition with one or more electric utilities within the same geographical area may construct or install electric facilities or provide a service connection for a customer located within a disputed service area without the approval of the commission.   
+(b) The commission will grant approval to provide a service connection for a customer located within a disputed area if   
+ 	(1) the utility requesting approval receives the concurrence of the competing utility and submits to the commission a signed "Waiver of Objection" on a form provided by the commission; or   
+ 	(2) a determination is made by the commission, after hearing, that one or the other of the utilities is the appropriate one to provide the service.
+```
+
+### Definitions for Loan Programs {#sec-ipp-definitions}
+
+[3 AAC 106.900.](https://www.akleg.gov/basis/aac.asp#3.106.900)
+```
+ 3 AAC 106.900.  Definitions.
+(a) In this chapter, unless the context requires otherwise,   
+ 	(1) deleted;   
+ 	(2) Repealed 4/8/2015;   
+ 	(3) deleted;   
+ 	(4) "regional corporation" means an Alaska Native regional corporation established under the laws of this state in accordance with the provisions of 43 U.S.C. 1601 - 1629(e) (Alaska Native Claims Settlement Act).   
+(b) In AS 42.45, unless the context requires otherwise, "nonprofit marketing cooperative" means a cooperative organized under AS 10.15 (Alaska Cooperative Corporation Act), which is operated on a nonprofit basis for the mutual benefit of its members and which has bylaws containing provisions relating to the disposition of revenues and receipts as may be necessary and appropriate to establish and maintain its nonprofit and cooperative character, or a cooperative organized under AS 10.25 (Electric and Telephone Cooperative Act) that exercises the powers granted to an electric cooperative by AS 10.25.020.   
+(c) In AS 42.45 and this chapter, unless the context requires otherwise,   
+ 	(1) "economically viable" means   
+ 		(A) a project for which the long term benefits exceed the long term costs; or   
+ 		(B) the project is financially feasible in the absence of a government grant for the project;   
+ 	(2) "extension of electric service" means the point when at least three new customers begin receiving electric service through an extension made in connection with a loan from the rural electrification revolving loan fund;   
+ 	(3) "immediate service" means electric service provided within 30 days after completion of the extension of electric service made in connection with a loan from the rural electrification revolving loan fund;   
+ 	(4) "village corporation" means an Alaska Native Village Corporation organized under the laws of the State of Alaska as a business for profit or nonprofit corporation to hold, invest, manage, and distribute land, property, money, and other rights and assets for and on behalf of a native village in accordance with the terms of the Alaska Native Claims Settlement Act (PL 920-203);   
+ 	(5) "village council" means the duly elected governing body of an unincorporated community which has between 25 and 600 people residing within a two-mile radius;   
+ 	(6) "authority" means the Alaska Energy Authority created in AS 44.83.020.   
+(d) In AS 42.45.010, "independent power producer" means a corporation, person, agency, authority, or other legal entity or instrumentality, that is not a utility and that owns or operates a facility for the generation or production of electric or thermal energy for use by the residents, local government, or businesses of one or more municipalities or unincorporated communities recognized by the Department of Commerce, Community, and Economic Development for community revenue sharing under AS 29.60.850 - 29.60.879 and 3 AAC 180.   
+(e) In AS 42.45.010 and this chapter,   
+ 	(1) "alternative energy"   
+ 		(A) means energy or fuel that is used for production of electricity, heat, or mechanical power, and that is derived from renewable or local sources other than liquid petroleum;   
+ 		(B) includes,   
+ 		 	(i) wind, solar, geothermal, hydroelectric, and biomass power sources; and   
+ 		 	(ii) local sources of coal and natural gas;   
+ 	(2) "alternative energy facility" means a facility that generates or produces alternative energy;   
+ 	(3) "electric utility" has the meaning given the term "public utility" in AS 42.05.990(6)(A).
+```

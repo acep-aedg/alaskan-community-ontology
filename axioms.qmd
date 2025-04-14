@@ -36,16 +36,16 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ### Legislative Districts
 
 - A Senate election district is composed of two contiguous house districts, if possible.
-- Districts are redefined every 10 years after the federal census, and may change itermittantly due to court challenges.
+- Districts are redefined every 10 years after the federal census, and may change intermittently due to court challenges.
 - HouseDistricts can contain multiple Communities.
 - A single Community might intersect several HouseDistricts (example: Fairbanks)
   - Therefore: HouseDistrict population cannot be determined from a sum of Community populations.
 
 ### Boroughs
-- Communities can be unencorporated, meaning they are not in a Borough.
-- If encorporated, a Community can only be in a single Borough
-- There is one unencorporated Borough
-  - The unencorporated Borough is split into CensusAreas for statistical purposes (not administrative)
+- Communities can be unincorporated, meaning they are not in a Borough.
+- If incorporated, a Community can only be in a single Borough
+- There is one unincorporated Borough
+  - The unincorporated Borough is split into CensusAreas for statistical purposes (not administrative)
 
 ### Census
 
@@ -68,25 +68,28 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 ## Energy-Related
 
+- A Community can be served by multiple Energy Utilities
 
 ### Grid
 - Is a physical structure that supplies electricity to Communities
   - A Grid has the physical entities of PowerStations and PowerLines
 - If isolated, is called a microgrid (check this)
 - Can be composed of multiple Grids connected by interties
-  - Interies are established on particular dates, so Grid definition can change over time
-- A Grid generates power to supply a load.
+  - Interties are established on particular dates, so Grid definition can change over time
+- Power Stations connected to a Grid generate power to supply a load.
 
-### Utility
-- A Utility can operate a single Grid (KEA)
-- A Utility can operate multiple Grids (AVEC or AP&T)
-- A Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
-  - The Railbelt is serviced by 5 different utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
+### Electric Utility
+- An Electric Utility can operate a single Grid (KEA)
+- An Electric Utility can operate multiple Grids (AVEC or AP&T)
+- An Electric Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
+  - The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
 - Anchorage Municipal Light & Power (ML&P) used to make that 6, but they were absorbed by CEA
-- Utility service areas are regulated by the RCA so they do not overlap.
-- Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.
-- Utility service areas are documented by the RCA with PDF maps. KML also?
-    - [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
+- Electric Utility service areas are regulated by the RCA
+  - In general, Electric Utilities cannot compete against each other (@sec-electricity-competition)
+  - Electric Utility service areas do not overlap
+  - Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.
+  - Utility service areas are documented by the RCA with PDF maps. KML also?
+    - See [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
 
 ### IPP
 - A [Tribal Independent Power Producer (IPP)](https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf) can develop and own renewable energy assets
@@ -99,3 +102,4 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ## Regarding Time
 
 The assumption is that this needs to function **for the current time only**. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves.
+

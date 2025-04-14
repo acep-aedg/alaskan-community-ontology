@@ -7,8 +7,9 @@ author:
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
 citation: true
-date: 2024-03-27
+date: 2025-04-14
 ---
+
 
 A question was raised about whether Aurora Energy LLC in Fairbanks should be considered an electric utility or if it is an Independent Power Producer that only sells power to GVEA. The previous version of AEDG displays Fairbanks categorized Aurora as one of many utilities:
 
