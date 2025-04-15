@@ -55,8 +55,8 @@ Fairbanks has more distributed generation than other communities in part because
 
 Additionally:
 
-- The Fairbanks Interior Gas Utility is certificated to sell natural gas outside the Fairbanks city limit but within the borough (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
-- Fairbanks Natural Gas LLC (CPCN [514](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=14aed247-df8f-4dc6-8b2a-325acf1cb3c7)) is the gas utility in the city of Fairbanks
+- The Fairbanks Interior Gas Utility is certificated to sell natural gas (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
+- Fairbanks Natural Gas LLC (CPCN [514](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=14aed247-df8f-4dc6-8b2a-325acf1cb3c7)) used to be the gas utility in the city of Fairbanks, but it is inactive now.
 - The University of Alaska Fairbanks operates its own coal plant that makes electricity and heat 
 - Doyon Utilities provides electric utility service for Fort Wainwright in Fairbanks (CPCN [726](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=c89cf393-1bf6-483d-a777-e9af4b204710))
 - Doyon Utilities also serves as a heat utility for Fort Wainwright (CPCN [725](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=57e97e33-75bf-4e3b-9c19-ae1bf7ec26fb))
