@@ -34,7 +34,7 @@ book:
     - axioms.qmd
   appendices:
     - about.qmd
-    - alaska_statutes.qmd
+    - legal_definitions.qmd
     - ipp_utility_example.qmd
     - grids.qmd
 

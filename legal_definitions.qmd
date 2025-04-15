@@ -7,8 +7,11 @@ author:
     affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2024-04-14
+date: 2025-04-14
 ---
+
+Much of the language for the various Classes was derived from Alaska statutes so the relevant sections have been copied here for convenience. The Regulatory Commission of Alaska (RCA) also has a page on [Alaska Administrative Code](
+https://rca.alaska.gov/RCAWeb/AboutRCA/RCAStatutesAndRegulations.aspx) that describes regulations that apply to their authority.
 
 
 ## Definitions
@@ -56,22 +59,6 @@ State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp
 ```
 
 
-
-### Allocation of Facilities and Services Between Competing Electric Utilities  {#sec-electricity-competition}
-
-[3 AAC 52 article2](https://www.akleg.gov/basis/aac.asp#3.52%20article2)
-
-```
-  3 AAC 52.110.  Purpose.
-The purpose of 3 AAC 52.110 - 3 AAC 52.150 is to prevent duplication of electric facilities and services in those geographical areas of the state in which two or more electric utilities compete.
-
-  3 AAC 52.120.  Authority to construct facilities or serve customers.
-(a) No electric utility operating in direct competition with one or more electric utilities within the same geographical area may construct or install electric facilities or provide a service connection for a customer located within a disputed service area without the approval of the commission.   
-(b) The commission will grant approval to provide a service connection for a customer located within a disputed area if   
- 	(1) the utility requesting approval receives the concurrence of the competing utility and submits to the commission a signed "Waiver of Objection" on a form provided by the commission; or   
- 	(2) a determination is made by the commission, after hearing, that one or the other of the utilities is the appropriate one to provide the service.
-```
-
 ### Definitions for Loan Programs {#sec-ipp-definitions}
 
 [3 AAC 106.900.](https://www.akleg.gov/basis/aac.asp#3.106.900)
@@ -101,4 +88,19 @@ The purpose of 3 AAC 52.110 - 3 AAC 52.150 is to prevent duplication of electric
  		 	(ii) local sources of coal and natural gas;   
  	(2) "alternative energy facility" means a facility that generates or produces alternative energy;   
  	(3) "electric utility" has the meaning given the term "public utility" in AS 42.05.990(6)(A).
+```
+
+## Allocation of Facilities and Services Between Competing Electric Utilities  {#sec-electricity-competition}
+
+[3 AAC 52 article2](https://www.akleg.gov/basis/aac.asp#3.52%20article2)
+
+```
+  3 AAC 52.110.  Purpose.
+The purpose of 3 AAC 52.110 - 3 AAC 52.150 is to prevent duplication of electric facilities and services in those geographical areas of the state in which two or more electric utilities compete.
+
+  3 AAC 52.120.  Authority to construct facilities or serve customers.
+(a) No electric utility operating in direct competition with one or more electric utilities within the same geographical area may construct or install electric facilities or provide a service connection for a customer located within a disputed service area without the approval of the commission.   
+(b) The commission will grant approval to provide a service connection for a customer located within a disputed area if   
+ 	(1) the utility requesting approval receives the concurrence of the competing utility and submits to the commission a signed "Waiver of Objection" on a form provided by the commission; or   
+ 	(2) a determination is made by the commission, after hearing, that one or the other of the utilities is the appropriate one to provide the service.
 ```

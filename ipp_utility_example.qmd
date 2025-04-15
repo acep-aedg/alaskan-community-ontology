@@ -10,62 +10,63 @@ citation: true
 date: 2025-04-14
 ---
 
+To illustrate the questions that arise with utilities that serve multiple parts of the energy market and the relationships between Independent Power Producers (IPPs) and the Load Serving Entities that distribute power to customers, this page considers the case of 
+Aurora Energy LLC in Fairbanks. It also illustrates the development of plants and operators in Fairbanks over time because knowing that history is important.
 
-A question was raised about whether Aurora Energy LLC in Fairbanks should be considered an electric utility or if it is an Independent Power Producer that only sells power to GVEA. The previous version of AEDG displays Fairbanks categorized Aurora as one of many utilities:
+These questions were not addressed adequately by the previous version of AEDG. In the AEDG dashboard for Fairbanks, Aurora Energy is categorized as one of many electrical utilities and no mention is made of the other utilities that serve Fairbanks.  Here is a screenshot of that display:
 
 ![Screenshot of Fairbanks electricity section in AEDG v2.](images/fairbanks_utilities_aedgv2.png){fig-alt="Aurora Energy listed with other utilities in Fairbanks" width=600 fig-align="left"}
 
-Other hints:
+This is inaccurate in many ways. To clarify, this page draws upon legal definitions and information from the Regulatory Commission of Alaska (RCA). Additional information came from subject matter experts Steve Colt and Mark Foster; their responses in an email exchange in Feb. 2025 have been edited here for clarity.
 
-- Aurora Energy is regulated by the RCA (CPCN [520](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=46535813-c48f-4949-895e-dc74a9884e55)), sells power to GVEA, and that RCA documentation of its service area seems to be limited to the immediate area around their plant.
-  - There is a (possibly vestigial) [sign-up for new service](https://www.auroraenergyak.com/for-customers) that implies to a wider service area.
-- GVEA is also regulated by the RCA (CPCN [13](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6a907960-cadb-4d83-831d-4ed494e7cf66)) and has a service area that covers Fairbanks and beyond.
+## What is Aurora Power LLC?
 
-So questions arose:
+Aurora Power is a company that owns and operates the coal fired power plant in downtown Fairbanks; it is also called [Aurora Energy](https://www.uaf.edu/acep/news/news-archives/2013-2023/2015/march/acep-this-week-march-22nd-28th-2015/coal-and-biomass-co-firing-at-aurora-power.php). This plant generates electricity, and it also generates heat which is distributed to customers in the downtown area. 
 
-- Is it possible for electrical utilities to compete against each other in Alaska?  
-- Is Aurora better categorized as  an Independent Power Producer (IPP)? 
-- Are we using the correct words to refer to these entities?
+Aurora Energy is regulated by the RCA (CPCN [520](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=46535813-c48f-4949-895e-dc74a9884e55)), which gives it "Authority to operate as an electric utility to furnish
+electric energy to Golden Valley Electric Association, Inc., ". But there is another certificate (CPCN [119](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=bc1521db-2a33-4f03-8257-854483bd5572)) that describes it as a public utility providing steam heat with a service area of "The corporate limits of the City of Fairbanks, Alaska, as of July 1, 1970."
 
-The following information can be attributed to Steve Colt and Mark Foster; their responses from an email exchange in Feb. 2025 have been edited here for clarity. The key to the problem is the development of plants and operators in Fairbanks over time.
+Therefore, Aurora Power is both:
 
-## What is Aurora Power?
+1. a certificated utility selling heat in a service territory defined by the network of steam [and hot water] pipes; and 
+2. an IPP selling electricity to Golden Valley Electric Association (GVEA)
 
-Aurora is both 1) a certificated utility selling heat in some service territory defined by the network of steam [and hot water] pipes; and 2) an IPP selling electricity to GVEA.
-
-Aurora is a successor entity to the Fairbanks Municipal Utilities System ("FMUS") that served downtown Fairbanks for decades, like Anchorage ML&P served downtown Anchorage. FMUS also provided district heat through pipes, as steam. Coal fired power plants that generated heat and electricity were common across small campuses around the Northern United States. 
+Aurora Power is one of the successor entities to the Fairbanks Municipal Utilities System (FMUS) that served downtown Fairbanks for decades. FMUS also provided district heat through pipes, as steam. Coal fired power plants that generated heat and electricity were common across small campuses around the Northern United States. A similar entity was Anchorage Municipal Light and Power which served downtown Anchorage.
 
 
-## What is GVEA?
+## What is Golden Valley Electric Association (GVEA)?
 
-The Golden Valley Electric Association is a cooperative whose mission is to "safely provide its member-owners with reliable electric service, quality customer service, and innovative energy solutions at fair and reasonable prices." GVEA incorporated in 1946, and in about 1997, GVEA acquired the electricity transmission and distribution assets from FMUS and some of its generation assets. GVEA acquired the Frame 5 diesel fired generating units that were stationed adjacent to the FMUS Chena Power Plant from FMUS. 
+The Golden Valley Electric Association (GVEA) is a non-profit electric cooperative membership corporation whose mission is to "safely provide its member-owners with reliable electric service, quality customer service, and innovative energy solutions at fair and reasonable prices." GVEA incorporated in 1946, and in about 1997, GVEA acquired the electricity transmission and distribution assets from FMUS and some of its generation assets. 
 
-But GVEA did not acquire the big coal plant on the Chena river; instead Aurora Energy somehow came into being as an IPP, acquired this coal plant, and operates it now.
+GVEA acquired the Frame 5 diesel fired generating units that were stationed adjacent to the FMUS Chena Power Plant from FMUS. But GVEA did not acquire the big coal plant on the Chena river; instead Aurora Energy came into being as an IPP, acquired that coal plant, and operates it now.
 
-GVEA is the final seller of electricity, or "Load-Serving Entity" ("LSE"), serving all of Fairbanks with some exceptions. GVEA only covers customers who have or pay for electric line extensions to their property/facilities. A number of customers within GVEA's service territory continue to self-generate electricity in view of the expense of line extension costs. And for historic reasons, UAF and the militry bases generate their own power (see below).  
+GVEA is the final seller of electricity, or "Load-Serving Entity" ("LSE"), serving all of Fairbanks with some exceptions. GVEA only covers customers who have or pay for electric line extensions to their property/facilities. A number of customers within GVEA's service territory continue to self-generate electricity in view of the expense of line extension costs. And for historic reasons, UAF and the military bases generate their own power (see below). GVEA's role is convoluted: sometimes selling some electricity to the bases, sometimes buying electricity from UAF, and probably some other interesting behaviors.
+
+GVEA is regulated by the RCA (CPCN [13](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6a907960-cadb-4d83-831d-4ed494e7cf66)) and has a service area that covers Fairbanks and beyond.
 
 Additional info:
 
 - Henri Dale, retired from GVEA, will have details on GVEA's acquisitions.
+- Wight, P. (2025). Electrifying Alaska's Railbelt: A Generation and Transmission History, 1904-2024. Zenodo. https://doi.org/10.5281/zenodo.14908275
 
-## Are there other relevant entities?
+## Are there other relevant utilities?
 
-Yes. Fairbanks has more "distributed generation" than other communities in part because of the evolution of the distribution of the power plants at UAF, FMUS, Ft. Wainwright, Eielson and later GVEA chasing diesel, HAGO, and naphtha generation resources at the North Pole refinery associated with TAPS completion in 1977.
+Fairbanks has more distributed generation than other communities in part because of the evolution of the distribution of the power plants at UAF, FMUS, Ft. Wainwright, Eielson and later additional GVEA operated power plants using diesel, HAGO, and naphtha generation resources at the North Pole refinery associated with TAPS completion in 1977.
 
-Additionally
+Additionally:
 
-- Aurora is a a certificated utility selling heat in some service territory defined by the network of steam [and hot water] pipes.
-- The Fairbanks Interior Gas Utility is certificated to sell natural gas to some service territory.
-- UAF operates its own coal plant that makes electricity and heat
-- Doyon Utilities is a generator operating plants on military bases
+- The Fairbanks Interior Gas Utility is certificated to sell natural gas outside the Fairbanks city limit but within the borough (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
+- Fairbanks Natural Gas LLC (CPCN [514](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=14aed247-df8f-4dc6-8b2a-325acf1cb3c7)) is the gas utility in the city of Fairbanks
+- The University of Alaska Fairbanks operates its own coal plant that makes electricity and heat 
+- Doyon Utilities provides electric utility service for Fort Wainwright in Fairbanks (CPCN [726](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=c89cf393-1bf6-483d-a777-e9af4b204710))
+- Doyon Utilities also serves as a heat utility for Fort Wainwright (CPCN [725](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=57e97e33-75bf-4e3b-9c19-ae1bf7ec26fb))
+- Fairbanks is connected to the Railbelt and so purchases power from other connected utilities.
 
-And GVEA's role is also convoluted: sometimes selling some electricity to the bases, sometimes buying electricity from UAF, and probably some other weird factors.
 
 ### Aurora Energy relation to Usibelli Coal?
 
 Aurora Energy is listed as a [customer of Usibelli Coal](https://www.usibelli.com/company/customers). Their [2011 Financial Statement](https://rca.alaska.gov/RCAWeb/ViewFile.aspx?id=05148B26-2E7A-4EAB-B340-8B80DBEDF28D) filed at the RCA says that "The Company has similar ownership as Usibelli Coal Mine, Inc. (UCM), sole supplier of coal to the plant."  The [GEM wiki](https://www.gem.wiki/Aurora_Energy_LLC) says "It is a private company, owned by Joseph E. Usibelli, Sr., Joseph E. Usibelli, Jr., and Rosalie Whyel."
 
-In short Usibelli went up the value chain to own/operate the coal fired cogeneration power plant.
 
 ### A note on technology
 
@@ -78,9 +79,9 @@ Additional info:
 - Mark Foster's paternal grandfather came to Alaska in the 1940s following work on hydro projects on the Columbia River in WA and worked on building coal fired power plants with steam heat distribution systems at UAF, FMUS, and Ft. Wainwright.
 - See: Davis, T. N., 1984, Energy/Alaska: Fairbanks, AK, University of Alaska Press, 530 p.
 
-## Resolution
+## Categories
 
-Neil McMahon resolved this question by creating an overarching category called "Operator", of which utilities are one type. The types of operators are:
+Types of utilities in Alaska are listed in @sec-utility-definitions. For his update to the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/), Neil McMahon uses an overarching category called "Operator", of which utilities are one type. The types of operators are:
 
 - Public Electric Utility
 - Private Electric Utility
@@ -91,5 +92,3 @@ Neil McMahon resolved this question by creating an overarching category called "
 - Industrial 
 - Joint Action Agency of the State of Alaska 
 - Political Subdivision of the State
-
-In this system, Aurora Energy LLC is a Regulated Independent Power Producer, and GVEA is a Regulated Private Electric Utility.

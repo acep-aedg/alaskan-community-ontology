@@ -7,10 +7,10 @@ author:
     affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
     affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2024-03-27
+date: 2025-03-27
 ---
 
-Relations can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
+Relations can be hierarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
 
   - Relations are the edges in a graph.
   - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.
@@ -64,7 +64,7 @@ Before we established the ELT pipeline or the application database, Liz theorize
 
 #### provides_electricity_to
 
-Utilites provide electricity to Communities. Liz added some columns that might be useful, but she doesn't know where these data will come from, so the table schema will change. This is just an example of what _could_ be.
+Utilities provide electricity to Communities. Liz added some columns that might be useful, but she doesn't know where these data will come from, so the table schema will change. This is just an example of what _could_ be.
 
 - **Analogous Standards**:
  - [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) - "A service is a process that is an intangible activity performed by some agent for the benefit of another agent."
@@ -78,7 +78,7 @@ Utilites provide electricity to Communities. Liz added some columns that might b
 
 #### is_intertied_with
 
-Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but "intertie" is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our puposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.) 
+Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but "intertie" is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our purposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.) 
 
 - **Analogous Standards**:
   - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
