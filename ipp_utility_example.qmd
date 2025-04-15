@@ -11,7 +11,7 @@ date: 2025-04-14
 ---
 
 To illustrate the questions that arise with utilities that serve multiple parts of the energy market and the relationships between Independent Power Producers (IPPs) and the Load Serving Entities that distribute power to customers, this page considers the case of 
-Aurora Energy LLC in Fairbanks. It also illustrates the development of plants and operators in Fairbanks over time because knowing that history is important.
+[Aurora Energy LLC](https://www.auroraenergyak.com) in Fairbanks. It also illustrates the development of plants and operators in Fairbanks over time because knowing that history is important.
 
 These questions were not addressed adequately by the previous version of AEDG. In the AEDG dashboard for Fairbanks, Aurora Energy is categorized as one of many electrical utilities and no mention is made of the other utilities that serve Fairbanks.  Here is a screenshot of that display:
 
@@ -19,19 +19,24 @@ These questions were not addressed adequately by the previous version of AEDG. I
 
 This is inaccurate in many ways. To clarify, this page draws upon legal definitions and information from the Regulatory Commission of Alaska (RCA). Additional information came from subject matter experts Steve Colt and Mark Foster; their responses in an email exchange in Feb. 2025 have been edited here for clarity.
 
-## What is Aurora Power LLC?
+## What is Aurora Energy LLC?
 
-Aurora Power is a company that owns and operates the coal fired power plant in downtown Fairbanks; it is also called [Aurora Energy](https://www.uaf.edu/acep/news/news-archives/2013-2023/2015/march/acep-this-week-march-22nd-28th-2015/coal-and-biomass-co-firing-at-aurora-power.php). This plant generates electricity, and it also generates heat which is distributed to customers in the downtown area. 
+Aurora Energy is a company that owns and operates the coal fired power plant in downtown Fairbanks; it has also been called [Aurora Power](https://www.uaf.edu/acep/news/news-archives/2013-2023/2015/march/acep-this-week-march-22nd-28th-2015/coal-and-biomass-co-firing-at-aurora-power.php). This plant generates electricity, and it also generates heat which is distributed to customers in the downtown area. 
 
 Aurora Energy is regulated by the RCA (CPCN [520](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=46535813-c48f-4949-895e-dc74a9884e55)), which gives it "Authority to operate as an electric utility to furnish
 electric energy to Golden Valley Electric Association, Inc., ". But there is another certificate (CPCN [119](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=bc1521db-2a33-4f03-8257-854483bd5572)) that describes it as a public utility providing steam heat with a service area of "The corporate limits of the City of Fairbanks, Alaska, as of July 1, 1970."
 
-Therefore, Aurora Power is both:
+Therefore, Aurora Energy is both:
 
 1. a certificated utility selling heat in a service territory defined by the network of steam [and hot water] pipes; and 
 2. an IPP selling electricity to Golden Valley Electric Association (GVEA)
 
-Aurora Power is one of the successor entities to the Fairbanks Municipal Utilities System (FMUS) that served downtown Fairbanks for decades. FMUS also provided district heat through pipes, as steam. Coal fired power plants that generated heat and electricity were common across small campuses around the Northern United States. A similar entity was Anchorage Municipal Light and Power which served downtown Anchorage.
+Aurora Energy is one of the successor entities to the Fairbanks Municipal Utilities System (FMUS) that served downtown Fairbanks for decades. FMUS also provided district heat through pipes, as steam. Coal fired power plants that generated heat and electricity were common across small campuses around the Northern United States. A similar entity was Anchorage Municipal Light and Power which served downtown Anchorage.
+
+
+### What is Aurora Energy's relationship to Usibelli Coal?
+
+Aurora Energy is listed as a [customer of Usibelli Coal](https://www.usibelli.com/company/customers). Their [2011 Financial Statement](https://rca.alaska.gov/RCAWeb/ViewFile.aspx?id=05148B26-2E7A-4EAB-B340-8B80DBEDF28D) filed at the RCA says that "The Company has similar ownership as Usibelli Coal Mine, Inc. (UCM), sole supplier of coal to the plant."  The [GEM wiki](https://www.gem.wiki/Aurora_Energy_LLC) says "It is a private company, owned by Joseph E. Usibelli, Sr., Joseph E. Usibelli, Jr., and Rosalie Whyel."
 
 
 ## What is Golden Valley Electric Association (GVEA)?
@@ -51,22 +56,14 @@ Additional info:
 
 ## Are there other relevant utilities?
 
-Fairbanks has more distributed generation than other communities in part because of the evolution of the distribution of the power plants at UAF, FMUS, Ft. Wainwright, Eielson and later additional GVEA operated power plants using diesel, HAGO, and naphtha generation resources at the North Pole refinery associated with TAPS completion in 1977.
-
-Additionally:
+Fairbanks has more distributed power generation than other communities in part because of the evolution of the distribution of the power plants developed at University of Alaska Fairbanks, Ft. Wainwright, Eielson Air Force Base, and later additional GVEA operated power plants using diesel, HAGO, and naphtha generation resources at the North Pole refinery associated with completion of the Trans-Alaska Pipeline System (TAPS) in 1977. In addition, there are, or have been, other utilities besides electrical utilities:
 
 - The Fairbanks Interior Gas Utility is certificated to sell natural gas (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
 - Fairbanks Natural Gas LLC (CPCN [514](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=14aed247-df8f-4dc6-8b2a-325acf1cb3c7)) used to be the gas utility in the city of Fairbanks, but it is inactive now.
-- The University of Alaska Fairbanks operates its own coal plant that makes electricity and heat 
+- The University of Alaska Fairbanks's coal plant that makes both electricity and heat 
 - Doyon Utilities provides electric utility service for Fort Wainwright in Fairbanks (CPCN [726](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=c89cf393-1bf6-483d-a777-e9af4b204710))
 - Doyon Utilities also serves as a heat utility for Fort Wainwright (CPCN [725](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=57e97e33-75bf-4e3b-9c19-ae1bf7ec26fb))
 - Fairbanks is connected to the Railbelt and so purchases power from other connected utilities.
-
-
-### Aurora Energy relation to Usibelli Coal?
-
-Aurora Energy is listed as a [customer of Usibelli Coal](https://www.usibelli.com/company/customers). Their [2011 Financial Statement](https://rca.alaska.gov/RCAWeb/ViewFile.aspx?id=05148B26-2E7A-4EAB-B340-8B80DBEDF28D) filed at the RCA says that "The Company has similar ownership as Usibelli Coal Mine, Inc. (UCM), sole supplier of coal to the plant."  The [GEM wiki](https://www.gem.wiki/Aurora_Energy_LLC) says "It is a private company, owned by Joseph E. Usibelli, Sr., Joseph E. Usibelli, Jr., and Rosalie Whyel."
-
 
 ### A note on technology
 
