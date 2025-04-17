@@ -19,7 +19,7 @@ These questions were not addressed adequately by the previous version of AEDG. I
 
 This is inaccurate in many ways. To clarify, this page draws upon legal definitions and information from the Regulatory Commission of Alaska (RCA). Additional information came from subject matter experts Steve Colt and Mark Foster; their responses in an email exchange in Feb. 2025 have been edited here for clarity.
 
-## What is Aurora Energy LLC?
+## What is Aurora Energy LLC? {#sec-aurora-cogen}
 
 Aurora Energy is a company that owns and operates the coal fired power plant in downtown Fairbanks; it has also been called [Aurora Power](https://www.uaf.edu/acep/news/news-archives/2013-2023/2015/march/acep-this-week-march-22nd-28th-2015/coal-and-biomass-co-firing-at-aurora-power.php). This plant generates electricity, and it also generates heat which is distributed to customers in the downtown area. 
 
