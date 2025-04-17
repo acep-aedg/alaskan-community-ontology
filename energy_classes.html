@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-04-14">
 <meta name="description" content="A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.">
 
-<title>6&nbsp; Axioms – Alaskan Community Ontology</title>
+<title>4&nbsp; Energy Classes (not Electricity) – Alaskan Community Ontology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./about.html" rel="next">
-<link href="./relations.html" rel="prev">
+<link href="./relations.html" rel="next">
+<link href="./electricity_classes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./axioms.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./energy_classes.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
+  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></span></a>
   </div>
 </li>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./axioms.html" class="sidebar-item-text sidebar-link active">
+  <a href="./axioms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms</span></span></a>
   </div>
 </li>
@@ -202,23 +202,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#regions" id="toc-regions" class="nav-link active" data-scroll-target="#regions"><span class="header-section-number">6.1</span> Regions</a>
+  <li><a href="#list-of-classes-in-the-wider-energy-context" id="toc-list-of-classes-in-the-wider-energy-context" class="nav-link active" data-scroll-target="#list-of-classes-in-the-wider-energy-context"><span class="header-section-number">4.1</span> List of Classes in the Wider Energy Context</a>
   <ul class="collapse">
-  <li><a href="#state" id="toc-state" class="nav-link" data-scroll-target="#state"><span class="header-section-number">6.1.1</span> State</a></li>
-  <li><a href="#community" id="toc-community" class="nav-link" data-scroll-target="#community"><span class="header-section-number">6.1.2</span> Community</a></li>
-  <li><a href="#indigenous" id="toc-indigenous" class="nav-link" data-scroll-target="#indigenous"><span class="header-section-number">6.1.3</span> Indigenous</a></li>
-  <li><a href="#legislative-districts" id="toc-legislative-districts" class="nav-link" data-scroll-target="#legislative-districts"><span class="header-section-number">6.1.4</span> Legislative Districts</a></li>
-  <li><a href="#boroughs" id="toc-boroughs" class="nav-link" data-scroll-target="#boroughs"><span class="header-section-number">6.1.5</span> Boroughs</a></li>
-  <li><a href="#census" id="toc-census" class="nav-link" data-scroll-target="#census"><span class="header-section-number">6.1.6</span> Census</a></li>
-  <li><a href="#zip-codes-optional" id="toc-zip-codes-optional" class="nav-link" data-scroll-target="#zip-codes-optional"><span class="header-section-number">6.1.7</span> Zip Codes (Optional)</a></li>
+  <li><a href="#steamheatutility" id="toc-steamheatutility" class="nav-link" data-scroll-target="#steamheatutility"><span class="header-section-number">4.1.1</span> SteamHeatUtility</a></li>
+  <li><a href="#transmission-or-distribution-of-natural-or-manufactured-gas" id="toc-transmission-or-distribution-of-natural-or-manufactured-gas" class="nav-link" data-scroll-target="#transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.1.2</span> transmission or distribution of natural or manufactured gas</a></li>
+  <li><a href="#distribution-petroleum-or-petroleum-products" id="toc-distribution-petroleum-or-petroleum-products" class="nav-link" data-scroll-target="#distribution-petroleum-or-petroleum-products"><span class="header-section-number">4.1.3</span> distribution petroleum or petroleum products</a></li>
+  <li><a href="#natural-gas-storage" id="toc-natural-gas-storage" class="nav-link" data-scroll-target="#natural-gas-storage"><span class="header-section-number">4.1.4</span> natural gas storage</a></li>
+  <li><a href="#liquefied-natural-gas-storage" id="toc-liquefied-natural-gas-storage" class="nav-link" data-scroll-target="#liquefied-natural-gas-storage"><span class="header-section-number">4.1.5</span> liquefied natural gas storage</a></li>
+  <li><a href="#pipelines" id="toc-pipelines" class="nav-link" data-scroll-target="#pipelines"><span class="header-section-number">4.1.6</span> pipelines</a></li>
   </ul></li>
-  <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">6.2</span> Energy-Related</a>
-  <ul class="collapse">
-  <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid"><span class="header-section-number">6.2.1</span> Grid</a></li>
-  <li><a href="#electric-utility" id="toc-electric-utility" class="nav-link" data-scroll-target="#electric-utility"><span class="header-section-number">6.2.2</span> Electric Utility</a></li>
-  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">6.2.3</span> IPP</a></li>
-  </ul></li>
-  <li><a href="#regarding-time" id="toc-regarding-time" class="nav-link" data-scroll-target="#regarding-time"><span class="header-section-number">6.3</span> Regarding Time</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -227,8 +219,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms</span></h1>
-<p class="subtitle lead">Domain-specific rules that describe entity relations in the Alaska Community Ontology</p>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></h1>
+<p class="subtitle lead">Descriptions of wider Energy-related entities in the Alaska Community Ontology</p>
 </div>
 
 
@@ -266,147 +258,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Axioms are domain-specific rules that encapsulate what we know about the Classes.</p>
+<p>State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See {<a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a>} for the text.</p>
+<p>Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.</p>
+<section id="list-of-classes-in-the-wider-energy-context" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="list-of-classes-in-the-wider-energy-context"><span class="header-section-number">4.1</span> List of Classes in the Wider Energy Context</h2>
+<section id="steamheatutility" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="steamheatutility"><span class="header-section-number">4.1.1</span> SteamHeatUtility</h3>
 <ul>
-<li>Axioms could form the basis of quality checks to entered data or the definition of the ontology. For instance, if the axioms include <code>x = y</code> and <code>y = z</code>, trying to enter an <code>x</code> that isn’t equal to <code>z</code> would fail a test.</li>
-<li>An Axiom should describe only one quality because it will eventually have a code-based test, and we want to keep those independent of each other.</li>
-</ul>
-<section id="regions" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="regions"><span class="header-section-number">6.1</span> Regions</h2>
-<section id="state" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="state"><span class="header-section-number">6.1.1</span> State</h3>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86">RCA search</a> gives 3: Aurora Energy and Doyon utilities servicing Fort Greely and Fort Wainwright</li>
+<li>Anchorage? ML&amp;P as referenced in <a href="ipp_utility_example.html#sec-aurora-cogen" class="quarto-xref"><span>Section C.1</span></a>
 <ul>
-<li>The State is defined to be Alaska</li>
-<li>All Communities are in the State</li>
-</ul>
-</section>
-<section id="community" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="community"><span class="header-section-number">6.1.2</span> Community</h3>
-<ul>
-<li>Communities are primarily determined by the expectations of the AEDG audience.</li>
-<li>Communities should be equal to a single entity (preferred)</li>
-<li>Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)</li>
-</ul>
-</section>
-<section id="indigenous" class="level3" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="indigenous"><span class="header-section-number">6.1.3</span> Indigenous</h3>
-<ul>
-<li>Tribes are nations and should be federally recognized (but sometimes are not)</li>
-<li>Native corporations are not nations, they are corporations that are a uniquely Alaskan entity.
-<ul>
-<li>Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr.&nbsp;16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.</li>
-</ul></li>
-<li>Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate type of entity.</li>
-</ul>
-</section>
-<section id="legislative-districts" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="legislative-districts"><span class="header-section-number">6.1.4</span> Legislative Districts</h3>
-<ul>
-<li>A Senate election district is composed of two contiguous house districts, if possible.</li>
-<li>Districts are redefined every 10 years after the federal census, and may change intermittently due to court challenges.</li>
-<li>HouseDistricts can contain multiple Communities.</li>
-<li>A single Community might intersect several HouseDistricts (example: Fairbanks)
-<ul>
-<li>Therefore: HouseDistrict population cannot be determined from a sum of Community populations.</li>
+<li>https://www.phoenixpg.com/anchorage-ml-p describes George M. Sullivan Plant 2 heating water</li>
+<li>but https://www.gem.wiki/George_M_Sullivan_Generation_Plant_2 says it is not combined heat and power (CHP)</li>
+<li>Googling does not identify steam heat in downtown Anchorage.</li>
 </ul></li>
 </ul>
 </section>
-<section id="boroughs" class="level3" data-number="6.1.5">
-<h3 data-number="6.1.5" class="anchored" data-anchor-id="boroughs"><span class="header-section-number">6.1.5</span> Boroughs</h3>
+<section id="transmission-or-distribution-of-natural-or-manufactured-gas" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.1.2</span> transmission or distribution of natural or manufactured gas</h3>
+<p>What types of information is available?</p>
 <ul>
-<li>Communities can be unincorporated, meaning they are not in a Borough.</li>
-<li>If incorporated, a Community can only be in a single Borough</li>
-<li>There is one unincorporated Borough
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227">RCA search</a> for certificate numbers: 8 active state-wide, but only 2 big.
 <ul>
-<li>The unincorporated Borough is split into CensusAreas for statistical purposes (not administrative)</li>
+<li>tariff filings (rate schedules)</li>
+<li>RCA service areas (PDF and KML)
+<ul>
+<li>Enstar and its supplier Alaska Pipeline Company have separate service areas with the pipelines looking like rasterized lines.</li>
+<li>IGU’s is out of date because Fairbanks Natural Gas’s service area is still separate but they merged in 2020.</li>
+</ul></li>
+</ul></li>
+<li>EIA natural gas power plant locations and owners</li>
+<li>https://www.interiorgas.com/</li>
+<li>https://www.enstarnaturalgas.com/</li>
+<li>https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet</li>
+</ul>
+</section>
+<section id="distribution-petroleum-or-petroleum-products" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="distribution-petroleum-or-petroleum-products"><span class="header-section-number">4.1.3</span> distribution petroleum or petroleum products</h3>
+<p>No RCA search option. Not real?</p>
+</section>
+<section id="natural-gas-storage" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="natural-gas-storage"><span class="header-section-number">4.1.4</span> natural gas storage</h3>
+<p>What types of information is available?</p>
+<ul>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=27421552-89e9-43c5-a783-101051f39f54">RCA search</a> only has 2:
+<ul>
+<li>Interior Alaska Natural Gas Utility, LLC (CPCN <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=64190d5c-575a-4859-a3cd-f863801ef588">778</a>)</li>
+<li>Cook Inlet Natural Gas Storage Alaska, LLC (CINGSA) (CPCN <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6b8fdbaf-08a6-4da3-8261-c15cc4092b39">733</a>)</li>
 </ul></li>
 </ul>
 </section>
-<section id="census" class="level3" data-number="6.1.6">
-<h3 data-number="6.1.6" class="anchored" data-anchor-id="census"><span class="header-section-number">6.1.6</span> Census</h3>
+<section id="liquefied-natural-gas-storage" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="liquefied-natural-gas-storage"><span class="header-section-number">4.1.5</span> liquefied natural gas storage</h3>
+<p>No RCA search option. Not real … yet?</p>
+</section>
+<section id="pipelines" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="pipelines"><span class="header-section-number">4.1.6</span> pipelines</h3>
 <ul>
-<li>Census blocks are not permanent through the decades. If a block is split, a suffix is added to the block number.</li>
-<li>Census blocks are not required to have population. They could be water-only.</li>
-<li>Census blocks nest within a census tract.</li>
-<li>Census tracks nest within state</li>
-<li>Census tracks nest within county, or the statistical equivalents of counties</li>
-<li>The optimum population of a census track is 4000 and the size is adjusted to accomplish that</li>
-<li>Census tracts occasionally are split due to population growth or merged as a result of substantial population decline.</li>
-<li>A Census Designated Place (CDP) can be located in more than one county (does that mean they might be in multiple census tracts?)</li>
-<li>A CDP cannot cross state boundaries.</li>
-<li>A CDP has a name that is different from adjacent places, but is not unique and can change.</li>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca">RCA search</a> returns 35</li>
+<li>not in {<a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a>}</li>
+<li>not relevant to Communities?</li>
 </ul>
-</section>
-<section id="zip-codes-optional" class="level3" data-number="6.1.7">
-<h3 data-number="6.1.7" class="anchored" data-anchor-id="zip-codes-optional"><span class="header-section-number">6.1.7</span> Zip Codes (Optional)</h3>
-<ul>
-<li>A ZipCode can contain multiple Communities, especially in rural areas.</li>
-<li>A single Community can contain multiple ZipCodes, especially in urban areas.</li>
-</ul>
-</section>
-</section>
-<section id="energy-related" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="energy-related"><span class="header-section-number">6.2</span> Energy-Related</h2>
-<ul>
-<li>A Community can be served by multiple Energy Utilities</li>
-</ul>
-<section id="grid" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="grid"><span class="header-section-number">6.2.1</span> Grid</h3>
-<ul>
-<li>Is a physical structure that supplies electricity to Communities
-<ul>
-<li>A Grid has the physical entities of PowerStations and PowerLines</li>
-</ul></li>
-<li>If isolated, is called a microgrid (check this)</li>
-<li>Can be composed of multiple Grids connected by interties
-<ul>
-<li>Interties are established on particular dates, so Grid definition can change over time</li>
-</ul></li>
-<li>Power Stations connected to a Grid generate power to supply a load.</li>
-</ul>
-</section>
-<section id="electric-utility" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="electric-utility"><span class="header-section-number">6.2.2</span> Electric Utility</h3>
-<ul>
-<li>An Electric Utility can operate a single Grid (KEA)</li>
-<li>An Electric Utility can operate multiple Grids (AVEC or AP&amp;T)</li>
-<li>An Electric Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
-<ul>
-<li>The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).</li>
-</ul></li>
-<li>Anchorage Municipal Light &amp; Power (ML&amp;P) used to make that 6, but they were absorbed by CEA</li>
-<li>Electric Utility service areas are regulated by the RCA
-<ul>
-<li>In general, Electric Utilities cannot compete against each other (<a href="legal_definitions.html#sec-electricity-competition" class="quarto-xref"><span>Section B.2</span></a>)</li>
-<li>Electric Utility service areas do not overlap</li>
-<li>Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.</li>
-<li>Utility service areas are documented by the RCA with PDF maps. KML also?
-<ul>
-<li>See <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf">CPCN 17: Kotzebue Electric Association, Inc.</a></li>
-</ul></li>
-</ul></li>
-</ul>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="images/KEA_kml_google.png" class="img-fluid figure-img" alt="KEA's service area displayed in Google Earth" width="600"></p>
-<figcaption>Kotzebue Electric’s Service Area in Google Earth</figcaption>
-</figure>
-</div>
-</section>
-<section id="ipp" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="ipp"><span class="header-section-number">6.2.3</span> IPP</h3>
-<ul>
-<li>A <a href="https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf">Tribal Independent Power Producer (IPP)</a> can develop and own renewable energy assets</li>
-<li>A local utility can buy renewable energy power from the Tribal IPP</li>
-<li>The cost of that power becomes a fuel cost that is an eligible PCE expense</li>
-</ul>
-</section>
-</section>
-<section id="regarding-time" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="regarding-time"><span class="header-section-number">6.3</span> Regarding Time</h2>
-<p>The assumption is that this needs to function <strong>for the current time only</strong>. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -973,13 +888,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./relations.html" class="pagination-link" aria-label="Relations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relations</span></span>
+      <a href="./electricity_classes.html" class="pagination-link" aria-label="Electricity Classes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./about.html" class="pagination-link" aria-label="About">
-        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">About</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./relations.html" class="pagination-link" aria-label="Relations">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relations</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

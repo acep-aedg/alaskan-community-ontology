@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2025-03-27">
 <meta name="description" content="A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.">
 
-<title>4&nbsp; Relations – Alaskan Community Ontology</title>
+<title>5&nbsp; Relations – Alaskan Community Ontology</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./axioms.html" rel="next">
-<link href="./electricity_classes.html" rel="prev">
+<link href="./energy_classes.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./relations.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Relations</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./relations.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -141,14 +141,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./relations.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Relations</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./axioms.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Axioms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -196,12 +202,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#applicable-standards" id="toc-applicable-standards" class="nav-link active" data-scroll-target="#applicable-standards"><span class="header-section-number">4.1</span> Applicable Standards</a></li>
-  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">4.2</span> Relations</a>
+  <li><a href="#applicable-standards" id="toc-applicable-standards" class="nav-link active" data-scroll-target="#applicable-standards"><span class="header-section-number">5.1</span> Applicable Standards</a></li>
+  <li><a href="#relations" id="toc-relations" class="nav-link" data-scroll-target="#relations"><span class="header-section-number">5.2</span> Relations</a>
   <ul class="collapse">
-  <li><a href="#spatial-relations" id="toc-spatial-relations" class="nav-link" data-scroll-target="#spatial-relations"><span class="header-section-number">4.2.1</span> Spatial Relations</a></li>
-  <li><a href="#lookup-tables" id="toc-lookup-tables" class="nav-link" data-scroll-target="#lookup-tables"><span class="header-section-number">4.2.2</span> Lookup Tables</a></li>
-  <li><a href="#early-ideas-for-lookup-tables" id="toc-early-ideas-for-lookup-tables" class="nav-link" data-scroll-target="#early-ideas-for-lookup-tables"><span class="header-section-number">4.2.3</span> Early ideas for lookup tables</a></li>
+  <li><a href="#spatial-relations" id="toc-spatial-relations" class="nav-link" data-scroll-target="#spatial-relations"><span class="header-section-number">5.2.1</span> Spatial Relations</a></li>
+  <li><a href="#lookup-tables" id="toc-lookup-tables" class="nav-link" data-scroll-target="#lookup-tables"><span class="header-section-number">5.2.2</span> Lookup Tables</a></li>
+  <li><a href="#early-ideas-for-lookup-tables" id="toc-early-ideas-for-lookup-tables" class="nav-link" data-scroll-target="#early-ideas-for-lookup-tables"><span class="header-section-number">5.2.3</span> Early ideas for lookup tables</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/eldobbins/alaska-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -211,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Relations</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Relations</span></h1>
 <p class="subtitle lead">Domain-defined ways that entities relate to each other in the Alaska Community Ontology</p>
 </div>
 
@@ -255,8 +261,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Relations are the edges in a graph.</li>
 <li>In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.</li>
 </ul>
-<section id="applicable-standards" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="applicable-standards"><span class="header-section-number">4.1</span> Applicable Standards</h2>
+<section id="applicable-standards" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="applicable-standards"><span class="header-section-number">5.1</span> Applicable Standards</h2>
 <p><a href="https://desktop.arcgis.com/en/arcmap/latest/manage-data/using-sql-with-gdbs/relational-functions-for-st-geometry.htm">ArcMap spatial relations</a></p>
 <ul>
 <li>ST_Contains</li>
@@ -283,22 +289,22 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties">OBO Relations Ontology</a> “is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.” It is a foundational element of the <a href="http://openenergy-platform.org/ontology/oeo/">Open Energy Ontology</a>.</p>
 <p>On the other hand, in the OEO <a href="https://terminology.tib.eu/ts/ontologies/oeo/props">Terminology Service</a>, I could only find one instance of a straight-up <code>RO</code> usage: <a href="https://terminology.tib.eu/ts/ontologies/oeo/props?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0040042">is homeomorphic for</a> (which I don’t even understand).</p>
 </section>
-<section id="relations" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="relations"><span class="header-section-number">4.2</span> Relations</h2>
-<section id="spatial-relations" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="spatial-relations"><span class="header-section-number">4.2.1</span> Spatial Relations</h3>
+<section id="relations" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="relations"><span class="header-section-number">5.2</span> Relations</h2>
+<section id="spatial-relations" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="spatial-relations"><span class="header-section-number">5.2.1</span> Spatial Relations</h3>
 <p>Most relationships can be established dynamically through spatial relations. We do not need to have a lookup table of Communities in Boroughs, say, because we can select all the Community points that the Borough CONTAINS. The primary relationships are sketched out on the Classes pages, but the combinations are really unlimited.</p>
 </section>
-<section id="lookup-tables" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="lookup-tables"><span class="header-section-number">4.2.2</span> Lookup Tables</h3>
+<section id="lookup-tables" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="lookup-tables"><span class="header-section-number">5.2.2</span> Lookup Tables</h3>
 <p>Some classes are legal or corporate entities and so do not have an intrinsic spatial component. But they serve other entities that <em>do</em> have a spatial component, so we will use look-up tables to attach spatial info to them.</p>
 <p>Table names are very specific so that they describe the exact relationship between the entities. This will self-document the queries when those are written.</p>
 </section>
-<section id="early-ideas-for-lookup-tables" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="early-ideas-for-lookup-tables"><span class="header-section-number">4.2.3</span> Early ideas for lookup tables</h3>
+<section id="early-ideas-for-lookup-tables" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="early-ideas-for-lookup-tables"><span class="header-section-number">5.2.3</span> Early ideas for lookup tables</h3>
 <p>Before we established the ELT pipeline or the application database, Liz theorized about potentially required tables. These have not been developed, but they do illustrate some interesting points so they have not been removed.</p>
-<section id="provides_electricity_to" class="level4" data-number="4.2.3.1">
-<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="provides_electricity_to"><span class="header-section-number">4.2.3.1</span> provides_electricity_to</h4>
+<section id="provides_electricity_to" class="level4" data-number="5.2.3.1">
+<h4 data-number="5.2.3.1" class="anchored" data-anchor-id="provides_electricity_to"><span class="header-section-number">5.2.3.1</span> provides_electricity_to</h4>
 <p>Utilities provide electricity to Communities. Liz added some columns that might be useful, but she doesn’t know where these data will come from, so the table schema will change. This is just an example of what <em>could</em> be.</p>
 <ul>
 <li><strong>Analogous Standards</strong>:</li>
@@ -324,8 +330,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="is_intertied_with" class="level4" data-number="4.2.3.2">
-<h4 data-number="4.2.3.2" class="anchored" data-anchor-id="is_intertied_with"><span class="header-section-number">4.2.3.2</span> is_intertied_with</h4>
+<section id="is_intertied_with" class="level4" data-number="5.2.3.2">
+<h4 data-number="5.2.3.2" class="anchored" data-anchor-id="is_intertied_with"><span class="header-section-number">5.2.3.2</span> is_intertied_with</h4>
 <p>Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but “intertie” is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our purposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.)</p>
 <ul>
 <li><strong>Analogous Standards</strong>:
@@ -375,8 +381,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="is_based_near" class="level4" data-number="4.2.3.3">
-<h4 data-number="4.2.3.3" class="anchored" data-anchor-id="is_based_near"><span class="header-section-number">4.2.3.3</span> is_based_near</h4>
+<section id="is_based_near" class="level4" data-number="5.2.3.3">
+<h4 data-number="5.2.3.3" class="anchored" data-anchor-id="is_based_near"><span class="header-section-number">5.2.3.3</span> is_based_near</h4>
 <p>Alaska Native village corporations are organized around small communities in Alaska that typically originated as traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Therefore, they aren’t the same as a Community but manage lands in possibly disjointed parcels inside and around the Community.</p>
 <p>The <a href="https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/">DCRA dataset</a> explicitly links these two with the columns <code>EntityName</code> and <code>CommunityName</code>. The addresses are for the corporate headquarters, which might be in Anchorage or somewhere, so those aren’t reliable links.</p>
 <ul>
@@ -975,13 +981,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./electricity_classes.html" class="pagination-link" aria-label="Electricity Classes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Electricity Classes</span></span>
+      <a href="./energy_classes.html" class="pagination-link" aria-label="Energy Classes (not Electricity)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./axioms.html" class="pagination-link" aria-label="Axioms">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Axioms</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Axioms</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
