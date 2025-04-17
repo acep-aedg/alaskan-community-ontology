@@ -30,6 +30,7 @@ book:
     - index.qmd
     - community_classes.qmd
     - electricity_classes.qmd
+    - energy_classes.qmd
     - relations.qmd
     - axioms.qmd
   appendices:

@@ -10,7 +10,7 @@ type: webpage
 date: 2025-04-14
 ---
 
-Much of the language for the various Classes was derived from Alaska statutes so the relevant sections have been copied here for convenience. The Regulatory Commission of Alaska (RCA) also has a page on [Alaska Administrative Code](
+Some language for the various Classes was derived from Alaska legal code so some relevant sections have been copied here for convenience. The Regulatory Commission of Alaska (RCA) also has a page on [Alaska Administrative Code](
 https://rca.alaska.gov/RCAWeb/AboutRCA/RCAStatutesAndRegulations.aspx) that describes regulations that apply to their authority.
 
 
