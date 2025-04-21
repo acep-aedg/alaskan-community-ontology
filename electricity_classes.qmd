@@ -175,7 +175,7 @@ date: 2025-04-14
   - [OEO:power plant operator](http://openenergy-platform.org/ontology/oeo/OEO_00140130) - "an agent that operates an electric utility generation station."
 - **References**:
   - https://www.eia.gov/tools/glossary/index.php?id=Electric%20utility
-  - {@sec-utility-definitions}
+  - @sec-utility-definitions
 - **Properties**:
   - coop (boolean): True/False is it organized as a member owned co-operative?
   - private (boolean): True/False is it a private company? Public owned utility (POU)?

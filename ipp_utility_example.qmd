@@ -53,6 +53,8 @@ Additional info:
 
 - Henri Dale, retired from GVEA, will have details on GVEA's acquisitions.
 - Wight, P. (2025). Electrifying Alaska's Railbelt: A Generation and Transmission History, 1904-2024. Zenodo. https://doi.org/10.5281/zenodo.14908275
+- [Sources of Power](https://www.gvea.com/services/energy/sources-of-power/), a published list of where GVEA purchased power from. As of April 2025, the list includes 25 MW of power from Aurora Energy, but nothing from UAF and no natural gas generation from other railbelt utilities since February 2024.
+- [2023 Annual Report CPCN 13 for Golden Valley Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/ViewFile.aspx?id=4B563B9C-A556-4764-BD1C-24B0645B6B87) which includes FERC Form 1 on purchased and sold power 
 
 ## Are there other relevant utilities?
 

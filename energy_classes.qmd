@@ -10,7 +10,7 @@ type: webpage
 date: 2025-04-14
 ---
 
-State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See {@sec-utility-definitions} for the text.
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text.
 
 Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.
 
@@ -33,9 +33,12 @@ What types of information is available?
   - RCA service areas (PDF and KML)
     - Enstar and its supplier Alaska Pipeline Company have separate service areas with the pipelines looking like rasterized lines.
     - IGU's is out of date because Fairbanks Natural Gas's service area is still separate but they merged in 2020.
-- EIA natural gas power plant locations and owners
-- https://www.interiorgas.com/
-- https://www.enstarnaturalgas.com/
+- EIA 
+  - locations and owners of electrical power plants fueled by natural gas
+  - [Alaska Natural Gas Prices](https://www.eia.gov/dnav/ng/ng_pri_sum_dcu_SAK_m.htm) including historical data 
+- Utility web pages
+  - https://www.interiorgas.com/
+  - https://www.enstarnaturalgas.com/
 - https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet
 
 ### distribution petroleum or petroleum products
@@ -57,5 +60,5 @@ No RCA search option. Not real ... yet?
 ### pipelines
 
 - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) returns 35
-- not in {@sec-utility-definitions}
+- not in @sec-utility-definitions
 - not relevant to Communities?
