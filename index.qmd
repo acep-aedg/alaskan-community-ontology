@@ -7,27 +7,25 @@ subtitle: "Describing elements of the Alaska Energy Data Gateway (AEDG)"
 
 This repository aims to support needed conversations regarding a foundational element of Alaska Energy Data Gateway (AEDG): the creation of derived aggregates of socio-economic and energy data at upper levels such as administrative regions and grids.
 
-To accomplish the computation of these aggregates in a reproducible way, a cross-walk between conceptual groupings of communities is required. This conceptual model will be applicable to diverse types of data. It will also guide the development of the algorythms that compute the aggregations and convert between them. 
+To accomplish the computation of these aggregates in a reproducible way, a cross-walk between conceptual groupings of communities is required. This conceptual model will be applicable to diverse types of data. It will also guide the development of the algorithms that compute the aggregations and convert between them. 
 
 If possible, this cross-walk will be machine readable/actionable. But to establish with consensus between our various subject matter experts, we need to start with a single set of definitions and axioms (rules) expressed in a human readable form. This could happen in a wiki, but we should maintain a record of revisions so we can document discussions and final recommendations. The best format for this process is a GitHub repo. 
 
 ## Goal
 
-To provide a basis for tranformation of data provided at different scales so that multiple groupings can be displayed on AEDG dashboards. 
+To provide a basis for transformation of data provided at different scales so that multiple groupings can be displayed on AEDG dashboards. 
 
 This is required because data will provided at different scales. For instance:
 
 - Because of interties, electricity is not always reported by individual communities.
 - Some ways of avoiding personally identifiable information (such as for building footprints) involve reporting by zip code.
-- Existing analysis such as [somebody's] energy burden data is reported at census tract level.
+- The [Spatial Energy Burden Analysis of the Fairbanks North Star Borough](https://zenodo.org/records/12575186)  reports at census tract level.
 
 Also, different audiences need data reported at different scales:
 
 - Communities want a summary of their own data.
 - Legislative Aides want summaries by legislative district.
 - Agency leads might want to compare PCE communities with railbelt communities.
-
-
 
 ## Format
 
@@ -38,7 +36,7 @@ Development will begin with a series of web pages oriented around ontological co
   - Instances of a Class are nodes in a graph, if you think about things that way.
 - **Properties**: These are attributes of the Classes. 
   - Properties could take the form of columns in tables in a relational database.
-- **Relations**: These can be heirarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishs an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
+- **Relations**: These can be hierarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. If they are based on domain specific rules (Axioms), then that is what distinguishes an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
   - Relations are the edges in a graph.
   - In a relational database, Relations can be encoded using a lookup table with a combination of foreign keys.
 - **Axioms**: Domain-specific rules that encapsulate what we know about the Classes.
@@ -53,13 +51,13 @@ Whenever possible, we will rely on existing resources and resist defining our ow
 
 [Dublin Core Metadata Terms (DCMT)](https://www.dublincore.org/specifications/dublin-core/dcmi-terms) are limited to only the most necessary terms. For instance, [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) is defined to include both spatial regions and named places, and puts no qualifications on the type or context. Similarly, an [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) is merely "a resource that acts or has the power to act". [Wikipedia says](https://en.wikipedia.org/wiki/Dublin_Core): "Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as a Resource Description Framework (RDF) vocabulary."
 
-[Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/) (OEO), which you access via this [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/terms).
+[Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/) (OEO), which can be accessed via this [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/terms).
 
 The [Census Glossary](https://www.census.gov/glossary/) describes the terms associated with the census.
 
-Terms describing Alaska Native representation are complex. The definitions here are based on [ANCSA Regional Association's Overview](https://ancsaregional.com/overview-of-entities/), is a description of the different tribal entities in Alaska that includes links to more information.
+Terms describing Alaska Native representation are complex. The definitions here are based on [ANCSA Regional Association's Overview](https://ancsaregional.com/overview-of-entities/), which is a description of the different tribal entities in Alaska with links to more information.
 
 
 
-![Initial Brainstorming.](images/brainstorming_board.jpg){fig-alt="first graph of communities" width=600 fig-align="left"}
+![Initial Brainstorming by Jesse Kaczmarski (ACEP, UAF), Brett Watson (ISER, UAA), and Mike Jones (ISER, UAA) on 11/11/2024.](images/brainstorming_board.jpg){fig-alt="first graph of communities" width=600 fig-align="left"}
 
