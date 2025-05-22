@@ -71,10 +71,10 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ### Grid
 - Is a physical structure that supplies electricity to Communities
   - A Grid has the physical entities of PowerStations and PowerLines
-- If isolated, is called a microgrid (check this)
 - Can be composed of multiple Grids connected by interties
   - Interties are established on particular dates, so Grid definition can change over time
 - Power Stations connected to a Grid generate power to supply a load.
+- [NREL defines a microgrid](https://www.nrel.gov/grid/microgrids) as "a group of interconnected loads and distributed energy resources that acts as a single controllable entity with respect to the grid". 
 
 ### Electric Utility
 - An Electric Utility can operate a single Grid (KEA)
@@ -94,9 +94,9 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 
 ### IPP
-- A [Tribal Independent Power Producer (IPP)](https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf) can develop and own renewable energy assets
-- A local utility can buy renewable energy power from the Tribal IPP
-- The cost of that power becomes a fuel cost that is an eligible PCE expense
+- Many kinds of organizations can act as an Independent Power Producer (IPP), developing, owning, and operating renewable and other types of energy assets.
+  - One such entity is a [Tribal Independent Power Producer (IPP)](https://www.energy.gov/sites/default/files/2024-07/Tribal-IPP-Development-in-Alaska_0.pdf)
+- A local load serving entity can buy power from an IPP and distribute it to customers.
 
 
 ## Regarding Time

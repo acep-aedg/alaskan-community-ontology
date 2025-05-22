@@ -17,7 +17,7 @@ As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one s
 As data sources are identified, this section will evolve into regular classes and relationships.
 
 
-## Thermal (Steam, Waste Heat)
+## Thermal (Steam, Waste Heat, Heat Recovery)
 
 ### RCA Regulated Steam Heat Utilities
 
@@ -37,6 +37,7 @@ As data sources are identified, this section will evolve into regular classes an
 - Seward
 - King Salmon
 - Angoon
+- [Noatak](https://www.nwabor.org/wp-content/uploads/I.-Community-Profile-Noatak.pdf) water treatment plant served by heat recovery system with opportunity to expand indicated.
 
 ## transmission or distribution of natural or manufactured gas
 
