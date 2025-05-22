@@ -271,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Alaskan Community Ontology</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/acep-aedg/alaskan-community-ontology" title="Alaska Community Ontology GitHub" class="quarto-navigation-tool px-1" aria-label="Alaska Community Ontology GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://www.uaf.edu/acep/" title="Alaska Center for Energy and Power" class="quarto-navigation-tool px-1" aria-label="Alaska Center for Energy and Power"><i class="bi bi-globe"></i></a>
     <a href="https://github.com/acep-aedg/alaskan-community-ontology" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./Alaskan-Community-Ontology.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -389,19 +389,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#boroughs" id="toc-boroughs" class="nav-link" data-scroll-target="#boroughs"><span class="header-section-number">3.3.3</span> Boroughs</a></li>
   <li><a href="#housedistricts" id="toc-housedistricts" class="nav-link" data-scroll-target="#housedistricts"><span class="header-section-number">3.3.4</span> HouseDistricts</a></li>
   <li><a href="#senatedistricts" id="toc-senatedistricts" class="nav-link" data-scroll-target="#senatedistricts"><span class="header-section-number">3.3.5</span> SenateDistricts</a></li>
+  <li><a href="#schooldistrict" id="toc-schooldistrict" class="nav-link" data-scroll-target="#schooldistrict"><span class="header-section-number">3.3.6</span> SchoolDistrict</a></li>
   </ul></li>
   <li><a href="#statistical-or-research-context" id="toc-statistical-or-research-context" class="nav-link" data-scroll-target="#statistical-or-research-context"><span class="header-section-number">3.4</span> Statistical or Research Context</a>
   <ul class="collapse">
   <li><a href="#censusblocks" id="toc-censusblocks" class="nav-link" data-scroll-target="#censusblocks"><span class="header-section-number">3.4.1</span> CensusBlocks</a></li>
   <li><a href="#censustracts" id="toc-censustracts" class="nav-link" data-scroll-target="#censustracts"><span class="header-section-number">3.4.2</span> CensusTracts</a></li>
-  <li><a href="#aeaenergyregions" id="toc-aeaenergyregions" class="nav-link" data-scroll-target="#aeaenergyregions"><span class="header-section-number">3.4.3</span> AeaEnergyRegions</a></li>
-  <li><a href="#acepenergyregions" id="toc-acepenergyregions" class="nav-link" data-scroll-target="#acepenergyregions"><span class="header-section-number">3.4.4</span> AcepEnergyRegions</a></li>
-  </ul></li>
-  <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional"><span class="header-section-number">3.5</span> Optional</a>
-  <ul class="collapse">
-  <li><a href="#censusarea" id="toc-censusarea" class="nav-link" data-scroll-target="#censusarea"><span class="header-section-number">3.5.1</span> CensusArea</a></li>
-  <li><a href="#zipcode" id="toc-zipcode" class="nav-link" data-scroll-target="#zipcode"><span class="header-section-number">3.5.2</span> ZipCode</a></li>
-  <li><a href="#schooldistrict" id="toc-schooldistrict" class="nav-link" data-scroll-target="#schooldistrict"><span class="header-section-number">3.5.3</span> SchoolDistrict</a></li>
+  <li><a href="#censusarea" id="toc-censusarea" class="nav-link" data-scroll-target="#censusarea"><span class="header-section-number">3.4.3</span> CensusArea</a></li>
+  <li><a href="#aeaenergyregions" id="toc-aeaenergyregions" class="nav-link" data-scroll-target="#aeaenergyregions"><span class="header-section-number">3.4.4</span> AeaEnergyRegions</a></li>
+  <li><a href="#acepenergyregions" id="toc-acepenergyregions" class="nav-link" data-scroll-target="#acepenergyregions"><span class="header-section-number">3.4.5</span> AcepEnergyRegions</a></li>
+  <li><a href="#zipcode" id="toc-zipcode" class="nav-link" data-scroll-target="#zipcode"><span class="header-section-number">3.4.6</span> ZipCode</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -495,9 +492,9 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
-<li>fipps_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.</li>
+<li>fips_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.</li>
 <li>geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted “place”.</li>
-<li>geometry (WKT Polygon): boundary of the administrative bounds of a Community available from a DRCA PCE dataset.</li>
+<li>geometry (WKT Polygon): boundary of the administrative bounds of a Community.</li>
 </ul></li>
 </ul>
 </section>
@@ -507,7 +504,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="fedrecognizedtribes" class="level3" data-number="3.2.1">
 <h3 data-number="3.2.1" class="anchored" data-anchor-id="fedrecognizedtribes"><span class="header-section-number">3.2.1</span> FedRecognizedTribes</h3>
 <ul>
-<li><strong>Definition</strong>: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.</li>
+<li><strong>Definition</strong>: For the purposes of tracking energy in Alaska, the definition could be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.</li>
 <li><strong>SpatialRelationships</strong>:</li>
 <li><strong>Analogous Standards</strong>:
 <ul>
@@ -517,9 +514,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>References</strong>:
 <ul>
-<li>https://biamaps.geoplatform.gov/BIA-Opendata/Data/ - terrible. no way to link to dataset.</li>
+<li>https://biamaps.geoplatform.gov/BIA-Opendata/Data/ has several relevant layers</li>
 <li>https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf</li>
-<li>https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question</li>
 <li>https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/</li>
 </ul></li>
 <li><strong>Properties</strong>:
@@ -550,6 +546,7 @@ ul.task-list li input[type="checkbox"] {
 <li>https://ancsa.lbblawyers.com/1602.htm (definition)</li>
 <li>https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)</li>
 <li>https://ancsaregional.com/about-ancsa/#mandates</li>
+<li>https://onemap-bia-geospatial.hub.arcgis.com/datasets/BIA-Geospatial::alaska-native-villages/</li>
 </ul></li>
 <li><strong>Properties</strong>:
 <ul>
@@ -562,7 +559,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="regionalcorps" class="level3" data-number="3.2.3">
 <h3 data-number="3.2.3" class="anchored" data-anchor-id="regionalcorps"><span class="header-section-number">3.2.3</span> RegionalCorps</h3>
 <ul>
-<li><strong>Definition</strong>: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.</li>
+<li><strong>Definition</strong>: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA). The boundaries of these areas do not directly represent land ownership, but instead define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
 <li>WITHIN Alaska</li>
@@ -650,7 +647,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="boroughs" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="boroughs"><span class="header-section-number">3.3.3</span> Boroughs</h3>
 <ul>
-<li><strong>Definition</strong>: Boroughs are analagous to a county in other places. Organized boroughs were formed in those areas where economies were better developed. The remaining areas are the unorganized borough, which is divided into census areas; these areas exist for statistical analysis and do not have a government of their own. There are also consolidated city-borough governments.</li>
+<li><strong>Definition</strong>: Boroughs are analogous to counties in other states with several Alaska-specific qualities. First,boroughs were initially formed in areas whose economies were better developed at the time; the remaining areas were consolidated as the Unorganized Borough. Second, for statistical purposes the Unorganized Borough is divided into Census Areas; these do not have governments of their own. Third, there are also areas where city and borough governments have been consolidated.</li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
 <li>CONTAINS IncorporatedPlaces</li>
@@ -745,6 +742,22 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
+<section id="schooldistrict" class="level3" data-number="3.3.6">
+<h3 data-number="3.3.6" class="anchored" data-anchor-id="schooldistrict"><span class="header-section-number">3.3.6</span> SchoolDistrict</h3>
+<ul>
+<li><strong>Definition</strong>: Community based school districts. This might be out of scope or better handled as research.</li>
+<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the governmental organization.</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district.</li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="statistical-or-research-context" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="statistical-or-research-context"><span class="header-section-number">3.4</span> Statistical or Research Context</h2>
@@ -758,7 +771,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
-<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li>https://schema.org/DefinedRegion as a broad definition</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020034">OEO:study subregion</a> (of CensusTract)</li>
 </ul></li>
@@ -785,7 +798,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
-<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li>https://schema.org/DefinedRegion as a broad definition</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
@@ -801,8 +814,12 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="aeaenergyregions" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="aeaenergyregions"><span class="header-section-number">3.4.3</span> AeaEnergyRegions</h3>
+<section id="censusarea" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="censusarea"><span class="header-section-number">3.4.3</span> CensusArea</h3>
+<p>see Boroughs</p>
+</section>
+<section id="aeaenergyregions" class="level3" data-number="3.4.4">
+<h3 data-number="3.4.4" class="anchored" data-anchor-id="aeaenergyregions"><span class="header-section-number">3.4.4</span> AeaEnergyRegions</h3>
 <ul>
 <li><strong>Definition</strong>: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.</li>
 <li><strong>SpatialRelationships</strong>:
@@ -811,7 +828,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
-<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li>https://schema.org/DefinedRegion as a broad definition</li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
 <li><strong>References</strong>:
@@ -825,8 +842,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="acepenergyregions" class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="acepenergyregions"><span class="header-section-number">3.4.4</span> AcepEnergyRegions</h3>
+<section id="acepenergyregions" class="level3" data-number="3.4.5">
+<h3 data-number="3.4.5" class="anchored" data-anchor-id="acepenergyregions"><span class="header-section-number">3.4.5</span> AcepEnergyRegions</h3>
 <ul>
 <li><strong>Definition</strong>: Communities were been grouped into 3 regions in order to summarize energy trends in the <a href="https://acep-uaf.github.io/aetr-web-book-2024/">2024 Alaska Electricity Trends Report</a>. Was intended to group communities by generation mix, but we grouped in contiguous areas: railbelt, coastal, and rural remote.</li>
 <li><strong>SpatialRelationships</strong>:
@@ -835,7 +852,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
-<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
+<li>https://schema.org/DefinedRegion as a broad definition</li>
 <li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
 </ul></li>
 <li><strong>Properties</strong>:
@@ -844,32 +861,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-</section>
-<section id="optional" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="optional"><span class="header-section-number">3.5</span> Optional</h2>
-<section id="censusarea" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="censusarea"><span class="header-section-number">3.5.1</span> CensusArea</h3>
-<ul>
-<li><strong>Definition</strong>: Census areas are subdivisions of the unorganized borough that are only used for statistical analysis and do not have a government of their own. These are typically undeveloped areas, so I’m not sure how relevant they are for AEDG.</li>
-<li><strong>SpatialRelationships</strong>:</li>
-<li><strong>Analogous Standards</strong>:
-<ul>
-<li>https://schema.org/DefinedRegion - Arbitrary! haha</li>
-<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location">dc:Location</a></li>
-<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the unincorporated Borough)</li>
-</ul></li>
-<li><strong>References</strong>:
-<ul>
-<li>https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about</li>
-</ul></li>
-<li><strong>Properties</strong>:
-<ul>
-<li>boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census area.</li>
-</ul></li>
-</ul>
-</section>
-<section id="zipcode" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="zipcode"><span class="header-section-number">3.5.2</span> ZipCode</h3>
+<section id="zipcode" class="level3" data-number="3.4.6">
+<h3 data-number="3.4.6" class="anchored" data-anchor-id="zipcode"><span class="header-section-number">3.4.6</span> ZipCode</h3>
 <ul>
 <li><strong>Definition</strong>: Postal zip codes as available from [link] (ZCTA)</li>
 <li><strong>SpatialRelationships</strong>:</li>
@@ -886,22 +879,6 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Properties</strong>:
 <ul>
 <li>boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.</li>
-</ul></li>
-</ul>
-</section>
-<section id="schooldistrict" class="level3" data-number="3.5.3">
-<h3 data-number="3.5.3" class="anchored" data-anchor-id="schooldistrict"><span class="header-section-number">3.5.3</span> SchoolDistrict</h3>
-<ul>
-<li><strong>Definition</strong>: Community based school districts. This might be out of scope or better handled as research.</li>
-<li><strong>SpatialRelationships</strong>:</li>
-<li><strong>Analogous Standards</strong>:
-<ul>
-<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a> for the governmental organization.</li>
-<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020033">OEO:subregion</a> - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)</li>
-</ul></li>
-<li><strong>Properties</strong>:
-<ul>
-<li>boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.</li>
 </ul></li>
 </ul>
 
