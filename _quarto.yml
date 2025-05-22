@@ -22,9 +22,9 @@ book:
     pinned: true
     align: center
     tools: 
-      - icon: github
-        href: https://github.com/acep-aedg/alaskan-community-ontology
-        text: "Alaska Community Ontology GitHub"
+      - icon: globe
+        href: https://www.uaf.edu/acep/  # future replacement with AEDG site?
+        text: "Alaska Center for Energy and Power"
 
   chapters:
     - index.qmd

@@ -26,25 +26,24 @@ date: 2025-03-27
   - https://schema.org/Place
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
 - **Properties**:
-  - fipps_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.
+  - fips_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.
   - geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
-  - geometry (WKT Polygon): boundary of the administrative bounds of a Community available from a DRCA  PCE dataset.
+  - geometry (WKT Polygon): boundary of the administrative bounds of a Community.
  
 
 
 ## ANCSA or Indigenous Context
 
 ### FedRecognizedTribes
-- **Definition**: For the purposes of tracking energy in Alaska, the definition [should|will|could] be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. 
+- **Definition**: For the purposes of tracking energy in Alaska, the definition could be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. 
 - **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
   - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **References**:
-  - https://biamaps.geoplatform.gov/BIA-Opendata/Data/ - terrible. no way to link to dataset.
+  - https://biamaps.geoplatform.gov/BIA-Opendata/Data/ has several relevant layers
   - https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf
-  - https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question
   - https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/
 - **Properties**:
   - geometry (WKT Polygon): boundary of Tribe
@@ -65,6 +64,7 @@ date: 2025-03-27
   - https://ancsa.lbblawyers.com/1602.htm (definition)
   - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
   - https://ancsaregional.com/about-ancsa/#mandates
+  - https://onemap-bia-geospatial.hub.arcgis.com/datasets/BIA-Geospatial::alaska-native-villages/
 - **Properties**:
   - geometry (WKT Point): longitude, latitude of tribal leadership location
   - related to Communities via the `is_based_near` lookup table.
@@ -72,7 +72,7 @@ date: 2025-03-27
 
 
 ### RegionalCorps
-- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around geographic areas defined by the common heritage and shared interests of the indigenous peoples. The boundaries of these areas do not directly represent land ownership, but instread define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.
+- **Definition**: Alaska Native regional corporations were created by the Alaska Native Claims Settlement Act (ANCSA). The boundaries of these areas do not directly represent land ownership, but instead define the areas in which each regional corporation could select lands to be conveyed under the provisions of ANCSA.
 - **SpatialRelationships**: 
   - WITHIN Alaska
 - **Analogous Standards**:
@@ -129,7 +129,7 @@ date: 2025-03-27
 
 
 ### Boroughs
-- **Definition**: Boroughs are analagous to a county in other places. Organized boroughs were formed in those areas where economies were better developed. The remaining areas are the unorganized borough, which is divided into census areas; these areas exist for statistical analysis and do not have a government of their own. There are also consolidated city-borough governments.
+- **Definition**: Boroughs are analogous to counties in other states with several Alaska-specific qualities. First,boroughs were initially formed in areas whose economies were better developed at the time; the remaining areas were consolidated as the Unorganized Borough. Second, for statistical purposes the Unorganized Borough is divided into Census Areas; these do not have governments of their own. Third, there are also areas where city and borough governments have been consolidated.
 - **SpatialRelationships**: 
   - CONTAINS IncorporatedPlaces
   - CONTAINS CensusDesignatedPlaces
@@ -195,6 +195,15 @@ date: 2025-03-27
   - district (character): Capitol letter that denotes the district
   - geometry (WKT MultiPolygon): boundary of the district.
 
+### SchoolDistrict
+- **Definition**: Community based school districts. This might be out of scope or better handled as research.
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)
+- **Properties**:
+  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district.
+
 
 ## Statistical or Research Context
 
@@ -203,7 +212,7 @@ date: 2025-03-27
 - **SpatialRelationships**: 
   - WITHIN CensusTracts
 - **Analogous Standards**:
-  - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - https://schema.org/DefinedRegion as a broad definition
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
   - [OEO:study subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020034) (of CensusTract)
 - **References**:
@@ -220,7 +229,7 @@ date: 2025-03-27
 - **SpatialRelationships**: 
   - CONTAINS CensusBlocks
 - **Analogous Standards**:
-  - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - https://schema.org/DefinedRegion as a broad definition
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
   - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **References**:
@@ -230,12 +239,16 @@ date: 2025-03-27
 - **Properties**:
   - geometry (WKT Polygon): boundary of the census tract.
 
+### CensusArea
+
+see Boroughs
+
 ### AeaEnergyRegions
 - **Definition**: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.
 - **SpatialRelationships**: 
   - CONTAINS Communities
 - **Analogous Standards**:
-  - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - https://schema.org/DefinedRegion as a broad definition
   - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **References**:
   - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::alaska-energy-authority-regions/about
@@ -248,25 +261,10 @@ date: 2025-03-27
 - **SpatialRelationships**: 
   - CONTAINS Communities
 - **Analogous Standards**:
-  - https://schema.org/DefinedRegion - Arbitrary!  haha
+  - https://schema.org/DefinedRegion as a broad definition
   - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **Properties**:
   - geometry (WKT MultiPolygon) or (WKT Polygon): boundaries 
-
-## Optional
-
-### CensusArea
-- **Definition**: Census areas are subdivisions of the unorganized borough that are only used for statistical analysis and do not have a government of their own. These are typically undeveloped areas, so I'm not sure how relevant they are for AEDG.
-- **SpatialRelationships**: 
-- **Analogous Standards**:
-  - https://schema.org/DefinedRegion - Arbitrary!  haha
-  - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location)
-  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of the unincorporated Borough)
-- **References**:
-  - https://gis.data.alaska.gov/datasets/DCCED::alaska-borough-and-census-area-boundaries/about
-- **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the census area.
-
 
 ### ZipCode
 - **Definition**: Postal zip codes as available from [link] (ZCTA)
@@ -279,16 +277,3 @@ date: 2025-03-27
   - https://www.geonames.org/postal-codes/US/AK/alaska.html (place = town, Admin2 = borough?)
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the house district.
-
-
-### SchoolDistrict
-- **Definition**: Community based school districts. This might be out of scope or better handled as research.
-- **SpatialRelationships**: 
-- **Analogous Standards**:
-  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
-  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)
-- **Properties**:
-  - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district. This is too much to expect, probably.
-
-
-

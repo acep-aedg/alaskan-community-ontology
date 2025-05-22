@@ -10,21 +10,35 @@ type: webpage
 date: 2025-04-14
 ---
 
-State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text.
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.
 
-Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.
+As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information.
 
-## List of Classes in the Wider Energy Context
+As data sources are identified, this section will evolve into regular classes and relationships.
 
-### SteamHeatUtility
+
+## Thermal (Steam, Waste Heat)
+
+### RCA Regulated Steam Heat Utilities
 
 - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86) gives 3: Aurora Energy and Doyon utilities servicing Fort Greely and Fort Wainwright
+
+### Other information
+
 - Anchorage? ML&P as referenced in @sec-aurora-cogen
   - https://www.phoenixpg.com/anchorage-ml-p describes George M. Sullivan Plant 2 heating water
   - but https://www.gem.wiki/George_M_Sullivan_Generation_Plant_2 says it is not combined heat and power (CHP)
   - Googling does not identify steam heat in downtown Anchorage. 
+- Galena: Sustainable Energy for Galena (SEGA) heating Galena Interior Learning Academy (GILA) 
+  - original system was steam with diesel but now it is a hydronic hot-water system with a biomass boiler
+- Naknek 
+  - waste heat recovery district heating loop ([USDA awards](https://www.rd.usda.gov/media/file/download/usda-rd-rus-hecg2021-2022-project-awards-122324.pdf) as source of more infomation)
+- Utqiaġvik: Barrow Electric for the school and pool
+- Seward
+- King Salmon
+- Angoon
 
-### transmission or distribution of natural or manufactured gas
+## transmission or distribution of natural or manufactured gas
 
 What types of information is available?
 
@@ -41,11 +55,11 @@ What types of information is available?
   - https://www.enstarnaturalgas.com/
 - https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet
 
-### distribution petroleum or petroleum products
+## distribution petroleum or petroleum products
 
-No RCA search option. Not real?
+No RCA search option.
 
-### natural gas storage
+## natural gas storage
 
 What types of information is available?
 
@@ -53,12 +67,16 @@ What types of information is available?
   - Interior Alaska Natural Gas Utility, LLC (CPCN [778](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=64190d5c-575a-4859-a3cd-f863801ef588))
   - Cook Inlet Natural Gas Storage Alaska, LLC (CINGSA) (CPCN [733](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6b8fdbaf-08a6-4da3-8261-c15cc4092b39))
 
-### liquefied natural gas storage
+## liquefied natural gas storage
 
-No RCA search option. Not real ... yet?
+No RCA search option.
 
-### pipelines
+## pipelines
 
 - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) returns 35
 - not in @sec-utility-definitions
-- not relevant to Communities?
+
+## Geothermal
+
+- Naknek / King Salmon in 2010c
+- Chena Hot Springs

@@ -29,8 +29,6 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ### Indigenous 
 
 - Tribes are nations and should be federally recognized (but sometimes are not)
-- Native corporations are not nations, they are corporations that are a uniquely Alaskan entity. 
-  - Gregory Ablavsky, Are Alaska Native corporations Indian tribes? A multimillion-dollar question, SCOTUSblog (Apr. 16, 2021, 8:18 PM), https://www.scotusblog.com/2021/04/are-alaska-native-corporations-indian-tribes-a-multimillion-dollar-question/ descibes an area where the distinction between tribe and corporation is murky.
 - Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate type of entity.
 
 ### Legislative Districts
@@ -44,8 +42,8 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ### Boroughs
 - Communities can be unincorporated, meaning they are not in a Borough.
 - If incorporated, a Community can only be in a single Borough
-- There is one unincorporated Borough
-  - The unincorporated Borough is split into CensusAreas for statistical purposes (not administrative)
+- There is one Unorganized Borough
+  - The Unorganized Borough is split into CensusAreas for statistical purposes (not administrative)
 
 ### Census
 
