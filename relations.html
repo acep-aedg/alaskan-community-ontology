@@ -6,8 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Liz Dobbins">
-<meta name="dcterms.date" content="2025-03-27">
+<meta name="dcterms.date" content="2025-05-23">
 <meta name="description" content="A vocabulary of entities that describe Alaskan communities, aggregates of communities such as grids and regions, and the relationships between them.">
 
 <title>5&nbsp; Relations – Alaskan Community Ontology</title>
@@ -371,7 +370,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#spatial-relations" id="toc-spatial-relations" class="nav-link" data-scroll-target="#spatial-relations"><span class="header-section-number">5.2.1</span> Spatial Relations</a></li>
   <li><a href="#lookup-tables" id="toc-lookup-tables" class="nav-link" data-scroll-target="#lookup-tables"><span class="header-section-number">5.2.2</span> Lookup Tables</a></li>
-  <li><a href="#early-ideas-for-lookup-tables" id="toc-early-ideas-for-lookup-tables" class="nav-link" data-scroll-target="#early-ideas-for-lookup-tables"><span class="header-section-number">5.2.3</span> Early ideas for lookup tables</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -387,29 +385,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author"><a href="https://github.com/eldobbins">Liz Dobbins</a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            <a href="https://www.uaf.edu/acep">
-            Alaska Center for Energy and Power, University of Alaska Fairbanks
-            </a>
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
+    
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 27, 2025</p>
+      <p class="date">May 23, 2025</p>
     </div>
   </div>
   
@@ -464,121 +447,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="lookup-tables"><span class="header-section-number">5.2.2</span> Lookup Tables</h3>
 <p>Some classes are legal or corporate entities and so do not have an intrinsic spatial component. But they serve other entities that <em>do</em> have a spatial component, so we will use look-up tables to attach spatial info to them.</p>
 <p>Table names are very specific so that they describe the exact relationship between the entities. This will self-document the queries when those are written.</p>
-</section>
-<section id="early-ideas-for-lookup-tables" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="early-ideas-for-lookup-tables"><span class="header-section-number">5.2.3</span> Early ideas for lookup tables</h3>
-<p>Before we established the ELT pipeline or the application database, Liz theorized about potentially required tables. These have not been developed, but they do illustrate some interesting points so they have not been removed.</p>
-<section id="provides_electricity_to" class="level4" data-number="5.2.3.1">
-<h4 data-number="5.2.3.1" class="anchored" data-anchor-id="provides_electricity_to"><span class="header-section-number">5.2.3.1</span> provides_electricity_to</h4>
-<p>Utilities provide electricity to Communities. Liz added some columns that might be useful, but she doesn’t know where these data will come from, so the table schema will change. This is just an example of what <em>could</em> be.</p>
-<ul>
-<li><strong>Analogous Standards</strong>:</li>
-<li><a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> - “A service is a process that is an intangible activity performed by some agent for the benefit of another agent.”</li>
-<li><a href="https://schema.org/Service">Schema.org:Service</a> - “A service provided by an organization, e.g.&nbsp;delivery service, print services, etc.”</li>
-</ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id_provides</th>
-<th>id_utility</th>
-<th>id_community</th>
-<th>year_established</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="is_intertied_with" class="level4" data-number="5.2.3.2">
-<h4 data-number="5.2.3.2" class="anchored" data-anchor-id="is_intertied_with"><span class="header-section-number">5.2.3.2</span> is_intertied_with</h4>
-<p>Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but “intertie” is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our purposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.)</p>
-<ul>
-<li><strong>Analogous Standards</strong>:
-<ul>
-<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000144">OEO:electricity grid component</a> (a material entity that includes power plants)</li>
-<li>or maybe more specifically <a href="http://openenergy-platform.org/ontology/oeo/OEO_00000253">OEO:power line</a></li>
-<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource">dc:PhysicalResource</a></li>
-</ul></li>
-<li><strong>Properties</strong>:
-<ul>
-<li>owner (string): Who owns it?</li>
-<li>maintainer (string): Who maintains it? Is this the same as Owner?</li>
-</ul></li>
-</ul>
-<p>This is just an example of what <em>could</em> be. Schema should be based on Neil’s work?</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 15%">
-<col style="width: 22%">
-<col style="width: 8%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>id_intertie</th>
-<th>id_grid1</th>
-<th>id_grid2</th>
-<th>new_grid_id</th>
-<th>year_established</th>
-<th>owner</th>
-<th>maintainer</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-<td>string</td>
-<td>string</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="is_based_near" class="level4" data-number="5.2.3.3">
-<h4 data-number="5.2.3.3" class="anchored" data-anchor-id="is_based_near"><span class="header-section-number">5.2.3.3</span> is_based_near</h4>
-<p>Alaska Native village corporations are organized around small communities in Alaska that typically originated as traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Therefore, they aren’t the same as a Community but manage lands in possibly disjointed parcels inside and around the Community.</p>
-<p>The <a href="https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/">DCRA dataset</a> explicitly links these two with the columns <code>EntityName</code> and <code>CommunityName</code>. The addresses are for the corporate headquarters, which might be in Anchorage or somewhere, so those aren’t reliable links.</p>
-<ul>
-<li><strong>Analogous Standards</strong>:
-<ul>
-<li>The VillageCorp is an <a href="http://xmlns.com/foaf/spec/#term_Organization">foaf:Organization</a> that is <a href="http://xmlns.com/foaf/spec/#term_based_near">foaf:based_near</a> a Community - “A location that something is based near, for some broadly human notion of near.”</li>
-</ul></li>
-<li><strong>References</strong>:
-<ul>
-<li>https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)</li>
-</ul></li>
-</ul>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id_near</th>
-<th>id_village_corp</th>
-<th>id_community</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>integer</td>
-<td>integer</td>
-<td>integer</td>
-</tr>
-</tbody>
-</table>
 
 
-</section>
 </section>
 </section>
 
