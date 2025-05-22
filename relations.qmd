@@ -1,13 +1,8 @@
 ---
 title: "Relations"
 subtitle: "Domain-defined ways that entities relate to each other in the Alaska Community Ontology"
-author:
-  - name: Liz Dobbins
-    url: https://github.com/eldobbins
-    affiliation: "Alaska Center for Energy and Power, University of Alaska Fairbanks"
-    affiliation-url: https://www.uaf.edu/acep 
 type: webpage
-date: 2025-03-27
+date: 2025-05-23
 ---
 
 Relations can be hierarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.
@@ -56,56 +51,3 @@ Most relationships can be established dynamically through spatial relations. We 
 Some classes are legal or corporate entities and so do not have an intrinsic spatial component. But they serve other entities that _do_ have a spatial component, so we will use look-up tables to attach spatial info to them.
 
 Table names are very specific so that they describe the exact relationship between the entities. This will self-document the queries when those are written.
-
-
-### Early ideas for lookup tables
-
-Before we established the ELT pipeline or the application database, Liz theorized about potentially required tables. These have not been developed, but they do illustrate some interesting points so they have not been removed.
-
-#### provides_electricity_to
-
-Utilities provide electricity to Communities. Liz added some columns that might be useful, but she doesn't know where these data will come from, so the table schema will change. This is just an example of what _could_ be.
-
-- **Analogous Standards**:
- - [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) - "A service is a process that is an intangible activity performed by some agent for the benefit of another agent."
- - [Schema.org:Service](https://schema.org/Service) - "A service provided by an organization, e.g. delivery service, print services, etc."
-
-
-| id_provides | id_utility | id_community | year_established | 
-| ----------- | ---------- | ------------ | ---------------- |
-| integer     | integer    | integer      | integer          |
-
-
-#### is_intertied_with
-
-Grids are connected to each other with interties. Interties are the physical power lines (transmission or distribution) that make the connection, but "intertie" is also the action of making two separate Grids into a new Grid. An intertie can be multiple lines going on different routes so if a geometry was defined, the line might be quite complex; for our purposes, we will start by representing interties with lines that join the Community points. Interties have a start date that could be defined in multiple ways - date of construction or date when billing changed. (This needs clarification.) 
-
-- **Analogous Standards**:
-  - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
-  - or maybe more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-- **Properties**:
-  - owner (string): Who owns it?
-  - maintainer (string): Who maintains it? Is this the same as Owner?
-
-This is just an example of what _could_ be. Schema should be based on Neil's work?
-
-| id_intertie | id_grid1 | id_grid2 | new_grid_id | year_established | owner  | maintainer |
-| ----------- | -------- | -------- | ----------- | ---------------- | ------ | ---------- |
-| integer     | integer  | integer  | integer     | integer          | string | string     |
-
-
-#### is_based_near
-
-Alaska Native village corporations are organized around small communities in Alaska that typically originated as traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Therefore, they aren't the same as a Community but manage lands in possibly disjointed parcels inside and around the Community.
-
-The [DCRA dataset](https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/) explicitly links these two with the columns `EntityName` and `CommunityName`. The addresses are for the corporate headquarters, which might be in Anchorage or somewhere, so those aren't reliable links.
-
-- **Analogous Standards**:
-  - The VillageCorp is an [foaf:Organization](http://xmlns.com/foaf/spec/#term_Organization) that is [foaf:based_near](http://xmlns.com/foaf/spec/#term_based_near) a Community - "A location that something is based near, for some broadly human notion of near."
-- **References**:
-  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
-
-| id_near | id_village_corp | id_community |
-| ------- | --------------- | ------------ | 
-| integer | integer         | integer      |
