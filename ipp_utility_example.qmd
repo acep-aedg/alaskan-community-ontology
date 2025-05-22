@@ -23,7 +23,7 @@ electric energy to Golden Valley Electric Association, Inc., ". But there is ano
 
 Therefore, Aurora Energy is both:
 
-1. a certificated utility selling heat in a service territory defined by the network of steam [and hot water] pipes; and 
+1. a certificated utility that directly serves commercial and consumers rate payers in Fairbanks and receives payments from them, selling heat in a service territory defined by the network of steam [and hot water] pipes; and 
 2. an IPP selling electricity to Golden Valley Electric Association (GVEA)
 
 Aurora Energy is one of the successor entities to the Fairbanks Municipal Utilities System (FMUS) that served downtown Fairbanks for decades. FMUS also provided district heat through pipes, as steam. Coal fired power plants that generated heat and electricity were common across small campuses around the Northern United States. A similar entity was Anchorage Municipal Light and Power which served downtown Anchorage.
@@ -55,9 +55,9 @@ Additional info:
 
 Fairbanks has more distributed power generation than other communities in part because of the evolution of the distribution of the power plants developed at University of Alaska Fairbanks, Ft. Wainwright, Eielson Air Force Base, and later additional GVEA operated power plants using diesel, HAGO, and naphtha generation resources at the North Pole refinery associated with completion of the Trans-Alaska Pipeline System (TAPS) in 1977. In addition, there are, or have been, other energy utilities besides electrical utilities:
 
-- The Fairbanks Interior Gas Utility is certificated to sell natural gas (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
+- The Fairbanks Interior Gas Utility (IGU) is certificated to sell natural gas (CPCN [753](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=b7a5d725-eb8d-4019-924c-18947e92af21))
 - Fairbanks Natural Gas LLC (CPCN [514](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=14aed247-df8f-4dc6-8b2a-325acf1cb3c7)) used to be the gas utility in the city of Fairbanks, but it is inactive now.
-- The University of Alaska Fairbanks's coal plant that makes both electricity and heat (No CPCN? It is not **Not** CPCN [452](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=70017ece-7417-4017-845d-c81961a48970) which is for Telecommunication Intrastate Inter-Exchange Carriers (IXCs))
+- The University of Alaska Fairbanks's coal plant that makes both electricity and heat <!-- (No CPCN? It is not **Not** CPCN [452](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=70017ece-7417-4017-845d-c81961a48970) which is for Telecommunication Intrastate Inter-Exchange Carriers (IXCs)) -->
 - Doyon Utilities provides electric utility service for Fort Wainwright in Fairbanks (CPCN [726](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=c89cf393-1bf6-483d-a777-e9af4b204710))
 - Doyon Utilities also serves as a heat utility for Fort Wainwright (CPCN [725](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=57e97e33-75bf-4e3b-9c19-ae1bf7ec26fb))
 - Fairbanks is connected to the Railbelt and so purchases power from other connected utilities.
