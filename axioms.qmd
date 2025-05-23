@@ -49,7 +49,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - Census tracks nest within county, or the statistical equivalents of counties
 - The optimum population of a census track is 4000 and the size is adjusted to accomplish that
 - Census tracts occasionally are split due to population growth or merged as a result of substantial population decline.
-- A Census Designated Place (CDP) can be located in more than one county (does that mean they might be in multiple census tracts?)
+- A Census Designated Place (CDP) can be located in more than one county
 - A CDP cannot cross state boundaries.
 - A CDP has a name that is different from adjacent places, but is not unique and can change.
 
@@ -81,7 +81,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
   - In general, Electric Utilities cannot compete against each other (@sec-electricity-competition)
   - Electric Utility service areas do not overlap
   - Utility service areas are measured in the Public Land Survey System (PLSS) - township, range, and section.
-  - Utility service areas are documented by the RCA with PDF maps. KML also?
+  - Utility service areas are documented by the RCA with PDF and KML maps
     - See [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf)
 
 
@@ -97,4 +97,3 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ## Regarding Time
 
 The assumption is that this needs to function **for the current time only**. Of course, boundaries change over time, and that these changes are of interest to researchers. However, the main users of AEDG have been defined as requiring current data to support future projects or to determine the success of existing projects. Researchers can download data and work out time-dependent issues for themselves.
-

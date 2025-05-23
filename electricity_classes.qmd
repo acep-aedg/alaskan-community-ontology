@@ -42,7 +42,7 @@ date: 2025-05-23
 - **Values**: 
   - Regulated: by the RCA
   - Not regulated
-  - Regulated, rate exemption: Exempted from rate cases because of nature of ownership is municiple or co-op or very small private or the customers waived it
+  - Regulated, rate exemption: Exempted from rate cases because of nature of ownership is municipal or co-op or very small private or the customers waived it
   - N/A
 
 #### Operator Utility Type Name
@@ -57,7 +57,7 @@ date: 2025-05-23
   - Military
   - Industrial
   - State Government: as Joint Action Agency of the State of Alaska i.e. Southeast Alaska Power Agency or Alaska Industrial Development & Export Authority
-  - Political Subdivision of the State: Not used?
+  - Political Subdivision of the State (Not used in most the recent version of table)
 
 ### Plant
 - **Definition**: Entities that generate electricity for grids. (or power station)
@@ -70,7 +70,7 @@ date: 2025-05-23
 - **Properties**:
   - ak_plant_id (string): assigned by Neil to integrate EIA and PCE information
   - eia_plant_id (integer): assigned by EIA
-  - pce_preporting_id (integer): assigned by AEA
+  - pce_reporting_id (integer): assigned by AEA
   - operator_ak_operator_id (string): assigned by Neil in operator table
   - eia_operator_id (integer): assigned by EIA
   - operator_operator_name (string): defined by Neil in operator table
@@ -90,7 +90,7 @@ date: 2025-05-23
 - **SpatialRelationships**: 
   - CONTAINS PowerLines (transmission and distribution lines)
   - CONTAINS PowerStations (power providers)
-  - CONTAINS Communities (consumers) demand, load ?
+  - CONTAINS Communities (consumers) demand, load
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
   - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that have parts: power stations and power lines.
@@ -108,7 +108,7 @@ date: 2025-05-23
   - connection_year (integer): when the community was connected to the grid. Months are often unknown
   - final_year (integer): when the community was connected to a different grid, ending its previously independent grid
   - source (string): where info came from. most often empty
-  - geometry (WKT ?): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
+  - geometry: Grids are identified with community names so do not have a spatial definition. However, all grids are continuous so could be a combination of lines (PowerLines) and points (PowerPlants) or a shape that encloses all the elements.
 
 ### LoadServingEntity
 - **Definition**: "an electric utility that has a service obligation to distribute power to more than 10 customers that receive invoices directly from the entity;" AS 42.05.760 - 42.05.790  or FERC says "Any entity, including a load aggregator or power marketer, that serves end-users within a control area and has been granted the authority or has an obligation pursuant to state or local law, regulation, or franchise to sell electric energy to end-users located within the control area."
@@ -125,7 +125,7 @@ date: 2025-05-23
   - service_area: the control area that FERC mentioned, or the locations of the customers
 
 ### ServiceArea
-- **Definition**: The RCA associates every regulated electric utitlity with a service area.
+- **Definition**: The RCA associates every regulated electric utility with a service area.
 - **SpatialRelationships**: 
   - A LoadServingEntity has a ServiceArea
   - ServiceAreas cannot intersect (probably)
@@ -153,7 +153,7 @@ date: 2025-05-23
   - maintainer (string): Who maintains it? Is this the same as Owner?
   - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
   - type (string): buried, underwater, overhead
-  - geometry (WKT MultiLineString): polyline that traces an acceptible, if not accurate, route of the lines.
+  - geometry (WKT MultiLineString): polyline that traces an acceptable, if not accurate, route of the lines.
 
 
 ### Electric Utilities {#sec-electrical-utility}
@@ -171,7 +171,7 @@ date: 2025-05-23
   - private (boolean): True/False is it a private company? Public owned utility (POU)?
   - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
   - certificate_name: RCA's name for the utility
-  - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their sevice regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
+  - geom: could be determined by the look-up table `provides_electricity_to`. For instance, AVEC and Alaska Power and Telephone serve isolated communities so their service regions are discontinuous. However, RCA does certify service areas for certified utilities - we need to find out if these are available as a spatial data set.
 
 ### IPP
 - **Definition**: An independent power producer (IPP) is a private entity that owns or operates facilities to generate electricity. It could be a person, agency, authority, corporate, cooperative, or tribal. It could sell power to a utility or generate power for a privately held facility. "means a corporation, person, agency, authority, or other legal entity or instrumentality, that is not a utility and that owns or operates a facility for the generation or production of electric or thermal energy for use by the residents, local government, or businesses of one or more municipalities or unincorporated communities recognized by the Department of Commerce, Community, and Economic Development for community revenue sharing under AS 29.60.850 - 29.60.879 and 3 AAC 180." from Alaska Statute [3 AAC 106.900.](https://www.akleg.gov/basis/aac.asp#3.106.900)
@@ -184,24 +184,31 @@ date: 2025-05-23
 - **Properties**:
 
 ### PceEntities
-- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program."  
-- PCE authorizes payment to the electric utility (not the community). CSV is a link between communites and the utilities that serve them. 
-- Also includes ineligible like Fairbanks and Barrow. Wha?
-- Map shows points but CSV is an X,Y projection?
-- Data Year - points with different times. Maybe 
+- **Definition**: https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program." PCE authorizes payment to the electric utility (not the community) so data in this layer is a link between communities and the utilities that serve them. 
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+- **References**:
+- **Properties**:
+  - Year: Entities can drop in and out of the program in time
 
 ### PceCommunities
-- https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about says "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
-- CSV links PCECommunity + CommunityName + EntityName where Entity is maybe the utility?
-- Single PCECommunity can link to multiple communities, i.e. "Tok; Tanacross PCE"
-- This is the big CSV from AEA with columns for population and rates.
+- **Definition**: These were defined at the beginning of the PCE program and in some cases are not now equivalent to a single AEDG Community. This is because a grids evolve over time as new communities are added, such as Tok and Tanacross.
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+- **References**:
+  - https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program/about: "Alaska Energy Authority Power Cost Equalization (PCE) program by community."
+- **Properties**:
+  - PCECommunity
+  - CommunityName
+  - EntityName: PceEntity such as the utility
+  - many such as population and rates
 
 ### Interties
-- **Definition**: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interies connect new communities to existing grids and they become active in a defined year.
+- **Definition**: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interties connect new communities to existing grids and they become active in a defined year.
 - **SpatialRelationships**: 
   - CONTAINS PowerLines (transmission and distribution lines)
   - CONTAINS PowerStations (power providers)
-  - CONTAINS Communities (consumers) demand, load ?
+  - CONTAINS Communities (consumers) demand, load
 - **Analogous Standards**:
   - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
   - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
@@ -211,9 +218,9 @@ date: 2025-05-23
   - ak_intertie_id (string): assigned by Neil as combo of id and year
   - intertie_unique_id_name (string): primary community name
   - current (boolean): is this the most recent version?
-  - communities_intertied (string): community names separated by some puctuation
+  - communities_intertied (string): community names separated by some punctuation
   - month_of_intertie (integer): most often empty
   - year_of_intertie (integer): repeated in id, often empty
   - aea_energy_region (string): assigned by AEA
   - source (string): where info came from. most often empty
-  - geometry (WKT Polygon): All grids are continuous. Could this be a shape that includes all the PowerPlants and PowerLines?
+  - geometry: see Grids

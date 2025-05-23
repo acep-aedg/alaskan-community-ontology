@@ -23,7 +23,7 @@ book:
     align: center
     tools: 
       - icon: globe
-        href: https://www.uaf.edu/acep/  # future replacement with AEDG site?
+        href: https://www.uaf.edu/acep/   # in future, replace with AEDG URL
         text: "Alaska Center for Energy and Power"
 
   chapters:

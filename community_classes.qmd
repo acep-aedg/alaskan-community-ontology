@@ -42,11 +42,10 @@ date: 2025-03-27
   - https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/
 - **Properties**:
   - geometry (WKT Polygon): boundary of Tribe
-  - Additional properties should be determined by what is important to the people. i.e. language?
 
 
 ### VillageCorps
-- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities in Alaska that typically stemmed from traditional Alaska Native land. Village corporations were intended to select lands on which any part of the village was located. Their importance in the energy context is that they might operate as Independent Power Producers that sell power to the Communities' utilities. 
+- **Definition**: Alaska Native Village Corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities. There is not a one to one correspondence between place and Village Corporations. For instance, The Kuskokwim Corporation (TKC) is merger of ten (Lower Kalskag, Kalskag, Aniak, Chuathbaluk, Napaimute, Crooked Creek, Georgetown, Red Devil, Sleetmute, and Stony River) and the headquarters of some are in Anchorage. In the energy context, Village Corporations might operate as Independent Power Producers that sell power to the Communities' utilities.  
 - **SpatialRelationships**: 
   - WITHIN Alaska
 - **Analogous Standards**:
@@ -55,15 +54,15 @@ date: 2025-03-27
   - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
   - Is an [foaf:Organization](http://xmlns.com/foaf/spec/#term_Organization) that is [foaf:based_near](http://xmlns.com/foaf/spec/#term_based_near) a Community - "A location that something is based near, for some broadly human notion of near."
 - **References**:
-  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
   - https://ancsa.lbblawyers.com/1602.htm (definition)
-  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
   - https://ancsaregional.com/about-ancsa/#mandates
-  - https://onemap-bia-geospatial.hub.arcgis.com/datasets/BIA-Geospatial::alaska-native-villages/
+  - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
+  - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
+  - https://onemap-bia-geospatial.hub.arcgis.com/datasets/BIA-Geospatial::alaska-native-villages/ (list of 228 with tribal headquarters, which are in Anchorage in 5 cases)
+  - https://dnr.alaska.gov/mlw/paad/17b-easements/search/ (list of 245 communities with different corporation names than BIA layer)
+  - https://kuskokwim.com/
 - **Properties**:
-  - geometry (WKT Point): longitude, latitude of tribal leadership location
-  - related to Communities via the `is_based_near` lookup table.
-  - Additional properties should be determined by what is important to the people.
+  - geometry (WKT Point): longitude, latitude of place or of headquarters
 
 
 ### RegionalCorps
@@ -99,7 +98,7 @@ date: 2025-03-27
   - has an https://schema.org/AdministrativeArea
   - [dc:Location](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location) for the place
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the government
-  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.  Governmental ok?
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents. It is unclear if a government can be a provider.
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
   - https://www2.census.gov/programs-surveys/popest/tables/2020-2023/cities/totals/SUB-IP-EST2023-POP-02.xlsx 2023 populations for Alaska incorporated places
@@ -120,7 +119,7 @@ date: 2025-03-27
 - **References**:
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
 - **Properties**:
-  - location (WKT Point): longitude, latitude points of whereever the census says it is (does not have legal boundary, therefore not a polygon?)
+  - location (WKT Point): longitude, latitude points
 
 
 ### Boroughs
@@ -195,7 +194,7 @@ date: 2025-03-27
 - **SpatialRelationships**: 
 - **Analogous Standards**:
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent) for the governmental organization.
-  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of what?)
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance.
 - **Properties**:
   - boundary (WKT Polygon): longitude, latitude points that denote the boundary of the school district.
 
