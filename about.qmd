@@ -29,6 +29,7 @@ This project was built with support from State of Alaska capital appropriations 
   - Roles: Writing – review & editing
 
 The initial version of this ontology was based on discussions at the Nov 11, 2024, meeting of AEDG personnel, which included the above and also:
+
 - Jesse Kaczmarski, ACEP
 - Diane Hirshberg, ISER
 - Mike Jones, ISER
@@ -39,6 +40,7 @@ The initial version of this ontology was based on discussions at the Nov 11, 202
 - Ryan Witten, ISER
 
 The authors acknowledge additional contributions by:
+
 - Neil McMahon, DOWL
 - Steve Colt, ACEP
 - Mark Foster
