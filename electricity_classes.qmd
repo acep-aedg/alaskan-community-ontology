@@ -7,7 +7,96 @@ date: 2025-05-23
 
 # Lists of Classes
 
-## List of Classes in the Electricity Context
+## Infrastructure
+
+### Plant
+- **Definition**: Entities that generate electricity for grids. (or power station)
+- **SpatialRelationships**: 
+  - TOUCHES PowerLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
+- **Properties**:
+  - ak_plant_id (string): assigned by Neil to integrate EIA and PCE information
+  - eia_plant_id (integer): assigned by EIA
+  - pce_reporting_id (integer): assigned by AEA
+  - operator_ak_operator_id (string): assigned by Neil in operator table
+  - eia_operator_id (integer): assigned by EIA
+  - operator_operator_name (string): defined by Neil in operator table
+  - intertie_current_intertie_id (string): assigned by Neil in intertie table
+  - intertie_current_intertie_name (string): assigned by Neil in intertie table
+  - combined_heat_power (boolean)
+  - primary_voltage (float): grid voltage (kV) at point of interconnection
+  - primary_voltage2 (float): grid voltage (kV) at point of interconnection, often null
+  - phases (integer): from AEA powerhouse survey, single or three phase
+  - latitude (float): of the plant
+  - longitude (float): of the plant
+  - notes (string)
+  - geometry (WKT Point): from latitude and longitude
+
+### PowerLines
+- **Definition**: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed. 
+- **SpatialRelationships**: 
+  - WITHIN Grids
+  - TOUCHES PowerStations
+  - TOUCHES Loads
+- **Analogous Standards**:
+   - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
+  - or more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+- **Properties**:
+  - owner (string): Who owns it?
+  - maintainer (string): Who maintains it? Is this the same as Owner?
+  - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
+  - type (string): buried, underwater, overhead
+  - geometry (WKT MultiLineString): polyline that traces an acceptable, if not accurate, route of the lines.
+
+### Grids
+- **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
+- **SpatialRelationships**: 
+  - CONTAINS PowerLines (transmission and distribution lines)
+  - CONTAINS PowerStations (power providers)
+  - CONTAINS Communities (consumers) demand, load
+- **Analogous Standards**:
+  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
+  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that have parts: power stations and power lines.
+- **References**:
+  - https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid
+  - https://en.wikipedia.org/wiki/Electrical_grid
+  - https://www.nrel.gov/grid/microgrids.html
+  - https://en.wikipedia.org/wiki/Microgrid
+  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) calls these interties
+  - @sec-electricity-definitions ("interconnected electric energy transmission network")
+- **Properties**:
+  - grid_id (string): assigned by Neil as combo of id with the year removed (see Interties below)
+  - grid_name (string): primary community name + "_id"
+  - communities_fips_code (integer): Federal Information Processing Standard, identifying geographic locations uniquely
+  - connection_year (integer): when the community was connected to the grid. Months are often unknown
+  - final_year (integer): when the community was connected to a different grid, ending its previously independent grid
+  - source (string): where info came from. most often empty
+  - geometry: Grids are identified with community names so do not have a spatial definition. However, all grids are continuous so could be a combination of lines (PowerLines) and points (PowerPlants) or a shape that encloses all the elements.
+
+### Interties
+- **Definition**: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interties connect new communities to existing grids and they become active in a defined year.
+- **SpatialRelationships**: 
+  - like Grids
+- **Analogous Standards**:
+  - like Grids
+- **References**:
+  - [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)
+- **Properties**:
+  - ak_intertie_id (string): assigned by Neil as combo of id and year
+  - intertie_unique_id_name (string): primary community name
+  - current (boolean): is this the most recent version?
+  - communities_intertied (string): community names separated by some punctuation
+  - month_of_intertie (integer): most often empty
+  - year_of_intertie (integer): repeated in id, often empty
+  - aea_energy_region (string): assigned by AEA
+  - source (string): where info came from. most often empty
+  - geometry: see Grids
+
+## Organizations
 
 ### Operators
 - **Definition**: Because so many types of entities generate power in Alaska, an overarching category is required to avoid classification conflicts. So operators are any entity that operates power generation facilities. 
@@ -56,57 +145,6 @@ date: 2025-05-23
   - State Government: as Joint Action Agency of the State of Alaska i.e. Southeast Alaska Power Agency or Alaska Industrial Development & Export Authority
   - Political Subdivision of the State (Not used in most the recent version of table)
 
-### Plant
-- **Definition**: Entities that generate electricity for grids. (or power station)
-- **SpatialRelationships**: 
-  - TOUCHES PowerLines
-  - WITHIN Grids
-- **Analogous Standards**:
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
-- **Properties**:
-  - ak_plant_id (string): assigned by Neil to integrate EIA and PCE information
-  - eia_plant_id (integer): assigned by EIA
-  - pce_reporting_id (integer): assigned by AEA
-  - operator_ak_operator_id (string): assigned by Neil in operator table
-  - eia_operator_id (integer): assigned by EIA
-  - operator_operator_name (string): defined by Neil in operator table
-  - intertie_current_intertie_id (string): assigned by Neil in intertie table
-  - intertie_current_intertie_name (string): assigned by Neil in intertie table
-  - combined_heat_power (boolean)
-  - primary_voltage (float): grid voltage (kV) at point of interconnection
-  - primary_voltage2 (float): grid voltage (kV) at point of interconnection, often null
-  - phases (integer): from AEA powerhouse survey, single or three phase
-  - latitude (float): of the plant
-  - longitude (float): of the plant
-  - notes (string)
-  - geometry (WKT Point): from latitude and longitude
-
-### Grids
-- **Definition**: An Electric power grid is "A system of synchronized power providers and consumers connected by transmission and distribution lines and operated by one or more control centers. ... In Alaska and Hawaii, several systems encompass areas smaller than the State (e.g., the interconnect serving Anchorage, Fairbanks, and the Kenai Peninsula)" (EIA)
-- **SpatialRelationships**: 
-  - CONTAINS PowerLines (transmission and distribution lines)
-  - CONTAINS PowerStations (power providers)
-  - CONTAINS Communities (consumers) demand, load
-- **Analogous Standards**:
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that have parts: power stations and power lines.
-- **References**:
-  - https://www.eia.gov/tools/glossary/index.php?id=electric_power_grid
-  - https://en.wikipedia.org/wiki/Electrical_grid
-  - https://www.nrel.gov/grid/microgrids.html
-  - https://en.wikipedia.org/wiki/Microgrid
-  - Neil McMahon, creator of the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) calls these interties
-  - @sec-electricity-definitions ("interconnected electric energy transmission network")
-- **Properties**:
-  - grid_id (string): assigned by Neil as combo of id with the year removed (see Interties below)
-  - grid_name (string): primary community name + "_id"
-  - communities_fips_code (integer): Federal Information Processing Standard, identifying geographic locations uniquely
-  - connection_year (integer): when the community was connected to the grid. Months are often unknown
-  - final_year (integer): when the community was connected to a different grid, ending its previously independent grid
-  - source (string): where info came from. most often empty
-  - geometry: Grids are identified with community names so do not have a spatial definition. However, all grids are continuous so could be a combination of lines (PowerLines) and points (PowerPlants) or a shape that encloses all the elements.
-
 ### LoadServingEntity
 - **Definition**: "an electric utility that has a service obligation to distribute power to more than 10 customers that receive invoices directly from the entity;" AS 42.05.760 - 42.05.790  or FERC says "Any entity, including a load aggregator or power marketer, that serves end-users within a control area and has been granted the authority or has an obligation pursuant to state or local law, regulation, or franchise to sell electric energy to end-users located within the control area."
 - **SpatialRelationships**: 
@@ -120,38 +158,6 @@ date: 2025-05-23
   - @sec-electricity-definitions
 - **Properties**:
   - service_area: the control area that FERC mentioned, or the locations of the customers
-
-### ServiceArea
-- **Definition**: The RCA associates every regulated electric utility with a service area.
-- **SpatialRelationships**: 
-  - A LoadServingEntity has a ServiceArea
-  - ServiceAreas cannot intersect (probably)
-- **Analogous Standards**:
-  - https://schema.org/AdministrativeArea
-  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)
-- **References**:
-  - See the KML files linked to on [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf) for example.
-- **Properties**:
-  - as_of_date: because they can be revised
-  - geometry (WKT Polygon): service area (guessing from FERC definition)
-
-### PowerLines
-- **Definition**: The transmission and distribution lines that create a Grid that includes multiple Communities. In Electric North, there was a distinction between the voltages of transmission and distribution lines, but that was arbitrarily defined and changed as needed. 
-- **SpatialRelationships**: 
-  - WITHIN Grids
-  - TOUCHES PowerStations
-  - TOUCHES Loads
-- **Analogous Standards**:
-   - [OEO:electricity grid component](http://openenergy-platform.org/ontology/oeo/OEO_00000144)  (a material entity that includes power plants)
-  - or more specifically [OEO:power line](http://openenergy-platform.org/ontology/oeo/OEO_00000253)
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-- **Properties**:
-  - owner (string): Who owns it?
-  - maintainer (string): Who maintains it? Is this the same as Owner?
-  - voltage (int): voltage of line in kV (by definition above 69 kV for transmission lines, but not always in Alaska)
-  - type (string): buried, underwater, overhead
-  - geometry (WKT MultiLineString): polyline that traces an acceptable, if not accurate, route of the lines.
-
 
 ### Electric Utilities {#sec-electrical-utility}
 - **Definition**: "A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for delivery of electric energy for use primarily by the public. Included are investor-owned electric utilities, municipal and State utilities, Federal electric utilities, and rural electric cooperatives." (EIA) Certified utilities in Alaska have a certificate of operation issued by the RCA.
@@ -180,6 +186,22 @@ date: 2025-05-23
   - @sec-ipp-definitions
 - **Properties**:
 
+## Reporting
+
+### ServiceArea
+- **Definition**: The RCA associates every regulated electric utility with a service area.
+- **SpatialRelationships**: 
+  - A LoadServingEntity has a ServiceArea
+  - ServiceAreas cannot intersect (probably)
+- **Analogous Standards**:
+  - https://schema.org/AdministrativeArea
+  - [OEO:subregion](http://openenergy-platform.org/ontology/oeo/OEO_00020033) - a region of relevance that is in every respect a component of a region of relevance, but never encompasses the entire extent of a region of relevance. (of Alaska)
+- **References**:
+  - See the KML files linked to on [CPCN 17: Kotzebue Electric Association, Inc.](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=a2255e26-17e0-47b3-a1ff-2c43ad24fbdf) for example.
+- **Properties**:
+  - as_of_date: because they can be revised
+  - geometry (WKT Polygon): service area (guessing from FERC definition)
+
 ### PceEntities
 - **Definition**: https://gis.data.alaska.gov/datasets/DCCED::power-cost-equalization-pce-program-eligible-entities-1/about says "Communities served by entities that are eligible for the Alaska Energy Authority's Power Cost Equalization program." PCE authorizes payment to the electric utility (not the community) so data in this layer is a link between communities and the utilities that serve them. 
 - **SpatialRelationships**: 
@@ -199,25 +221,3 @@ date: 2025-05-23
   - CommunityName
   - EntityName: PceEntity such as the utility
   - many such as population and rates
-
-### Interties
-- **Definition**: This is the lookup table in the Energy Stats Workbooks used to describe grids. Interties connect new communities to existing grids and they become active in a defined year.
-- **SpatialRelationships**: 
-  - CONTAINS PowerLines (transmission and distribution lines)
-  - CONTAINS PowerStations (power providers)
-  - CONTAINS Communities (consumers) demand, load
-- **Analogous Standards**:
-  - [dc:PhysicalResource](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/PhysicalResource)
-  - [OEO:electricity grid](http://openenergy-platform.org/ontology/oeo/OEO_00000143) -  "An electricity grid is a supply grid that distributes electrical energy / electricity." It is an aggregate of material entities that has parts: power stations and power lines.
-- **References**:
-  - [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/)
-- **Properties**:
-  - ak_intertie_id (string): assigned by Neil as combo of id and year
-  - intertie_unique_id_name (string): primary community name
-  - current (boolean): is this the most recent version?
-  - communities_intertied (string): community names separated by some punctuation
-  - month_of_intertie (integer): most often empty
-  - year_of_intertie (integer): repeated in id, often empty
-  - aea_energy_region (string): assigned by AEA
-  - source (string): where info came from. most often empty
-  - geometry: see Grids
