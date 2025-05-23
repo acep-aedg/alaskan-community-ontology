@@ -2,7 +2,7 @@ Classes are types of entities. Most are defined according to existing legal stru
 
   - Classes could be translated to tables in a relational database, if that makes sense for development. 
   - Instances of a Class are nodes in a graph, if you think about things that way.
-  - Classes are typically capitolized to differentiate them from instances or objects of that class, which are lower case.
+  - Classes are typically capitalized to differentiate them from instances or objects of that class, which are lower case.
 
 This page also includes Properties, which are attributes of the Classes. 
 
@@ -10,7 +10,7 @@ This page also includes Properties, which are attributes of the Classes.
 
 ### Common Properties
 
-We've adopted some common properties that are used by multiple tables (but are not manditory). These are based on Rails conventions:
+We've adopted some common properties that are used by multiple tables (but are not mandatory). These are based on Rails conventions:
 
 - id (int): the row number generated when the table is ingested into the database
 - name (string): human readable label. We don't use these as indices or unique identifiers, because they are never the same between data sets.

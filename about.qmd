@@ -7,25 +7,41 @@ date: 2025-05-20
 
 ## Purpose
 
-This repository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP) at the University of Alaska Fairbanks (UAF), and the Institute for Social and Economic Research (ISER) at the University of Alaska Anchorage (UAA). It does not exist to be its own thing. If it ceases to be applicable to the AEDG project, it should be archived.
+This repository exists to support development of the Alaska Energy Data Gateway by the Alaska Center for Energy and Power (ACEP) at the University of Alaska Fairbanks (UAF) and the Institute for Social and Economic Research (ISER) at the University of Alaska Anchorage (UAA).
 
 ## Funding
 
 This project was built with support from State of Alaska capital appropriations for the Alaska Energy Data Gateway.
 
+## Authors
 
-## Workflow
+- Elizabeth Dobbins, Alaska Center for Energy and Power (ACEP) at the University of Alaska Fairbanks
+  - Roles: Conceptualization, Methodology, Software, Writing – original draft
+- Leasi Vanessa Lee Raymond, ACEP
+  - Roles: Supervision, Writing – review & editing
+- Will Fisher, ACEP
+  - Roles: Supervision
+- Ian MacDougall, ACEP
+  - Roles: Writing – review & editing
+- Carolyn Tix, Institute of Social and Economic Research (ISER), University of Alaska Anchorage
+  - Roles: Writing – review & editing
+- Vanessa Collier, Institute of Social and Economic Research (ISER), University of Alaska Anchorage
+  - Roles: Writing – review & editing
 
-1. Liz drafted an initial versions based on discussions at the Nov 11, 2024, meeting of AEDG personnel. The intention was to track issues in this repo.
-2. These were translated into a data model that serves as a translation layer between Ian who is creating the data tables and Nicole and Will who are building the Rails database.
-3. As consensus is reached (often in direct messages or conversations during meetings), the resolution migrates to the data model and then to this ontology.
+The initial version of this ontology was based on discussions at the Nov 11, 2024, meeting of AEDG personnel, which included the above and also:
+- Jesse Kaczmarski, ACEP
+- Diane Hirshberg, ISER
+- Mike Jones, ISER
+- Brett Watson, ISER
+- Nicole Mah, ACEP
+- Alora Greer, ACEP
+- Dayne Broderson, ACEP
+- Ryan Witten, ISER
 
-The original idea was to encode the ontology in OWL. However, as of Nov. 2024, it is unclear how to make use of an OWL formatted ontology with code. 
-
-The second idea was a separate relational (or graph) database that would be queried during the table development. Instead, Ian built a self-contained ELT workflow as a way to experiment with different relations. His findings then feed back into the data model.
-
-Ontology specific work will be delayed to future development cycles, if it happens at all.
-
+The authors acknowledge additional contributions by:
+- Neil McMahon, DOWL
+- Steve Colt, ACEP
+- Mark Foster
 
 ## Additional Information
 
