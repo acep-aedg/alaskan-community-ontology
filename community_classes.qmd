@@ -4,11 +4,6 @@ subtitle: "Types of entities in the Alaska Community Ontology"
 date: 2025-05-23
 ---
 
-## Classes
-
-{{< include _classes.qmd >}}
-
-
 # List of Classes
 
 ## AEDG Context Only

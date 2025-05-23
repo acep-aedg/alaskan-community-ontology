@@ -4,10 +4,8 @@ subtitle: "Descriptions of Electricity-related entities in the Alaska Community 
 date: 2025-05-23
 ---
 
-## Classes
 
-{{< include _classes.qmd >}}
-
+# Lists of Classes
 
 ## List of Classes in the Electricity Context
 
