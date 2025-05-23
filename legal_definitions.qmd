@@ -1,7 +1,6 @@
 ---
 title: "Energy-Related Laws"
 subtitle: "Quotes from Alaska Statute"
-type: webpage
 date: 2025-04-14
 ---
 

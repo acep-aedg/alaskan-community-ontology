@@ -1,8 +1,7 @@
 ---
 title: "About"
-type: webpage
-citation: true
-date: 2025-05-20
+subtitle: "Funding and Authors"
+date: 2025-05-23
 ---
 
 ## Purpose
@@ -11,7 +10,7 @@ This repository exists to support development of the Alaska Energy Data Gateway 
 
 ## Funding
 
-This project was built with support from State of Alaska capital appropriations for the Alaska Energy Data Gateway.
+This project was created with support from State of Alaska capital appropriations for the Alaska Energy Data Gateway.
 
 ## Authors
 

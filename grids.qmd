@@ -1,7 +1,6 @@
 ---
 title: "AEDG Grids"
-type: webpage
-citation: true
+subtitle: "Transitioning the definition of interties used in the Alaska Energy Statistics Workbooks"
 date: 2025-05-23
 ---
 

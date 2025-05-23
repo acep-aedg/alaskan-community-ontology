@@ -1,8 +1,7 @@
 ---
 title: "Regional Classes"
 subtitle: "Types of entities in the Alaska Community Ontology"
-type: webpage
-date: 2025-03-27
+date: 2025-05-23
 ---
 
 ## Classes
@@ -123,7 +122,7 @@ date: 2025-03-27
 
 
 ### Boroughs
-- **Definition**: Boroughs are analogous to counties in other states with several Alaska-specific qualities. First,boroughs were initially formed in areas whose economies were better developed at the time; the remaining areas were consolidated as the Unorganized Borough. Second, for statistical purposes the Unorganized Borough is divided into Census Areas; these do not have governments of their own. Third, there are also areas where city and borough governments have been consolidated.
+- **Definition**: Boroughs are analogous to counties in other states with several Alaska-specific qualities. First, boroughs were initially formed in areas whose economies were better developed at the time; the remaining areas were consolidated as the Unorganized Borough. Second, for statistical purposes the Unorganized Borough is divided into Census Areas; these do not have governments of their own. Third, there are also areas where city and borough governments have been consolidated.
 - **SpatialRelationships**: 
   - CONTAINS IncorporatedPlaces
   - CONTAINS CensusDesignatedPlaces
