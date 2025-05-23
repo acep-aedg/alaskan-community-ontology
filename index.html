@@ -370,7 +370,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#format" id="toc-format" class="nav-link" data-scroll-target="#format"><span class="header-section-number">0.3</span> Format</a>
   <ul class="collapse">
   <li><a href="#common-properties" id="toc-common-properties" class="nav-link" data-scroll-target="#common-properties"><span class="header-section-number">0.3.1</span> Common Properties</a></li>
-  <li><a href="#a-note-about-classes" id="toc-a-note-about-classes" class="nav-link" data-scroll-target="#a-note-about-classes"><span class="header-section-number">0.3.2</span> A Note about Classes</a></li>
   </ul></li>
   <li><a href="#possibly-applicable-standards" id="toc-possibly-applicable-standards" class="nav-link" data-scroll-target="#possibly-applicable-standards"><span class="header-section-number">0.4</span> Possibly Applicable Standards</a></li>
   </ul>
@@ -453,6 +452,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Classes could be translated to tables in a relational database, if that makes sense for development.</li>
 <li>Instances of a Class are nodes in a graph, if you think about things that way.</li>
+<li>Classes are typically capitalized to differentiate them from instances or objects of that class, which are lower case.</li>
 </ul></li>
 <li><strong>Properties</strong>: These are attributes of the Classes.
 <ul>
@@ -481,19 +481,6 @@ ul.task-list li input[type="checkbox"] {
 <li>The ELT process generates GeoJSON with a coordinate reference system denoted as <code>"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }</code>. This is equivalent to EPSG:4326 (WGS84) with the order changed from Lat-Long to Long-Lat.</li>
 </ul></li>
 <li>as_of_date (string): when the source data was published.</li>
-</ul>
-</section>
-<section id="a-note-about-classes" class="level3" data-number="0.3.2">
-<h3 data-number="0.3.2" class="anchored" data-anchor-id="a-note-about-classes"><span class="header-section-number">0.3.2</span> A Note about Classes</h3>
-<p>Classes are types of entities. Most are defined according to existing legal structures as described in the linked references. The main exception is Community, which is the organizational principle of previous versions of AEDG; we will define that one ourselves. It is likely we can use established standard vocabularies to define all Classes. Which standard we use will depend on the level of specificity we want.</p>
-<ul>
-<li>Classes could be translated to tables in a relational database, if that makes sense for development.</li>
-<li>Instances of a Class are nodes in a graph, if you think about things that way.</li>
-<li>Classes are typically capitalized to differentiate them from instances or objects of that class, which are lower case.</li>
-</ul>
-<p>This page also includes Properties, which are attributes of the Classes.</p>
-<ul>
-<li>Properties could take the form of columns in tables in a relational database.</li>
 </ul>
 </section>
 </section>
