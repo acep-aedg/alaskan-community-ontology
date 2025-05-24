@@ -365,17 +365,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#thermal-steam-waste-heat-heat-recovery" id="toc-thermal-steam-waste-heat-heat-recovery" class="nav-link active" data-scroll-target="#thermal-steam-waste-heat-heat-recovery"><span class="header-section-number">4.1</span> Thermal (Steam, Waste Heat, Heat Recovery)</a>
+  <li><a href="#space-heating-steam-waste-heat-heat-recovery" id="toc-space-heating-steam-waste-heat-heat-recovery" class="nav-link active" data-scroll-target="#space-heating-steam-waste-heat-heat-recovery"><span class="header-section-number">4.1</span> Space Heating (Steam, Waste Heat, Heat Recovery)</a></li>
+  <li><a href="#thermal" id="toc-thermal" class="nav-link" data-scroll-target="#thermal"><span class="header-section-number">4.2</span> Thermal</a>
   <ul class="collapse">
-  <li><a href="#rca-regulated-steam-heat-utilities" id="toc-rca-regulated-steam-heat-utilities" class="nav-link" data-scroll-target="#rca-regulated-steam-heat-utilities"><span class="header-section-number">4.1.1</span> RCA Regulated Steam Heat Utilities</a></li>
-  <li><a href="#other-information" id="toc-other-information" class="nav-link" data-scroll-target="#other-information"><span class="header-section-number">4.1.2</span> Other information</a></li>
+  <li><a href="#rca-regulated-steam-heat-utilities" id="toc-rca-regulated-steam-heat-utilities" class="nav-link" data-scroll-target="#rca-regulated-steam-heat-utilities"><span class="header-section-number">4.2.1</span> RCA Regulated Steam Heat Utilities</a></li>
+  <li><a href="#other-information" id="toc-other-information" class="nav-link" data-scroll-target="#other-information"><span class="header-section-number">4.2.2</span> Other information</a></li>
   </ul></li>
-  <li><a href="#transmission-or-distribution-of-natural-or-manufactured-gas" id="toc-transmission-or-distribution-of-natural-or-manufactured-gas" class="nav-link" data-scroll-target="#transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.2</span> transmission or distribution of natural or manufactured gas</a></li>
-  <li><a href="#distribution-petroleum-or-petroleum-products" id="toc-distribution-petroleum-or-petroleum-products" class="nav-link" data-scroll-target="#distribution-petroleum-or-petroleum-products"><span class="header-section-number">4.3</span> distribution petroleum or petroleum products</a></li>
-  <li><a href="#natural-gas-storage" id="toc-natural-gas-storage" class="nav-link" data-scroll-target="#natural-gas-storage"><span class="header-section-number">4.4</span> natural gas storage</a></li>
-  <li><a href="#liquefied-natural-gas-storage" id="toc-liquefied-natural-gas-storage" class="nav-link" data-scroll-target="#liquefied-natural-gas-storage"><span class="header-section-number">4.5</span> liquefied natural gas storage</a></li>
-  <li><a href="#pipelines" id="toc-pipelines" class="nav-link" data-scroll-target="#pipelines"><span class="header-section-number">4.6</span> pipelines</a></li>
-  <li><a href="#geothermal" id="toc-geothermal" class="nav-link" data-scroll-target="#geothermal"><span class="header-section-number">4.7</span> Geothermal</a></li>
+  <li><a href="#geothermal" id="toc-geothermal" class="nav-link" data-scroll-target="#geothermal"><span class="header-section-number">4.3</span> Geothermal</a></li>
+  <li><a href="#fuel" id="toc-fuel" class="nav-link" data-scroll-target="#fuel"><span class="header-section-number">4.4</span> Fuel</a></li>
+  <li><a href="#distribution-of-petroleum-or-petroleum-products" id="toc-distribution-of-petroleum-or-petroleum-products" class="nav-link" data-scroll-target="#distribution-of-petroleum-or-petroleum-products"><span class="header-section-number">4.5</span> Distribution of Petroleum or Petroleum Products</a></li>
+  <li><a href="#bulk-fuel" id="toc-bulk-fuel" class="nav-link" data-scroll-target="#bulk-fuel"><span class="header-section-number">4.6</span> Bulk Fuel</a></li>
+  <li><a href="#natural-gas" id="toc-natural-gas" class="nav-link" data-scroll-target="#natural-gas"><span class="header-section-number">4.7</span> Natural Gas</a>
+  <ul class="collapse">
+  <li><a href="#transmission-or-distribution-of-natural-or-manufactured-gas" id="toc-transmission-or-distribution-of-natural-or-manufactured-gas" class="nav-link" data-scroll-target="#transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.7.1</span> Transmission or Distribution of Natural or Manufactured Gas</a></li>
+  </ul></li>
+  <li><a href="#natural-gas-storage" id="toc-natural-gas-storage" class="nav-link" data-scroll-target="#natural-gas-storage"><span class="header-section-number">4.8</span> Natural Gas Storage</a>
+  <ul class="collapse">
+  <li><a href="#liquefied-natural-gas-storage" id="toc-liquefied-natural-gas-storage" class="nav-link" data-scroll-target="#liquefied-natural-gas-storage"><span class="header-section-number">4.8.1</span> Liquefied Natural Gas Storage</a></li>
+  <li><a href="#pipelines-all-types" id="toc-pipelines-all-types" class="nav-link" data-scroll-target="#pipelines-all-types"><span class="header-section-number">4.8.2</span> Pipelines (all types)</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -409,19 +417,51 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See <a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a> for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.</p>
-<p>As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information.</p>
+<p>State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See <a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a> for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent. Energy “public utility” or “utility” includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for</p>
+<ul>
+<li>furnishing, by generation, transmission, or distribution, electrical service to the public for compensation;</li>
+<li>furnishing steam to the public for compensation (grouped with water and sewer);</li>
+<li>furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;</li>
+<li>furnishing for distribution or by distribution petroleum or petroleum products to the public for compensation when the consumer has no alternative in the choice of supplier of a comparable product and service at an equal or lesser price;</li>
+<li>furnishing the service of natural gas storage to the public for compensation; furnishing the service of liquefied natural gas storage to the public for compensation;</li>
+</ul>
+<p>As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information. RCA search includes:</p>
+<ul>
+<li><!--  value="fb3aa508-d4ce-40d9-8e4a-602912321bce"-->
+Electric</li>
+<li><!--  value="41ccfb21-50d0-481e-aaf3-bd9c73153227"-->
+Natural Gas</li>
+<li><!--  value="27421552-89e9-43c5-a783-101051f39f54"-->
+Natural Gas Storage</li>
+<li><!--  value="5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca"-->
+Pipeline</li>
+<li><!--  value="bcff05fe-74e7-4c68-b9a8-ca3469ef5f86"-->
+Steam Heat</li>
+<li><!--  value="76a8876e-9d32-41cd-9bc3-f2ade80568b5"-->
+Steam Heat (different search returns nothing)</li>
+<li><!--  value="f05be2d0-f0af-4bc0-bf5b-13112b84be82"-->
+Electric Reliability Organization</li>
+<li><!--  value="03e98254-f29e-433f-9357-b1abd4579b6c"-->
+Railbelt Transmission Organization</li>
+<li><!--  value="2804581d-eea3-4aa3-8377-bc56f9758eed"-->
+CP ONLY- Electric (Unregulated) (returns nothing)</li>
+<li><!--  value="1f57f1fa-2113-42fd-b10f-9476a18cf4e4"-->
+CP ONLY-Electric PCE (Unregulated) (returns nothing)</li>
+</ul>
 <p>As data sources are identified, this section will evolve into regular classes and relationships.</p>
-<section id="thermal-steam-waste-heat-heat-recovery" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="thermal-steam-waste-heat-heat-recovery"><span class="header-section-number">4.1</span> Thermal (Steam, Waste Heat, Heat Recovery)</h2>
-<section id="rca-regulated-steam-heat-utilities" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="rca-regulated-steam-heat-utilities"><span class="header-section-number">4.1.1</span> RCA Regulated Steam Heat Utilities</h3>
+<section id="space-heating-steam-waste-heat-heat-recovery" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="space-heating-steam-waste-heat-heat-recovery"><span class="header-section-number">4.1</span> Space Heating (Steam, Waste Heat, Heat Recovery)</h2>
+</section>
+<section id="thermal" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="thermal"><span class="header-section-number">4.2</span> Thermal</h2>
+<section id="rca-regulated-steam-heat-utilities" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="rca-regulated-steam-heat-utilities"><span class="header-section-number">4.2.1</span> RCA Regulated Steam Heat Utilities</h3>
 <ul>
 <li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86">RCA search</a> gives 3: Aurora Energy and Doyon utilities servicing Fort Greely and Fort Wainwright</li>
 </ul>
 </section>
-<section id="other-information" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="other-information"><span class="header-section-number">4.1.2</span> Other information</h3>
+<section id="other-information" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="other-information"><span class="header-section-number">4.2.2</span> Other information</h3>
 <ul>
 <li>Anchorage? ML&amp;P as referenced in <a href="ipp_utility_example.html#sec-aurora-cogen" class="quarto-xref"><span>Section C.1</span></a>
 <ul>
@@ -445,9 +485,29 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="transmission-or-distribution-of-natural-or-manufactured-gas" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.2</span> transmission or distribution of natural or manufactured gas</h2>
-<p>What types of information is available?</p>
+<section id="geothermal" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="geothermal"><span class="header-section-number">4.3</span> Geothermal</h2>
+<ul>
+<li>Naknek / King Salmon in 2010c</li>
+<li>Chena Hot Springs</li>
+</ul>
+</section>
+<section id="fuel" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="fuel"><span class="header-section-number">4.4</span> Fuel</h2>
+</section>
+<section id="distribution-of-petroleum-or-petroleum-products" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="distribution-of-petroleum-or-petroleum-products"><span class="header-section-number">4.5</span> Distribution of Petroleum or Petroleum Products</h2>
+<p>No RCA search option.</p>
+</section>
+<section id="bulk-fuel" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="bulk-fuel"><span class="header-section-number">4.6</span> Bulk Fuel</h2>
+</section>
+<section id="natural-gas" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="natural-gas"><span class="header-section-number">4.7</span> Natural Gas</h2>
+<section id="transmission-or-distribution-of-natural-or-manufactured-gas" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="transmission-or-distribution-of-natural-or-manufactured-gas"><span class="header-section-number">4.7.1</span> Transmission or Distribution of Natural or Manufactured Gas</h3>
+<section id="rca" class="level4" data-number="4.7.1.1">
+<h4 data-number="4.7.1.1" class="anchored" data-anchor-id="rca"><span class="header-section-number">4.7.1.1</span> RCA</h4>
 <ul>
 <li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227">RCA search</a> for certificate numbers: 8 active state-wide, but only 2 big.
 <ul>
@@ -458,9 +518,14 @@ ul.task-list li input[type="checkbox"] {
 <li>IGU’s is out of date because Fairbanks Natural Gas’s service area is still separate but they merged in 2020.</li>
 </ul></li>
 </ul></li>
+</ul>
+</section>
+<section id="other-sources" class="level4" data-number="4.7.1.2">
+<h4 data-number="4.7.1.2" class="anchored" data-anchor-id="other-sources"><span class="header-section-number">4.7.1.2</span> Other Sources</h4>
+<ul>
 <li>EIA
 <ul>
-<li>locations and owners of electrical power plants fueled by natural gas</li>
+<li>Forms include locations and owners of electrical power plants fueled by natural gas</li>
 <li><a href="https://www.eia.gov/dnav/ng/ng_pri_sum_dcu_SAK_m.htm">Alaska Natural Gas Prices</a> including historical data</li>
 </ul></li>
 <li>Utility web pages
@@ -468,43 +533,49 @@ ul.task-list li input[type="checkbox"] {
 <li>https://www.interiorgas.com/</li>
 <li>https://www.enstarnaturalgas.com/</li>
 </ul></li>
-<li>https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet</li>
+<li>Alaska Energy Blog’s <a href="https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet">Why are the warnings about Cook Inlet gas getting more dire?</a></li>
 </ul>
 </section>
-<section id="distribution-petroleum-or-petroleum-products" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="distribution-petroleum-or-petroleum-products"><span class="header-section-number">4.3</span> distribution petroleum or petroleum products</h2>
-<p>No RCA search option.</p>
 </section>
-<section id="natural-gas-storage" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="natural-gas-storage"><span class="header-section-number">4.4</span> natural gas storage</h2>
-<p>What types of information is available?</p>
-<ul>
-<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=27421552-89e9-43c5-a783-101051f39f54">RCA search</a> only has 2:
-<ul>
+</section>
+<section id="natural-gas-storage" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="natural-gas-storage"><span class="header-section-number">4.8</span> Natural Gas Storage</h2>
+<section id="rca-1" class="level4" data-number="4.8.0.1">
+<h4 data-number="4.8.0.1" class="anchored" data-anchor-id="rca-1"><span class="header-section-number">4.8.0.1</span> RCA</h4>
+<p><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=27421552-89e9-43c5-a783-101051f39f54">RCA search</a> only has 2:</p>
+<ol type="1">
 <li>Interior Alaska Natural Gas Utility, LLC (CPCN <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=64190d5c-575a-4859-a3cd-f863801ef588">778</a>)</li>
 <li>Cook Inlet Natural Gas Storage Alaska, LLC (CINGSA) (CPCN <a href="https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6b8fdbaf-08a6-4da3-8261-c15cc4092b39">733</a>)</li>
+</ol>
+</section>
+<section id="liquefied-natural-gas-storage" class="level3" data-number="4.8.1">
+<h3 data-number="4.8.1" class="anchored" data-anchor-id="liquefied-natural-gas-storage"><span class="header-section-number">4.8.1</span> Liquefied Natural Gas Storage</h3>
+<ul>
+<li>No RCA search option for LNG storage.</li>
+<li><a href="https://alaska-lng.com/project-overview/liquefaction-facility/">Alaska LNG</a> describes a planned liquefaction facility located in Nikiski with two 240,000 cubic meter storage tanks</li>
+</ul>
+</section>
+<section id="pipelines-all-types" class="level3" data-number="4.8.2">
+<h3 data-number="4.8.2" class="anchored" data-anchor-id="pipelines-all-types"><span class="header-section-number">4.8.2</span> Pipelines (all types)</h3>
+<p>Natural gas pipelines are not included in <a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a></p>
+<section id="rca-2" class="level4" data-number="4.8.2.1">
+<h4 data-number="4.8.2.1" class="anchored" data-anchor-id="rca-2"><span class="header-section-number">4.8.2.1</span> RCA</h4>
+<ul>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca">RCA search</a> returns 35 existing pipelines, of which 26 are active
+<ul>
+<li>~16 are oil or oil products</li>
 </ul></li>
 </ul>
 </section>
-<section id="liquefied-natural-gas-storage" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="liquefied-natural-gas-storage"><span class="header-section-number">4.5</span> liquefied natural gas storage</h2>
-<p>No RCA search option.</p>
-</section>
-<section id="pipelines" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="pipelines"><span class="header-section-number">4.6</span> pipelines</h2>
+<section id="other-information-1" class="level4" data-number="4.8.2.2">
+<h4 data-number="4.8.2.2" class="anchored" data-anchor-id="other-information-1"><span class="header-section-number">4.8.2.2</span> Other information</h4>
 <ul>
-<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca">RCA search</a> returns 35</li>
-<li>not in <a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section B.1.2</span></a></li>
-</ul>
-</section>
-<section id="geothermal" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="geothermal"><span class="header-section-number">4.7</span> Geothermal</h2>
-<ul>
-<li>Naknek / King Salmon in 2010c</li>
-<li>Chena Hot Springs</li>
+<li><a href="https://alaska-lng.com/project-overview/pipeline/">Alaska LNG</a> describes a planned pipeline from the North Slope to Southcentral Alaska</li>
 </ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
