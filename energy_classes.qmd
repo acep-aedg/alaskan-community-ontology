@@ -4,14 +4,34 @@ subtitle: "Descriptions of wider Energy-related entities in the Alaska Community
 date: 2025-05-23
 ---
 
-State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.  Energy “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for
+  
+- furnishing, by generation, transmission, or distribution, electrical service to the public for compensation;
+- furnishing steam to the public for compensation (grouped with water and sewer);
+- furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;
+- furnishing for distribution or by distribution petroleum or petroleum products to the public for compensation when the consumer has no alternative in the choice of supplier of a comparable product and service at an equal or lesser price;
+- furnishing the service of natural gas storage to the public for compensation;
+furnishing the service of liquefied natural gas storage to the public for compensation;
 
-As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information.
+As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information. RCA search includes:
+
+- <!--  value="fb3aa508-d4ce-40d9-8e4a-602912321bce"-->Electric
+- <!--  value="41ccfb21-50d0-481e-aaf3-bd9c73153227"-->Natural Gas
+- <!--  value="27421552-89e9-43c5-a783-101051f39f54"-->Natural Gas Storage
+- <!--  value="5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca"-->Pipeline
+- <!--  value="bcff05fe-74e7-4c68-b9a8-ca3469ef5f86"-->Steam Heat
+- <!--  value="76a8876e-9d32-41cd-9bc3-f2ade80568b5"-->Steam Heat (different search returns nothing)
+- <!--  value="f05be2d0-f0af-4bc0-bf5b-13112b84be82"-->Electric Reliability Organization
+- <!--  value="03e98254-f29e-433f-9357-b1abd4579b6c"-->Railbelt Transmission Organization
+- <!--  value="2804581d-eea3-4aa3-8377-bc56f9758eed"-->CP ONLY- Electric (Unregulated) (returns nothing)
+- <!--  value="1f57f1fa-2113-42fd-b10f-9476a18cf4e4"-->CP ONLY-Electric PCE (Unregulated) (returns nothing)
+
 
 As data sources are identified, this section will evolve into regular classes and relationships.
 
+## Space Heating (Steam, Waste Heat, Heat Recovery)
 
-## Thermal (Steam, Waste Heat, Heat Recovery)
+## Thermal 
 
 ### RCA Regulated Steam Heat Utilities
 
@@ -33,45 +53,71 @@ As data sources are identified, this section will evolve into regular classes an
 - Angoon
 - [Noatak](https://www.nwabor.org/wp-content/uploads/I.-Community-Profile-Noatak.pdf) water treatment plant served by heat recovery system with opportunity to expand indicated.
 
-## transmission or distribution of natural or manufactured gas
 
-What types of information is available?
+
+## Geothermal
+
+- Naknek / King Salmon in 2010c
+- Chena Hot Springs
+
+
+## Fuel
+
+## Distribution of Petroleum or Petroleum Products
+
+No RCA search option.
+
+## Bulk Fuel
+
+
+## Natural Gas
+
+
+### Transmission or Distribution of Natural or Manufactured Gas
+
+#### RCA
 
 - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227) for certificate numbers: 8 active state-wide, but only 2 big.
   - tariff filings (rate schedules)
   - RCA service areas (PDF and KML)
     - Enstar and its supplier Alaska Pipeline Company have separate service areas with the pipelines looking like rasterized lines.
     - IGU's is out of date because Fairbanks Natural Gas's service area is still separate but they merged in 2020.
+
+#### Other Sources 
+
 - EIA 
-  - locations and owners of electrical power plants fueled by natural gas
+  - Forms include locations and owners of electrical power plants fueled by natural gas
   - [Alaska Natural Gas Prices](https://www.eia.gov/dnav/ng/ng_pri_sum_dcu_SAK_m.htm) including historical data 
 - Utility web pages
   - https://www.interiorgas.com/
   - https://www.enstarnaturalgas.com/
-- https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet
+- Alaska Energy Blog's [Why are the warnings about Cook Inlet gas getting more dire?](https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet)
 
-## distribution petroleum or petroleum products
 
-No RCA search option.
+## Natural Gas Storage
 
-## natural gas storage
+#### RCA
 
-What types of information is available?
+[RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=27421552-89e9-43c5-a783-101051f39f54) only has 2:
 
-- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=27421552-89e9-43c5-a783-101051f39f54) only has 2:
-  - Interior Alaska Natural Gas Utility, LLC (CPCN [778](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=64190d5c-575a-4859-a3cd-f863801ef588))
-  - Cook Inlet Natural Gas Storage Alaska, LLC (CINGSA) (CPCN [733](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6b8fdbaf-08a6-4da3-8261-c15cc4092b39))
+1. Interior Alaska Natural Gas Utility, LLC (CPCN [778](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=64190d5c-575a-4859-a3cd-f863801ef588))
+2. Cook Inlet Natural Gas Storage Alaska, LLC (CINGSA) (CPCN [733](https://rca.alaska.gov/RCAWeb/Certificate/CertificateDetails.aspx?id=6b8fdbaf-08a6-4da3-8261-c15cc4092b39))
 
-## liquefied natural gas storage
 
-No RCA search option.
+### Liquefied Natural Gas Storage
 
-## pipelines
+- No RCA search option for LNG storage.
+- [Alaska LNG](https://alaska-lng.com/project-overview/liquefaction-facility/) describes a planned liquefaction facility located in Nikiski with two 240,000 cubic meter storage tanks
 
-- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) returns 35
-- not in @sec-utility-definitions
+### Pipelines (all types)
 
-## Geothermal
+Natural gas pipelines are not included in  @sec-utility-definitions
 
-- Naknek / King Salmon in 2010c
-- Chena Hot Springs
+#### RCA
+
+- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) returns 35 existing pipelines, of which 26 are active
+  - ~16 are oil or oil products
+
+#### Other information
+
+- [Alaska LNG](https://alaska-lng.com/project-overview/pipeline/) describes a planned pipeline from the North Slope to Southcentral Alaska

@@ -4,7 +4,6 @@ subtitle: "Types of entities in the Alaska Community Ontology"
 date: 2025-05-23
 ---
 
-# List of Classes
 
 ## AEDG Context Only
 
