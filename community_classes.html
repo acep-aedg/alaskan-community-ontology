@@ -305,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy Classes (not Electricity)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Energy (besides Electricity)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -389,9 +389,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#censusblocks" id="toc-censusblocks" class="nav-link" data-scroll-target="#censusblocks"><span class="header-section-number">2.4.1</span> CensusBlocks</a></li>
   <li><a href="#censustracts" id="toc-censustracts" class="nav-link" data-scroll-target="#censustracts"><span class="header-section-number">2.4.2</span> CensusTracts</a></li>
   <li><a href="#censusarea" id="toc-censusarea" class="nav-link" data-scroll-target="#censusarea"><span class="header-section-number">2.4.3</span> CensusArea</a></li>
-  <li><a href="#aeaenergyregions" id="toc-aeaenergyregions" class="nav-link" data-scroll-target="#aeaenergyregions"><span class="header-section-number">2.4.4</span> AeaEnergyRegions</a></li>
+  <li><a href="#sec-aea-energy-regions" id="toc-sec-aea-energy-regions" class="nav-link" data-scroll-target="#sec-aea-energy-regions"><span class="header-section-number">2.4.4</span> AeaEnergyRegions</a></li>
   <li><a href="#acepenergyregions" id="toc-acepenergyregions" class="nav-link" data-scroll-target="#acepenergyregions"><span class="header-section-number">2.4.5</span> AcepEnergyRegions</a></li>
-  <li><a href="#zipcode" id="toc-zipcode" class="nav-link" data-scroll-target="#zipcode"><span class="header-section-number">2.4.6</span> ZipCode</a></li>
+  <li><a href="#drcaeconomicregions" id="toc-drcaeconomicregions" class="nav-link" data-scroll-target="#drcaeconomicregions"><span class="header-section-number">2.4.6</span> DrcaEconomicRegions</a></li>
+  <li><a href="#zipcode" id="toc-zipcode" class="nav-link" data-scroll-target="#zipcode"><span class="header-section-number">2.4.7</span> ZipCode</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -766,8 +767,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="2.4.3" class="anchored" data-anchor-id="censusarea"><span class="header-section-number">2.4.3</span> CensusArea</h3>
 <p>see Boroughs</p>
 </section>
-<section id="aeaenergyregions" class="level3" data-number="2.4.4">
-<h3 data-number="2.4.4" class="anchored" data-anchor-id="aeaenergyregions"><span class="header-section-number">2.4.4</span> AeaEnergyRegions</h3>
+<section id="sec-aea-energy-regions" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="sec-aea-energy-regions"><span class="header-section-number">2.4.4</span> AeaEnergyRegions</h3>
 <ul>
 <li><strong>Definition</strong>: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.</li>
 <li><strong>SpatialRelationships</strong>:
@@ -809,8 +810,35 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="zipcode" class="level3" data-number="2.4.6">
-<h3 data-number="2.4.6" class="anchored" data-anchor-id="zipcode"><span class="header-section-number">2.4.6</span> ZipCode</h3>
+<section id="drcaeconomicregions" class="level3" data-number="2.4.6">
+<h3 data-number="2.4.6" class="anchored" data-anchor-id="drcaeconomicregions"><span class="header-section-number">2.4.6</span> DrcaEconomicRegions</h3>
+<ul>
+<li><strong>Definition</strong>: The Alaska Division of Community and Regional Affairs (DCRA) distributes some data grouped by Alaska economic regions, which are based on 2013 borough and census area geography with boundaries determined by the Alaska Department of Labor &amp; Workforce Development.</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CONTAINS Communities</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li>https://schema.org/DefinedRegion as a broad definition</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020032">OEO:study region</a> - “A study region is a region of relevance that has the study region role and consists entirely of one or more subregions.”</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>https://maps.commerce.alaska.gov/server/rest/services/Boundaries/CDO_Economic_Regions/MapServer/0</li>
+<li>https://gis.data.alaska.gov/datasets/DCCED::economic-regions-2/about</li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>CommunityName: 6 regional names like Anchorage, Interior, and Southeast</li>
+<li>DataYear:</li>
+<li>LocalLaborMarketInfoURL: link to http://live.laborstats.alaska.gov/alari/ (which is 404)</li>
+<li>geometry (WKT Polygon): boundaries</li>
+</ul></li>
+</ul>
+</section>
+<section id="zipcode" class="level3" data-number="2.4.7">
+<h3 data-number="2.4.7" class="anchored" data-anchor-id="zipcode"><span class="header-section-number">2.4.7</span> ZipCode</h3>
 <ul>
 <li><strong>Definition</strong>: Postal zip codes as available from [link] (ZCTA)</li>
 <li><strong>SpatialRelationships</strong>:</li>
