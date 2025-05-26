@@ -230,7 +230,7 @@ date: 2025-05-23
 
 see Boroughs
 
-### AeaEnergyRegions
+### AeaEnergyRegions {#sec-aea-energy-regions}
 - **Definition**: Energy Regions as defined by Alaska Energy Authority for Regional Energy Planning. These were also used in the Alaska Energy Statistics Reports.
 - **SpatialRelationships**: 
   - CONTAINS Communities
@@ -252,6 +252,22 @@ see Boroughs
   - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
 - **Properties**:
   - geometry (WKT MultiPolygon) or (WKT Polygon): boundaries 
+
+### DrcaEconomicRegions
+- **Definition**: The Alaska Division of Community and Regional Affairs (DCRA) distributes some data grouped by Alaska economic regions, which are based on 2013 borough and census area geography with boundaries determined by the Alaska Department of Labor & Workforce Development. 
+- **SpatialRelationships**: 
+  - CONTAINS Communities
+- **Analogous Standards**:
+  - https://schema.org/DefinedRegion as a broad definition
+  - [OEO:study region](http://openenergy-platform.org/ontology/oeo/OEO_00020032) - "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."
+- **References**:
+  - https://maps.commerce.alaska.gov/server/rest/services/Boundaries/CDO_Economic_Regions/MapServer/0
+  - https://gis.data.alaska.gov/datasets/DCCED::economic-regions-2/about
+- **Properties**:
+  - CommunityName: 6 regional names like Anchorage, Interior, and Southeast
+  - DataYear: 
+  - LocalLaborMarketInfoURL: link to http://live.laborstats.alaska.gov/alari/ (which is 404)
+  - geometry (WKT Polygon): boundaries 
 
 ### ZipCode
 - **Definition**: Postal zip codes as available from [link] (ZCTA)

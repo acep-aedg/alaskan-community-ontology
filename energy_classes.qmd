@@ -1,89 +1,175 @@
 ---
-title: "Energy Classes (not Electricity)"
+title: "Energy (besides Electricity)"
 subtitle: "Descriptions of wider Energy-related entities in the Alaska Community Ontology"
 date: 2025-05-23
 ---
 
-State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which are related to energy: electrical service, steam, gas distribution and storage, petroleum, and liquefied natural gas storage. See @sec-utility-definitions for the text. Of these, only electrical service was displayed in the dashboard of the previous version of AEDG, so these classes are all without AEDG precedent.  Energy “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for
-  
-- furnishing, by generation, transmission, or distribution, electrical service to the public for compensation;
-- furnishing steam to the public for compensation (grouped with water and sewer);
-- furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;
-- furnishing for distribution or by distribution petroleum or petroleum products to the public for compensation when the consumer has no alternative in the choice of supplier of a comparable product and service at an equal or lesser price;
-- furnishing the service of natural gas storage to the public for compensation;
-furnishing the service of liquefied natural gas storage to the public for compensation;
+Unfortunately, without specific data sources to provide and constrain attributes, classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified, this page will evolve. For now, it is incomplete.
 
-As with electrical utilities, the Regulatory Commission of Alaska (RCA) is one source of information on energy utilities, but the RCA regulates only a portion of existing energy-related entities in Alaska. Therefore each category below is divided into RCA resources and other sources of information. RCA search includes:
+## Other State Resources
+
+### Definitions
+
+State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which relate to energy. However, only electrical utilities were displayed in the dashboard of the previous version of AEDG. Because these classes are all without AEDG precedent, we'll begin with a summary of @sec-utility-definitions: A “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for furnishing to the public for compensation:
+  
+- generation, transmission, or distribution of electrical service
+- steam (grouped with water and sewer)
+- transmission or distribution of natural or manufactured gas
+- distribution or by distribution petroleum or petroleum products when the consumer has no alternative in the choice of supplier of a comparable product and service at an equal or lesser price
+- the service of natural gas storage 
+- the service of liquefied natural gas storage
+
+### Regulatory Commission of Alaska (RCA)
+
+The [Regulatory Commission of Alaska (RCA)'s search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchByType.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86) is a major source of information on energy utility certificates. Therefore the available searches provided by the RCA are relevant, with the understanding that the RCA regulates only a portion of energy-related entities in Alaska. RCA searches that return results include:
 
 - <!--  value="fb3aa508-d4ce-40d9-8e4a-602912321bce"-->Electric
 - <!--  value="41ccfb21-50d0-481e-aaf3-bd9c73153227"-->Natural Gas
 - <!--  value="27421552-89e9-43c5-a783-101051f39f54"-->Natural Gas Storage
-- <!--  value="5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca"-->Pipeline
-- <!--  value="bcff05fe-74e7-4c68-b9a8-ca3469ef5f86"-->Steam Heat
-- <!--  value="76a8876e-9d32-41cd-9bc3-f2ade80568b5"-->Steam Heat (different search returns nothing)
+- <!--  value="5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca"-->Pipeline (oil, gas, etc.)
+- <!--  value="bcff05fe-74e7-4c68-b9a8-ca3469ef5f86"-->Steam Heat (a second search option returns nothing)
 - <!--  value="f05be2d0-f0af-4bc0-bf5b-13112b84be82"-->Electric Reliability Organization
-- <!--  value="03e98254-f29e-433f-9357-b1abd4579b6c"-->Railbelt Transmission Organization
-- <!--  value="2804581d-eea3-4aa3-8377-bc56f9758eed"-->CP ONLY- Electric (Unregulated) (returns nothing)
-- <!--  value="1f57f1fa-2113-42fd-b10f-9476a18cf4e4"-->CP ONLY-Electric PCE (Unregulated) (returns nothing)
+<!---   value="03e98254-f29e-433f-9357-b1abd4579b6c"Railbelt Transmission Organization  no results -->
+
+### Alaska Native Tribal Health Consortium
+
+- [Energy Audits](https://www.anthc.org/what-we-do/rural-energy/audits/) listed by communities
+- [Successful Projects](https://www.anthc.org/what-we-do/rural-energy/case-studies/) with a variety of technologies (some of which are scattered below)
+
+### Alaska Municipal League
+
+- [EnergyShed](https://www.akml.org/energy/alaska-energyshed/)
+- [Alaska Energy Hub](https://experience.arcgis.com/experience/f03f5040b0e5486da16a2af9b984f210/page/Home/) dashboard
+
+### Alaska Energy Authority
+
+As a funder of energy projects in Alaska, they distribute documents on projects and renewable energy. It's hard to know how to integrate these into AEDG.
 
 
-As data sources are identified, this section will evolve into regular classes and relationships.
+## Fuel {#sec-fuel}
 
-## Space Heating (Steam, Waste Heat, Heat Recovery)
+### DCRA's Heating and Gasoline Surveys
+- **Definition**: In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.
+- **SpatialRelationships**: 
+  - INTERSECTS Communities (as in only includes some)
+  - Averaged into DrcaEconomicRegions
+- **Analogous Standards**:
+  - [OEO:gasoline](http://openenergy-platform.org/ontology/oeo/OEO_00000183) 
+  - [OEO:heating oil](http://openenergy-platform.org/ontology/oeo/OEO_00000211)
+  - [OEO:monetary price](http://openenergy-platform.org/ontology/oeo/OEO_00020427)
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities, in this case fuel
+- **References**:
+  - https://storymaps.arcgis.com/stories/6d6a33a3d9a74723a2f476c26ecfdf21
+  - https://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/61
+  - https://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/45
+  - https://gis.data.alaska.gov/datasets/DCCED::heating-fuel-price-all-years/about
+  - https://gis.data.alaska.gov/datasets/DCCED::gas-prices-all-years/about
+  - https://gis.data.alaska.gov/maps/DCCED::fuel-delivery-method
+- **Properties**:
+  - Community (100) or Economic Region
+  - Heating Fuel Retail Price Per Gallon
+  - Heating Fuel Vendor
+  - Gas Retail Price Per Gallon
+  - Gas Vendor
+  - Reporting Year: survey year (since 2005)
+  - Reporting Season: summer or winter
+  - geometry (WKT Point) or (WKT Polygon): 100 points for communities and boundaries for economic regions
 
-## Thermal 
+
+### Fuel Distribution
+
+Fuel distribution is performed by private companies; we've found no statewide record of costs other than the DCRA surveys described above. One possible lead to these data is found in the ACEP blog post [To be the best utility: Reflections from former AVEC president and CEO, Meera Kohler](https://www.uaf.edu/acep-blog/to-be-the-best-utility-reflections-from-former-avec-president-and-ceo-meera-kohler.php), which describes the collaboration between the [Alaska Village Electric Cooperative](https://avec.org/) (AVEC) and Vitus Marine LLC to provide more affordable fuel to Alaskan villages. Vitus Marine is one branch of Vitus Energy, and in case outreach to Vitus is attempted in the future to get more information on energy prices, here is a little more information on them:
+
+- Vitus Marine provides fuel and freight to communities along Western Alaska’s coast and tributary rivers.
+- [Vitus Terminals](https://www.vitusterminals.com) distributes fuel to commercial and retail customers via shore-based operations.
+- Central Alaska Energy LLC is developing a 4.8 million gallon fuel terminal at [Port Mackenzie](https://matsugov.us/newconstructiondevelopment/35-communication/landing-pages/13880-port) and plans to market wholesale gas and diesel products to industrial customers.
+
+
+### Bulk Fuel Storage
+
+The Alaska State Geoportal includes the [Utilities Bulk Fuel Inventory Dashboard](https://www.arcgis.com/apps/dashboards/325a06d2664e4056ab90c7b67bb833a5) developed by the Division of Community and Regional Affairs (DCRA), Alaska
+Dept. of Commerce, Community, & Economic Development. This is "A list of bulk fuel facilities in Alaska including photos, assessments, and tank details provided by the Alaska Energy Authority, the U.S. Coast Guard, and Division of Community and Regional Affairs." This dashboard includes a list of bulk fuel facilities with:
+
+- facility status including enforcement actions
+- filters by community, U.S.C.G. ID, AEA ID, AST ID
+- owner contact info
+- 11 AEA Alaska Energy Regions (@sec-aea-energy-regions)
+- DCRA Alaska Fuel Survey Data (see below)
+
+#### Other information
+
+- [2025 Report Card for Alaska's Infrastructure](https://infrastructurereportcard.org/wp-content/uploads/2025/03/2025-alaska-report-card-full-report.pdf.pdf) gives energy infrastructure a D+ grade! The discussion of bulk fuel is partly based partly on info credited to the Denali Commission.
+- AEA has been inventorying infrastructure with drones and imagery, but this is sensitive information.
+
+
+## Heating
+
+### Residential Space Heating
+
+- See costs of heating oil as @sec-fuel
+- State of Alaska's Department of Health [Heating Assistance Program](https://health.alaska.gov/en/services/division-of-public-assistance-dpa-services/heating-assistance/)
+- Heat pumps
+- ARIS database and retrofits by Alaska Housing Finance Corporation
+
+
+### Wind to Heat
+
+- [Celebrating completion of Kotzebue’s wind-to-heat energy system](https://www.anthc.org/news/celebrating-completion-of-kotzebues-wind-to-heat-energy-system/) 2017c 
+- [Mekoryuk](https://adaptalaska.org/case-study/renewable-energy-and-heat-recovery/) water treatment heating
+- ACEP news item on electric thermal storage heaters: [Excess wind energy helps heat Kotzebue homes](https://www.uaf.edu/acep/news/2024/excess-wind-energy-helps-heat-kotzebue-homes.php) 
+
+
+## Thermal (Steam and Hot Water Utilities, Waste Heat, Heat Recovery)
 
 ### RCA Regulated Steam Heat Utilities
 
 - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86) gives 3: Aurora Energy and Doyon utilities servicing Fort Greely and Fort Wainwright
-
-### Other information
-
-- Anchorage? ML&P as referenced in @sec-aurora-cogen
+- Anchorage's Municipal Light and Power is referenced in @sec-aurora-cogen, but is not active as a utility now
   - https://www.phoenixpg.com/anchorage-ml-p describes George M. Sullivan Plant 2 heating water
   - but https://www.gem.wiki/George_M_Sullivan_Generation_Plant_2 says it is not combined heat and power (CHP)
   - Googling does not identify steam heat in downtown Anchorage. 
-- Galena: Sustainable Energy for Galena (SEGA) heating Galena Interior Learning Academy (GILA) 
-  - original system was steam with diesel but now it is a hydronic hot-water system with a biomass boiler
+
+### Combined Heat and Power (CHP)
+
+> The U.S. Department of Energy CHP Installation Database is the most comprehensive source of information on CHP installations in the United States. Established in 2002, the CHP Installation Database is maintained by ICF Inc. and is funded by the U.S. Department of Energy. The database is updated on a monthly basis.
+
+- [U.S. Department of Energy Combined Heat and Power and Microgrid Installation Databases](https://doe.icfwebservices.com/chp) has a [subset for Alaska](https://doe.icfwebservices.com/state/chp/AK) that lists 165 entries
+  - Data Download as an Excel spreadsheet [Full CHP data set](https://doe.icfwebservices.com/downloads/chpDataset) which then needs to be filtered by "AK"
+    - Fields are: Organization Name	Facility Name	City	State	Application	SIC4	NAICS	OpYear	Latest Install Year	 Capacity (kW) 	Prime Mover	Fuel Class - Prim Fuel	Last Verified	Project Profile Link	Microgrid	Critical Infrastructure	EPA Award Winner
+
+#### Other information
+
+Although the DoE database includes a lot of information, it seems to be missing some context that is provided by other sources. It may be worth extending this datasets with more information from utilities and subject matter experts.
+
+- [Galena](https://sustainablegalena.org): Sustainable Energy for Galena (SEGA) heating Galena Interior Learning Academy (GILA) 
+  - original system was steam with diesel but now it is a hydronic hot-water system with a biomass boiler (Energy in the North Podcast [transcript August 21, 2024](https://www.uaf.edu/acep/files/transcripts/energy-north-series/Tim-Kalke_Energy-In-the-North.txt))
 - Naknek 
-  - waste heat recovery district heating loop ([USDA awards](https://www.rd.usda.gov/media/file/download/usda-rd-rus-hecg2021-2022-project-awards-122324.pdf) as source of more infomation)
+  - waste heat recovery district heating loop ([USDA awards](https://www.rd.usda.gov/media/file/download/usda-rd-rus-hecg2021-2022-project-awards-122324.pdf) as source of more information)
 - Utqiaġvik: Barrow Electric for the school and pool
-- Seward
-- King Salmon
-- Angoon
 - [Noatak](https://www.nwabor.org/wp-content/uploads/I.-Community-Profile-Noatak.pdf) water treatment plant served by heat recovery system with opportunity to expand indicated.
+- [Savoonga](https://adaptalaska.org/case-study/renewable-energy-and-heat-recovery/)
 
+### Waste Heat to Power (WHP)
 
+EPA's definition [Waste Heat to Power Systems](https://www.epa.gov/sites/default/files/2015-07/documents/waste_heat_to_power_systems.pdf): "Waste heat to power (WHP) is the process of capturing heat discarded by an existing
+thermal process and using that heat to generate power"
 
-## Geothermal
-
-- Naknek / King Salmon in 2010c
-- Chena Hot Springs
-
-
-## Fuel
-
-## Distribution of Petroleum or Petroleum Products
-
-No RCA search option.
-
-## Bulk Fuel
-
+- Unalaska 2015c announced [Rankin Cycle (ORC) heat recovery generators](https://www.ci.unalaska.ak.us/publicutilities/page/waste-heat-recovery-project)  at the Dutch Harbor Power Plant.
 
 ## Natural Gas
 
-
-### Transmission or Distribution of Natural or Manufactured Gas
+### Natural Gas Utilities
 
 #### RCA
 
-- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227) for certificate numbers: 8 active state-wide, but only 2 big.
-  - tariff filings (rate schedules)
-  - RCA service areas (PDF and KML)
+- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227) 
+  - 8 are active state-wide, but only 2 service large areas: Enstar and IGU
+  - documents include tariff filings (rate schedules)
+  - service areas documented with PDF and KML maps
     - Enstar and its supplier Alaska Pipeline Company have separate service areas with the pipelines looking like rasterized lines.
     - IGU's is out of date because Fairbanks Natural Gas's service area is still separate but they merged in 2020.
 
-#### Other Sources 
+#### Other Information 
 
 - EIA 
   - Forms include locations and owners of electrical power plants fueled by natural gas
@@ -92,9 +178,11 @@ No RCA search option.
   - https://www.interiorgas.com/
   - https://www.enstarnaturalgas.com/
 - Alaska Energy Blog's [Why are the warnings about Cook Inlet gas getting more dire?](https://www.alaskaenergy.org/p/why-are-the-warnings-about-cook-inlet)
+- [Barrow Utilities and Electric Cooperative](https://bueci.org) lists [gas tariff rates](https://bueci.org/wp-content/uploads/2025/01/BUECI-Gas-Tariff-01-15-2025.pdf) on their website, and uses natural gas to power their electricity
+- [Norgasco, Inc.](https://www.alaska.net/~norgasco/)  is an industrial natural gas utility located in the Deadhorse, Alaska
 
 
-## Natural Gas Storage
+### Natural Gas Storage
 
 #### RCA
 
@@ -109,15 +197,26 @@ No RCA search option.
 - No RCA search option for LNG storage.
 - [Alaska LNG](https://alaska-lng.com/project-overview/liquefaction-facility/) describes a planned liquefaction facility located in Nikiski with two 240,000 cubic meter storage tanks
 
-### Pipelines (all types)
+## Pipelines (all types)
 
-Natural gas pipelines are not included in  @sec-utility-definitions
+### RCA
 
-#### RCA
-
-- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) returns 35 existing pipelines, of which 26 are active
+- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=5d3eb685-14c3-4d4a-9b0f-e56cb92bbeca) 
+  - 35 existing pipelines
+  - 26 are active
   - ~16 are oil or oil products
 
-#### Other information
+### Other Information
 
 - [Alaska LNG](https://alaska-lng.com/project-overview/pipeline/) describes a planned pipeline from the North Slope to Southcentral Alaska
+- [Alaska CNG](https://akcng.com), a sister company of North Slope utility Norgasco, delivers gas to Deadhorse in a high-pressure tube trailer (truck not a pipeline)
+
+
+## Geothermal and Community-scale Ground Source Heat Pumps
+
+- Naknek / King Salmon in 2010c
+- Chena Hot Springs
+
+- Seward
+  - Sewards Alaska Sea Life Center [ASLC shifting 98% of the Center's heating needs from fossil fuel to ocean water as source heat](https://alaskasealife.org/news_item/34)
+  - [Seward Heat Loop Project](https://digital.akbizmag.com/issue/august-2024/cold-water-warm-city/). Design funded by AEA. US Department of Energy (DOE) grant for later phases. It is in AML's [Alaska Energy Hub](https://experience.arcgis.com/experience/f03f5040b0e5486da16a2af9b984f210/page/Home/)
