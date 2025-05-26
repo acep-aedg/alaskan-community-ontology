@@ -210,6 +210,7 @@ thermal process and using that heat to generate power"
 
 - [Alaska LNG](https://alaska-lng.com/project-overview/pipeline/) describes a planned pipeline from the North Slope to Southcentral Alaska
 - [Alaska CNG](https://akcng.com), a sister company of North Slope utility Norgasco, delivers gas to Deadhorse in a high-pressure tube trailer (truck not a pipeline)
+- The [Trans Alaska Pipeline](https://gis.data.alaska.gov/datasets/SOA-DNR::trans-alaska-pipeline/about) in the Alaska Geoportal
 
 
 ## Geothermal and Community-scale Ground Source Heat Pumps
