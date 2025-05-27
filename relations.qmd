@@ -35,8 +35,7 @@ Relations can be hierarchical (taxonomy) or could form a network or graph (seman
 - geor:sfTouches
 - geor:sfWithin
 
-[OBO Relations Ontology](https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties) "is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies." It is a foundational element of the [Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/).
-- In the OEO [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/props), only one instance of  `RO` usage could be found: [is homeomorphic for](https://terminology.tib.eu/ts/ontologies/oeo/props?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0040042) which has a mathematical definition involving sets.
+[OBO Relations Ontology](https://www.ebi.ac.uk/ols4/ontologies/ro?tab=properties) "is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies." It is a foundational element of the [Open Energy Ontology](http://openenergy-platform.org/ontology/oeo/). In the OEO [Terminology Service](https://terminology.tib.eu/ts/ontologies/oeo/props), only one instance of  `RO` usage could be found: [is homeomorphic for](https://terminology.tib.eu/ts/ontologies/oeo/props?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FRO_0040042) which has a mathematical definition involving sets.
 
 ## Relations
 
