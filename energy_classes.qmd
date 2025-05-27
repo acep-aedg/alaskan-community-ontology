@@ -1,10 +1,10 @@
 ---
-title: "Fuel, Heating, and Thermal Classes"
+title: "Fuel, Heating, Thermal, and Transportation Classes"
 subtitle: "Descriptions of Energy-related entities (besides Electricity) in the Alaska Community Ontology"
 date: 2025-05-28
 ---
 
-Unfortunately, without specific data sources to provide and constrain attributes, classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified in @sec-energy-data, this page will evolve. For now, it is incomplete.
+Unfortunately, without specific data sources to provide and constrain attributes, some classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified in @sec-energy-data, this page will evolve. For now, it is incomplete.
 
 
 ## Fuel (not natural gas) {#sec-fuel}
@@ -37,18 +37,20 @@ Unfortunately, without specific data sources to provide and constrain attributes
   - geometry (WKT Point) or (WKT Polygon): 100 points for communities and boundaries for economic regions
 
 
-### Fuel Distribution
-
-
-- **Definition**:  
+### DCRA Fuel Distribution from the Community Surveys
+- **Definition**: The process of delivering heating oil and gasoline to 100 surveyed Communities 
 - **SpatialRelationships**: 
 - **Analogous Standards**:
-- **References**:
   - https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about
   - [OEO: distribution](http://openenergy-platform.org/ontology/oeo/OEO_00010136): "Distribution is the process of delivering goods and services to agents"
   - [OEO: fuel](http://openenergy-platform.org/ontology/oeo/OEO_00000173)
+- **References**:
+  - https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about is "Primary method by which a community receives its fuel shipments according to the biannual DCRA Alaska Fuel Survey."
 - **Properties**:
-  - Year: Entities can drop in and out of the program in time
+  - CommunityName
+  - Fuel Delivery Method: Barge, Plane, Road, Ice Road (not Rail?)
+  - AsOfDate: when the survey was performed
+  - geometry (WKT Point) : 100 points for communities
 
 
 ### Propane
@@ -76,7 +78,9 @@ Unfortunately, without specific data sources to provide and constrain attributes
   - certificate_name: RCA's name for the utility
   - geom: service area
 
-### Natural Gas Storage
+### RCA Regulated Natural Gas Storage
+
+- [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=27421552-89e9-43c5-a783-101051f39f54)
 
 ### Liquefied Natural Gas Storage
 
@@ -84,12 +88,15 @@ Unfortunately, without specific data sources to provide and constrain attributes
 
 ## Pipelines and Infrastructure
 
+- [OEO: distribution](http://openenergy-platform.org/ontology/oeo/OEO_00010136): "Distribution is the process of delivering goods and services to agents" ?
+
 
 ## Heating
 
 ### Residential Space Heating
 
 - See costs of heating oil as @sec-fuel
+- [OEO: heating and cooling sector](http://openenergy-platform.org/ontology/oeo/OEO_00000213)
 
 ### Wind to Heat
 
@@ -165,15 +172,34 @@ thermal process and using that heat to generate power"
 
 ## Geothermal and Community-scale Ground Source Heat Pumps
 
+- [OEO: geothermal heat plant](http://openenergy-platform.org/ontology/oeo/OEO_00310018)
+- [OEO: geothermal power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000192)
+- [OEO: heat pump](http://openenergy-platform.org/ontology/oeo/OEO_00000212)
+
 
 ## Transportation
 
-### 
+### DCRA's Transportation Overview 
 - **Definition**:  
 - **SpatialRelationships**: 
+  - Transportation joins communities
+  - Transportation joins communities to services
 - **Analogous Standards**:
+  - [OEO: transport network](http://openenergy-platform.org/ontology/oeo/OEO_00320016): "A transport network is a supply system of transport network components that enables the transport of people and/or goods."
 - **References**:
+  - https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0
+  - [DCCED Transportation dashboard](https://dcced.maps.arcgis.com/apps/webappviewer/index.html?id=3de3ebccbb6b4ba8a9c64609e96199ba)
+  - https://gis.data.alaska.gov/datasets/DCCED::community-transportation-overview/about
 - **Properties**:
-  - Year: Entities can drop in and out of the program in time
+  - airport: Answers the question: Does the Community have an airport?
+  - cargo_barge: Answers the question: Is the Community served by a cargo barge?
+  - coastal: Answers the question: Is the Community located on the coast?
+  - harbor_dock: Answers the question: Does the Community have a harbor with a dock? 
+  - road_connection:Answers the question: Is the Community connected to a road system to other communities?
+  - state_ferry: Answers the question: Is the Community served by a state ferry?
+  - description: a narrative summary of transportation options
 
+### Electric Vehicles
 
+- [OEO: electric vehicle](http://openenergy-platform.org/ontology/oeo/OEO_00000146)
+- [OEO: vehicle charging station](http://openenergy-platform.org/ontology/oeo/OEO_00320040)

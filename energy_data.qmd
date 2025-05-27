@@ -246,4 +246,14 @@ thermal process and using that heat to generate power"
 
 ## Transportation
 
-DCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0
+### DCRA Transportation Overview
+
+- DCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0
+- [DCCED Transportation dashboard](https://dcced.maps.arcgis.com/apps/webappviewer/index.html?id=3de3ebccbb6b4ba8a9c64609e96199ba) includes categorization of airport hubs, operators of harbors, as well as the transportation options.
+
+### Electric Vehicles from DMV
+
+1. The DMV collects data on electrical vehicle registrations that includes make, model, location, etc.
+2. AEA has an MOU with the DMV to analyze that data. The MOU restricts data access to AEA only so these data are not public.
+3. AEA is in discussions with a private company to build an ESRI-based dashboard to display this data. sample dashboard: https://experience.arcgis.com/experience/7765ad22843f49bbb8dd2179c2f7d3be
+4. AEDG could combine these data with generation source, PCE status, utility service areas.
