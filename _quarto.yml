@@ -33,11 +33,12 @@ book:
     - energy_classes.qmd
     - relations.qmd
     - axioms.qmd
-  appendices:
     - about.qmd
+  appendices:
     - legal_definitions.qmd
     - ipp_utility_example.qmd
     - grids.qmd
+    - energy_data.qmd
 
 format:
   html:

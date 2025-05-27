@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About and CRediT"
 subtitle: "Funding and Authors"
 date: 2025-05-23
 ---
