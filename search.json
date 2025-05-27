@@ -132,81 +132,81 @@
   {
     "objectID": "energy_classes.html",
     "href": "energy_classes.html",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "",
-    "text": "4.1 Fuel (not natural gas)\nUnfortunately, without specific data sources to provide and constrain attributes, classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified in Section D.1, this page will evolve. For now, it is incomplete.",
+    "text": "4.1 Fuel (not natural gas)\nUnfortunately, without specific data sources to provide and constrain attributes, some classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified in Section D.1, this page will evolve. For now, it is incomplete.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#sec-fuel",
     "href": "energy_classes.html#sec-fuel",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "",
-    "text": "4.1.1 DCRA’s Heating and Gasoline Surveys\n\nDefinition: In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.\nSpatialRelationships:\n\nINTERSECTS Communities (as in only includes some)\nAveraged into DrcaEconomicRegions\n\nAnalogous Standards:\n\nOEO:gasoline\nOEO:heating oil\nOEO:monetary price\nOEO:provider - A provider is an agent (organization) that transfers commodities, in this case fuel\n\nReferences:\n\nhttps://storymaps.arcgis.com/stories/6d6a33a3d9a74723a2f476c26ecfdf21\nhttps://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/61\nhttps://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/45\nhttps://gis.data.alaska.gov/datasets/DCCED::heating-fuel-price-all-years/about\nhttps://gis.data.alaska.gov/datasets/DCCED::gas-prices-all-years/about\nhttps://gis.data.alaska.gov/maps/DCCED::fuel-delivery-method\n\nProperties:\n\nCommunity (100) or Economic Region\nHeating Fuel Retail Price Per Gallon\nHeating Fuel Vendor\nGas Retail Price Per Gallon\nGas Vendor\nReporting Year: survey year (since 2005)\nReporting Season: summer or winter\ngeometry (WKT Point) or (WKT Polygon): 100 points for communities and boundaries for economic regions\n\n\n\n\n4.1.2 Fuel Distribution\n\nDefinition:\n\nSpatialRelationships:\nAnalogous Standards:\nReferences:\n\nhttps://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about\nOEO: distribution: “Distribution is the process of delivering goods and services to agents”\nOEO: fuel\n\nProperties:\n\nYear: Entities can drop in and out of the program in time\n\n\n\n\n4.1.3 Propane\n\nOEO: liquefied petroleum gas: “Liquefied petroleum gas (LPG) is gas mixture of hydrocarbon gases, mainly propane and butane.”\n\n\n\n4.1.4 Bulk Fuel Storage\n\nOEO: fuel tank",
+    "text": "4.1.1 DCRA’s Heating and Gasoline Surveys\n\nDefinition: In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.\nSpatialRelationships:\n\nINTERSECTS Communities (as in only includes some)\nAveraged into DrcaEconomicRegions\n\nAnalogous Standards:\n\nOEO:gasoline\nOEO:heating oil\nOEO:monetary price\nOEO:provider - A provider is an agent (organization) that transfers commodities, in this case fuel\n\nReferences:\n\nhttps://storymaps.arcgis.com/stories/6d6a33a3d9a74723a2f476c26ecfdf21\nhttps://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/61\nhttps://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/45\nhttps://gis.data.alaska.gov/datasets/DCCED::heating-fuel-price-all-years/about\nhttps://gis.data.alaska.gov/datasets/DCCED::gas-prices-all-years/about\nhttps://gis.data.alaska.gov/maps/DCCED::fuel-delivery-method\n\nProperties:\n\nCommunity (100) or Economic Region\nHeating Fuel Retail Price Per Gallon\nHeating Fuel Vendor\nGas Retail Price Per Gallon\nGas Vendor\nReporting Year: survey year (since 2005)\nReporting Season: summer or winter\ngeometry (WKT Point) or (WKT Polygon): 100 points for communities and boundaries for economic regions\n\n\n\n\n4.1.2 DCRA Fuel Distribution from the Community Surveys\n\nDefinition: The process of delivering heating oil and gasoline to 100 surveyed Communities\nSpatialRelationships:\nAnalogous Standards:\n\nhttps://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about\nOEO: distribution: “Distribution is the process of delivering goods and services to agents”\nOEO: fuel\n\nReferences:\n\nhttps://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about is “Primary method by which a community receives its fuel shipments according to the biannual DCRA Alaska Fuel Survey.”\n\nProperties:\n\nCommunityName\nFuel Delivery Method: Barge, Plane, Road, Ice Road (not Rail?)\nAsOfDate: when the survey was performed\ngeometry (WKT Point) : 100 points for communities\n\n\n\n\n4.1.3 Propane\n\nOEO: liquefied petroleum gas: “Liquefied petroleum gas (LPG) is gas mixture of hydrocarbon gases, mainly propane and butane.”\n\n\n\n4.1.4 Bulk Fuel Storage\n\nOEO: fuel tank",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#natural-gas",
     "href": "energy_classes.html#natural-gas",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.2 Natural Gas",
-    "text": "4.2 Natural Gas\n\n4.2.1 RCA Regulated Natural Gas Utilities\n\nDefinition: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;\nAnalogous Standards:\n\nhttps://schema.org/Corporation\ndc:Agent\nOEO:provider - A provider is an agent (organization) that transfers commodities or a OEO:Service to other agents.\nOEO: natural gas\n\nReferences:\n\nRCA search\nSection A.1.2\n\nProperties:\n\ncertificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number\ncertificate_name: RCA’s name for the utility\ngeom: service area\n\n\n\n\n4.2.2 Natural Gas Storage\n\n\n4.2.3 Liquefied Natural Gas Storage\n\nOEO: liquefied natural gas: “Liquefied natural gas (LNG) is natural gas that has a liquid state of matter.”",
+    "text": "4.2 Natural Gas\n\n4.2.1 RCA Regulated Natural Gas Utilities\n\nDefinition: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;\nAnalogous Standards:\n\nhttps://schema.org/Corporation\ndc:Agent\nOEO:provider - A provider is an agent (organization) that transfers commodities or a OEO:Service to other agents.\nOEO: natural gas\n\nReferences:\n\nRCA search\nSection A.1.2\n\nProperties:\n\ncertificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number\ncertificate_name: RCA’s name for the utility\ngeom: service area\n\n\n\n\n4.2.2 RCA Regulated Natural Gas Storage\n\nRCA search\n\n\n\n4.2.3 Liquefied Natural Gas Storage\n\nOEO: liquefied natural gas: “Liquefied natural gas (LNG) is natural gas that has a liquid state of matter.”",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#pipelines-and-infrastructure",
     "href": "energy_classes.html#pipelines-and-infrastructure",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.3 Pipelines and Infrastructure",
-    "text": "4.3 Pipelines and Infrastructure",
+    "text": "4.3 Pipelines and Infrastructure\n\nOEO: distribution: “Distribution is the process of delivering goods and services to agents” ?",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#heating",
     "href": "energy_classes.html#heating",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.4 Heating",
-    "text": "4.4 Heating\n\n4.4.1 Residential Space Heating\n\nSee costs of heating oil as Section 4.1\n\n\n\n4.4.2 Wind to Heat",
+    "text": "4.4 Heating\n\n4.4.1 Residential Space Heating\n\nSee costs of heating oil as Section 4.1\nOEO: heating and cooling sector\n\n\n\n4.4.2 Wind to Heat",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#thermal-steam-and-hot-water-utilities-waste-heat-heat-recovery",
     "href": "energy_classes.html#thermal-steam-and-hot-water-utilities-waste-heat-heat-recovery",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.5 Thermal (Steam and Hot Water Utilities, Waste Heat, Heat Recovery)",
     "text": "4.5 Thermal (Steam and Hot Water Utilities, Waste Heat, Heat Recovery)\n\n4.5.1 RCA Regulated Steam Heat Utilities\n\nDefinition: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing water, steam, or sewer service to the public for compensation.\nAnalogous Standards:\n\nhttps://schema.org/Corporation\ndc:Agent\nOEO:provider - A provider is an agent (organization) that transfers commodities or a OEO:Service to other agents.\nOEO: heating and cooling sector\nOEO: district heating\nOEO: heating grid component\n\nReferences:\n\nRCA search\nSection A.1.2\n\nProperties:\n\ncertificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number\ncertificate_name: RCA’s name for the utility\ngeom: service area\n\n\n\n\n4.5.2 Combined Heat and Power (CHP)\n\nDefinition: From OEO, “A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid.”\nSpatialRelationships:\n\nCHP plants provide heat to nearby buildings (Touches?)\nCHP plants are Within Communities\nTOUCHES PowerLines\nWITHIN Grids\n\nAnalogous Standards:\n\nOEO: combined heat and power plant\nOEO: heating and cooling sector\nOEO: district heating\nOEO: heating grid component\n\nReferences:\n\nDOE’s Combined Heat and Power Installations in Alaska\nThere is a boolean column for this in the Alaska Energy Statistics Workbooks Generation Plants table\n\nProperties: based on DoE’s database\n\nCity: Community\nOrganization Name: operator\nFacility Name: system name (like “Baxter Senior Living Center” or “Angoon”)\nApplication: like “Remote Community”, “Nursing Homes”, or “Hospitals/Healthcare”\nSIC4: Standard Industrial Classification is a system for classifying industries (from OHSA)\nNAICS: North American Industry Classification System (NAICS) for classifying business (from census)\nOpYear\nLatest Install Year\nCapacity (kW)\nPrime Mover: like “Reciprocating Engine” or “Organic Rankine Cycle”\nFuel Class Prim Fuel: coal, oil, propane, natural gas, etc\nLast Verified Project Profile Link\n\nMicrogrid: is it part of a microgrid?\nCritical Infrastructure: does it provide essential services and functions?\n\n\n\n\n4.5.3 Waste Heat to Power (WHP)\n\nDefinition: EPA’s definition is “Waste heat to power (WHP) is the process of capturing heat discarded by an existing thermal process and using that heat to generate power”\nSpatialRelationships:\n\nTOUCHES PowerLines\nWITHIN Grids\n\nAnalogous Standards:\n\nOEO: power plant - “an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid.”\nOEO: waste power plant may be this, or it might be from refuse (i.e. garbage)\n\nReferences:\n\nEPA’s definition Waste Heat to Power Systems\nUnalaska 2015c announced Rankin Cycle (ORC) heat recovery generators at the Dutch Harbor Power Plant.\n\nUnalaska’s WHP does not seem to be in the Alaska Energy Statistics Workbooks Generation Plants table\n\n\nProperties:\n\nunknown",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#geothermal-and-community-scale-ground-source-heat-pumps",
     "href": "energy_classes.html#geothermal-and-community-scale-ground-source-heat-pumps",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.6 Geothermal and Community-scale Ground Source Heat Pumps",
-    "text": "4.6 Geothermal and Community-scale Ground Source Heat Pumps",
+    "text": "4.6 Geothermal and Community-scale Ground Source Heat Pumps\n\nOEO: geothermal heat plant\nOEO: geothermal power plant\nOEO: heat pump",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
     "objectID": "energy_classes.html#transportation",
     "href": "energy_classes.html#transportation",
-    "title": "4  Fuel, Heating, and Thermal Classes",
+    "title": "4  Fuel, Heating, Thermal, and Transportation Classes",
     "section": "4.7 Transportation",
-    "text": "4.7 Transportation\n\n4.7.1 \n\nDefinition:\n\nSpatialRelationships:\nAnalogous Standards:\nReferences:\nProperties:\n\nYear: Entities can drop in and out of the program in time",
+    "text": "4.7 Transportation\n\n4.7.1 DCRA’s Transportation Overview\n\nDefinition:\n\nSpatialRelationships:\n\nTransportation joins communities\nTransportation joins communities to services\n\nAnalogous Standards:\n\nOEO: transport network: “A transport network is a supply system of transport network components that enables the transport of people and/or goods.”\n\nReferences:\n\nhttps://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0\nDCCED Transportation dashboard\nhttps://gis.data.alaska.gov/datasets/DCCED::community-transportation-overview/about\n\nProperties:\n\nairport: Answers the question: Does the Community have an airport?\ncargo_barge: Answers the question: Is the Community served by a cargo barge?\ncoastal: Answers the question: Is the Community located on the coast?\nharbor_dock: Answers the question: Does the Community have a harbor with a dock?\nroad_connection:Answers the question: Is the Community connected to a road system to other communities?\nstate_ferry: Answers the question: Is the Community served by a state ferry?\ndescription: a narrative summary of transportation options\n\n\n\n\n4.7.2 Electric Vehicles\n\nOEO: electric vehicle\nOEO: vehicle charging station",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, and Thermal Classes</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fuel, Heating, Thermal, and Transportation Classes</span>"
     ]
   },
   {
@@ -522,7 +522,7 @@
     "href": "energy_data.html#transportation",
     "title": "Appendix D — Energy Data (besides Electricity)",
     "section": "D.8 Transportation",
-    "text": "D.8 Transportation\nDCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0",
+    "text": "D.8 Transportation\n\nD.8.1 DCRA Transportation Overview\n\nDCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0\nDCCED Transportation dashboard includes categorization of airport hubs, operators of harbors, as well as the transportation options.\n\n\n\nD.8.2 Electric Vehicles from DMV\n\nThe DMV collects data on electrical vehicle registrations that includes make, model, location, etc.\nAEA has an MOU with the DMV to analyze that data. The MOU restricts data access to AEA only so these data are not public.\nAEA is in discussions with a private company to build an ESRI-based dashboard to display this data. sample dashboard: https://experience.arcgis.com/experience/7765ad22843f49bbb8dd2179c2f7d3be\nAEDG could combine these data with generation source, PCE status, utility service areas.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>D</span>  <span class='chapter-title'>Energy Data (besides Electricity)</span>"

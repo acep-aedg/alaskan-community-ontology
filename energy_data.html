@@ -304,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./energy_classes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fuel, Heating, and Thermal Classes</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fuel, Heating, Thermal, and Transportation Classes</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -408,7 +408,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#other-information-3" id="toc-other-information-3" class="nav-link" data-scroll-target="#other-information-3"><span class="header-section-number">D.6.2</span> Other Information</a></li>
   </ul></li>
   <li><a href="#geothermal-and-community-scale-ground-source-heat-pumps" id="toc-geothermal-and-community-scale-ground-source-heat-pumps" class="nav-link" data-scroll-target="#geothermal-and-community-scale-ground-source-heat-pumps"><span class="header-section-number">D.7</span> Geothermal and Community-scale Ground Source Heat Pumps</a></li>
-  <li><a href="#transportation" id="toc-transportation" class="nav-link" data-scroll-target="#transportation"><span class="header-section-number">D.8</span> Transportation</a></li>
+  <li><a href="#transportation" id="toc-transportation" class="nav-link" data-scroll-target="#transportation"><span class="header-section-number">D.8</span> Transportation</a>
+  <ul class="collapse">
+  <li><a href="#dcra-transportation-overview" id="toc-dcra-transportation-overview" class="nav-link" data-scroll-target="#dcra-transportation-overview"><span class="header-section-number">D.8.1</span> DCRA Transportation Overview</a></li>
+  <li><a href="#electric-vehicles-from-dmv" id="toc-electric-vehicles-from-dmv" class="nav-link" data-scroll-target="#electric-vehicles-from-dmv"><span class="header-section-number">D.8.2</span> Electric Vehicles from DMV</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -754,9 +758,24 @@ Electric Reliability Organization <!---   value="03e98254-f29e-433f-9357-b1abd45
 </section>
 <section id="transportation" class="level2" data-number="D.8">
 <h2 data-number="D.8" class="anchored" data-anchor-id="transportation"><span class="header-section-number">D.8</span> Transportation</h2>
-<p>DCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0</p>
+<section id="dcra-transportation-overview" class="level3" data-number="D.8.1">
+<h3 data-number="D.8.1" class="anchored" data-anchor-id="dcra-transportation-overview"><span class="header-section-number">D.8.1</span> DCRA Transportation Overview</h3>
+<ul>
+<li>DCRA transportation https://maps.commerce.alaska.gov/server/rest/services/Transportation/Transportation_Overview/MapServer/0</li>
+<li><a href="https://dcced.maps.arcgis.com/apps/webappviewer/index.html?id=3de3ebccbb6b4ba8a9c64609e96199ba">DCCED Transportation dashboard</a> includes categorization of airport hubs, operators of harbors, as well as the transportation options.</li>
+</ul>
+</section>
+<section id="electric-vehicles-from-dmv" class="level3" data-number="D.8.2">
+<h3 data-number="D.8.2" class="anchored" data-anchor-id="electric-vehicles-from-dmv"><span class="header-section-number">D.8.2</span> Electric Vehicles from DMV</h3>
+<ol type="1">
+<li>The DMV collects data on electrical vehicle registrations that includes make, model, location, etc.</li>
+<li>AEA has an MOU with the DMV to analyze that data. The MOU restricts data access to AEA only so these data are not public.</li>
+<li>AEA is in discussions with a private company to build an ESRI-based dashboard to display this data. sample dashboard: https://experience.arcgis.com/experience/7765ad22843f49bbb8dd2179c2f7d3be</li>
+<li>AEDG could combine these data with generation source, PCE status, utility service areas.</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
