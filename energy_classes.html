@@ -380,7 +380,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#natural-gas" id="toc-natural-gas" class="nav-link" data-scroll-target="#natural-gas"><span class="header-section-number">4.2</span> Natural Gas</a>
   <ul class="collapse">
-  <li><a href="#natural-gas-utilities" id="toc-natural-gas-utilities" class="nav-link" data-scroll-target="#natural-gas-utilities"><span class="header-section-number">4.2.1</span> Natural Gas Utilities</a></li>
+  <li><a href="#rca-regulated-natural-gas-utilities" id="toc-rca-regulated-natural-gas-utilities" class="nav-link" data-scroll-target="#rca-regulated-natural-gas-utilities"><span class="header-section-number">4.2.1</span> RCA Regulated Natural Gas Utilities</a></li>
   <li><a href="#natural-gas-storage" id="toc-natural-gas-storage" class="nav-link" data-scroll-target="#natural-gas-storage"><span class="header-section-number">4.2.2</span> Natural Gas Storage</a></li>
   <li><a href="#liquefied-natural-gas-storage" id="toc-liquefied-natural-gas-storage" class="nav-link" data-scroll-target="#liquefied-natural-gas-storage"><span class="header-section-number">4.2.3</span> Liquefied Natural Gas Storage</a></li>
   </ul></li>
@@ -397,7 +397,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#waste-heat-to-power-whp" id="toc-waste-heat-to-power-whp" class="nav-link" data-scroll-target="#waste-heat-to-power-whp"><span class="header-section-number">4.5.3</span> Waste Heat to Power (WHP)</a></li>
   </ul></li>
   <li><a href="#geothermal-and-community-scale-ground-source-heat-pumps" id="toc-geothermal-and-community-scale-ground-source-heat-pumps" class="nav-link" data-scroll-target="#geothermal-and-community-scale-ground-source-heat-pumps"><span class="header-section-number">4.6</span> Geothermal and Community-scale Ground Source Heat Pumps</a></li>
-  <li><a href="#transportation" id="toc-transportation" class="nav-link" data-scroll-target="#transportation"><span class="header-section-number">4.7</span> Transportation</a></li>
+  <li><a href="#transportation" id="toc-transportation" class="nav-link" data-scroll-target="#transportation"><span class="header-section-number">4.7</span> Transportation</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">4.7.1</span> </a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -475,26 +478,69 @@ ul.task-list li input[type="checkbox"] {
 <section id="fuel-distribution" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="fuel-distribution"><span class="header-section-number">4.1.2</span> Fuel Distribution</h3>
 <ul>
+<li><strong>Definition</strong>:<br>
+</li>
+<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Analogous Standards</strong>:</li>
+<li><strong>References</strong>:
+<ul>
 <li>https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00010136">OEO: distribution</a>: “Distribution is the process of delivering goods and services to agents”</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000173">OEO: fuel</a></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>Year: Entities can drop in and out of the program in time</li>
+</ul></li>
 </ul>
 </section>
 <section id="propane" class="level3" data-number="4.1.3">
 <h3 data-number="4.1.3" class="anchored" data-anchor-id="propane"><span class="header-section-number">4.1.3</span> Propane</h3>
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00320011">OEO: liquefied petroleum gas</a>: “Liquefied petroleum gas (LPG) is gas mixture of hydrocarbon gases, mainly propane and butane.”</li>
+</ul>
 </section>
 <section id="bulk-fuel-storage" class="level3" data-number="4.1.4">
 <h3 data-number="4.1.4" class="anchored" data-anchor-id="bulk-fuel-storage"><span class="header-section-number">4.1.4</span> Bulk Fuel Storage</h3>
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00320056">OEO: fuel tank</a></li>
+</ul>
 </section>
 </section>
 <section id="natural-gas" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="natural-gas"><span class="header-section-number">4.2</span> Natural Gas</h2>
-<section id="natural-gas-utilities" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="natural-gas-utilities"><span class="header-section-number">4.2.1</span> Natural Gas Utilities</h3>
+<section id="rca-regulated-natural-gas-utilities" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="rca-regulated-natural-gas-utilities"><span class="header-section-number">4.2.1</span> RCA Regulated Natural Gas Utilities</h3>
+<ul>
+<li><strong>Definition</strong>: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing by transmission or distribution of natural or manufactured gas to the public for compensation;</li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000292">OEO: natural gas</a></li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227">RCA search</a></li>
+<li><a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section A.1.2</span></a></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number</li>
+<li>certificate_name: RCA’s name for the utility</li>
+<li>geom: service area</li>
+</ul></li>
+</ul>
 </section>
 <section id="natural-gas-storage" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="natural-gas-storage"><span class="header-section-number">4.2.2</span> Natural Gas Storage</h3>
 </section>
 <section id="liquefied-natural-gas-storage" class="level3" data-number="4.2.3">
 <h3 data-number="4.2.3" class="anchored" data-anchor-id="liquefied-natural-gas-storage"><span class="header-section-number">4.2.3</span> Liquefied Natural Gas Storage</h3>
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00010237">OEO: liquefied natural gas</a>: “Liquefied natural gas (LNG) is natural gas that has a liquid state of matter.”</li>
+</ul>
 </section>
 </section>
 <section id="pipelines-and-infrastructure" class="level2" data-number="4.3">
@@ -516,12 +562,100 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.5" class="anchored" data-anchor-id="thermal-steam-and-hot-water-utilities-waste-heat-heat-recovery"><span class="header-section-number">4.5</span> Thermal (Steam and Hot Water Utilities, Waste Heat, Heat Recovery)</h2>
 <section id="rca-regulated-steam-heat-utilities" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="rca-regulated-steam-heat-utilities"><span class="header-section-number">4.5.1</span> RCA Regulated Steam Heat Utilities</h3>
+<ul>
+<li><strong>Definition</strong>: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing water, steam, or sewer service to the public for compensation.</li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li>https://schema.org/Corporation</li>
+<li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000213">OEO: heating and cooling sector</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000132">OEO: district heating</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020008">OEO: heating grid component</a></li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li><a href="https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&amp;p=typesearch&amp;cert=&amp;entity=&amp;utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86">RCA search</a></li>
+<li><a href="legal_definitions.html#sec-utility-definitions" class="quarto-xref"><span>Section A.1.2</span></a></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number</li>
+<li>certificate_name: RCA’s name for the utility</li>
+<li>geom: service area</li>
+</ul></li>
+</ul>
 </section>
 <section id="combined-heat-and-power-chp" class="level3" data-number="4.5.2">
 <h3 data-number="4.5.2" class="anchored" data-anchor-id="combined-heat-and-power-chp"><span class="header-section-number">4.5.2</span> Combined Heat and Power (CHP)</h3>
+<ul>
+<li><strong>Definition</strong>: From OEO, “A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid.”</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>CHP plants provide heat to nearby buildings (Touches?)</li>
+<li>CHP plants are Within Communities</li>
+<li>TOUCHES PowerLines</li>
+<li>WITHIN Grids</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00240011">OEO: combined heat and power plant</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000213">OEO: heating and cooling sector</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000132">OEO: district heating</a></li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00020008">OEO: heating grid component</a></li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>DOE’s <a href="https://doe.icfwebservices.com/state/chp/AK">Combined Heat and Power Installations in Alaska</a></li>
+<li>There is a boolean column for this in the <a href="https://acep-uaf.github.io/ak-energy-statistics-2011_2021/">Alaska Energy Statistics Workbooks</a> Generation Plants table</li>
+</ul></li>
+<li><strong>Properties</strong>: based on DoE’s database
+<ul>
+<li>City: Community</li>
+<li>Organization Name: operator</li>
+<li>Facility Name: system name (like “Baxter Senior Living Center” or “Angoon”)</li>
+<li>Application: like “Remote Community”, “Nursing Homes”, or “Hospitals/Healthcare”</li>
+<li>SIC4: Standard Industrial Classification is a system for classifying industries (from OHSA)</li>
+<li>NAICS: North American Industry Classification System (NAICS) for classifying business (from census)</li>
+<li>OpYear</li>
+<li>Latest Install Year</li>
+<li>Capacity (kW)</li>
+<li>Prime Mover: like “Reciprocating Engine” or “Organic Rankine Cycle”</li>
+<li>Fuel Class Prim Fuel: coal, oil, propane, natural gas, etc</li>
+<li>Last Verified Project Profile Link<br>
+</li>
+<li>Microgrid: is it part of a microgrid?</li>
+<li>Critical Infrastructure: does it provide essential services and functions?</li>
+</ul></li>
+</ul>
 </section>
 <section id="waste-heat-to-power-whp" class="level3" data-number="4.5.3">
 <h3 data-number="4.5.3" class="anchored" data-anchor-id="waste-heat-to-power-whp"><span class="header-section-number">4.5.3</span> Waste Heat to Power (WHP)</h3>
+<ul>
+<li><strong>Definition</strong>: EPA’s definition is “Waste heat to power (WHP) is the process of capturing heat discarded by an existing thermal process and using that heat to generate power”</li>
+<li><strong>SpatialRelationships</strong>:
+<ul>
+<li>TOUCHES PowerLines</li>
+<li>WITHIN Grids</li>
+</ul></li>
+<li><strong>Analogous Standards</strong>:
+<ul>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000031">OEO: power plant</a> - “an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid.”</li>
+<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00000440">OEO: waste power plant</a> may be this, or it might be from refuse (i.e.&nbsp;garbage)</li>
+</ul></li>
+<li><strong>References</strong>:
+<ul>
+<li>EPA’s definition <a href="https://www.epa.gov/sites/default/files/2015-07/documents/waste_heat_to_power_systems.pdf">Waste Heat to Power Systems</a></li>
+<li>Unalaska 2015c announced <a href="https://www.ci.unalaska.ak.us/publicutilities/page/waste-heat-recovery-project">Rankin Cycle (ORC) heat recovery generators</a> at the Dutch Harbor Power Plant.
+<ul>
+<li>Unalaska’s WHP does not seem to be in the <a href="https://acep-uaf.github.io/ak-energy-statistics-2011_2021/">Alaska Energy Statistics Workbooks</a> Generation Plants table</li>
+</ul></li>
+</ul></li>
+<li><strong>Properties</strong>:
+<ul>
+<li>unknown</li>
+</ul></li>
+</ul>
 </section>
 </section>
 <section id="geothermal-and-community-scale-ground-source-heat-pumps" class="level2" data-number="4.6">
@@ -529,8 +663,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="transportation" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="transportation"><span class="header-section-number">4.7</span> Transportation</h2>
+<section id="section" class="level3" data-number="4.7.1">
+<h3 data-number="4.7.1" class="anchored" data-anchor-id="section"><span class="header-section-number">4.7.1</span> </h3>
+<ul>
+<li><strong>Definition</strong>:<br>
+</li>
+<li><strong>SpatialRelationships</strong>:</li>
+<li><strong>Analogous Standards</strong>:</li>
+<li><strong>References</strong>:</li>
+<li><strong>Properties</strong>:
+<ul>
+<li>Year: Entities can drop in and out of the program in time</li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
