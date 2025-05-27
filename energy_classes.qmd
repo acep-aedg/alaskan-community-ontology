@@ -39,21 +39,48 @@ Unfortunately, without specific data sources to provide and constrain attributes
 
 ### Fuel Distribution
 
-- https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about
+
+- **Definition**:  
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+- **References**:
+  - https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about
+  - [OEO: distribution](http://openenergy-platform.org/ontology/oeo/OEO_00010136): "Distribution is the process of delivering goods and services to agents"
+  - [OEO: fuel](http://openenergy-platform.org/ontology/oeo/OEO_00000173)
+- **Properties**:
+  - Year: Entities can drop in and out of the program in time
+
 
 ### Propane
 
+- [OEO: liquefied petroleum gas](http://openenergy-platform.org/ontology/oeo/OEO_00320011): "Liquefied petroleum gas (LPG) is gas mixture of hydrocarbon gases, mainly propane and butane."
+
 ### Bulk Fuel Storage
 
+- [OEO: fuel tank](http://openenergy-platform.org/ontology/oeo/OEO_00320056)
 
 ## Natural Gas
 
-### Natural Gas Utilities
+### RCA Regulated Natural Gas Utilities
+- **Definition**: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing by transmission or distribution of natural or manufactured gas to the public for compensation; 
+- **Analogous Standards**:
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - [OEO: natural gas](http://openenergy-platform.org/ontology/oeo/OEO_00000292)
+- **References**:
+  - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=41ccfb21-50d0-481e-aaf3-bd9c73153227) 
+  - @sec-utility-definitions
+- **Properties**:
+  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
+  - certificate_name: RCA's name for the utility
+  - geom: service area
 
 ### Natural Gas Storage
 
 ### Liquefied Natural Gas Storage
 
+- [OEO: liquefied natural gas](http://openenergy-platform.org/ontology/oeo/OEO_00010237): "Liquefied natural gas (LNG) is natural gas that has a liquid state of matter."
 
 ## Pipelines and Infrastructure
 
@@ -70,13 +97,83 @@ Unfortunately, without specific data sources to provide and constrain attributes
 ## Thermal (Steam and Hot Water Utilities, Waste Heat, Heat Recovery)
 
 ### RCA Regulated Steam Heat Utilities
+- **Definition**: A corporation, person, agency, authority, or other legal entity or instrumentality aligned with distribution facilities for furnishing water, steam, or sewer service to the public for compensation. 
+- **Analogous Standards**:
+  - https://schema.org/Corporation
+  - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
+  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
+  - [OEO: heating and cooling sector](http://openenergy-platform.org/ontology/oeo/OEO_00000213)
+  - [OEO: district heating](http://openenergy-platform.org/ontology/oeo/OEO_00000132)
+  - [OEO: heating grid component](http://openenergy-platform.org/ontology/oeo/OEO_00020008)
+- **References**:
+  - [RCA search](https://rca.alaska.gov/RCAWeb/RCALibrary/SearchResults.aspx?t=cert&p=typesearch&cert=&entity=&utiltype=bcff05fe-74e7-4c68-b9a8-ca3469ef5f86)
+  - @sec-utility-definitions
+- **Properties**:
+  - certificate_number: RCA Certificate of Public Convenience and Necessity (CPCN) number
+  - certificate_name: RCA's name for the utility
+  - geom: service area
+
 
 ### Combined Heat and Power (CHP)
+- **Definition**:  From OEO, "A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid."
+- **SpatialRelationships**:
+  - CHP plants provide heat to nearby buildings (Touches?)
+  - CHP plants are Within Communities
+  - TOUCHES PowerLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [OEO: combined heat and power plant](http://openenergy-platform.org/ontology/oeo/OEO_00240011)
+  - [OEO: heating and cooling sector](http://openenergy-platform.org/ontology/oeo/OEO_00000213)
+  - [OEO: district heating](http://openenergy-platform.org/ontology/oeo/OEO_00000132)
+  - [OEO: heating grid component](http://openenergy-platform.org/ontology/oeo/OEO_00020008)
+- **References**:
+  - DOE's [Combined Heat and Power Installations in Alaska](https://doe.icfwebservices.com/state/chp/AK)
+  - There is a boolean column for this in the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) Generation Plants table
+- **Properties**: based on DoE's database
+  - City: Community
+  - Organization Name: operator
+  -	Facility Name: system name (like "Baxter Senior Living Center" or "Angoon")
+  - Application: like "Remote Community", "Nursing Homes", or "Hospitals/Healthcare"
+  - SIC4: Standard Industrial Classification is a system for classifying industries (from OHSA)
+  - NAICS: North American Industry Classification System (NAICS) for classifying business (from census)
+  - OpYear
+  - Latest Install Year
+  - Capacity (kW)
+  - Prime Mover: like "Reciprocating Engine" or "Organic Rankine Cycle"
+  -	Fuel Class Prim Fuel: coal, oil, propane, natural gas, etc 
+  - Last Verified	Project Profile Link	
+  - Microgrid: is it part of a microgrid?
+  - Critical Infrastructure: does it provide essential services and functions?
+
 
 ### Waste Heat to Power (WHP)
+- **Definition**:  EPA's definition is "Waste heat to power (WHP) is the process of capturing heat discarded by an existing
+thermal process and using that heat to generate power"
+- **SpatialRelationships**: 
+  - TOUCHES PowerLines
+  - WITHIN Grids
+- **Analogous Standards**:
+  - [OEO: power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000031) - "an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid."
+  - [OEO: waste power plant](http://openenergy-platform.org/ontology/oeo/OEO_00000440) may be this, or it might be from refuse (i.e. garbage)
+- **References**:
+  - EPA's definition [Waste Heat to Power Systems](https://www.epa.gov/sites/default/files/2015-07/documents/waste_heat_to_power_systems.pdf)
+  - Unalaska 2015c announced [Rankin Cycle (ORC) heat recovery generators](https://www.ci.unalaska.ak.us/publicutilities/page/waste-heat-recovery-project) at the Dutch Harbor Power Plant.
+    - Unalaska's WHP does not seem to be in the [Alaska Energy Statistics Workbooks](https://acep-uaf.github.io/ak-energy-statistics-2011_2021/) Generation Plants table
+- **Properties**:
+  - unknown
 
 
 ## Geothermal and Community-scale Ground Source Heat Pumps
 
 
 ## Transportation
+
+### 
+- **Definition**:  
+- **SpatialRelationships**: 
+- **Analogous Standards**:
+- **References**:
+- **Properties**:
+  - Year: Entities can drop in and out of the program in time
+
+
