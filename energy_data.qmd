@@ -4,11 +4,13 @@ subtitle: "Ideas for sources of energy data for the Alaska Energy Data Gateway"
 date: 2025-05-28
 ---
 
+This page is an informal compilation of sources of a wide variety of energy data in Alaska. Electricity is not included because our coverage of that sector is based on the Energy Statistics Workbooks and so is settled for the time being. Instead, this pages describes a range of possible directions in which AEDG data collection could go. Some sources have already been included in the AEDG; these have corresponding Classes in {#sec-fuel}. More Classes will be added as we focus on the most applicable data types.
+
 ## Other State Resources {#sec-energy-data}
 
 ### Definitions
 
-State of Alaska [Statute AS 42.05.990] (https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which relate to energy. However, only electrical utilities were displayed in the dashboard of the previous version of AEDG. Because these classes are all without AEDG precedent, we'll begin with a summary of @sec-utility-definitions: A “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for furnishing to the public for compensation:
+State of Alaska [Statute AS 42.05.990](https://www.akleg.gov/basis/statutes.asp#42.05.990) includes the definition of utilities, several of which relate to energy. However, only electrical utilities were displayed in the dashboard of the previous version of AEDG. Because these classes are all without AEDG precedent, we'll begin with a summary of @sec-utility-definitions: A “public utility” or “utility”  includes every corporation whether public, cooperative, or otherwise, company, individual, or association of individuals, their lessees, trustees, or receivers appointed by a court, that owns, operates, manages, or controls any plant, pipeline, or system for furnishing to the public for compensation:
   
 - generation, transmission, or distribution of electrical service
 - steam (grouped with water and sewer)
@@ -47,34 +49,30 @@ As a funder of energy projects in Alaska, they distribute documents on projects 
 ## Fuel (not natural gas)
 
 ### DCRA's Heating and Gasoline Surveys
-- **Definition**: In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.
-- **SpatialRelationships**: 
-  - INTERSECTS Communities (as in only includes some)
-  - Averaged into DrcaEconomicRegions
-- **Analogous Standards**:
-  - [OEO:gasoline](http://openenergy-platform.org/ontology/oeo/OEO_00000183) 
-  - [OEO:heating oil](http://openenergy-platform.org/ontology/oeo/OEO_00000211)
-  - [OEO:monetary price](http://openenergy-platform.org/ontology/oeo/OEO_00020427)
-  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities, in this case fuel
-- **References**:
+
+In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.
+
   - https://storymaps.arcgis.com/stories/6d6a33a3d9a74723a2f476c26ecfdf21
   - https://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/61
   - https://maps.commerce.alaska.gov/server/rest/services/Services/CDO_Utilities/MapServer/45
   - https://gis.data.alaska.gov/datasets/DCCED::heating-fuel-price-all-years/about
   - https://gis.data.alaska.gov/datasets/DCCED::gas-prices-all-years/about
   - https://gis.data.alaska.gov/maps/DCCED::fuel-delivery-method
-- **Properties**:
-  - Community (100) or Economic Region
-  - Heating Fuel Retail Price Per Gallon
-  - Heating Fuel Vendor
-  - Gas Retail Price Per Gallon
-  - Gas Vendor
-  - Reporting Year: survey year (since 2005)
-  - Reporting Season: summer or winter
-  - geometry (WKT Point) or (WKT Polygon): 100 points for communities and boundaries for economic regions
+
 
 
 ### Fuel Distribution
+
+####  DCRA Fuel Distribution from the Community Surveys
+
+When surveying communities for fuel prices, DCRA also determined how fuel is delivered, so there is an ancillary dataset to DCRA's fuel survey for fuel delivery methods. 
+
+- https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about is "Primary method by which a community receives its fuel shipments according to the biannual DCRA Alaska Fuel Survey."
+  - CommunityName
+  - Fuel Delivery Method: Barge, Plane, Road, Ice Road (not Rail?)
+  - AsOfDate: when the survey was performed
+
+#### Private Companies
 
 Fuel distribution is performed by private companies; we've found no statewide record of costs other than the DCRA surveys described above. One possible lead to these data is found in the ACEP blog post [To be the best utility: Reflections from former AVEC president and CEO, Meera Kohler](https://www.uaf.edu/acep-blog/to-be-the-best-utility-reflections-from-former-avec-president-and-ceo-meera-kohler.php), which describes the collaboration between the [Alaska Village Electric Cooperative](https://avec.org/) (AVEC) and Vitus Marine LLC to provide more affordable fuel to Alaskan villages. Vitus Marine is one branch of Vitus Energy, and in case outreach to Vitus is attempted in the future to get more information on energy prices, here is a little more information on them:
 
@@ -82,15 +80,16 @@ Fuel distribution is performed by private companies; we've found no statewide re
 - [Vitus Terminals](https://www.vitusterminals.com) distributes fuel to commercial and retail customers via shore-based operations.
 - Central Alaska Energy LLC is developing a 4.8 million gallon fuel terminal at [Port Mackenzie](https://matsugov.us/newconstructiondevelopment/35-communication/landing-pages/13880-port) and plans to market wholesale gas and diesel products to industrial customers.
 
+There is also:
+
 - Ruby Marine. "Many people from Galena ship in heating fuel, gasoline, and
 propane through this barge service." [Galena welcome packet](https://www.galenaalaska.org/wp-content/uploads/2024/03/Galena-Welcome-Packet_2023-24-1-1.pdf)
 - [Crowley](https://www.crowley.com/alaska/) has many [locations](https://www.crowley.com/alaska/locations/).
 
 #### By Air
 
-There is a special category of communities who have fuel delivered by airplant. AK DOT is interested in seeing a list of these for safety assessments, and Mike Jones is interested because of his research on airports. There is an ancillary dataset to DCRA's fuel survey for fuel delivery methods. 
+There is a special category of communities who have fuel delivered by airplane. AK DOT is interested in seeing a list of these for safety assessments, and Mike Jones is interested because of his research on airports.
 
-- https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about
 
 ### Propane
 
@@ -119,6 +118,7 @@ Dept. of Commerce, Community, & Economic Development. This is "A list of bulk fu
 #### Other information
 
 - [2025 Report Card for Alaska's Infrastructure](https://infrastructurereportcard.org/wp-content/uploads/2025/03/2025-alaska-report-card-full-report.pdf.pdf) gives energy infrastructure a D+ grade! The discussion of bulk fuel is partly based partly on info credited to the Denali Commission.
+- We could contact the Denali Commission directly.
 - AEA has been inventorying infrastructure with drones and imagery, but this is sensitive information.
 
 
@@ -170,7 +170,7 @@ Dept. of Commerce, Community, & Economic Development. This is "A list of bulk fu
 
 - See costs of heating oil as @sec-fuel
 - State of Alaska's Department of Health [Heating Assistance Program](https://health.alaska.gov/en/services/division-of-public-assistance-dpa-services/heating-assistance/)
-- Heat pumps
+- Residential heat pumps (likely air source)
 - ARIS database and retrofits by Alaska Housing Finance Corporation
 
 
