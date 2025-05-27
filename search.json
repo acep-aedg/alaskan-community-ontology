@@ -214,7 +214,7 @@
     "href": "relations.html",
     "title": "5  Relations",
     "section": "",
-    "text": "5.1 Applicable Standards\nRelations can be hierarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.\nArcMap spatial relations\nGeoSPARQL - same except for Relate\nOBO Relations Ontology “is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.” It is a foundational element of the Open Energy Ontology. - In the OEO Terminology Service, only one instance of RO usage could be found: is homeomorphic for which has a mathematical definition involving sets.",
+    "text": "5.1 Applicable Standards\nRelations can be hierarchical (taxonomy) or could form a network or graph (semantic web) of the various entities. These are based on domain specific rules (Axioms), and that defines an ontology. Relations enable AI to infer new information without people having to explicitly define everything.\nArcMap spatial relations\nGeoSPARQL - same except for Relate\nOBO Relations Ontology “is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies.” It is a foundational element of the Open Energy Ontology. In the OEO Terminology Service, only one instance of RO usage could be found: is homeomorphic for which has a mathematical definition involving sets.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Relations</span>"
     ]
