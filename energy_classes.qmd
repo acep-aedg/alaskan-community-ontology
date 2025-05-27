@@ -46,7 +46,7 @@ The [Regulatory Commission of Alaska (RCA)'s search](https://rca.alaska.gov/RCAW
 As a funder of energy projects in Alaska, they distribute documents on projects and renewable energy. It's hard to know how to integrate these into AEDG.
 
 
-## Fuel {#sec-fuel}
+## Fuel (not natural gas) {#sec-fuel}
 
 ### DCRA's Heating and Gasoline Surveys
 - **Definition**: In 2005, the Division of Community and Regional Affairs (DCRA) began collecting prices of heating fuel and unleaded gasoline in 100 select communities. The prices for heating fuel in these 100 communities are collected via a telephone survey of each fuel retailer. The communities have remained constant since the project’s inception and the reported prices should be considered representative of what a community resident would have paid for a gallon of heating fuel (including tax) on the day of contact. Values are also presented as averages for DCRA Economic Regions.
@@ -83,6 +83,23 @@ Fuel distribution is performed by private companies; we've found no statewide re
 - Vitus Marine provides fuel and freight to communities along Western Alaska’s coast and tributary rivers.
 - [Vitus Terminals](https://www.vitusterminals.com) distributes fuel to commercial and retail customers via shore-based operations.
 - Central Alaska Energy LLC is developing a 4.8 million gallon fuel terminal at [Port Mackenzie](https://matsugov.us/newconstructiondevelopment/35-communication/landing-pages/13880-port) and plans to market wholesale gas and diesel products to industrial customers.
+
+#### By Air
+
+There is a special category of communities who have fuel delivered by airplant. AK DOT is interested in seeing a list of these for safety assessments, and Mike Jones is interested because of his research on airports. There is an ancillary dataset to DCRA's fuel survey for fuel delivery methods. 
+
+- https://gis.data.alaska.gov/datasets/DCCED::fuel-delivery-method/about
+
+### Propane
+
+Propane is a byproduct of natural gas processing. The distribution chain is very different than that for natural gas.
+
+- Distributors
+  - https://www.propanealaska.com/
+  - https://www.crowley.com/alaska/commercial-fuels/propane/
+- Prices
+  - https://www.consultenergy.org/propane/ak/ has prices for Fairbanks and Anchorage
+  - [EIA residential propane](https://www.eia.gov/dnav/pet/pet_pri_wfr_a_EPLLPA_PRS_dpgal_w.htm)
 
 
 ### Bulk Fuel Storage
