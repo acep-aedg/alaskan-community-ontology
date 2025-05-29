@@ -51,8 +51,7 @@ date: 2025-05-23
   - https://ancsaregional.com/about-ancsa/#mandates
   - https://ancsa.lbblawyers.com/native-corporations.htm (list of 179)
   - https://dcra-cdo-dcced.opendata.arcgis.com/datasets/DCCED::native-village-corporations/ (215 records)
-  - https://onemap-bia-geospatial.hub.arcgis.com/datasets/BIA-Geospatial::alaska-native-villages/ (list of 228 with tribal headquarters, which are in Anchorage in 5 cases)
-  - https://dnr.alaska.gov/mlw/paad/17b-easements/search/ (list of 245 communities with different corporation names than BIA layer)
+  - https://dnr.alaska.gov/mlw/paad/17b-easements/search/ (list of 245)
   - https://kuskokwim.com/
 - **Properties**:
   - geometry (WKT Point): longitude, latitude of place or of headquarters

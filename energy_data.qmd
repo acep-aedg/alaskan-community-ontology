@@ -239,7 +239,6 @@ thermal process and using that heat to generate power"
 
 - Naknek / King Salmon in 2010c
 - Chena Hot Springs
-
 - Seward
   - Sewards Alaska Sea Life Center [ASLC shifting 98% of the Center's heating needs from fossil fuel to ocean water as source heat](https://alaskasealife.org/news_item/34)
   - [Seward Heat Loop Project](https://digital.akbizmag.com/issue/august-2024/cold-water-warm-city/). Design funded by AEA. US Department of Energy (DOE) grant for later phases. It is in AML's [Alaska Energy Hub](https://experience.arcgis.com/experience/f03f5040b0e5486da16a2af9b984f210/page/Home/)
