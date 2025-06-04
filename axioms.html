@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9f0968ba3d1aa3445c8135c34b44dc96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-348d15f7f182aba38e3df54e6e53de97.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-9f0968ba3d1aa3445c8135c34b44dc96.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-03fb0c48514f8f3b3611eb54e83d3f6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-789b0e15de72aab8a0c32b6e308e8331.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-03fb0c48514f8f3b3611eb54e83d3f6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -353,12 +353,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">AEDG Grids</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./energy_data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Energy Data (besides Electricity)</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -384,8 +378,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#energy-related" id="toc-energy-related" class="nav-link" data-scroll-target="#energy-related"><span class="header-section-number">6.2</span> Energy-Related</a>
   <ul class="collapse">
   <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid"><span class="header-section-number">6.2.1</span> Grid</a></li>
-  <li><a href="#electric-utility" id="toc-electric-utility" class="nav-link" data-scroll-target="#electric-utility"><span class="header-section-number">6.2.2</span> Electric Utility</a></li>
-  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">6.2.3</span> IPP</a></li>
+  <li><a href="#plant-or-powerstation" id="toc-plant-or-powerstation" class="nav-link" data-scroll-target="#plant-or-powerstation"><span class="header-section-number">6.2.2</span> Plant or PowerStation</a></li>
+  <li><a href="#electric-utility" id="toc-electric-utility" class="nav-link" data-scroll-target="#electric-utility"><span class="header-section-number">6.2.3</span> Electric Utility</a></li>
+  <li><a href="#ipp" id="toc-ipp" class="nav-link" data-scroll-target="#ipp"><span class="header-section-number">6.2.4</span> IPP</a></li>
   </ul></li>
   <li><a href="#regarding-time" id="toc-regarding-time" class="nav-link" data-scroll-target="#regarding-time"><span class="header-section-number">6.3</span> Regarding Time</a></li>
   </ul>
@@ -440,7 +435,17 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Communities are primarily determined by the expectations of the AEDG audience.</li>
 <li>Communities should be equal to a single entity (preferred)</li>
-<li>Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)</li>
+<li>Transportation joins Communities
+<ul>
+<li>Transportation joins Communities to services such as fuel distribution</li>
+</ul></li>
+<li>A Community has a measured population
+<ul>
+<li>The DCRA uses Census Designated Places as Communities
+<ul>
+<li>A city could be separated into multiple Communities. For example, parts of Fairbanks such as College and Farmers Loop are listed separately in AEDG.</li>
+</ul></li>
+</ul></li>
 </ul>
 </section>
 <section id="indigenous" class="level3" data-number="6.1.3">
@@ -504,20 +509,34 @@ ul.task-list li input[type="checkbox"] {
 <section id="grid" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="grid"><span class="header-section-number">6.2.1</span> Grid</h3>
 <ul>
-<li>Is a physical structure that supplies electricity to Communities
+<li>A Grid is a physical structure that supplies electricity within a single Community or to multiple Communities
 <ul>
-<li>A Grid has the physical entities of PowerStations and PowerLines</li>
+<li>A Grid consists of physical entities: PowerStations and PowerLines</li>
 </ul></li>
-<li>Can be composed of multiple Grids connected by interties
+<li>A Grid can be subdivided into multiple Grids connected by Interties
 <ul>
-<li>Interties are established on particular dates, so Grid definition can change over time</li>
+<li>An Interties is established on particular dates, so a Grid’s definition can evolve over time.</li>
 </ul></li>
-<li>Power Stations connected to a Grid generate power to supply a load.</li>
 <li><a href="https://www.nrel.gov/grid/microgrids">NREL defines a microgrid</a> as “a group of interconnected loads and distributed energy resources that acts as a single controllable entity with respect to the grid”.</li>
 </ul>
 </section>
-<section id="electric-utility" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="electric-utility"><span class="header-section-number">6.2.2</span> Electric Utility</h3>
+<section id="plant-or-powerstation" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="plant-or-powerstation"><span class="header-section-number">6.2.2</span> Plant or PowerStation</h3>
+<ul>
+<li>A Plant generates power and is connected to a Grid</li>
+<li>A Plant can also generate heat for distribution (Combined Heat and Power, CHP)</li>
+<li>A plant can generate power from waste heat (Waste Heat to Power, WHP)</li>
+<li>Plants report to the EIA with Form 923</li>
+<li>In the Energy Statistics Workbooks, a Plant has a single Operator
+<ul>
+<li>An Operator can have multiple Plants</li>
+</ul></li>
+<li>A Plant runs on a reported fuel type such as coal or solar power.</li>
+<li>A Plant has generating units that are driven by a prime mover such as an internal combustion engine or photovoltaic cell.</li>
+</ul>
+</section>
+<section id="electric-utility" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="electric-utility"><span class="header-section-number">6.2.3</span> Electric Utility</h3>
 <ul>
 <li>An Electric Utility can operate a single Grid (KEA)</li>
 <li>An Electric Utility can operate multiple Grids (AVEC or AP&amp;T)</li>
@@ -525,6 +544,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).</li>
 <li>Anchorage Municipal Light &amp; Power (ML&amp;P) used to make that 6, but they were absorbed by CEA</li>
+</ul></li>
+<li>Some Electric Utilities are eligible to report to the Power Cost Equalization program</li>
+<li>Some Electric Utilities are required to report to FERC</li>
+<li>An Electric Utility can operate its own power generation (Plants) or purchase power from other Electric Utilities or Independent Power Producers
+<ul>
+<li>Not every Operator is a Electric Utility</li>
 </ul></li>
 <li>Electric Utility service areas are regulated by the RCA
 <ul>
@@ -544,8 +569,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="ipp" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="ipp"><span class="header-section-number">6.2.3</span> IPP</h3>
+<section id="ipp" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="ipp"><span class="header-section-number">6.2.4</span> IPP</h3>
 <ul>
 <li>Many kinds of organizations can act as an Independent Power Producer (IPP), developing, owning, and operating renewable and other types of energy assets.
 <ul>
