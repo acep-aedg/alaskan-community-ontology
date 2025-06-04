@@ -1,8 +1,17 @@
 ---
 title: "Energy Data (besides Electricity)"
 subtitle: "Ideas for sources of energy data for the Alaska Energy Data Gateway"
-date: 2025-05-28
+date: 2025-06-04
 ---
+
+<!-- 
+     This page was removed from the book because of its unfinished quality.
+     Its contents were copied to a Google Doc for easier collaboration.
+     https://docs.google.com/document/d/1bfCtU3Cq_sN4SZQFJbB8BM8HYkGNM1wIihU-KpYch1o/edit?usp=sharing 
+     ELD 
+     6/4/2025
+ -->
+
 
 This page is an informal compilation of sources of a wide variety of energy data in Alaska. Electricity is not included because our coverage of that sector is based on the Energy Statistics Workbooks and so is settled for the time being. Instead, this pages describes a range of possible directions in which AEDG data collection could go. Some sources have already been included in the AEDG; these have corresponding Classes in {#sec-fuel}. More Classes will be added as we focus on the most applicable data types.
 

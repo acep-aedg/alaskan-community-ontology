@@ -1,10 +1,10 @@
 ---
 title: "Fuel, Heating, Thermal, and Transportation Classes"
 subtitle: "Descriptions of Energy-related entities (besides Electricity) in the Alaska Community Ontology"
-date: 2025-05-28
+date: 2025-06-04
 ---
 
-Unfortunately, without specific data sources to provide and constrain attributes, some classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified in @sec-energy-data, this page will evolve. For now, it is incomplete.
+Unfortunately, without specific data sources to provide and constrain attributes, some classes and relationships cannot yet be defined within the context of AEDG. As data sources are identified, this page will evolve. For now, it is incomplete.
 
 
 ## Fuel (not natural gas) {#sec-fuel}
@@ -154,8 +154,7 @@ Unfortunately, without specific data sources to provide and constrain attributes
 
 
 ### Waste Heat to Power (WHP)
-- **Definition**:  EPA's definition is "Waste heat to power (WHP) is the process of capturing heat discarded by an existing
-thermal process and using that heat to generate power"
+- **Definition**:  EPA's definition is "Waste heat to power (WHP) is the process of capturing heat discarded by an existing thermal process and using that heat to generate power"
 - **SpatialRelationships**: 
   - TOUCHES PowerLines
   - WITHIN Grids

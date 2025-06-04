@@ -18,7 +18,11 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 ### Community
 - Communities are primarily determined by the expectations of the AEDG audience.
 - Communities should be equal to a single entity (preferred)
-- Communities could be collections of entities (example: Fairbanks should include College and Farmers Loop, which are separate Community Designated Places in the census)
+- Transportation joins Communities
+  - Transportation joins Communities to services such as fuel distribution
+- A Community has a measured population
+  - The DCRA uses Census Designated Places as Communities
+    - A city could be separated into multiple Communities. For example, parts of Fairbanks such as College and Farmers Loop are listed separately in AEDG.
 
 ### Indigenous 
 
@@ -63,12 +67,22 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A Community can be served by multiple Energy Utilities
 
 ### Grid
-- Is a physical structure that supplies electricity to Communities
-  - A Grid has the physical entities of PowerStations and PowerLines
-- Can be composed of multiple Grids connected by interties
-  - Interties are established on particular dates, so Grid definition can change over time
-- Power Stations connected to a Grid generate power to supply a load.
+- A Grid is a physical structure that supplies electricity within a single Community or to multiple Communities
+  - A Grid consists of physical entities: PowerStations and PowerLines
+- A Grid can be subdivided into multiple Grids connected by Interties
+  - An Interties is established on particular dates, so a Grid's definition can evolve over time.
 - [NREL defines a microgrid](https://www.nrel.gov/grid/microgrids) as "a group of interconnected loads and distributed energy resources that acts as a single controllable entity with respect to the grid". 
+
+### Plant or PowerStation
+- A Plant generates power and is connected to a Grid
+- A Plant can also generate heat for distribution (Combined Heat and Power, CHP)
+- A plant can generate power from waste heat (Waste Heat to Power, WHP)
+- Plants report to the EIA with Form 923
+- In the Energy Statistics Workbooks, a Plant has a single Operator
+  - An Operator can have multiple Plants
+- A Plant runs on a reported fuel type such as coal or solar power.
+- A Plant has generating units that are driven by a prime mover such as an internal combustion engine or photovoltaic cell.
+
 
 ### Electric Utility
 - An Electric Utility can operate a single Grid (KEA)
@@ -76,6 +90,10 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - An Electric Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
   - The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
   - Anchorage Municipal Light & Power (ML&P) used to make that 6, but they were absorbed by CEA
+- Some Electric Utilities are eligible to report to the Power Cost Equalization program
+- Some Electric Utilities are required to report to FERC
+- An Electric Utility can operate its own power generation (Plants) or purchase power from other Electric Utilities or Independent Power Producers
+  - Not every Operator is a Electric Utility
 - Electric Utility service areas are regulated by the RCA
   - In general, Electric Utilities cannot compete against each other (@sec-electricity-competition)
   - Electric Utility service areas do not overlap
