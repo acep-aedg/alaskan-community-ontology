@@ -88,7 +88,7 @@ Unfortunately, without specific data sources to provide and constrain attributes
 
 ## Pipelines and Infrastructure
 
-- [OEO: distribution](http://openenergy-platform.org/ontology/oeo/OEO_00010136): "Distribution is the process of delivering goods and services to agents" ?
+- [OEO: distribution](http://openenergy-platform.org/ontology/oeo/OEO_00010136): "Distribution is the process of delivering goods and services to agents"
 
 
 ## Heating
@@ -124,7 +124,7 @@ Unfortunately, without specific data sources to provide and constrain attributes
 ### Combined Heat and Power (CHP)
 - **Definition**:  From OEO, "A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid."
 - **SpatialRelationships**:
-  - CHP plants provide heat to nearby buildings (Touches?)
+  - CHP plants provide heat to nearby buildings
   - CHP plants are Within Communities
   - TOUCHES PowerLines
   - WITHIN Grids

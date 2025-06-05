@@ -26,8 +26,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 
 ### Indigenous 
 
-- Tribes are nations and should be federally recognized (but sometimes are not)
-- Native Village Corporations are not a subset of the Native Regional Corporations. They are a separate type of entity.
+- Alaska Native village corporations are not subsets of Alaska Native regional corporations. These are independent types of entities.
 
 ### Legislative Districts
 
@@ -77,7 +76,7 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - A Plant generates power and is connected to a Grid
 - A Plant can also generate heat for distribution (Combined Heat and Power, CHP)
 - A plant can generate power from waste heat (Waste Heat to Power, WHP)
-- Plants report to the EIA with Form 923
+- Some plants report to the U.S. Energy Information Administration (EIA) with Form 923
 - In the Energy Statistics Workbooks, a Plant has a single Operator
   - An Operator can have multiple Plants
 - A Plant runs on a reported fuel type such as coal or solar power.
@@ -90,8 +89,8 @@ Axioms are domain-specific rules that encapsulate what we know about the Classes
 - An Electric Utility can operate a subset of a Grid. In other words, a Grid could be operated by multiple Utilities
   - The Railbelt is serviced by 5 different Electric Utilities: Golden Valley Electric Association (GVEA), Matanuska Electric Association (MEA), Chugach Electric Association (CEA), Homer Electric Association (HEA), and the City of Seward Electric System (SES).
   - Anchorage Municipal Light & Power (ML&P) used to make that 6, but they were absorbed by CEA
-- Some Electric Utilities are eligible to report to the Power Cost Equalization program
-- Some Electric Utilities are required to report to FERC
+- Some Electric Utilities are eligible to report to the Power Cost Equalization (PCE) program
+- Some Electric Utilities are required to report to Federal Energy Regulatory Commission (FERC)
 - An Electric Utility can operate its own power generation (Plants) or purchase power from other Electric Utilities or Independent Power Producers
   - Not every Operator is a Electric Utility
 - Electric Utility service areas are regulated by the RCA

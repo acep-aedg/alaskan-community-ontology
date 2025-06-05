@@ -17,30 +17,28 @@ date: 2025-05-23
   - fips_code (integer): Federal Information Processing Standard, identifying geographic locations. unique identifier.
   - geometry (WKT Point): longitude, latitude of the Community for convenience of display. Perhaps the centroid of the Municipality or a commonly accepted "place".
   - geometry (WKT Polygon): boundary of the administrative bounds of a Community.
- 
 
 
 ## ANCSA or Indigenous Context
 
 ### FedRecognizedTribes
-- **Definition**: For the purposes of tracking energy in Alaska, the definition could be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies. 
+- **Definition**: There are 229 Federally recognized Tribes according to "Indian Entities Recognized and Eligible to Receive Services from the United States Bureau of Indian Affairs" (January 28, 2022), 87 Federal Register 4636. AEDG associates Communities with  Alaska Native village corporations and Alaska Native regional corporations.
 - **SpatialRelationships**: 
 - **Analogous Standards**:
   - https://schema.org/GovernmentOrganization
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
-  - [OEO:provider](http://openenergy-platform.org/ontology/oeo/OEO_00140123) - A provider is an agent (organization) that transfers commodities or a [OEO:Service](http://openenergyplatform.org/ontology/oeo/OEO_00140124/) to other agents.
 - **References**:
   - https://biamaps.geoplatform.gov/BIA-Opendata/Data/ has several relevant layers
   - https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf
-  - https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/
+  - https://www.federalregister.gov/documents/2022/01/28/2022-01789/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of
 - **Properties**:
-  - geometry (WKT Polygon): boundary of Tribe
 
 
 ### VillageCorps
-- **Definition**: Alaska Native Village Corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities. There is not a one to one correspondence between place and Village Corporations. For instance, The Kuskokwim Corporation (TKC) is merger of ten (Lower Kalskag, Kalskag, Aniak, Chuathbaluk, Napaimute, Crooked Creek, Georgetown, Red Devil, Sleetmute, and Stony River) and the headquarters of some are in Anchorage. In the energy context, Village Corporations might operate as Independent Power Producers that sell power to the Communities' utilities.  
+- **Definition**: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities. There is not a one to one correspondence between place and village corporations. For instance, The Kuskokwim Corporation (TKC) is merger of ten (Lower Kalskag, Kalskag, Aniak, Chuathbaluk, Napaimute, Crooked Creek, Georgetown, Red Devil, Sleetmute, and Stony River) and the headquarters of some are in Anchorage. In the energy context, a village corporations might operate an Independent Power Producer that sells power to Electric Utilities.  
 - **SpatialRelationships**: 
   - WITHIN Alaska
+  - NEAR Communities
 - **Analogous Standards**:
   - https://schema.org/Corporation
   - [dc:Agent](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent)
@@ -112,6 +110,7 @@ date: 2025-05-23
   - https://www.census.gov/programs-surveys/bas/information/cdp.html
 - **Properties**:
   - location (WKT Point): longitude, latitude points
+  - population
 
 
 ### Boroughs
