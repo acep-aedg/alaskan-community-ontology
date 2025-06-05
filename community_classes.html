@@ -453,34 +453,31 @@ ul.task-list li input[type="checkbox"] {
 <section id="fedrecognizedtribes" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="fedrecognizedtribes"><span class="header-section-number">2.2.1</span> FedRecognizedTribes</h3>
 <ul>
-<li><strong>Definition</strong>: For the purposes of tracking energy in Alaska, the definition could be restricted to the 229 Federally recognized Tribes - sovereign governments. The 1975 Indian Self-Determination and Education Assistance Act allows tribes to contract with the federal government to provide services in place of federal agencies.</li>
+<li><strong>Definition</strong>: There are 229 Federally recognized Tribes according to “Indian Entities Recognized and Eligible to Receive Services from the United States Bureau of Indian Affairs” (January 28, 2022), 87 Federal Register 4636. AEDG associates Communities with Alaska Native village corporations and Alaska Native regional corporations.</li>
 <li><strong>SpatialRelationships</strong>:</li>
 <li><strong>Analogous Standards</strong>:
 <ul>
 <li>https://schema.org/GovernmentOrganization</li>
 <li><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Agent">dc:Agent</a></li>
-<li><a href="http://openenergy-platform.org/ontology/oeo/OEO_00140123">OEO:provider</a> - A provider is an agent (organization) that transfers commodities or a <a href="http://openenergyplatform.org/ontology/oeo/OEO_00140124/">OEO:Service</a> to other agents.</li>
 </ul></li>
 <li><strong>References</strong>:
 <ul>
 <li>https://biamaps.geoplatform.gov/BIA-Opendata/Data/ has several relevant layers</li>
 <li>https://www.fws.gov/sites/default/files/documents/Map-Federally-Recognized-Tribes-In-Alaska.pdf</li>
-<li>https://biamaps.geoplatform.gov/Tribal-Leaders-Directory/</li>
+<li>https://www.federalregister.gov/documents/2022/01/28/2022-01789/indian-entities-recognized-by-and-eligible-to-receive-services-from-the-united-states-bureau-of</li>
 </ul></li>
-<li><strong>Properties</strong>:
-<ul>
-<li>geometry (WKT Polygon): boundary of Tribe</li>
-</ul></li>
+<li><strong>Properties</strong>:</li>
 </ul>
 </section>
 <section id="villagecorps" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="villagecorps"><span class="header-section-number">2.2.2</span> VillageCorps</h3>
 <ul>
-<li><strong>Definition</strong>: Alaska Native Village Corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities. There is not a one to one correspondence between place and Village Corporations. For instance, The Kuskokwim Corporation (TKC) is merger of ten (Lower Kalskag, Kalskag, Aniak, Chuathbaluk, Napaimute, Crooked Creek, Georgetown, Red Devil, Sleetmute, and Stony River) and the headquarters of some are in Anchorage. In the energy context, Village Corporations might operate as Independent Power Producers that sell power to the Communities’ utilities.<br>
+<li><strong>Definition</strong>: Alaska Native village corporations were created by the Alaska Native Claims Settlement Act (ANCSA) and are organized around small communities. There is not a one to one correspondence between place and village corporations. For instance, The Kuskokwim Corporation (TKC) is merger of ten (Lower Kalskag, Kalskag, Aniak, Chuathbaluk, Napaimute, Crooked Creek, Georgetown, Red Devil, Sleetmute, and Stony River) and the headquarters of some are in Anchorage. In the energy context, a village corporations might operate an Independent Power Producer that sells power to Electric Utilities.<br>
 </li>
 <li><strong>SpatialRelationships</strong>:
 <ul>
 <li>WITHIN Alaska</li>
+<li>NEAR Communities</li>
 </ul></li>
 <li><strong>Analogous Standards</strong>:
 <ul>
@@ -589,6 +586,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Properties</strong>:
 <ul>
 <li>location (WKT Point): longitude, latitude points</li>
+<li>population</li>
 </ul></li>
 </ul>
 </section>
@@ -1293,7 +1291,7 @@ ul.task-list li input[type="checkbox"] {
 <p>© <a href="https://github.com/acep-aedg/alaskan-community-ontology/blob/main/LICENSE">CC BY-SA 4.0</a>, 2025<br> <a href="https://www.uaf.edu/acep/">Alaska Center for Energy and Power</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>The University of Alaska (www.alaska.edu) is an Equal Opportunity/Equal Access Employer and Educational Institution. The University is committed to a policy of non-discrimination (www.alaska.edu/nondiscrimination) against individuals on the basis of any legally protected status.</p>
+<p>The <a href="www.alaska.edu">University of Alaska</a> is an Equal Opportunity/Equal Access Employer and Educational Institution. The University is committed to a <a href="www.alaska.edu/nondiscrimination">policy of non-discrimination</a> against individuals on the basis of any legally protected status.</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/acep-aedg/alaskan-community-ontology/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
